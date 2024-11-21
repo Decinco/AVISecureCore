@@ -15,6 +15,9 @@ namespace AVISecureCore
         public AVISecureCore()
         {
             InitializeComponent();
+            this.Hide();
+            PantallaPrincipal PantallaPrincipal = new PantallaPrincipal();
+            PantallaPrincipal.Show();
         }
     }
 }
