@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AVIDataAccess, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Compile\AVIDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -107,6 +111,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AVISC_DataAccess\AVISC_DataAccess.csproj">
+      <Project>{a490cbff-3035-45a1-8358-dad9cbb84197}</Project>
+      <Name>AVISC_DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Controles\Controles.csproj">
       <Project>{d1e99e3f-ba7c-416f-a009-ad213af6dd36}</Project>
       <Name>Controles</Name>
