@@ -40,7 +40,6 @@ namespace Controles
             dllBD = Activator.CreateInstance(tipus);
 
             ((Form)dllBD).Show();
-            MessageBox.Showç();
         }
     }
 }
