@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace AVISecureCore
 {
@@ -37,7 +38,7 @@ namespace AVISecureCore
 
         private void splash_Load(object sender, EventArgs e)
         {
-            backVideo.URL = @"C:\DAM2n\ABP\ProyectoABP\resourses\video-splash.mp4";
+            backVideo.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resources", "video-splash.mp4");
             backVideo.settings.autoStart = true;
             backVideo.uiMode = "none"; // Ocultar controles
             backVideo.PlayStateChange += BackVideo_PlayStateChange; // Suscribirse al evento
