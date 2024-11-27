@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AVISC_DataAccess;
+using AVIDataAccess;
 
 namespace AVISecureCore
 {
@@ -15,6 +17,9 @@ namespace AVISecureCore
         public TestForm()
         {
             InitializeComponent();
+            AVISC_DataAccess.LoginData loginData = new AVISC_DataAccess.LoginData();
+
+            loginData.PerformLogin("a", "b");
         }
     }
 }

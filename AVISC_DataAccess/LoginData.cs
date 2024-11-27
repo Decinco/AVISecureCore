@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using AVIDataAccess;
 
 namespace AVISC_DataAccess
 {
@@ -26,8 +27,6 @@ namespace AVISC_DataAccess
         public bool PerformLogin(string username, string password)
         {
             Connectar();
-
-            bool successful = false;
 
             DataRow[] rowsFound;
             string hashedPasswd, salt, storedPasswd;
