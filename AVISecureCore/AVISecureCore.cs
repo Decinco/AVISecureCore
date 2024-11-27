@@ -19,5 +19,6 @@ namespace AVISecureCore
             PantallaPrincipal PantallaPrincipal = new PantallaPrincipal();
             PantallaPrincipal.Show();
         }
+
     }
 }

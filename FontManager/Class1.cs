@@ -1,42 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
-using System.Drawing;
-
-
-public static class FontManager
+namespace FontManager
 {
-    public static PrivateFontCollection FontCollection { get; } = new PrivateFontCollection();
-
-    static FontManager()
+    public static class FontManager
     {
         LoadCustomFont();
     }
-
     private static void LoadCustomFont()
     {
-        string fontPath = System.IO.Path.Combine(Application.StartupPath, "Resources", "TuFuente.ttf");
+        string fontPath = System.IO.Path.Combine(Application.bin\Debug, "Resources", "Inter/Inter-Italic-VariableFont_opsz,wght.ttf");
         FontCollection.AddFontFile(fontPath);
     }
-
-    public static Font GetFont(float size, FontStyle style = FontStyle.Regular)
-    {
-        return new Font(FontCollection.Families[0], size, style);
-    }
-
-    public static void ApplyCustomFont(Control parent)
-    {
-        foreach (Control control in parent.Controls)
-        {
-            control.Font = new Font(FontCollection.Families[0], control.Font.Size, control.Font.Style);
-            if (control.HasChildren)
-            {
-                ApplyCustomFont(control);
-            }
-        }
-    }
 }
-
