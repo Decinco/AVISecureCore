@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Controles
@@ -28,7 +29,18 @@ namespace Controles
 
         private void Abrir_Formulario_Click(object sender, EventArgs e)
         {
+            Assembly ensamblat = Assembly.LoadFrom($"{Classe}.dll");
 
+            Object dllBD;
+
+            Type tipus;
+
+            tipus = ensamblat.GetType($"{Classe}.{Form}");
+
+            dllBD = Activator.CreateInstance(tipus);
+
+            ((Form)dllBD).Show();
+            MessageBox.Showç();
         }
     }
 }
