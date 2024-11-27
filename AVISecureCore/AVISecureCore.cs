@@ -13,6 +13,7 @@ namespace AVISecureCore
     public partial class AVISecureCore : Form
     {
         splash splash = new splash();
+        PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
         public AVISecureCore()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace AVISecureCore
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            pantallaPrincipal.Show();
             splash.Show();
         }
     }
