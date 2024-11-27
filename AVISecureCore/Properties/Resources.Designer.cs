@@ -101,6 +101,26 @@ namespace AVISecureCore.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Inter_Italic_VariableFont_opsz_wght {
+            get {
+                object obj = ResourceManager.GetObject("Inter_Italic_VariableFont_opsz_wght", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Inter_VariableFont_opsz_wght {
+            get {
+                object obj = ResourceManager.GetObject("Inter_VariableFont_opsz_wght", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Line_1 {
