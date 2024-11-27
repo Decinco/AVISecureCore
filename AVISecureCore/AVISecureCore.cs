@@ -12,13 +12,16 @@ namespace AVISecureCore
 {
     public partial class AVISecureCore : Form
     {
+        splash splash = new splash();
         public AVISecureCore()
         {
             InitializeComponent();
-            this.Hide();
-            PantallaPrincipal PantallaPrincipal = new PantallaPrincipal();
-            PantallaPrincipal.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            splash.Show();
+        }
     }
 }
