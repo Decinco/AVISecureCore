@@ -13,6 +13,8 @@ namespace AVISC_Pantallas
 {
     public partial class AVISC_Login : Form
     {
+        Color myRgbColor = new Color();
+
         public AVISC_Login()
         {
             InitializeComponent();
@@ -33,7 +35,11 @@ namespace AVISC_Pantallas
             backVideo.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resources", "video-splash.mp4");
             backVideo.settings.autoStart = true;
             backVideo.uiMode = "none";
-            //backVideo.PlayStateChange += backVideo_PlayStateChange;
+            backVideo.PlayStateChange += backVideo_PlayStateChange;
+
+            myRgbColor = Color.FromArgb(15, 15, 15);
+
+            pnl_login.BackColor = myRgbColor;
         }
 
         private void backVideo_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
