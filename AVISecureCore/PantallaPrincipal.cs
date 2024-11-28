@@ -12,9 +12,15 @@ namespace AVISecureCore
 {
     public partial class PantallaPrincipal : Form
     {
+        public int MyProperty { get; set; }
+
         public PantallaPrincipal()
         {
+            
+
             InitializeComponent();
+
+
         }
 
         private void PantallaPrincipal_Load(object sender, EventArgs e)
@@ -33,6 +39,16 @@ namespace AVISecureCore
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblSecure_Click(object sender, EventArgs e)
         {
 
         }

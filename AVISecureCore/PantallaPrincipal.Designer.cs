@@ -32,20 +32,18 @@ namespace AVISecureCore
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblSecure = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +59,7 @@ namespace AVISecureCore
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 79);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel4
             // 
@@ -86,16 +85,6 @@ namespace AVISecureCore
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AVISecureCore.Properties.Resources.Ellipse_1;
-            this.pictureBox3.Location = new System.Drawing.Point(1840, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
@@ -108,9 +97,19 @@ namespace AVISecureCore
             this.lbl2.Text = "label2";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AVISecureCore.Properties.Resources.Ellipse_1;
+            this.pictureBox3.Location = new System.Drawing.Point(1840, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 79);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AVISecureCore.Properties.Resources.dibujo_1;
+            this.pictureBox2.Image = global::AVISecureCore.Properties.Resources.AVISC_Simple;
             this.pictureBox2.Location = new System.Drawing.Point(97, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(82, 53);
@@ -120,21 +119,26 @@ namespace AVISecureCore
             // 
             // lblSecure
             // 
-            this.lblSecure.AutoSize = true;
             this.lblSecure.BackColor = System.Drawing.Color.Transparent;
             this.lblSecure.CausesValidation = false;
-            this.lblSecure.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lblSecure.ForeColor = System.Drawing.Color.Yellow;
-            this.lblSecure.Location = new System.Drawing.Point(185, 14);
+            this.lblSecure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSecure.Font = new System.Drawing.Font("Inter", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblSecure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.lblSecure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSecure.Location = new System.Drawing.Point(185, -1);
+            this.lblSecure.Margin = new System.Windows.Forms.Padding(0);
+            this.lblSecure.MinimumSize = new System.Drawing.Size(245, 80);
             this.lblSecure.Name = "lblSecure";
-            this.lblSecure.Size = new System.Drawing.Size(256, 46);
+            this.lblSecure.Size = new System.Drawing.Size(280, 80);
             this.lblSecure.TabIndex = 1;
             this.lblSecure.Text = "Secure Core";
+            this.lblSecure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSecure.Click += new System.EventHandler(this.lblSecure_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AVISecureCore.Properties.Resources.Group_3;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 17);
+            this.pictureBox1.Image = global::AVISecureCore.Properties.Resources.AVI_Simple;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,28 +148,26 @@ namespace AVISecureCore
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(107, 1001);
+            this.panel2.Size = new System.Drawing.Size(80, 1001);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox4
+            // panel3
             // 
-            this.pictureBox4.Image = global::AVISecureCore.Properties.Resources._01_align_center;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 20);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.panel3.Location = new System.Drawing.Point(81, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(2, 60);
+            this.panel3.TabIndex = 3;
             // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -176,14 +178,11 @@ namespace AVISecureCore
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,7 +197,7 @@ namespace AVISecureCore
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
     }
 }
