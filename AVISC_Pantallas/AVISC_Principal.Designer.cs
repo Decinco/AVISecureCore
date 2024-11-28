@@ -50,6 +50,7 @@ namespace AVISC_Pantallas
             // 
             this.lbl_.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.lbl_.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
             this.lbl_.Location = new System.Drawing.Point(276, 79);
@@ -58,6 +59,7 @@ namespace AVISC_Pantallas
             this.lbl_.Size = new System.Drawing.Size(542, 102);
             this.lbl_.TabIndex = 2;
             this.lbl_.Text = "¡Bienvenido a Secure Core, <persona>!";
+            this.lbl_.Enter += new System.EventHandler(this.lbl__Enter);
             // 
             // panel1
             // 

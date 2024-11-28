@@ -23,9 +23,5 @@ namespace AVISC_Pantallas
         {
             ActiveControl = null;
         }
-        private void lbl_Person_MouseHover(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.Arrow;
-        }
     }
 }
