@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace AVISecureCore
+namespace AVISC_Pantallas
 {
     public partial class AVISC_Splash : Form
     {

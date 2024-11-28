@@ -49,11 +49,11 @@
     <Compile Include="AVISC_Login.Designer.cs">
       <DependentUpon>AVISC_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="AVISC_MDI.cs">
+    <Compile Include="AVISC_Border.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AVISC_MDI.Designer.cs">
-      <DependentUpon>AVISC_MDI.cs</DependentUpon>
+    <Compile Include="AVISC_Border.Designer.cs">
+      <DependentUpon>AVISC_Border.cs</DependentUpon>
     </Compile>
     <Compile Include="AVISC_Principal.cs">
       <SubType>Form</SubType>
@@ -75,11 +75,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AVISC_Border.resx">
+      <DependentUpon>AVISC_Border.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AVISC_Login.resx">
       <DependentUpon>AVISC_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AVISC_MDI.resx">
-      <DependentUpon>AVISC_MDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AVISC_Principal.resx">
       <DependentUpon>AVISC_Principal.cs</DependentUpon>
@@ -142,6 +142,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Line 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

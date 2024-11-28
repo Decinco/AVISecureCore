@@ -105,6 +105,10 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <ProjectReference Include="..\AVISC_Pantallas\AVISC_Pantallas.csproj">
+      <Project>{e63fac63-c1e6-44c1-bb30-65ed68d83745}</Project>
+      <Name>AVISC_Pantallas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

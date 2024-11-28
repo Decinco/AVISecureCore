@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace AVISC_Pantallas
 {
-    public partial class AVISC_MDI : Form
+    public partial class AVISC_Border : Form
     {
 
-        public AVISC_MDI()
+        public AVISC_Border()
         {
 
             InitializeComponent();
@@ -58,9 +58,12 @@ namespace AVISC_Pantallas
         /// <param name="newform">Formulario a mostrar.</param>
         private void RefreshForm(Form newform)
         {
-            ActiveMdiChild.Close();
+            
+            pnl_FormContainer.Controls.Clear();
 
-            newform.MdiParent = this;
+            newform.TopLevel = false;
+            pnl_FormContainer.Controls.Add(newform);
+
             newform.Show();
         }
     }

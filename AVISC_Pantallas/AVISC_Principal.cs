@@ -16,5 +16,16 @@ namespace AVISC_Pantallas
         {
             InitializeComponent();
         }
+
+        // Se utiliza un richtextbox para poder permitir que el nombre de usuario salga en negrita
+        // Ahora, hay que disimular que es un label normal y corriente :)
+        private void lbl__Enter(object sender, EventArgs e)
+        {
+            ActiveControl = null;
+        }
+        private void lbl_Person_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.Arrow;
+        }
     }
 }
