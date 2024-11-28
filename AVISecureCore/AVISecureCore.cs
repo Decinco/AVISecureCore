@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AVISC_Pantallas;
 using System.Windows.Forms;
 
 namespace AVISecureCore
@@ -14,6 +15,7 @@ namespace AVISecureCore
     {
         splash splash = new splash();
         PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
+        AVISC_Login login = new AVISC_Login();
         public AVISecureCore()
         {
             InitializeComponent();
@@ -22,8 +24,9 @@ namespace AVISecureCore
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            pantallaPrincipal.Show();
-            splash.Show();
+            login.Show();
+            //pantallaPrincipal.Show();
+            //splash.Show();
         }
     }
 }

@@ -41,7 +41,7 @@ namespace AVISecureCore
             backVideo.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resources", "video-splash.mp4");
             backVideo.settings.autoStart = true;
             backVideo.uiMode = "none"; // Ocultar controles
-            backVideo.PlayStateChange += BackVideo_PlayStateChange; // Suscribirse al evento
+            //backVideo.PlayStateChange += BackVideo_PlayStateChange; // Suscribirse al evento
         }
 
         private void BackVideo_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
