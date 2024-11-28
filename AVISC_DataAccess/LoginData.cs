@@ -42,8 +42,14 @@ namespace AVISC_DataAccess
 
                 hashedPasswd = SaltPassword(password, salt);
                 storedPasswd = rowsFound[0].Field<string>("Password");
-                
-                valid = hashedPasswd == storedPasswd;
+
+                if (storedPasswd == "12345aA.") {
+                    valid = password == storedPasswd; // Ignora hash para la contraseña por defecto
+                }
+                else
+                {
+                    valid = hashedPasswd == storedPasswd;
+                }
             }
 
 

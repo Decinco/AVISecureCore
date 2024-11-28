@@ -90,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
@@ -115,10 +116,6 @@
       <Project>{a490cbff-3035-45a1-8358-dad9cbb84197}</Project>
       <Name>AVISC_DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AVISC_Pantallas\AVISC_Pantallas.csproj">
-      <Project>{e63fac63-c1e6-44c1-bb30-65ed68d83745}</Project>
-      <Name>AVISC_Pantallas</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Controles\Controles.csproj">
       <Project>{d1e99e3f-ba7c-416f-a009-ad213af6dd36}</Project>
       <Name>Controles</Name>
@@ -140,6 +137,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVISC_Simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVI_Simple.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

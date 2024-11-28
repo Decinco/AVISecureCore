@@ -73,6 +73,26 @@ namespace AVISecureCore.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AVI_Simple {
+            get {
+                object obj = ResourceManager.GetObject("AVI_Simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AVISC_Simple {
+            get {
+                object obj = ResourceManager.GetObject("AVISC_Simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dibujo_1 {
             get {
                 object obj = ResourceManager.GetObject("dibujo 1", resourceCulture);
