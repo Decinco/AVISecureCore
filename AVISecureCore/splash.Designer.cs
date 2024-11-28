@@ -40,7 +40,7 @@ namespace AVISecureCore
             this.backVideo.Location = new System.Drawing.Point(-4, -3);
             this.backVideo.Name = "backVideo";
             this.backVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("backVideo.OcxState")));
-            this.backVideo.Size = new System.Drawing.Size(1924, 1128);
+            this.backVideo.Size = new System.Drawing.Size(1920, 1080);
             this.backVideo.TabIndex = 0;
             // 
             // splash
