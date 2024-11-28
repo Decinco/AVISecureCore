@@ -11,9 +11,9 @@ using System.IO;
 
 namespace AVISecureCore
 {
-    public partial class splash : Form
+    public partial class AVISC_Splash : Form
     {
-        public splash()
+        public AVISC_Splash()
         {
             InitializeComponent();
         }

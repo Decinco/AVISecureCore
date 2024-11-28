@@ -8,18 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AVISecureCore
+namespace AVISC_Pantallas
 {
-    public partial class PantallaPrincipal : Form
+    public partial class AVISC_MDI : Form
     {
-        public int MyProperty { get; set; }
 
-        public PantallaPrincipal()
+        public AVISC_MDI()
         {
-            
 
             InitializeComponent();
 
+            RefreshForm(new AVISC_Principal());
 
         }
 
@@ -51,6 +50,18 @@ namespace AVISecureCore
         private void lblSecure_Click(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// Introduce un formulario nuevo, quitando el anterior. 
+        /// </summary>
+        /// <param name="newform">Formulario a mostrar.</param>
+        private void RefreshForm(Form newform)
+        {
+            ActiveMdiChild.Close();
+
+            newform.MdiParent = this;
+            newform.Show();
         }
     }
 }

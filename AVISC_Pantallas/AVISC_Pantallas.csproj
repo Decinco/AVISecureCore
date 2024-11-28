@@ -43,11 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AVISC_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVISC_Login.Designer.cs">
+      <DependentUpon>AVISC_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AVISC_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVISC_MDI.Designer.cs">
+      <DependentUpon>AVISC_MDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="AVISC_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AVISC_Principal.Designer.cs">
       <DependentUpon>AVISC_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AVISC_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVISC_Splash.Designer.cs">
+      <DependentUpon>AVISC_Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -57,8 +75,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AVISC_Login.resx">
+      <DependentUpon>AVISC_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AVISC_MDI.resx">
+      <DependentUpon>AVISC_MDI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AVISC_Principal.resx">
       <DependentUpon>AVISC_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AVISC_Splash.resx">
+      <DependentUpon>AVISC_Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +94,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ferrari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVI_Simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVISC_Simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01 align center1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVI_Simple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVISC_Simple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dibujo 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01 align center2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVI_Simple2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AVISC_Simple2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dibujo 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 12.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

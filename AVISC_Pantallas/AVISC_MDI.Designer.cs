@@ -1,7 +1,7 @@
 ﻿
-namespace AVISecureCore
+namespace AVISC_Pantallas
 {
-    partial class PantallaPrincipal
+    partial class AVISC_MDI
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@ namespace AVISecureCore
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::AVISecureCore.Properties.Resources.Ellipse_1;
+            this.pictureBox3.Image = global::AVISC_Pantallas.Properties.Resources.placeholder_JohnRandom;
             this.pictureBox3.Location = new System.Drawing.Point(1840, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(80, 79);
@@ -109,7 +109,7 @@ namespace AVISecureCore
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AVISecureCore.Properties.Resources.AVISC_Simple;
+            this.pictureBox2.Image = global::AVISC_Pantallas.Properties.Resources.AVISC_Simple;
             this.pictureBox2.Location = new System.Drawing.Point(97, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(82, 53);
@@ -137,7 +137,7 @@ namespace AVISecureCore
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AVISecureCore.Properties.Resources.AVI_Simple;
+            this.pictureBox1.Image = global::AVISC_Pantallas.Properties.Resources.AVI_Simple;
             this.pictureBox1.Location = new System.Drawing.Point(9, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 50);
@@ -162,7 +162,7 @@ namespace AVISecureCore
             this.panel3.Size = new System.Drawing.Size(2, 60);
             this.panel3.TabIndex = 3;
             // 
-            // PantallaPrincipal
+            // AVISC_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,7 +172,7 @@ namespace AVISecureCore
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Name = "PantallaPrincipal";
+            this.Name = "AVISC_MDI";
             this.ShowInTaskbar = false;
             this.Text = "PantallaPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

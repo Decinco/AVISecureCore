@@ -14,7 +14,7 @@ namespace AVISecureCore
     public partial class AVISecureCore : Form
     {
         splash splash = new splash();
-        PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
+        AVISC_MDI pantallaPrincipal = new AVISC_MDI();
         AVISC_Login login = new AVISC_Login();
         public AVISecureCore()
         {

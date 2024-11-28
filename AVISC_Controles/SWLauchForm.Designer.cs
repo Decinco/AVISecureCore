@@ -1,4 +1,4 @@
-﻿namespace Controles
+﻿namespace AVISC_Controles
 {
     partial class SWLauchForm
     {

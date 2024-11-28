@@ -1,7 +1,7 @@
 ﻿
-namespace AVISecureCore
+namespace AVISC_Pantallas
 {
-    partial class splash
+    partial class AVISC_Splash
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace AVISecureCore
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(splash));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AVISC_Splash));
             this.backVideo = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.backVideo)).BeginInit();
             this.SuspendLayout();

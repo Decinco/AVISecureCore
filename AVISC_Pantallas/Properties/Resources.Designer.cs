@@ -63,9 +63,49 @@ namespace AVISC_Pantallas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AVI_Simple {
+            get {
+                object obj = ResourceManager.GetObject("AVI_Simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AVISC_Full {
+            get {
+                object obj = ResourceManager.GetObject("AVISC_Full", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AVISC_Simple {
+            get {
+                object obj = ResourceManager.GetObject("AVISC_Simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ferrari {
             get {
                 object obj = ResourceManager.GetObject("ferrari", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap placeholder_JohnRandom {
+            get {
+                object obj = ResourceManager.GetObject("placeholder_JohnRandom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

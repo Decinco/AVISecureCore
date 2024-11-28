@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D1E99E3F-BA7C-416F-A009-AD213AF6DD36}</ProjectGuid>
+    <ProjectGuid>{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Controles</RootNamespace>
-    <AssemblyName>Controles</AssemblyName>
+    <RootNamespace>AVISC_Controles</RootNamespace>
+    <AssemblyName>AVISC_Controles</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
