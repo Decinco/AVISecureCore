@@ -82,7 +82,6 @@ namespace AVISC_Pantallas
             // 
             // pnl_MenuItems
             // 
-            this.pnl_MenuItems.AutoScroll = true;
             this.pnl_MenuItems.Location = new System.Drawing.Point(42, 324);
             this.pnl_MenuItems.Margin = new System.Windows.Forms.Padding(67, 30, 67, 30);
             this.pnl_MenuItems.Name = "pnl_MenuItems";
