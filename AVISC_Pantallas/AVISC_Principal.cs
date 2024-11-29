@@ -22,7 +22,7 @@ namespace AVISC_Pantallas
         // Ahora, hay que disimular que es un label normal y corriente :)
         private void lbl__Enter(object sender, EventArgs e)
         {
-            ActiveControl = null;
+            ActiveControl = pnl_MenuItems;
         }
 
         private void AVISC_Principal_Load(object sender, EventArgs e)

@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Compile\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,12 +55,6 @@
     <Compile Include="AVISC_Border.Designer.cs">
       <DependentUpon>AVISC_Border.cs</DependentUpon>
     </Compile>
-    <Compile Include="AVISC_HelloJohnRandom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AVISC_HelloJohnRandom.Designer.cs">
-      <DependentUpon>AVISC_HelloJohnRandom.cs</DependentUpon>
-    </Compile>
     <Compile Include="AVISC_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +80,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AVISC_Login.resx">
       <DependentUpon>AVISC_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AVISC_HelloJohnRandom.resx">
-      <DependentUpon>AVISC_HelloJohnRandom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AVISC_Principal.resx">
       <DependentUpon>AVISC_Principal.cs</DependentUpon>

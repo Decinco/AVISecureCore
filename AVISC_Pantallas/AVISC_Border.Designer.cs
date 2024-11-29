@@ -36,10 +36,10 @@ namespace AVISC_Pantallas
             this.lblSecure = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_FormContainer = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnl_FormContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -133,6 +133,14 @@ namespace AVISC_Pantallas
             this.panel3.Size = new System.Drawing.Size(2, 60);
             this.panel3.TabIndex = 3;
             // 
+            // pnl_FormContainer
+            // 
+            this.pnl_FormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_FormContainer.Location = new System.Drawing.Point(80, 80);
+            this.pnl_FormContainer.Name = "pnl_FormContainer";
+            this.pnl_FormContainer.Size = new System.Drawing.Size(1840, 1000);
+            this.pnl_FormContainer.TabIndex = 4;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AVISC_Pantallas.Properties.Resources.placeholder_JohnRandom;
@@ -163,18 +171,10 @@ namespace AVISC_Pantallas
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnl_FormContainer
-            // 
-            this.pnl_FormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_FormContainer.Location = new System.Drawing.Point(80, 80);
-            this.pnl_FormContainer.Name = "pnl_FormContainer";
-            this.pnl_FormContainer.Size = new System.Drawing.Size(1840, 1000);
-            this.pnl_FormContainer.TabIndex = 4;
-            // 
             // AVISC_Border
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnl_FormContainer);
