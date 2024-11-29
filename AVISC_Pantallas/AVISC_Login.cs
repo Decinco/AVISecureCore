@@ -13,8 +13,6 @@ namespace AVISC_Pantallas
 {
     public partial class AVISC_Login : Form
     {
-        Color myRgbColor = new Color();
-
         public AVISC_Login()
         {
             InitializeComponent();
@@ -36,10 +34,6 @@ namespace AVISC_Pantallas
             backVideo.settings.autoStart = true;
             backVideo.uiMode = "none";
             backVideo.PlayStateChange += backVideo_PlayStateChange;
-
-            myRgbColor = Color.FromArgb(15, 15, 15);
-
-            pnl_login.BackColor = myRgbColor;
         }
 
         private void backVideo_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
@@ -47,7 +41,7 @@ namespace AVISC_Pantallas
             // Verificar si el estado del reproductor es "Playing"
             if (e.newState == (int)WMPLib.WMPPlayState.wmppsPlaying)
             {
-                backVideo.fullScreen = true; // Hacer pantalla completa
+                backVideo.SendToBack();
             }
         }
     }

@@ -22,9 +22,30 @@ namespace AVISC_Controles
             set { Form = value; }
         }
 
-        public SWLauchForm()
+        private string Descripcion;
+
+        public string descripcion
+        {
+            get { return Descripcion; }
+            set { Descripcion = value; }
+        }
+
+        private string Nombre;
+
+        public string nombre
+        {
+            get { return Nombre; }
+            set { Nombre = value; }
+        }
+
+
+        public SWLauchForm(string nombre, string clase, string descripcion, string form)
         {
             InitializeComponent();
+            Form = form;
+            Descripcion = descripcion;
+            Classe = clase;
+            Nombre = nombre;
         }
 
         private void Abrir_Formulario_Click(object sender, EventArgs e)
