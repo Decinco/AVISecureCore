@@ -103,6 +103,16 @@ namespace AVISC_Pantallas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_password_abierto {
+            get {
+                object obj = ResourceManager.GetObject("icono password abierto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placeholder_JohnRandom {
             get {
                 object obj = ResourceManager.GetObject("placeholder_JohnRandom", resourceCulture);
