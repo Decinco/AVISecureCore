@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace Controles
+namespace AVISC_Controles
 {
     public partial class SWLauchForm: UserControl
     {

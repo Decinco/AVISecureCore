@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AVISC_Controles;
 
 namespace AVISC_Pantallas
 {
-    public partial class AVISC_Principal : Form
+    public partial class AVISC_HelloJohnRandom : Form
     {
-        public AVISC_Principal()
+        public AVISC_HelloJohnRandom()
         {
+            lbl_Persona.Text = @"Bienvenido a Secure Core, \bJohn Random\b0";
+
             InitializeComponent();
         }
 
@@ -23,19 +24,6 @@ namespace AVISC_Pantallas
         private void lbl__Enter(object sender, EventArgs e)
         {
             ActiveControl = null;
-        }
-
-        private void AVISC_Principal_Load(object sender, EventArgs e)
-        {
-
-            for (int i = 0; i < 7; i++)
-            {
-                SWLauchForm function = new SWLauchForm();
-                function.Margin = new Padding(67, 30, 67, 30);
-
-
-                pnl_MenuItems.Controls.Add(function);
-            }
         }
     }
 }
