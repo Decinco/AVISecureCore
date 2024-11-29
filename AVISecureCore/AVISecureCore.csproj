@@ -84,10 +84,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AVISC_DataAccess\AVISC_DataAccess.csproj">
-      <Project>{a490cbff-3035-45a1-8358-dad9cbb84197}</Project>
-      <Name>AVISC_DataAccess</Name>
-    </ProjectReference>
     <COMReference Include="AxWMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
       <VersionMajor>1</VersionMajor>
