@@ -54,13 +54,14 @@ namespace AVISC_Pantallas
         private void btm_login_Click(object sender, EventArgs e)
         {
             LoginData login = new LoginData();
-            AVISC_Border aVISC_Principal = new AVISC_Border();
+            AVISC_Border aVISC_Border = new AVISC_Border();
             bool validar_login  = login.PerformLogin(txt_user.Text, txt_pass.Text);
 
             if (validar_login == true)
             {
                 this.Hide();
-                aVISC_Principal.Show();
+                aVISC_Border.Show();
+                backVideo.settings.mute = true;
             }
             else
             {
