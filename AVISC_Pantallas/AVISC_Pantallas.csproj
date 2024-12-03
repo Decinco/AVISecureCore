@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AVIDataAccess, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -166,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono password abierto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrellas_gif_prueba.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
