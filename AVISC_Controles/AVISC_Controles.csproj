@@ -49,6 +49,12 @@
       <DependentUpon>SWLauchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SWTextbox.Designer.cs">
+      <DependentUpon>SWTextbox.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
