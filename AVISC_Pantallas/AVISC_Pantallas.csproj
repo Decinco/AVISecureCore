@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AVIDataAccess, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -169,16 +168,72 @@
     <None Include="Resources\icono password abierto.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\estrellas_gif_prueba.gif" />
+    <Content Include="Resources\01 align center.png" />
+    <Content Include="Resources\ddddd-4083739413.jpg" />
+    <Content Include="Resources\dibujo 1.png" />
+    <Content Include="Resources\Ellipse 1.png" />
+    <Content Include="Resources\Group 3.png" />
+    <Content Include="Resources\Inter.bmp" />
+    <Content Include="Resources\Inter\Inter-Italic-VariableFont_opsz,wght.ttf" />
+    <Content Include="Resources\Inter\Inter-VariableFont_opsz,wght.ttf" />
+    <Content Include="Resources\Inter\OFL.txt" />
+    <Content Include="Resources\Inter\README.txt" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Black.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-BlackItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Bold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-BoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-ExtraBold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-ExtraBoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-ExtraLight.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-ExtraLightItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Italic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Light.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-LightItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Medium.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-MediumItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Regular.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-SemiBold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-SemiBoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-Thin.ttf" />
+    <Content Include="Resources\Inter\static\Inter_18pt-ThinItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Black.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-BlackItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Bold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-BoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-ExtraBold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-ExtraBoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-ExtraLight.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-ExtraLightItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Italic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Light.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-LightItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Medium.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-MediumItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Regular.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-SemiBold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-SemiBoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-Thin.ttf" />
+    <Content Include="Resources\Inter\static\Inter_24pt-ThinItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Black.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-BlackItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Bold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-BoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-ExtraBold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-ExtraBoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-ExtraLight.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-ExtraLightItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Italic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Light.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-LightItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Medium.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-MediumItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Regular.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-SemiBold.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-SemiBoldItalic.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-Thin.ttf" />
+    <Content Include="Resources\Inter\static\Inter_28pt-ThinItalic.ttf" />
+    <Content Include="Resources\Line 1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\estrellas_gif_prueba1.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Group 5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Log In.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
