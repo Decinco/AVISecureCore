@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace AVISC_Controles
 {
-    public partial class SWLauchForm: UserControl
+    public partial class SWLauchForm : UserControl
     {
         private string Classe;
 
@@ -39,7 +39,6 @@ namespace AVISC_Controles
             set { Nombre = value; }
         }
 
-
         public SWLauchForm(string nombre, string clase, string descripcion, string form)
         {
             InitializeComponent();
@@ -47,6 +46,9 @@ namespace AVISC_Controles
             Descripcion = descripcion;
             Classe = clase;
             Nombre = nombre;
+
+            lbl_descipcion.Text = Descripcion;
+            lbl_opcion.Text = Nombre;
         }
 
         private void Abrir_Formulario_Click(object sender, EventArgs e)
@@ -60,8 +62,6 @@ namespace AVISC_Controles
             tipus = ensamblat.GetType($"{Classe}.{Form}");
 
             dllBD = Activator.CreateInstance(tipus);
-
-            ((Form)dllBD).Show();
         }
 
         private void SWLauchForm_MouseEnter(object sender, EventArgs e)

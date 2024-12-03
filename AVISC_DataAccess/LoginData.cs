@@ -13,11 +13,6 @@ namespace AVISC_DataAccess
     {
         public string Username { get; set; }
 
-        public LoginData()
-        {
-            
-        }
-
         /// <summary>
         /// Intenta hacer un login y devuelve un booleano según si ha sido exitoso o no.
         /// </summary>

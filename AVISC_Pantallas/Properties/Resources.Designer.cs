@@ -93,9 +93,9 @@ namespace AVISC_Pantallas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap estrellas_gif_prueba {
+        internal static System.Drawing.Bitmap ddddd_4083739413 {
             get {
-                object obj = ResourceManager.GetObject("estrellas_gif_prueba", resourceCulture);
+                object obj = ResourceManager.GetObject("ddddd-4083739413", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

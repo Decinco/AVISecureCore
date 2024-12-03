@@ -30,7 +30,7 @@ namespace AVISC_Pantallas
 
             for (int i = 0; i < 7; i++)
             {
-                SWLauchForm function = new SWLauchForm("cosa", "cosa", "cosa", "cosa");
+                SWLauchForm function = new SWLauchForm("jijijija", "AVISC_Pantallas", "gracioso, gracioso, gracioso", "AVISC_jijijija");
                 function.Margin = new Padding(67, 30, 67, 30);
 
 
