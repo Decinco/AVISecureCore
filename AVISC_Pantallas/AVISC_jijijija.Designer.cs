@@ -264,7 +264,7 @@ namespace AVISC_Pantallas
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AVISC_Pantallas.Properties.Resources.ddddd_4083739413;
+            this.pictureBox1.Image = global::AVISC_Pantallas.Properties.Resources.AVI_Simple;
             this.pictureBox1.Location = new System.Drawing.Point(40, 287);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1413, 296);
