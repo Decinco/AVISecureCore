@@ -33,36 +33,45 @@ namespace AVISC_Pantallas
 
         private Image imageOpen;
         private Image imageClose;
+        private bool validar_login = false;
         private void AVISC_Login_Load(object sender, EventArgs e)
         {
-            backVideo.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resources", "video-splash.mp4");
-            backVideo.settings.autoStart = true;
-            backVideo.uiMode = "none";
-            backVideo.PlayStateChange += backVideo_PlayStateChange;
+            //backVideo.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resources", "estrellas_gif_prueba.gif");
+            //backVideo.settings.autoStart = true;
+            //backVideo.uiMode = "none";
+            //backVideo.PlayStateChange += backVideo_PlayStateChange;
 
-            imageOpen = pbx_ojo.Image = Bitmap.FromFile(@"Resources\icono password abierto.png");
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.SendToBack();
+
+            imageOpen = Bitmap.FromFile(@"Resources\icono password abierto.png");
+            imageClose = Bitmap.FromFile(@"Resources\icono password.png");
+
+            pbx_ojo.Image = imageOpen;
+            txt_pass.UseSystemPasswordChar = false;
         }
 
         private void backVideo_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
             // Verificar si el estado del reproductor es "Playing"
-            if (e.newState == (int)WMPLib.WMPPlayState.wmppsPlaying)
-            {
-                backVideo.SendToBack();
-            }
+            //if (e.newState == (int)WMPLib.WMPPlayState.wmppsPlaying)
+            //{
+            //    backVideo.SendToBack();
+            //    backVideo.Dock = DockStyle.Fill;
+            //}
         }
 
         private void btm_login_Click(object sender, EventArgs e)
         {
             LoginData login = new LoginData();
             AVISC_Border aVISC_Border = new AVISC_Border();
-            bool validar_login  = login.PerformLogin(txt_user.Text, txt_pass.Text);
+            validar_login  = login.PerformLogin(txt_user.Text, txt_pass.Text);
 
             if (validar_login == true)
             {
                 this.Hide();
                 aVISC_Border.Show();
-                backVideo.settings.mute = true;
+                //backVideo.settings.mute = true;
             }
             else
             {
@@ -72,16 +81,18 @@ namespace AVISC_Pantallas
 
         private void pbx_ojo_Click(object sender, EventArgs e)
         {
-            if (imageOpen == pbx_ojo.Image)
+            if (validar_login)
             {
-                imageClose = pbx_ojo.Image = Bitmap.FromFile(@"Resources\icono password.png");
-                txt_pass.PasswordChar.ToString();
+                txt_pass.UseSystemPasswordChar = false;
+                pbx_ojo.Image = imageOpen;
             }
-            else if (imageClose == pbx_ojo.Image)
+            else
             {
-                imageOpen = pbx_ojo.Image = Bitmap.FromFile(@"Resources\icono password abierto.png");
-                txt_pass.PasswordChar = '*';
+                txt_pass.UseSystemPasswordChar = true;
+                pbx_ojo.Image = imageClose;
             }
+
+            validar_login = !validar_login;
         }
     }
 }

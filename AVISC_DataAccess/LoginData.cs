@@ -48,11 +48,6 @@ namespace AVISC_DataAccess
             {
                 Username = username;
             }
-
-            //if (username == "admin" && password == "12345aA")
-            //{
-            //    valid = true;
-            //}
             return valid;
         }
 
