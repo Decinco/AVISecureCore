@@ -114,11 +114,5 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AVISC_Simple.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AVI_Simple.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

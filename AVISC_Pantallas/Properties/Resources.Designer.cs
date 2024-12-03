@@ -93,6 +93,16 @@ namespace AVISC_Pantallas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ddddd_4083739413 {
+            get {
+                object obj = ResourceManager.GetObject("ddddd-4083739413", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ferrari {
             get {
                 object obj = ResourceManager.GetObject("ferrari", resourceCulture);

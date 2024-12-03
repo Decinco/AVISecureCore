@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace AVISC_Pantallas
 {
     public partial class AVISC_Border : Form
@@ -17,6 +18,9 @@ namespace AVISC_Pantallas
         {
 
             InitializeComponent();
+
+
+
 
             RefreshForm(new AVISC_Principal());
 
@@ -65,6 +69,6 @@ namespace AVISC_Pantallas
             pnl_FormContainer.Controls.Add(newform);
 
             newform.Show();
-        }
-    }
+        }    }
+
 }
