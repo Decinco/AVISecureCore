@@ -40,11 +40,12 @@ namespace AVISC_Pantallas
             //backVideo.uiMode = "none";
             //backVideo.PlayStateChange += backVideo_PlayStateChange;
 
-            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.SendToBack();
+            pictureBox1.Dock = DockStyle.Fill;
 
-            imageOpen = Bitmap.FromFile(@"Resources\icono password abierto.png");
-            imageClose = Bitmap.FromFile(@"Resources\icono password.png");
+            imageOpen = Bitmap.FromFile(@"Resources\eye.png");
+
+            imageClose = Bitmap.FromFile(@"Resources\eye close.png");
 
             pbx_ojo.Image = imageOpen;
             txt_pass.UseSystemPasswordChar = false;
@@ -68,9 +69,10 @@ namespace AVISC_Pantallas
 
             if (validar_login == true)
             {
-                this.Hide();
-                aVISC_Border.Show();
-                //backVideo.settings.mute = true;
+                
+                GenerateNewPassword();
+                //this.Hide();
+                //aVISC_Border.Show();
             }
             else
             {
@@ -84,14 +86,27 @@ namespace AVISC_Pantallas
             {
                 txt_pass.UseSystemPasswordChar = false;
                 pbx_ojo.Image = imageOpen;
+                validar_login = false;
             }
             else
             {
                 txt_pass.UseSystemPasswordChar = true;
                 pbx_ojo.Image = imageClose;
+                validar_login = true;
             }
+        }
 
-            validar_login = !validar_login;
+        private void GenerateNewPassword()
+        {
+            lbl_titulo.Text = "Nueva Contraseña";
+            lbl_user.Text = "Contraseña";
+            lbl_pass.Text = "Confirmar contraseña";
+
+            txt_user.Text = "";
+            txt_pass.Text = "";
+
+            txt_pass.UseSystemPasswordChar = true;
+            txt_user.PasswordChar = '·';
         }
     }
 }

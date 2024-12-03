@@ -171,5 +171,14 @@
   <ItemGroup>
     <None Include="Resources\estrellas_gif_prueba.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrellas_gif_prueba1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

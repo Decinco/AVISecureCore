@@ -24,8 +24,8 @@ namespace AVISecureCore
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //login.Show();
-            pantallaPrincipal.Show();
+            login.Show();
+            //pantallaPrincipal.Show();
             //splash.Show();
         }
     }

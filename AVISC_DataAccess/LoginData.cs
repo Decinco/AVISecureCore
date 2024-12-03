@@ -33,7 +33,7 @@ namespace AVISC_DataAccess
             if (rowsFound.Length > 0)
             {
                 salt = rowsFound[0].Field<string>("Salt");
-
+                createSalt();
                 hashedPasswd = SaltPassword(password, salt);
                 storedPasswd = rowsFound[0].Field<string>("Password");
                 if (storedPasswd == "12345aA") {
@@ -67,6 +67,18 @@ namespace AVISC_DataAccess
             return strHash;
         }
 
+        private string createSalt()
+        {
+            string createSalt;
+            using (SHA256 hash = SHA256.Create())
+            {
+                byte[] hashedBytes = hash.ComputeHash(Encoding.UTF8.GetBytes(DateTime.Today.ToString("yyyyMMdd")));
+                createSalt = BitConverter.ToString(hashedBytes);
+            }
+
+            return createSalt;
+
+        }
 
     }
 }
