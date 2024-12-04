@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Pantallas", "AVISC_Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Controles", "AVISC_Controles\AVISC_Controles.csproj", "{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_DataAccess", "AVIDataAccess\AVISC_DataAccess.csproj", "{D6A0D9FD-99A9-4F23-9BE4-ADFD510F0705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVIDataAccess", "AVIDataAccess\AVIDataAccess.csproj", "{F536E5E3-DCB2-4795-BA07-0070C324619F}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "AVIDocumentation", "AVIDocumentation\AVIDocumentation.shfbproj", "{B70B742E-A4A0-4512-BFAD-F379F3331F63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +31,14 @@ Global
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6A0D9FD-99A9-4F23-9BE4-ADFD510F0705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6A0D9FD-99A9-4F23-9BE4-ADFD510F0705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6A0D9FD-99A9-4F23-9BE4-ADFD510F0705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6A0D9FD-99A9-4F23-9BE4-ADFD510F0705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AVIDataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:AVIDataAccess.DataAccess">
+            <summary>
+            Clase base abstracta para el acceso a datos.
+            Proporciona métodos comunes para interactuar con bases de datos.
+            </summary>
+        </member>
+        <member name="P:AVIDataAccess.DataAccess.ConnString">
+            <summary>
+            Cadena de conexión a la base de datos.
+            </summary>
+        </member>
+        <member name="P:AVIDataAccess.DataAccess.Connection">
+            <summary>
+            Conexión SQL utilizada para interactuar con la base de datos.
+            </summary>
+        </member>
+        <member name="P:AVIDataAccess.DataAccess.New">
+            <summary>
+            Indica si se está creando un nuevo registro.
+            </summary>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.#ctor">
+            <summary>
+            Constructor por defecto.
+            Inicializa la cadena de conexión y protege el archivo de configuración.
+            </summary>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.Connectar">
+            <summary>
+            Establece la conexión con la base de datos utilizando la cadena de conexión.
+            </summary>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.PortarTaula(System.String)">
+            <summary>
+            Obtiene todos los registros de una tabla específica.
+            </summary>
+            <param name="tableName">Nombre de la tabla a consultar.</param>
+            <returns>Un DataSet con los datos de la tabla.</returns>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.PortarPerConsulta(System.String)">
+            <summary>
+            Ejecuta una consulta SQL y devuelve los resultados.
+            </summary>
+            <param name="query">Consulta SQL a ejecutar.</param>
+            <returns>Un DataSet con los resultados de la consulta.</returns>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.PortarPerConsulta(System.String,System.String)">
+            <summary>
+            Ejecuta una consulta SQL y asigna un nombre a la tabla resultante.
+            </summary>
+            <param name="query">Consulta SQL a ejecutar.</param>
+            <param name="dataTableName">Nombre de la tabla resultante.</param>
+            <returns>Un DataSet con los resultados de la consulta.</returns>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.Actualitzar(System.Data.DataSet,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Actualiza los datos en la base de datos a partir de un DataSet.
+            </summary>
+            <param name="dts">DataSet con los datos a actualizar.</param>
+            <param name="query">Consulta SQL utilizada para obtener la tabla.</param>
+            <param name="fields">Diccionario con los campos y valores a actualizar.</param>
+            <returns>Número de registros modificados.</returns>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.Executar(System.String)">
+            <summary>
+            Ejecuta una consulta SQL no relacionada con resultados (como INSERT, UPDATE o DELETE).
+            </summary>
+            <param name="query">Consulta SQL a ejecutar.</param>
+            <returns>Número de registros afectados.</returns>
+        </member>
+        <member name="M:AVIDataAccess.DataAccess.EncryptConfigFile">
+            <summary>
+            Protege la sección de cadenas de conexión del archivo de configuración.
+            </summary>
+        </member>
+    </members>
+</doc>
