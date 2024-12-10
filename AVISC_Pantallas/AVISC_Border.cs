@@ -19,40 +19,7 @@ namespace AVISC_Pantallas
 
             InitializeComponent();
 
-
-
-
-            RefreshForm(new AVISC_Principal());
-
-        }
-
-        private void PantallaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblSecure_Click(object sender, EventArgs e)
-        {
+            OpenForm(new AVISC_Principal());
 
         }
 
@@ -60,15 +27,38 @@ namespace AVISC_Pantallas
         /// Introduce un formulario nuevo, quitando el anterior. 
         /// </summary>
         /// <param name="newform">Formulario a mostrar.</param>
-        private void RefreshForm(Form newform)
+        private void OpenForm(Form newform)
         {
             
-            pnl_FormContainer.Controls.Clear();
+            //pnl_FormContainer.Controls.Clear();
+
 
             newform.TopLevel = false;
             pnl_FormContainer.Controls.Add(newform);
 
             newform.Show();
-        }    }
+            
+        }
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserPanel_Enter(object sender, EventArgs e)
+        {
+            pnl_User.BackColor = Color.FromArgb(20, 20, 20);
+        }
+
+        private void UserPanel_Leave(object sender, EventArgs e)
+        {
+            pnl_User.BackColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void UserPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 }

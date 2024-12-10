@@ -28,5 +28,10 @@ namespace AVISecureCore
             //pantallaPrincipal.Show();
             //splash.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pantallaPrincipal.Show();
+        }
     }
 }

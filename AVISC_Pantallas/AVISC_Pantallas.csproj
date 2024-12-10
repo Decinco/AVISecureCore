@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AVISC_jijijija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVISC_jijijija.Designer.cs">
+      <DependentUpon>AVISC_jijijija.cs</DependentUpon>
+    </Compile>
     <Compile Include="AVISC_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AVISC_Border.resx">
       <DependentUpon>AVISC_Border.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AVISC_jijijija.resx">
+      <DependentUpon>AVISC_jijijija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AVISC_Login.resx">
       <DependentUpon>AVISC_Login.cs</DependentUpon>
