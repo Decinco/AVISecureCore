@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Pantallas", "AVISC_Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Controles", "AVISC_Controles\AVISC_Controles.csproj", "{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Maintenance", "AVISC_Maintenance\AVISC_Maintenance.csproj", "{72827DFF-D9FB-440D-939F-5402B3A24244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
