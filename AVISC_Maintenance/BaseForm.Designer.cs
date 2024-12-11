@@ -52,7 +52,7 @@ namespace AVISC_Maintenance
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 283);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 285);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1749, 622);
@@ -88,7 +88,6 @@ namespace AVISC_Maintenance
             this.nuevoDB.TabIndex = 4;
             this.nuevoDB.Text = "Nuevo";
             this.nuevoDB.UseVisualStyleBackColor = true;
-            this.nuevoDB.Click += new System.EventHandler(this.nuevoDB_Click);
             // 
             // actualizarDB
             // 
@@ -98,7 +97,6 @@ namespace AVISC_Maintenance
             this.actualizarDB.TabIndex = 5;
             this.actualizarDB.Text = "Actualizar";
             this.actualizarDB.UseVisualStyleBackColor = true;
-            this.actualizarDB.Click += new System.EventHandler(this.actualizarDB_Click);
             // 
             // BaseForm
             // 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AVISC_Pantallas;
 using System.Windows.Forms;
-
+using AVISC_Maintenance;
 namespace AVISecureCore
 {
     public partial class AVISecureCore : Form
@@ -16,6 +16,7 @@ namespace AVISecureCore
         AVISC_Splash splash = new AVISC_Splash();
         AVISC_Border pantallaPrincipal = new AVISC_Border();
         AVISC_Login login = new AVISC_Login();
+        BaseForm baseForm = new BaseForm();
         public AVISecureCore()
         {
             InitializeComponent();
@@ -25,8 +26,8 @@ namespace AVISecureCore
         {
             this.Hide();
             //login.Show();
-            pantallaPrincipal.Show();
             //splash.Show();
+            baseForm.Show();
         }
     }
 }

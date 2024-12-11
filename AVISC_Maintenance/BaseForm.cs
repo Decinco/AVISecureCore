@@ -14,8 +14,8 @@ namespace AVISC_Maintenance
 {
     public partial class BaseForm : Form
     {
-        class MaintenanceDataAccess : DataAccess{}
-        private MaintenanceDataAccess dataAccess;
+        //class MaintenanceDataAccess : DataAccess{}
+        private  DataAccess dataAccess;
         private DataSet dts;
         public  string taula { get; set; }
 
@@ -28,12 +28,14 @@ namespace AVISC_Maintenance
         private void PortarDates()
         {
 
-            dts = dataAccess.PortarTaula(taula);
-            dataGridView1.Columns["id"].Visible = false;
+            dts = dataAccess.PortarPerConsulta( "Select * from Species" , " Species ");
+            dataGridView1.DataSource = dts.Tables["Species"];
+
+            dataGridView1.Columns["idAlumne"].Visible = false;
 
 
         }
-
+       
         private void actualizarDB_Click(object sender, EventArgs e)
         {
 
