@@ -12,15 +12,17 @@ using AVIDataAccess;
 
 namespace AVISC_Maintenance
 {
+    public class MaintenanceDataAccess : DataAccess { };
+
     public partial class BaseForm : Form
     {
-        //class MaintenanceDataAccess : DataAccess{}
-        private  DataAccess dataAccess;
+        private MaintenanceDataAccess dataAccess;
         private DataSet dts;
         public  string taula { get; set; }
 
         public BaseForm()
         {
+            dataAccess = new MaintenanceDataAccess();
             InitializeComponent();
             PortarDates();
         }
@@ -31,7 +33,6 @@ namespace AVISC_Maintenance
             dts = dataAccess.PortarPerConsulta( "Select * from Species" , " Species ");
             dataGridView1.DataSource = dts.Tables["Species"];
 
-            dataGridView1.Columns["idAlumne"].Visible = false;
 
 
         }
