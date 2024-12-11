@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AVISC_BaseForms;
 
 
 namespace AVISC_Pantallas
@@ -29,8 +30,6 @@ namespace AVISC_Pantallas
         /// <param name="newform">Formulario a mostrar.</param>
         private void OpenForm(Form newform)
         {
-            
-            //pnl_FormContainer.Controls.Clear();
 
 
             newform.TopLevel = false;
@@ -45,19 +44,25 @@ namespace AVISC_Pantallas
 
         }
 
-        private void UserPanel_Enter(object sender, EventArgs e)
-        {
-            pnl_User.BackColor = Color.FromArgb(20, 20, 20);
-        }
-
-        private void UserPanel_Leave(object sender, EventArgs e)
-        {
-            pnl_User.BackColor = Color.FromArgb(0, 0, 0);
-        }
-
         private void UserPanel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SetFunctionName(object sender, ControlEventArgs e)
+        {
+            if (pnl_FormContainer.Controls.Count > 1 && pnl_FormContainer.Controls[1] is AVISC_CloseableFeatureForm)
+            {
+                AVISC_CloseableFeatureForm activeFunction = (AVISC_CloseableFeatureForm)pnl_FormContainer.Controls[1];
+
+                lbl_FeatureName.Text = activeFunction.FeatureName;
+                pnl_SmallBarText.Visible = true;
+                
+            }
+            else
+            {
+                pnl_SmallBarText.Visible = false;
+            }
         }
     }
 
