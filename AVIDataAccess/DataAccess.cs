@@ -13,7 +13,7 @@ namespace AVIDataAccess
     /// Clase base abstracta para el acceso a datos.
     /// Proporciona métodos comunes para interactuar con bases de datos.
     /// </summary>
-    public abstract class DataAccess
+    public class DataAccess
     {
         /// <summary>
         /// Cadena de conexión a la base de datos.
