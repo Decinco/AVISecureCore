@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -24,8 +25,9 @@ namespace AVISC_DataAccess
             Connectar();
 
             DataRow[] rowsFound;
-            string hashedPasswd, salt, storedPasswd;
+            string hashedPasswd, salt, storedPasswd, new_salt, query;
             bool valid = false;
+            int munModificados;
 
             DataSet dts = PortarTaula("Users");
             rowsFound = dts.Tables[0].Select($"UserName = '{username}'");
@@ -33,17 +35,21 @@ namespace AVISC_DataAccess
             if (rowsFound.Length > 0)
             {
                 salt = rowsFound[0].Field<string>("Salt");
-                createSalt();
                 hashedPasswd = SaltPassword(password, salt);
                 storedPasswd = rowsFound[0].Field<string>("Password");
-                if (storedPasswd == "12345aA") {
-                    valid = password == storedPasswd; // Ignora hash para la contraseña por defecto
+                if (password == "12345aA") {
+                    new_salt = createSalt();
+                    hashedPasswd = SaltPassword(password, new_salt);
+                    valid = password == storedPasswd;
+                    query = $"UPDATE Users SET Password = {hashedPasswd}, Salt = {new_salt} where Login = {username}";
+                    munModificados = Executar(query);
                 }
                 else
                 {
                     valid = hashedPasswd == storedPasswd;
                 }
             }
+
             if (valid)
             {
                 Username = username;
@@ -70,14 +76,13 @@ namespace AVISC_DataAccess
         private string createSalt()
         {
             string createSalt;
-            using (SHA256 hash = SHA256.Create())
+            using (RNGCryptoServiceProvider rngCrypt = new RNGCryptoServiceProvider())
             {
-                byte[] hashedBytes = hash.ComputeHash(Encoding.UTF8.GetBytes(DateTime.Today.ToString("yyyyMMdd")));
-                createSalt = BitConverter.ToString(hashedBytes);
+                byte[] valor = new byte[10];
+                rngCrypt.GetBytes(valor);
+                createSalt = BitConverter.ToString(valor, 0);
             }
-
             return createSalt;
-
         }
 
     }
