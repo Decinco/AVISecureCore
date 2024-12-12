@@ -28,13 +28,27 @@ namespace AVISC_Pantallas
         private void AVISC_Principal_Load(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 3; i++)
             {
-                SWLauchForm function = new SWLauchForm("jijijija", "AVISC_Pantallas", "gracioso, gracioso, gracioso", "AVISC_jijijija");
+                SWLauchForm function = new SWLauchForm();
+
+                function.Project = "AVISC_BaseForms";
+                function.Target = "AVISC_CloseableFeatureForm";
+                function.FeatureName = "cosa seria";
+                function.Description = "esta vaina es seria";
                 function.Margin = new Padding(67, 30, 67, 30);
 
-
                 pnl_MenuItems.Controls.Add(function);
+
+                SWLauchForm function2 = new SWLauchForm();
+
+                function2.Project = "AVISC_BaseForms";
+                function2.Target = "AVISC_CloseableFeatureForm";
+                function2.FeatureName = "cosa graciosa";
+                function2.Description = "gracioso, gracioso, gracioso, gracioso";
+                function2.Margin = new Padding(67, 30, 67, 30);
+
+                pnl_MenuItems.Controls.Add(function2);
             }
         }
     }

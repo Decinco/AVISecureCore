@@ -71,7 +71,7 @@
             this.lbl_opcion.ForeColor = System.Drawing.Color.White;
             this.lbl_opcion.Location = new System.Drawing.Point(114, 44);
             this.lbl_opcion.Name = "lbl_opcion";
-            this.lbl_opcion.Size = new System.Drawing.Size(112, 48);
+            this.lbl_opcion.Size = new System.Drawing.Size(311, 48);
             this.lbl_opcion.TabIndex = 1;
             this.lbl_opcion.Text = "label1";
             this.lbl_opcion.Click += new System.EventHandler(this.Abrir_Formulario_Click);

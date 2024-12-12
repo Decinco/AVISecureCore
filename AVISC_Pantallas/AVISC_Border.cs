@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AVISC_BaseForms;
 
 
 namespace AVISC_Pantallas
@@ -19,40 +20,7 @@ namespace AVISC_Pantallas
 
             InitializeComponent();
 
-
-
-
-            RefreshForm(new AVISC_Principal());
-
-        }
-
-        private void PantallaPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblSecure_Click(object sender, EventArgs e)
-        {
+            OpenForm(new AVISC_Principal());
 
         }
 
@@ -60,15 +28,42 @@ namespace AVISC_Pantallas
         /// Introduce un formulario nuevo, quitando el anterior. 
         /// </summary>
         /// <param name="newform">Formulario a mostrar.</param>
-        private void RefreshForm(Form newform)
+        private void OpenForm(Form newform)
         {
-            
-            pnl_FormContainer.Controls.Clear();
+
 
             newform.TopLevel = false;
             pnl_FormContainer.Controls.Add(newform);
 
             newform.Show();
-        }    }
+            
+        }
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetFunctionName(object sender, ControlEventArgs e)
+        {
+            if (pnl_FormContainer.Controls.Count > 1 && pnl_FormContainer.Controls[1] is AVISC_CloseableFeatureForm)
+            {
+                AVISC_CloseableFeatureForm activeFunction = (AVISC_CloseableFeatureForm)pnl_FormContainer.Controls[1];
+
+                lbl_FeatureName.Text = activeFunction.FeatureName;
+                pnl_SmallBarText.Visible = true;
+                
+            }
+            else
+            {
+                pnl_SmallBarText.Visible = false;
+            }
+        }
+    }
 
 }
