@@ -57,7 +57,6 @@ namespace AVISC_Pantallas
                         pnl_warning.Visible = false;
                         this.Hide();
                         aVISC_Border.Show();
-                        MessageBox.Show("Todo correcto");
                     }
                     else
                     {
