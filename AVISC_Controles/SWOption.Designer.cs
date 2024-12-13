@@ -45,10 +45,11 @@ namespace AVISC_Controles
             this.pnl_Option.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Option.ForeColor = System.Drawing.Color.White;
             this.pnl_Option.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Option.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pnl_Option.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_Option.Name = "pnl_Option";
             this.pnl_Option.Size = new System.Drawing.Size(433, 80);
             this.pnl_Option.TabIndex = 5;
+            this.pnl_Option.Click += new System.EventHandler(this.PassEvent);
             this.pnl_Option.MouseEnter += new System.EventHandler(this.Option_Enter);
             this.pnl_Option.MouseLeave += new System.EventHandler(this.Option_Leave);
             // 
@@ -61,6 +62,7 @@ namespace AVISC_Controles
             this.img_OptionIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_OptionIcon.TabIndex = 6;
             this.img_OptionIcon.TabStop = false;
+            this.img_OptionIcon.Click += new System.EventHandler(this.PassEvent);
             this.img_OptionIcon.MouseEnter += new System.EventHandler(this.Option_Enter);
             this.img_OptionIcon.MouseLeave += new System.EventHandler(this.Option_Leave);
             // 
@@ -68,7 +70,7 @@ namespace AVISC_Controles
             // 
             this.lbl_OptionName.BackColor = System.Drawing.Color.Transparent;
             this.lbl_OptionName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_OptionName.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_OptionName.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_OptionName.ForeColor = System.Drawing.Color.White;
             this.lbl_OptionName.Location = new System.Drawing.Point(86, 16);
             this.lbl_OptionName.Name = "lbl_OptionName";
@@ -77,6 +79,7 @@ namespace AVISC_Controles
             this.lbl_OptionName.TabIndex = 3;
             this.lbl_OptionName.Text = "label1";
             this.lbl_OptionName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_OptionName.Click += new System.EventHandler(this.PassEvent);
             this.lbl_OptionName.MouseEnter += new System.EventHandler(this.Option_Enter);
             this.lbl_OptionName.MouseLeave += new System.EventHandler(this.Option_Leave);
             // 
@@ -86,7 +89,7 @@ namespace AVISC_Controles
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_Option);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SWOption";
             this.Size = new System.Drawing.Size(433, 80);
             this.MouseEnter += new System.EventHandler(this.Option_Enter);

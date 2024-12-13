@@ -36,8 +36,11 @@ namespace AVISC_Controles
             this.lbl_Username = new System.Windows.Forms.Label();
             this.pnl_User = new System.Windows.Forms.Panel();
             this.pnl_OptionList = new System.Windows.Forms.FlowLayoutPanel();
+            this.swOption1 = new AVISC_Controles.SWOption();
+            this.swOption2 = new AVISC_Controles.SWOption();
             ((System.ComponentModel.ISupportInitialize)(this.img_UserProfilePicture)).BeginInit();
             this.pnl_User.SuspendLayout();
+            this.pnl_OptionList.SuspendLayout();
             this.SuspendLayout();
             // 
             // img_UserProfilePicture
@@ -104,14 +107,40 @@ namespace AVISC_Controles
             // 
             this.pnl_OptionList.AutoSize = true;
             this.pnl_OptionList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pnl_OptionList.Controls.Add(this.swOption1);
+            this.pnl_OptionList.Controls.Add(this.swOption2);
             this.pnl_OptionList.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_OptionList.ForeColor = System.Drawing.Color.White;
             this.pnl_OptionList.Location = new System.Drawing.Point(0, 80);
             this.pnl_OptionList.MaximumSize = new System.Drawing.Size(433, 0);
             this.pnl_OptionList.Name = "pnl_OptionList";
-            this.pnl_OptionList.Size = new System.Drawing.Size(433, 0);
+            this.pnl_OptionList.Size = new System.Drawing.Size(433, 160);
             this.pnl_OptionList.TabIndex = 5;
             this.pnl_OptionList.Visible = false;
+            // 
+            // swOption1
+            // 
+            this.swOption1.ForeColor = System.Drawing.Color.White;
+            this.swOption1.Location = new System.Drawing.Point(0, 0);
+            this.swOption1.Margin = new System.Windows.Forms.Padding(0);
+            this.swOption1.Name = "swOption1";
+            this.swOption1.OptionIcon = null;
+            this.swOption1.OptionName = "Cerrar Sesión";
+            this.swOption1.Size = new System.Drawing.Size(433, 80);
+            this.swOption1.TabIndex = 6;
+            this.swOption1.OptionClick += new System.EventHandler(this.LogOut);
+            // 
+            // swOption2
+            // 
+            this.swOption2.ForeColor = System.Drawing.Color.White;
+            this.swOption2.Location = new System.Drawing.Point(0, 80);
+            this.swOption2.Margin = new System.Windows.Forms.Padding(0);
+            this.swOption2.Name = "swOption2";
+            this.swOption2.OptionIcon = null;
+            this.swOption2.OptionName = "Salir del Programa";
+            this.swOption2.Size = new System.Drawing.Size(433, 80);
+            this.swOption2.TabIndex = 7;
+            this.swOption2.OptionClick += new System.EventHandler(this.LogOff);
             // 
             // SWUserOptions
             // 
@@ -121,11 +150,12 @@ namespace AVISC_Controles
             this.Controls.Add(this.pnl_OptionList);
             this.Controls.Add(this.pnl_User);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SWUserOptions";
-            this.Size = new System.Drawing.Size(433, 80);
+            this.Size = new System.Drawing.Size(433, 240);
             ((System.ComponentModel.ISupportInitialize)(this.img_UserProfilePicture)).EndInit();
             this.pnl_User.ResumeLayout(false);
+            this.pnl_OptionList.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +168,7 @@ namespace AVISC_Controles
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Panel pnl_User;
         private System.Windows.Forms.FlowLayoutPanel pnl_OptionList;
+        private SWOption swOption1;
+        private SWOption swOption2;
     }
 }

@@ -12,6 +12,10 @@ namespace AVISC_Controles
 {
     public partial class SWOption : UserControl
     {
+        [Browsable(true)]
+        [Category("Action")] // Necesarios para que se pueda ver en el Diseñador
+        public event EventHandler OptionClick;
+
         public string OptionName {
             get { return lbl_OptionName.Text; }
             set { lbl_OptionName.Text = value; } 
@@ -41,6 +45,11 @@ namespace AVISC_Controles
         private void Option_Leave(object sender, EventArgs e)
         {
             pnl_Option.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        private void PassEvent(object sender, EventArgs e)
+        {
+            OptionClick?.Invoke(this, e);
         }
     }
 }

@@ -41,17 +41,6 @@ namespace AVISC_Controles
 
         private void SetDefaultOptions()
         {
-            // Opción "Cerrar Sesión"
-            pnl_OptionList.Controls.Add(new SWOption() { 
-                OptionName = "Cerrar Sesión"
-            });
-
-
-            // Opción "Salir del Programa"
-            pnl_OptionList.Controls.Add(new SWOption()
-            {
-                OptionName = "Salir del Programa"
-            });
 
         }
 
@@ -71,6 +60,16 @@ namespace AVISC_Controles
             ContextMenuExtended = !ContextMenuExtended; // Invierte el estado del listado de opciones
 
             pnl_OptionList.Visible = ContextMenuExtended; // Actualiza el listado según su estado
+        }
+
+        private void LogOut(object sender, EventArgs e)
+        {
+            FindForm().Close();
+        }
+
+        private void LogOff(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
