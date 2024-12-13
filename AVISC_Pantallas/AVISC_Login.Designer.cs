@@ -43,7 +43,6 @@ namespace AVISC_Pantallas
             this.lbl_pass = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
-            this.pbx_newPass = new System.Windows.Forms.PictureBox();
             this.pnl_fondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).BeginInit();
             this.pnl_login.SuspendLayout();
@@ -51,7 +50,6 @@ namespace AVISC_Pantallas
             this.pnl_pass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).BeginInit();
             this.pnl_user.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_newPass)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_fondo
@@ -69,7 +67,7 @@ namespace AVISC_Pantallas
             // pbx_back
             // 
             this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
-            this.pbx_back.Location = new System.Drawing.Point(12, 99);
+            this.pbx_back.Location = new System.Drawing.Point(24, 58);
             this.pbx_back.Name = "pbx_back";
             this.pbx_back.Size = new System.Drawing.Size(321, 312);
             this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,7 +168,6 @@ namespace AVISC_Pantallas
             // pnl_user
             // 
             this.pnl_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.pnl_user.Controls.Add(this.pbx_newPass);
             this.pnl_user.Controls.Add(this.txt_user);
             this.pnl_user.Location = new System.Drawing.Point(37, 175);
             this.pnl_user.Name = "pnl_user";
@@ -186,7 +183,7 @@ namespace AVISC_Pantallas
             this.txt_user.Location = new System.Drawing.Point(3, 8);
             this.txt_user.Multiline = true;
             this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(596, 38);
+            this.txt_user.Size = new System.Drawing.Size(649, 38);
             this.txt_user.TabIndex = 0;
             // 
             // lbl_pass
@@ -224,17 +221,6 @@ namespace AVISC_Pantallas
             this.lbl_titulo.Text = "Iniciar Sessión";
             this.lbl_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pbx_newPass
-            // 
-            this.pbx_newPass.Location = new System.Drawing.Point(605, 5);
-            this.pbx_newPass.Name = "pbx_newPass";
-            this.pbx_newPass.Size = new System.Drawing.Size(47, 38);
-            this.pbx_newPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_newPass.TabIndex = 3;
-            this.pbx_newPass.TabStop = false;
-            this.pbx_newPass.Visible = false;
-            this.pbx_newPass.Click += new System.EventHandler(this.pbx_newPass_Click);
-            // 
             // AVISC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
@@ -258,7 +244,6 @@ namespace AVISC_Pantallas
             ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).EndInit();
             this.pnl_user.ResumeLayout(false);
             this.pnl_user.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_newPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,6 +264,5 @@ namespace AVISC_Pantallas
         private System.Windows.Forms.Label lbl_error;
         private System.Windows.Forms.PictureBox pbx_ojo;
         private System.Windows.Forms.PictureBox pbx_back;
-        private System.Windows.Forms.PictureBox pbx_newPass;
     }
 }

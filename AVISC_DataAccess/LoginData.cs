@@ -20,14 +20,14 @@ namespace AVISC_DataAccess
         /// <param name="username">Nombre del usuario al que se hará login.</param>
         /// <param name="password">Contraseña introducida.</param>
         /// <returns>"true" si es exitoso, "false" si no.</returns>
-        public bool PerformLogin(string username, string password)
+        public bool PerformLogin(string username, string password, string newPassword)
         {
             Connectar();
 
             DataRow[] rowsFound;
             string hashedPasswd, salt, storedPasswd, new_salt, query;
             bool valid = false;
-            int munModificados;
+            int numModificados;
 
             DataSet dts = PortarTaula("Users");
             rowsFound = dts.Tables[0].Select($"UserName = '{username}'");
@@ -35,17 +35,20 @@ namespace AVISC_DataAccess
             if (rowsFound.Length > 0)
             {
                 salt = rowsFound[0].Field<string>("Salt");
-                hashedPasswd = SaltPassword(password, salt);
                 storedPasswd = rowsFound[0].Field<string>("Password");
-                if (password == "12345aA") {
+
+                if (password == "12345aA")
+                {
                     new_salt = createSalt();
-                    hashedPasswd = SaltPassword(password, new_salt);
-                    valid = password == storedPasswd;
-                    query = $"UPDATE Users SET Password = {hashedPasswd}, Salt = {new_salt} where Login = {username}";
-                    munModificados = Executar(query);
+                    hashedPasswd = SaltPassword(newPassword, new_salt);
+                    query = $"UPDATE Users SET Password = '{hashedPasswd}', Salt = '{new_salt}' WHERE UserName = '{username}'";
+
+                    Executar(query);
+                    valid = true;
                 }
                 else
                 {
+                    hashedPasswd = SaltPassword(password, salt);
                     valid = hashedPasswd == storedPasswd;
                 }
             }
@@ -78,7 +81,7 @@ namespace AVISC_DataAccess
             string createSalt;
             using (RNGCryptoServiceProvider rngCrypt = new RNGCryptoServiceProvider())
             {
-                byte[] valor = new byte[10];
+                byte[] valor = new byte[20];
                 rngCrypt.GetBytes(valor);
                 createSalt = BitConverter.ToString(valor, 0);
             }

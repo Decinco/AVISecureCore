@@ -19,7 +19,7 @@ namespace AVISecureCore
             InitializeComponent();
             AVISC_DataAccess.LoginData loginData = new AVISC_DataAccess.LoginData();
 
-            loginData.PerformLogin("a", "b");
+            //loginData.PerformLogin("a", "b");
         }
     }
 }
