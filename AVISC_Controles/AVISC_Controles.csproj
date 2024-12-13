@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SWLauchForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -49,6 +54,12 @@
       <DependentUpon>SWLauchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWOption.Designer.cs">
+      <DependentUpon>SWOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="SWUserOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,8 +69,15 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWLauchForm.resx">
       <DependentUpon>SWLauchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWOption.resx">
+      <DependentUpon>SWOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SWUserOptions.resx">
       <DependentUpon>SWUserOptions.cs</DependentUpon>

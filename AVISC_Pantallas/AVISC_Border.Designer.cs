@@ -69,7 +69,7 @@ namespace AVISC_Pantallas
             this.pnl_SmallBarText.Controls.Add(this.lbl_FeatureName);
             this.pnl_SmallBarText.Controls.Add(this.label1);
             this.pnl_SmallBarText.Controls.Add(this.label2);
-            this.pnl_SmallBarText.Location = new System.Drawing.Point(195, 0);
+            this.pnl_SmallBarText.Location = new System.Drawing.Point(181, 1);
             this.pnl_SmallBarText.Name = "pnl_SmallBarText";
             this.pnl_SmallBarText.Size = new System.Drawing.Size(872, 80);
             this.pnl_SmallBarText.TabIndex = 3;
@@ -151,7 +151,7 @@ namespace AVISC_Pantallas
             this.lblSecure.Font = new System.Drawing.Font("Inter", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblSecure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
             this.lblSecure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSecure.Location = new System.Drawing.Point(185, -1);
+            this.lblSecure.Location = new System.Drawing.Point(175, -1);
             this.lblSecure.Margin = new System.Windows.Forms.Padding(0);
             this.lblSecure.MinimumSize = new System.Drawing.Size(245, 80);
             this.lblSecure.Name = "lblSecure";
@@ -199,10 +199,14 @@ namespace AVISC_Pantallas
             // 
             // swUserOptions1
             // 
-            this.swUserOptions1.Location = new System.Drawing.Point(60, 0);
+            this.swUserOptions1.AutoSize = true;
+            this.swUserOptions1.ForeColor = System.Drawing.Color.White;
+            this.swUserOptions1.Location = new System.Drawing.Point(1486, 0);
+            this.swUserOptions1.Margin = new System.Windows.Forms.Padding(0);
             this.swUserOptions1.Name = "swUserOptions1";
+            this.swUserOptions1.Options = null;
             this.swUserOptions1.Role = "Administrator";
-            this.swUserOptions1.Size = new System.Drawing.Size(433, 241);
+            this.swUserOptions1.Size = new System.Drawing.Size(433, 80);
             this.swUserOptions1.TabIndex = 0;
             this.swUserOptions1.Username = "John Random";
             this.swUserOptions1.UserProfilePicture = global::AVISC_Pantallas.Properties.Resources.placeholder_JohnRandom;
@@ -218,6 +222,7 @@ namespace AVISC_Pantallas
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AVISC_Border";
             this.ShowInTaskbar = false;
@@ -230,6 +235,7 @@ namespace AVISC_Pantallas
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
