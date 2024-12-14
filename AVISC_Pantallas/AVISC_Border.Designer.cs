@@ -207,7 +207,7 @@ namespace AVISC_Pantallas
             this.swUserOptions1.Options = null;
             this.swUserOptions1.Role = "Administrator";
             this.swUserOptions1.Size = new System.Drawing.Size(433, 80);
-            this.swUserOptions1.TabIndex = 0;
+            this.swUserOptions1.TabIndex = 2;
             this.swUserOptions1.Username = "John Random";
             this.swUserOptions1.UserProfilePicture = global::AVISC_Pantallas.Properties.Resources.placeholder_JohnRandom;
             // 

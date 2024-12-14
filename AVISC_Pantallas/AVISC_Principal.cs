@@ -13,9 +13,15 @@ namespace AVISC_Pantallas
 {
     public partial class AVISC_Principal : Form
     {
+        public string UserName {
+            set { lbl_Intro.Rtf = $"{{\\rtf1\\ansi Bienvenido a Secure Core, \\b {value}\\b0!}}"; }
+        }
+
         public AVISC_Principal()
         {
             InitializeComponent();
+
+            UserName = "John Random";
         }
 
         // Se utiliza un richtextbox para poder permitir que el nombre de usuario salga en negrita
@@ -28,27 +34,26 @@ namespace AVISC_Pantallas
         private void AVISC_Principal_Load(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 50; i++)
             {
-                SWLauchForm function = new SWLauchForm();
 
-                function.Project = "AVISC_BaseForms";
-                function.Target = "AVISC_CloseableFeatureForm";
-                function.FeatureName = "cosa seria";
-                function.Description = "esta vaina es seria";
-                function.Margin = new Padding(67, 30, 67, 30);
+                pnl_MenuItems.Controls.Add(new SWLauchForm()
+                {
+                    Project = "AVISC_BaseForms",
+                    Target = "AVISC_CloseableFeatureForm",
+                    FeatureName = "cosa seria",
+                    Description = "esta vaina es seria",
+                    Margin = new Padding(25)
+                });
 
-                pnl_MenuItems.Controls.Add(function);
-
-                SWLauchForm function2 = new SWLauchForm();
-
-                function2.Project = "AVISC_BaseForms";
-                function2.Target = "AVISC_CloseableFeatureForm";
-                function2.FeatureName = "cosa graciosa";
-                function2.Description = "gracioso, gracioso, gracioso, gracioso";
-                function2.Margin = new Padding(67, 30, 67, 30);
-
-                pnl_MenuItems.Controls.Add(function2);
+                pnl_MenuItems.Controls.Add(new SWLauchForm()
+                {
+                    Project = "AVISC_BaseForms",
+                    Target = "AVISC_CloseableFeatureForm",
+                    FeatureName = "cosa graciosa",
+                    Description = "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+                    Margin = new Padding(25)
+                });
             }
         }
     }

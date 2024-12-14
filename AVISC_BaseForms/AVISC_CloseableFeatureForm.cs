@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace AVISC_BaseForms
 {
@@ -12,9 +13,19 @@ namespace AVISC_BaseForms
             InitializeComponent();
         }
 
-        private void label23_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BackButton_Enter(object sender, EventArgs e)
+        {
+            pnl_BackButton.BackColor = ColorTranslator.FromHtml("#3C3C3C");
+        }
+
+        private void BackButton_Leave(object sender, EventArgs e)
+        {
+            pnl_BackButton.BackColor = ColorTranslator.FromHtml("#2A2A2A");
         }
     }
 }

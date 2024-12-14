@@ -46,7 +46,7 @@
             this.pnl_configuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnl_configuracion.Location = new System.Drawing.Point(0, 0);
             this.pnl_configuracion.Name = "pnl_configuracion";
-            this.pnl_configuracion.Size = new System.Drawing.Size(450, 250);
+            this.pnl_configuracion.Size = new System.Drawing.Size(301, 250);
             this.pnl_configuracion.TabIndex = 0;
             this.pnl_configuracion.Click += new System.EventHandler(this.Abrir_Formulario_Click);
             this.pnl_configuracion.MouseEnter += new System.EventHandler(this.SWLauchForm_MouseEnter);
@@ -54,13 +54,13 @@
             // 
             // lbl_descipcion
             // 
-            this.lbl_descipcion.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_descipcion.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_descipcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(120)))));
-            this.lbl_descipcion.Location = new System.Drawing.Point(25, 121);
+            this.lbl_descipcion.Location = new System.Drawing.Point(25, 149);
             this.lbl_descipcion.Name = "lbl_descipcion";
-            this.lbl_descipcion.Size = new System.Drawing.Size(400, 110);
+            this.lbl_descipcion.Size = new System.Drawing.Size(258, 93);
             this.lbl_descipcion.TabIndex = 2;
-            this.lbl_descipcion.Text = "hola buenas a todos guapisimos y guapisimas aqui vegeta777 en un nuevo video";
+            this.lbl_descipcion.Text = "heyyy buenas a todos guapisimos y guapisimas aqui vegeta777 en un nuevo video";
             this.lbl_descipcion.Click += new System.EventHandler(this.Abrir_Formulario_Click);
             this.lbl_descipcion.MouseEnter += new System.EventHandler(this.SWLauchForm_MouseEnter);
             this.lbl_descipcion.MouseLeave += new System.EventHandler(this.SWLauchForm_MouseLeave);
@@ -69,18 +69,19 @@
             // 
             this.lbl_opcion.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_opcion.ForeColor = System.Drawing.Color.White;
-            this.lbl_opcion.Location = new System.Drawing.Point(114, 44);
+            this.lbl_opcion.Location = new System.Drawing.Point(0, 102);
             this.lbl_opcion.Name = "lbl_opcion";
-            this.lbl_opcion.Size = new System.Drawing.Size(311, 48);
+            this.lbl_opcion.Size = new System.Drawing.Size(301, 48);
             this.lbl_opcion.TabIndex = 1;
             this.lbl_opcion.Text = "label1";
+            this.lbl_opcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_opcion.Click += new System.EventHandler(this.Abrir_Formulario_Click);
             this.lbl_opcion.MouseEnter += new System.EventHandler(this.SWLauchForm_MouseEnter);
             this.lbl_opcion.MouseLeave += new System.EventHandler(this.SWLauchForm_MouseLeave);
             // 
             // pbx_imagen
             // 
-            this.pbx_imagen.Location = new System.Drawing.Point(30, 30);
+            this.pbx_imagen.Location = new System.Drawing.Point(113, 24);
             this.pbx_imagen.Name = "pbx_imagen";
             this.pbx_imagen.Size = new System.Drawing.Size(75, 75);
             this.pbx_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,7 +99,7 @@
             this.Controls.Add(this.pnl_configuracion);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "SWLauchForm";
-            this.Size = new System.Drawing.Size(450, 250);
+            this.Size = new System.Drawing.Size(301, 250);
             this.MouseEnter += new System.EventHandler(this.SWLauchForm_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.SWLauchForm_MouseLeave);
             this.pnl_configuracion.ResumeLayout(false);
