@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AVISC_DataAccess;
+using AVISC_Global;
 
 namespace AVISC_Pantallas
 {
     public partial class AVISC_LoginChangePassword : Form
     {
         private Image imageOpen, imageClose;
-        LoginData login = new LoginData();
         private bool validar_login = false;
         AVISC_Border aVISC_Border = new AVISC_Border();
 
@@ -94,7 +93,7 @@ namespace AVISC_Pantallas
             }
             else
             {
-                validar_login = login.PerformLogin(username, Passwword, txt_confirmNewPass.Text);
+                validar_login = LoginData.PerformLogin(username, Passwword, txt_confirmNewPass.Text);
 
                 if (validar_login)
                 {

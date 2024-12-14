@@ -32,7 +32,7 @@ namespace AVISC_Controles
         private void InitializeComponent()
         {
             this.img_UserProfilePicture = new System.Windows.Forms.PictureBox();
-            this.lbl_Role = new System.Windows.Forms.Label();
+            this.lbl_Category = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.pnl_User = new System.Windows.Forms.Panel();
             this.pnl_OptionList = new System.Windows.Forms.FlowLayoutPanel();
@@ -56,20 +56,20 @@ namespace AVISC_Controles
             this.img_UserProfilePicture.MouseEnter += new System.EventHandler(this.UserPanel_Enter);
             this.img_UserProfilePicture.MouseLeave += new System.EventHandler(this.UserPanel_Leave);
             // 
-            // lbl_Role
+            // lbl_Category
             // 
-            this.lbl_Role.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Role.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_Role.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_Role.Location = new System.Drawing.Point(3, 45);
-            this.lbl_Role.Name = "lbl_Role";
-            this.lbl_Role.Size = new System.Drawing.Size(341, 24);
-            this.lbl_Role.TabIndex = 4;
-            this.lbl_Role.Text = "label2";
-            this.lbl_Role.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_Role.Click += new System.EventHandler(this.UserPanel_Click);
-            this.lbl_Role.MouseEnter += new System.EventHandler(this.UserPanel_Enter);
-            this.lbl_Role.MouseLeave += new System.EventHandler(this.UserPanel_Leave);
+            this.lbl_Category.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Category.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Category.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_Category.Location = new System.Drawing.Point(3, 45);
+            this.lbl_Category.Name = "lbl_Category";
+            this.lbl_Category.Size = new System.Drawing.Size(341, 24);
+            this.lbl_Category.TabIndex = 4;
+            this.lbl_Category.Text = "label2";
+            this.lbl_Category.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Category.Click += new System.EventHandler(this.UserPanel_Click);
+            this.lbl_Category.MouseEnter += new System.EventHandler(this.UserPanel_Enter);
+            this.lbl_Category.MouseLeave += new System.EventHandler(this.UserPanel_Leave);
             // 
             // lbl_Username
             // 
@@ -91,7 +91,7 @@ namespace AVISC_Controles
             // 
             this.pnl_User.BackColor = System.Drawing.Color.Black;
             this.pnl_User.Controls.Add(this.img_UserProfilePicture);
-            this.pnl_User.Controls.Add(this.lbl_Role);
+            this.pnl_User.Controls.Add(this.lbl_Category);
             this.pnl_User.Controls.Add(this.lbl_Username);
             this.pnl_User.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_User.Dock = System.Windows.Forms.DockStyle.Top;
@@ -164,7 +164,7 @@ namespace AVISC_Controles
         #endregion
 
         private System.Windows.Forms.PictureBox img_UserProfilePicture;
-        private System.Windows.Forms.Label lbl_Role;
+        private System.Windows.Forms.Label lbl_Category;
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Panel pnl_User;
         private System.Windows.Forms.FlowLayoutPanel pnl_OptionList;

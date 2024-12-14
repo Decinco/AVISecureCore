@@ -18,13 +18,6 @@ namespace AVISC_Pantallas
             InitializeComponent();
         }
 
-        //private void backVideo_Enter(object sender, EventArgs e)
-        //{
-        //    backVideo.URL = @"C:\DAM2n\ABP\ProyectoABP\resourses\video-splash.mp4";
-        //    backVideo.fullScreen = true;
-        //    backVideo.Ctlcontrols.play();
-            
-        //}
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.Escape))
@@ -50,6 +43,14 @@ namespace AVISC_Pantallas
             if (e.newState == (int)WMPLib.WMPPlayState.wmppsPlaying)
             {
                 backVideo.fullScreen = true; // Hacer pantalla completa
+            }
+            else if (e.newState == (int)WMPLib.WMPPlayState.wmppsStopped)
+            {
+                AVISC_Login login = new AVISC_Login();
+
+                login.Show();
+
+                Hide();
             }
         }
     }

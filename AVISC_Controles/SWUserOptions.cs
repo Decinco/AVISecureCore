@@ -16,10 +16,10 @@ namespace AVISC_Controles
             set { lbl_Username.Text = value; }
         }
 
-        public string Role
+        public string Category
         {
-            get { return lbl_Role.Text; }
-            set { lbl_Role.Text = value; }
+            get { return lbl_Category.Text; }
+            set { lbl_Category.Text = value; }
         }
 
         public Image UserProfilePicture

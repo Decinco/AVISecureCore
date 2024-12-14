@@ -2,17 +2,19 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using AVISC_DataAccess;
+using AVISC_Global;
 
 namespace AVISC_Pantallas
 {
     public partial class AVISC_Login : Form
     {
         private Image imageOpen, imageClose;
+
         private bool validar_login = false;
-        LoginData login = new LoginData();
-        AVISC_Border aVISC_Border = new AVISC_Border();
-        AVISC_LoginChangePassword loginChangePassword;
+
+        AVISC_LoginChangePassword ChangePasswordForm;
+
+        AVISC_Border Border; 
 
         public AVISC_Login()
         {
@@ -38,19 +40,27 @@ namespace AVISC_Pantallas
             {
                 if (txt_pass.Text == "12345aA")
                 {
+                    ChangePasswordForm = new AVISC_LoginChangePassword { username = txt_user.Text, passwword = txt_pass.Text };
+                    ChangePasswordForm.Show();
+
                     Hide();
-                    loginChangePassword = new AVISC_LoginChangePassword { username = txt_user.Text, passwword = txt_pass.Text };
-                    loginChangePassword.Show();
                 }
                 else
                 {
-                    validar_login = login.PerformLogin(txt_user.Text, txt_pass.Text, null);
+                    validar_login = LoginData.PerformLogin(txt_user.Text, txt_pass.Text, null);
 
                     if (validar_login == true)
                     {
+
+                        Border = new AVISC_Border();
+
                         pnl_warning.Visible = false;
-                        this.Hide();
-                        aVISC_Border.Show();
+
+                        Border.FormClosing += LoggedOut; // Suscribirse al evento FormClosing, de forma que al cerrar sesión se vuelva a mostrar este formulario
+
+                        Border.Show();
+
+                        Hide();
                     }
                     else
                     {
@@ -81,6 +91,11 @@ namespace AVISC_Pantallas
                 pbx_ojo.Image = imageClose;
                 validar_login = true;
             }
+        }
+
+        private void LoggedOut(object sender, FormClosingEventArgs e)
+        {
+            Show();
         }
     }
 }

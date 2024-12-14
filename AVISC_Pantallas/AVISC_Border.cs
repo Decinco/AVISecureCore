@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVISC_BaseForms;
+using AVISC_Global;
 
 
 namespace AVISC_Pantallas
@@ -20,7 +21,16 @@ namespace AVISC_Pantallas
 
             InitializeComponent();
 
-            OpenForm(new AVISC_Principal());
+            OpenForm(new AVISC_Principal()
+            {
+                UserName = LoginData.UserName,
+                AvailableOptions = LoginData.AvailableOptions,
+                ProfilePicture = LoginData.ProfilePicture
+            });
+
+            swUserOptions1.Username = LoginData.UserName;
+            swUserOptions1.Category = LoginData.CategoryName;
+            swUserOptions1.UserProfilePicture = LoginData.ProfilePicture;
 
         }
 

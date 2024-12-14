@@ -51,11 +51,11 @@ namespace AVIDataAccess
         }
 
         /// <summary>
-        /// Obtiene todos los registros de una tabla específica.
+        /// Obtiene un dataset con todos los registros de una tabla específica.
         /// </summary>
         /// <param name="tableName">Nombre de la tabla a consultar.</param>
         /// <returns>Un DataSet con los datos de la tabla.</returns>
-        public DataSet PortarTaula(string tableName)
+        public DataSet PortarDataset(string tableName)
         {
             Connectar();
             DataSet dts = new DataSet();
@@ -68,6 +68,26 @@ namespace AVIDataAccess
             }
 
             return dts;
+        }
+
+        /// <summary>
+        /// Obtiene todos los registros de una tabla específica.
+        /// </summary>
+        /// <param name="tableName">Nombre de la tabla a consultar.</param>
+        /// <returns>Un DataSet con los datos de la tabla.</returns>
+        public DataTable PortarTaula(string tableName)
+        {
+            Connectar();
+            DataSet dts = new DataSet();
+            string query = $"SELECT * FROM {tableName}";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
+
+            using (Connection)
+            {
+                adapter.Fill(dts, tableName);
+            }
+
+            return dts.Tables[0];
         }
 
         /// <summary>

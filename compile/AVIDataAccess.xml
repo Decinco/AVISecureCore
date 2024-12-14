@@ -36,6 +36,13 @@
             Establece la conexión con la base de datos utilizando la cadena de conexión.
             </summary>
         </member>
+        <member name="M:AVIDataAccess.DataAccess.PortarDataset(System.String)">
+            <summary>
+            Obtiene un dataset con todos los registros de una tabla específica.
+            </summary>
+            <param name="tableName">Nombre de la tabla a consultar.</param>
+            <returns>Un DataSet con los datos de la tabla.</returns>
+        </member>
         <member name="M:AVIDataAccess.DataAccess.PortarTaula(System.String)">
             <summary>
             Obtiene todos los registros de una tabla específica.

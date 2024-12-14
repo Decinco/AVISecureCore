@@ -23,16 +23,14 @@ namespace AVISecureCore
         {
             AVISC_Splash splash = new AVISC_Splash();
 
-            this.Hide();
-
-            login.Show();
+            splash.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AVISC_Border pantallaPrincipal = new AVISC_Border();
+            //AVISC_Border pantallaPrincipal = new AVISC_Border();
 
-            pantallaPrincipal.Show();
+            //pantallaPrincipal.Show();
         }
     }
 }

@@ -12,7 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVIDataAccess", "AVIDataAccess\AVIDataAccess.csproj", "{F536E5E3-DCB2-4795-BA07-0070C324619F}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "AVIDocumentation", "AVIDocumentation\AVIDocumentation.shfbproj", "{B70B742E-A4A0-4512-BFAD-F379F3331F63}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_BaseForms", "AVISC_BaseForms\AVISC_BaseForms.csproj", "{5C169A50-F0C1-409C-8ABB-1994C5BA4096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Global", "AVISC_Global\AVISC_Global.csproj", "{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,10 @@ Global
 		{5C169A50-F0C1-409C-8ABB-1994C5BA4096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C169A50-F0C1-409C-8ABB-1994C5BA4096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C169A50-F0C1-409C-8ABB-1994C5BA4096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

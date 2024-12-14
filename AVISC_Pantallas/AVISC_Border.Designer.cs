@@ -205,7 +205,7 @@ namespace AVISC_Pantallas
             this.swUserOptions1.Margin = new System.Windows.Forms.Padding(0);
             this.swUserOptions1.Name = "swUserOptions1";
             this.swUserOptions1.Options = null;
-            this.swUserOptions1.Role = "Administrator";
+            this.swUserOptions1.Category = "Administrator";
             this.swUserOptions1.Size = new System.Drawing.Size(433, 80);
             this.swUserOptions1.TabIndex = 2;
             this.swUserOptions1.Username = "John Random";

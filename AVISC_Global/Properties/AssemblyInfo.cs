@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("AVIEvents")]
+[assembly: AssemblyTitle("AVISC_Global")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AVIEvents")]
+[assembly: AssemblyProduct("AVISC_Global")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("98172d7e-5bbb-4485-9ebc-e16a7d908495")]
+[assembly: Guid("f195f66b-e1fc-47eb-a583-0a07f3bc3f94")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
