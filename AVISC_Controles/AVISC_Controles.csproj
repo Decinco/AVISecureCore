@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SWLauchForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -49,12 +55,40 @@
       <DependentUpon>SWLauchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWOption.Designer.cs">
+      <DependentUpon>SWOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SWUserOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWUserOptions.Designer.cs">
+      <DependentUpon>SWUserOptions.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWLauchForm.resx">
       <DependentUpon>SWLauchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SWOption.resx">
+      <DependentUpon>SWOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWUserOptions.resx">
+      <DependentUpon>SWUserOptions.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AVISC_BaseForms\AVISC_BaseForms.csproj">
+      <Project>{5c169a50-f0c1-409c-8abb-1994c5ba4096}</Project>
+      <Name>AVISC_BaseForms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

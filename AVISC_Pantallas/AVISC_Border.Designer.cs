@@ -21,6 +21,7 @@ namespace AVISC_Pantallas
             base.Dispose(disposing);
         }
 
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -30,18 +31,20 @@ namespace AVISC_Pantallas
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
+            this.pnl_SmallBarText = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_FeatureName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblSecure = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_FormContainer = new System.Windows.Forms.Panel();
+            this.swUserOptions1 = new AVISC_Controles.SWUserOptions();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnl_SmallBarText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,8 +53,7 @@ namespace AVISC_Pantallas
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pnl_SmallBarText);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblSecure);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -60,43 +62,86 @@ namespace AVISC_Pantallas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 80);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel4
+            // pnl_SmallBarText
             // 
-            this.panel4.Controls.Add(this.lbl1);
-            this.panel4.Controls.Add(this.lbl2);
-            this.panel4.Location = new System.Drawing.Point(1579, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 79);
-            this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.pnl_SmallBarText.Controls.Add(this.pictureBox3);
+            this.pnl_SmallBarText.Controls.Add(this.lbl_FeatureName);
+            this.pnl_SmallBarText.Controls.Add(this.label1);
+            this.pnl_SmallBarText.Controls.Add(this.label2);
+            this.pnl_SmallBarText.Location = new System.Drawing.Point(181, 1);
+            this.pnl_SmallBarText.Name = "pnl_SmallBarText";
+            this.pnl_SmallBarText.Size = new System.Drawing.Size(872, 80);
+            this.pnl_SmallBarText.TabIndex = 3;
+            this.pnl_SmallBarText.Visible = false;
             // 
-            // lbl1
+            // pictureBox3
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl1.Location = new System.Drawing.Point(143, 9);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl1.Size = new System.Drawing.Size(109, 38);
-            this.lbl1.TabIndex = 3;
-            this.lbl1.Text = "label1";
-            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
+            this.pictureBox3.Image = global::AVISC_Pantallas.Properties.Resources.Feature_Slash;
+            this.pictureBox3.Location = new System.Drawing.Point(96, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(10, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
-            // lbl2
+            // lbl_FeatureName
             // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl2.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl2.Location = new System.Drawing.Point(199, 47);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(53, 20);
-            this.lbl2.TabIndex = 4;
-            this.lbl2.Text = "label2";
-            this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_FeatureName.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_FeatureName.CausesValidation = false;
+            this.lbl_FeatureName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_FeatureName.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_FeatureName.ForeColor = System.Drawing.Color.White;
+            this.lbl_FeatureName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_FeatureName.Location = new System.Drawing.Point(101, 0);
+            this.lbl_FeatureName.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_FeatureName.Name = "lbl_FeatureName";
+            this.lbl_FeatureName.Size = new System.Drawing.Size(636, 80);
+            this.lbl_FeatureName.TabIndex = 5;
+            this.lbl_FeatureName.Text = "<feature>";
+            this.lbl_FeatureName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.CausesValidation = false;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(0, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 33);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Secure";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.CausesValidation = false;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label2.Location = new System.Drawing.Point(0, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(245, 33);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Core";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AVISC_Pantallas.Properties.Resources.AVISC_Simple;
+            this.pictureBox2.Location = new System.Drawing.Point(97, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(82, 53);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // lblSecure
             // 
@@ -106,7 +151,7 @@ namespace AVISC_Pantallas
             this.lblSecure.Font = new System.Drawing.Font("Inter", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lblSecure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
             this.lblSecure.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSecure.Location = new System.Drawing.Point(185, -1);
+            this.lblSecure.Location = new System.Drawing.Point(175, -1);
             this.lblSecure.Margin = new System.Windows.Forms.Padding(0);
             this.lblSecure.MinimumSize = new System.Drawing.Size(245, 80);
             this.lblSecure.Name = "lblSecure";
@@ -114,7 +159,16 @@ namespace AVISC_Pantallas
             this.lblSecure.TabIndex = 1;
             this.lblSecure.Text = "Secure Core";
             this.lblSecure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSecure.Click += new System.EventHandler(this.lblSecure_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AVISC_Pantallas.Properties.Resources.AVI_Simple;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -133,36 +187,6 @@ namespace AVISC_Pantallas
             this.panel3.Size = new System.Drawing.Size(2, 60);
             this.panel3.TabIndex = 3;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AVISC_Pantallas.Properties.Resources.placeholder_JohnRandom;
-            this.pictureBox3.Location = new System.Drawing.Point(1840, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AVISC_Pantallas.Properties.Resources.AVISC_Simple;
-            this.pictureBox2.Location = new System.Drawing.Point(97, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(82, 53);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AVISC_Pantallas.Properties.Resources.AVI_Simple;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnl_FormContainer
             // 
             this.pnl_FormContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,30 +194,48 @@ namespace AVISC_Pantallas
             this.pnl_FormContainer.Name = "pnl_FormContainer";
             this.pnl_FormContainer.Size = new System.Drawing.Size(1840, 1000);
             this.pnl_FormContainer.TabIndex = 4;
+            this.pnl_FormContainer.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.SetFunctionName);
+            this.pnl_FormContainer.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.SetFunctionName);
+            // 
+            // swUserOptions1
+            // 
+            this.swUserOptions1.AutoSize = true;
+            this.swUserOptions1.ForeColor = System.Drawing.Color.White;
+            this.swUserOptions1.Location = new System.Drawing.Point(1486, 0);
+            this.swUserOptions1.Margin = new System.Windows.Forms.Padding(0);
+            this.swUserOptions1.Name = "swUserOptions1";
+            this.swUserOptions1.Options = null;
+            this.swUserOptions1.Role = "Administrator";
+            this.swUserOptions1.Size = new System.Drawing.Size(433, 80);
+            this.swUserOptions1.TabIndex = 2;
+            this.swUserOptions1.Username = "John Random";
+            this.swUserOptions1.UserProfilePicture = global::AVISC_Pantallas.Properties.Resources.placeholder_JohnRandom;
             // 
             // AVISC_Border
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.swUserOptions1);
             this.Controls.Add(this.pnl_FormContainer);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AVISC_Border";
             this.ShowInTaskbar = false;
             this.Text = "PantallaPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnl_SmallBarText.ResumeLayout(false);
+            this.pnl_SmallBarText.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,11 +246,13 @@ namespace AVISC_Pantallas
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblSecure;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnl_FormContainer;
+        private System.Windows.Forms.Panel pnl_SmallBarText;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_FeatureName;
+        private AVISC_Controles.SWUserOptions swUserOptions1;
     }
 }
