@@ -25,7 +25,7 @@ namespace AVISC_DataAccess
             Connectar();
 
             DataRow[] rowsFound;
-            string hashedPasswd, salt, storedPasswd, new_salt, query;
+            string hashedPasswd, salt, storedPasswd, new_salt, query, name;
             bool valid = false;
             int numModificados;
 
@@ -36,6 +36,7 @@ namespace AVISC_DataAccess
             {
                 salt = rowsFound[0].Field<string>("Salt");
                 storedPasswd = rowsFound[0].Field<string>("Password");
+                name = rowsFound[0].Field<string>("Login");
 
                 if (password == "12345aA")
                 {
