@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace AVISC_Controles
 {
@@ -35,13 +36,6 @@ namespace AVISC_Controles
             InitializeComponent();
 
             ContextMenuExtended = false;
-
-            SetDefaultOptions();
-        }
-
-        private void SetDefaultOptions()
-        {
-
         }
 
         private void UserPanel_Enter(object sender, EventArgs e)

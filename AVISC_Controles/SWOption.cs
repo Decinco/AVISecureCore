@@ -39,7 +39,7 @@ namespace AVISC_Controles
 
         private void Option_Enter(object sender, EventArgs e)
         {
-            pnl_Option.BackColor = Color.FromArgb(40, 40, 40);
+            pnl_Option.BackColor = Color.FromArgb(50, 50, 50);
         }
 
         private void Option_Leave(object sender, EventArgs e)

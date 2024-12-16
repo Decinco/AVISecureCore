@@ -27,7 +27,6 @@ namespace AVISC_DataAccess
             DataRow[] rowsFound;
             string hashedPasswd, salt, storedPasswd, new_salt, query, name;
             bool valid = false;
-            int numModificados;
 
             DataSet dts = PortarTaula("Users");
             rowsFound = dts.Tables[0].Select($"UserName = '{username}'");

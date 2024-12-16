@@ -30,43 +30,56 @@ namespace AVISC_BaseForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label23 = new System.Windows.Forms.Label();
+            this.pnl_BackButton = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_BackButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // imageList1
+            // pnl_BackButton
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.pnl_BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.pnl_BackButton.Controls.Add(this.pictureBox1);
+            this.pnl_BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnl_BackButton.Location = new System.Drawing.Point(1760, 0);
+            this.pnl_BackButton.Name = "pnl_BackButton";
+            this.pnl_BackButton.Size = new System.Drawing.Size(80, 60);
+            this.pnl_BackButton.TabIndex = 24;
+            this.pnl_BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.pnl_BackButton.MouseEnter += new System.EventHandler(this.BackButton_Enter);
+            this.pnl_BackButton.MouseLeave += new System.EventHandler(this.BackButton_Leave);
             // 
-            // label23
+            // pictureBox1
             // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(1776, 9);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(52, 55);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "X";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::AVISC_BaseForms.Properties.Resources.UI_ICON_Back;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.BackButton_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.BackButton_Enter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.BackButton_Leave);
             // 
             // AVISC_CloseableFeatureForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1840, 1000);
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.pnl_BackButton);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AVISC_CloseableFeatureForm";
             this.Text = "AVISC_Principal";
+            this.pnl_BackButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel pnl_BackButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -13,8 +13,6 @@ namespace AVISecureCore
 {
     public partial class AVISecureCore : Form
     {
-        AVISC_Splash splash = new AVISC_Splash();
-        
         AVISC_Login login = new AVISC_Login();
         public AVISecureCore()
         {
@@ -23,10 +21,11 @@ namespace AVISecureCore
 
         private void button1_Click(object sender, EventArgs e)
         {
+            AVISC_Splash splash = new AVISC_Splash();
+
             this.Hide();
+
             login.Show();
-            //pantallaPrincipal.Show();
-            //splash.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
