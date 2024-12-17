@@ -11,8 +11,21 @@ using System.Windows.Forms;
 
 namespace AVISC_Controles
 {
+    public enum ContentType
+    {
+        Nombre,
+        Text,
+        Codi,
+    }
+
     public partial  class SWTextbox : TextBox
     {
+        public ContentType DadaPermesa { get; set; }
+        public bool AllowEmpty { get; set; }
+        public bool IsForeignKey { get; set; }
+        public string LinkedControlName { get; set; }
+
+        private TextBox linkedControl;
         public SWTextbox()
         {
             this.Enter += new System.EventHandler(this.SWTextbox_Enter);
@@ -20,22 +33,6 @@ namespace AVISC_Controles
             this.TextChanged += new System.EventHandler(this.SWTextbox_TextChanged);
             this.ResumeLayout(false);
         }
-
-
-        public enum ContentType
-        {
-            Nombre,
-            Text,
-            Codi,
-           
-        }
-
-        public ContentType DadaPermesa { get; set; }
-        public bool AllowEmpty { get; set; }
-        public bool IsForeignKey { get; set; }
-        public string LinkedControlName { get; set; }
-        private TextBox linkedControl;
-
 
         private void SWTextbox_Leave(object sender, EventArgs e)
         {
@@ -79,11 +76,13 @@ namespace AVISC_Controles
                 {
                     isValid = ValidateNombre(this.Text);
 
-
                 }
                 else if (DadaPermesa == ContentType.Codi)
                 {
                     isValid = ValidateCodi(this.Text);
+                }
+                else if(DadaPermesa == ContentType.Text){
+                    isValid = true;
                 }
                
 

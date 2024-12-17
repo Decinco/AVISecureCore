@@ -28,6 +28,7 @@ namespace AVISC_Maintenance
             dataAccess = new MaintenanceDataAccess();
             InitializeComponent();
             PortarDates();
+            dataBind();
         }
         bool EsNou = false;
         private void PortarDates()
@@ -47,7 +48,7 @@ namespace AVISC_Maintenance
                     }
                 }
             }
-
+            //actualizarDatos();
 
 
         }
@@ -57,8 +58,8 @@ namespace AVISC_Maintenance
             if (EsNou)
             {
                 DataRow newRow = dts.Tables["Species"].NewRow();
-                newRow["CodeSpecie"] = swTextbox1.Text;
-                newRow["DescSpecie"] = swTextbox3.Text;
+                newRow["CodeSpecie"] = swTextboxNom.Text;
+                newRow["DescSpecie"] = swTextboxSpecie.Text;
 
                 dts.Tables["Species"].Rows.Add(newRow);
                 EsNou = false;
@@ -83,7 +84,40 @@ namespace AVISC_Maintenance
 
         private void nuevoDB_Click(object sender, EventArgs e)
         {
+            EsNou = true;
+            swTextboxCognom.DataBindings.Clear();
+            swTextboxSpecie.DataBindings.Clear();
+            swTextboxNom.DataBindings.Clear();
+            dataBind();
+        }
+        //private void actualizarDatos()
+        //{
+        //    swTextboxCognom.DataBindings.Clear();
+        //    swTextboxSpecie.DataBindings.Clear();
+        //    swTextboxNom.DataBindings.Clear();
 
+        //    swTextboxCognom.DataBindings.Add("Text", dts.Tables["Species"], "CodeSpecie");
+        //    swTextboxSpecie.DataBindings.Add("Text", dts.Tables["Species"], "DescSpecie");
+        //}
+        private void dataBind()
+        {
+            foreach (Control control in Controls)
+            {
+                if(control is AVISC_Controles.SWTextbox)
+                {
+                    AVISC_Controles.SWTextbox textBox = (AVISC_Controles.SWTextbox)control;
+                    textBox.DataBindings.Clear();
+
+                    textBox.DataBindings.Add("Text", dts.Tables[0], textBox.Tag.ToString());
+                    textBox.Validated += new EventHandler(ValidateTextBox);
+                }
+            }
+            dataAccess.New = false;
+        }
+        
+        private void ValidateTextBox(object sender, EventArgs e)
+        {
+            ((AVISC_Controles.SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
     }
     
