@@ -30,31 +30,31 @@ namespace AVISC_Pantallas
         private void InitializeComponent()
         {
             this.pnl_fondo = new System.Windows.Forms.Panel();
-            this.pbx_back = new System.Windows.Forms.PictureBox();
             this.pnl_Container = new System.Windows.Forms.Panel();
-            this.lbl_pass = new System.Windows.Forms.Label();
-            this.lbl_user = new System.Windows.Forms.Label();
-            this.lbl_titulo = new System.Windows.Forms.Label();
             this.pnl_Login = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_warning = new System.Windows.Forms.Panel();
+            this.lbl_error = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pbx_ojo = new System.Windows.Forms.PictureBox();
+            this.txt_pass = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbl_pass = new System.Windows.Forms.Label();
+            this.lbl_user = new System.Windows.Forms.Label();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.pbx_back = new System.Windows.Forms.PictureBox();
             this.pnl_fondo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).BeginInit();
             this.pnl_Container.SuspendLayout();
             this.pnl_Login.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnl_warning.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_fondo
@@ -68,16 +68,6 @@ namespace AVISC_Pantallas
             this.pnl_fondo.Name = "pnl_fondo";
             this.pnl_fondo.Size = new System.Drawing.Size(1920, 1055);
             this.pnl_fondo.TabIndex = 0;
-            // 
-            // pbx_back
-            // 
-            this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
-            this.pbx_back.Location = new System.Drawing.Point(0, 0);
-            this.pbx_back.Name = "pbx_back";
-            this.pbx_back.Size = new System.Drawing.Size(1920, 1055);
-            this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_back.TabIndex = 4;
-            this.pbx_back.TabStop = false;
             // 
             // pnl_Container
             // 
@@ -93,45 +83,10 @@ namespace AVISC_Pantallas
             this.pnl_Container.Size = new System.Drawing.Size(720, 476);
             this.pnl_Container.TabIndex = 3;
             // 
-            // lbl_pass
-            // 
-            this.lbl_pass.AutoSize = true;
-            this.lbl_pass.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.lbl_pass.Location = new System.Drawing.Point(30, 248);
-            this.lbl_pass.Name = "lbl_pass";
-            this.lbl_pass.Size = new System.Drawing.Size(142, 32);
-            this.lbl_pass.TabIndex = 2;
-            this.lbl_pass.Text = "Contraseña";
-            // 
-            // lbl_user
-            // 
-            this.lbl_user.AutoSize = true;
-            this.lbl_user.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.lbl_user.Location = new System.Drawing.Point(30, 131);
-            this.lbl_user.Name = "lbl_user";
-            this.lbl_user.Size = new System.Drawing.Size(226, 32);
-            this.lbl_user.TabIndex = 1;
-            this.lbl_user.Text = "Nombre de Usuario";
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Inter", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.lbl_titulo.Location = new System.Drawing.Point(210, 35);
-            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(310, 57);
-            this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "Iniciar Sessión";
-            this.lbl_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.pnl_Login.Controls.Add(this.panel2);
+            this.pnl_Login.Controls.Add(this.pnl_warning);
             this.pnl_Login.Controls.Add(this.button1);
             this.pnl_Login.Controls.Add(this.panel3);
             this.pnl_Login.Controls.Add(this.panel4);
@@ -145,31 +100,31 @@ namespace AVISC_Pantallas
             this.pnl_Login.Size = new System.Drawing.Size(720, 476);
             this.pnl_Login.TabIndex = 7;
             // 
-            // panel2
+            // pnl_warning
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(720, 35);
-            this.panel2.TabIndex = 6;
-            this.panel2.Visible = false;
+            this.pnl_warning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.pnl_warning.Controls.Add(this.lbl_error);
+            this.pnl_warning.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_warning.Location = new System.Drawing.Point(0, 0);
+            this.pnl_warning.Name = "pnl_warning";
+            this.pnl_warning.Size = new System.Drawing.Size(720, 35);
+            this.pnl_warning.TabIndex = 6;
+            this.pnl_warning.Visible = false;
             // 
-            // label1
+            // lbl_error
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbl_error.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Inter", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
+            this.lbl_error.Font = new System.Drawing.Font("Inter", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_error.ForeColor = System.Drawing.Color.White;
+            this.lbl_error.Location = new System.Drawing.Point(3, 4);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(714, 27);
+            this.lbl_error.TabIndex = 0;
+            this.lbl_error.Text = "label1";
+            this.lbl_error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_error.Visible = false;
             // 
             // button1
             // 
@@ -187,35 +142,35 @@ namespace AVISC_Pantallas
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.pbx_ojo);
+            this.panel3.Controls.Add(this.txt_pass);
             this.panel3.Location = new System.Drawing.Point(37, 283);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(655, 48);
             this.panel3.TabIndex = 4;
             // 
-            // pictureBox1
+            // pbx_ojo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(605, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbx_ojo.Location = new System.Drawing.Point(605, 5);
+            this.pbx_ojo.Name = "pbx_ojo";
+            this.pbx_ojo.Size = new System.Drawing.Size(47, 38);
+            this.pbx_ojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_ojo.TabIndex = 2;
+            this.pbx_ojo.TabStop = false;
             // 
-            // textBox1
+            // txt_pass
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(3, 8);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '·';
-            this.textBox1.Size = new System.Drawing.Size(596, 38);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_pass.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.txt_pass.ForeColor = System.Drawing.Color.White;
+            this.txt_pass.Location = new System.Drawing.Point(3, 8);
+            this.txt_pass.Multiline = true;
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.PasswordChar = '·';
+            this.txt_pass.Size = new System.Drawing.Size(596, 38);
+            this.txt_pass.TabIndex = 1;
+            this.txt_pass.UseSystemPasswordChar = true;
             // 
             // panel4
             // 
@@ -273,6 +228,51 @@ namespace AVISC_Pantallas
             this.label4.Text = "Iniciar Sessión";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lbl_pass
+            // 
+            this.lbl_pass.AutoSize = true;
+            this.lbl_pass.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.lbl_pass.Location = new System.Drawing.Point(30, 248);
+            this.lbl_pass.Name = "lbl_pass";
+            this.lbl_pass.Size = new System.Drawing.Size(142, 32);
+            this.lbl_pass.TabIndex = 2;
+            this.lbl_pass.Text = "Contraseña";
+            // 
+            // lbl_user
+            // 
+            this.lbl_user.AutoSize = true;
+            this.lbl_user.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.lbl_user.Location = new System.Drawing.Point(30, 131);
+            this.lbl_user.Name = "lbl_user";
+            this.lbl_user.Size = new System.Drawing.Size(226, 32);
+            this.lbl_user.TabIndex = 1;
+            this.lbl_user.Text = "Nombre de Usuario";
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Inter", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
+            this.lbl_titulo.Location = new System.Drawing.Point(210, 35);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(310, 57);
+            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.Text = "Iniciar Sessión";
+            this.lbl_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pbx_back
+            // 
+            this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
+            this.pbx_back.Location = new System.Drawing.Point(0, 0);
+            this.pbx_back.Name = "pbx_back";
+            this.pbx_back.Size = new System.Drawing.Size(1920, 1055);
+            this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_back.TabIndex = 4;
+            this.pbx_back.TabStop = false;
+            // 
             // AVISC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
@@ -286,18 +286,17 @@ namespace AVISC_Pantallas
             this.Text = "AVISC_Login";
             this.Load += new System.EventHandler(this.AVISC_Login_Load);
             this.pnl_fondo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).EndInit();
             this.pnl_Container.ResumeLayout(false);
             this.pnl_Container.PerformLayout();
             this.pnl_Login.ResumeLayout(false);
             this.pnl_Login.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnl_warning.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,12 +310,12 @@ namespace AVISC_Pantallas
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.PictureBox pbx_back;
         private System.Windows.Forms.Panel pnl_Login;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnl_warning;
+        private System.Windows.Forms.Label lbl_error;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pbx_ojo;
+        private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
