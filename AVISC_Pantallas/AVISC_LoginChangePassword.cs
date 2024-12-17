@@ -14,8 +14,10 @@ namespace AVISC_Pantallas
     public partial class AVISC_LoginChangePassword : Form
     {
         private Image imageOpen, imageClose;
+
         private bool validar_login = false;
-        AVISC_Border aVISC_Border = new AVISC_Border();
+
+        AVISC_Border border;
 
         private string Username;
 
@@ -97,9 +99,11 @@ namespace AVISC_Pantallas
 
                 if (validar_login)
                 {
+                    border = new AVISC_Border();
+
                     pnl_warning.Visible = false;
-                    this.Hide();
-                    aVISC_Border.Show();
+                    Hide();
+                    border.Show();
                 }
                 else
                 {

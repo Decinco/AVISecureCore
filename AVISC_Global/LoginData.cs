@@ -10,6 +10,9 @@ using System.Drawing;
 using AVIDataAccess;
 
 namespace AVISC_Global {  
+    /// <summary>
+    /// Clase global que incluye los datos del usuario necesarios para correr el programa
+    /// </summary>
     public static class LoginData
     {
         public static string UserName { get; set; }
