@@ -89,6 +89,10 @@
       <Project>{5c169a50-f0c1-409c-8abb-1994c5ba4096}</Project>
       <Name>AVISC_BaseForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AVISC_Global\AVISC_Global.csproj">
+      <Project>{f195f66b-e1fc-47eb-a583-0a07f3bc3f94}</Project>
+      <Name>AVISC_Global</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

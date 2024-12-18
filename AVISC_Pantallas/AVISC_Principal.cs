@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVISC_Controles;
+using AVISC_Global;
 
 namespace AVISC_Pantallas
 {
@@ -52,6 +53,8 @@ namespace AVISC_Pantallas
                     });
                 }
             }
+
+            RoundUtils.RedondearControl(img_User, 200);
         }
     }
 }

@@ -3,6 +3,9 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Drawing;
 using AVISC_BaseForms;
+using System.Runtime.InteropServices;
+using System.ComponentModel;
+using AVISC_Global;
 
 namespace AVISC_Controles
 {
@@ -24,9 +27,26 @@ namespace AVISC_Controles
             set { lbl_opcion.Text = value; }
         }
 
+
+        Color myRgbColor = new Color();
+
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect, int nTopRect,
+            int nRightRect, int nBottomRect,
+            int nWidthEllipse, int nHeightEllipse);
+
         public SWLauchForm()
         {
             InitializeComponent();
+
+            // Configurar el estilo para redibujar el control.
+            this.SetStyle(ControlStyles.UserPaint, true);
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.ResizeRedraw, true); // Redibuja al cambiar de tamaño.
+            this.BackColor = Color.Transparent; // Permitir transparencia para bordes visibles.
+            RoundUtils.RedondearControl(pnl_configuracion, 50); // Inicializa la región al crear el control.
         }
 
         private void Abrir_Formulario_Click(object sender, EventArgs e)
@@ -68,6 +88,11 @@ namespace AVISC_Controles
             contenedorPral.Controls.Add(newform);
             newform.WindowState = FormWindowState.Maximized;
             newform.Show();
+        }
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            base.OnSizeChanged(e);
+            RoundUtils.RedondearControl(pnl_configuracion, 50); // Redondea de nuevo al cambiar el tamaño.
         }
     }
 }
