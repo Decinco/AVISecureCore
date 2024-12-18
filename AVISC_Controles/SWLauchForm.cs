@@ -46,7 +46,7 @@ namespace AVISC_Controles
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.ResizeRedraw, true); // Redibuja al cambiar de tamaño.
             this.BackColor = Color.Transparent; // Permitir transparencia para bordes visibles.
-            RoundUtils.RedondearControl(pnl_configuracion, 50); // Inicializa la región al crear el control.
+            RoundUtils.RedondearEsquinas(pnl_configuracion, 50); // Inicializa la región al crear el control.
         }
 
         private void Abrir_Formulario_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace AVISC_Controles
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
-            RoundUtils.RedondearControl(pnl_configuracion, 50); // Redondea de nuevo al cambiar el tamaño.
+            RoundUtils.RedondearEsquinas(pnl_configuracion, 50); // Redondea de nuevo al cambiar el tamaño.
         }
     }
 }

@@ -47,6 +47,8 @@ namespace AVISC_Pantallas
             this.lbl_user = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.pbx_back = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnl_fondo.SuspendLayout();
             this.pnl_Container.SuspendLayout();
             this.pnl_Login.SuspendLayout();
@@ -143,6 +145,7 @@ namespace AVISC_Pantallas
             // panel_pass
             // 
             this.panel_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.panel_pass.Controls.Add(this.panel2);
             this.panel_pass.Controls.Add(this.pbx_ojo);
             this.panel_pass.Controls.Add(this.txt_pass);
             this.panel_pass.Location = new System.Drawing.Point(37, 283);
@@ -166,17 +169,18 @@ namespace AVISC_Pantallas
             this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.White;
-            this.txt_pass.Location = new System.Drawing.Point(3, 8);
+            this.txt_pass.Location = new System.Drawing.Point(16, 12);
             this.txt_pass.Multiline = true;
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '·';
-            this.txt_pass.Size = new System.Drawing.Size(596, 38);
+            this.txt_pass.Size = new System.Drawing.Size(573, 25);
             this.txt_pass.TabIndex = 1;
             this.txt_pass.UseSystemPasswordChar = true;
             // 
             // panel_user
             // 
             this.panel_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.panel_user.Controls.Add(this.panel1);
             this.panel_user.Controls.Add(this.txt_user);
             this.panel_user.Location = new System.Drawing.Point(37, 175);
             this.panel_user.Name = "panel_user";
@@ -189,10 +193,10 @@ namespace AVISC_Pantallas
             this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.Color.White;
-            this.txt_user.Location = new System.Drawing.Point(3, 8);
+            this.txt_user.Location = new System.Drawing.Point(16, 10);
             this.txt_user.Multiline = true;
             this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(649, 38);
+            this.txt_user.Size = new System.Drawing.Size(622, 27);
             this.txt_user.TabIndex = 0;
             // 
             // label2
@@ -200,7 +204,7 @@ namespace AVISC_Pantallas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label2.Location = new System.Drawing.Point(30, 248);
+            this.label2.Location = new System.Drawing.Point(40, 247);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 29);
             this.label2.TabIndex = 2;
@@ -211,7 +215,7 @@ namespace AVISC_Pantallas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(30, 131);
+            this.label3.Location = new System.Drawing.Point(40, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(224, 29);
             this.label3.TabIndex = 1;
@@ -221,7 +225,7 @@ namespace AVISC_Pantallas
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(31)))));
-            this.label4.Location = new System.Drawing.Point(0, 35);
+            this.label4.Location = new System.Drawing.Point(0, 51);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(717, 46);
@@ -274,6 +278,25 @@ namespace AVISC_Pantallas
             this.pbx_back.TabIndex = 4;
             this.pbx_back.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(655, 1);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(655, 1);
+            this.panel2.TabIndex = 2;
+            // 
             // AVISC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
@@ -324,5 +347,7 @@ namespace AVISC_Pantallas
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
