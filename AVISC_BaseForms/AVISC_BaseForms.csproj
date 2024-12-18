@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AVISC_CloseableFeatureForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="AVISC_CloseableFeatureForm.cs" />
     <Compile Include="AVISC_CloseableFeatureForm.Designer.cs">
       <DependentUpon>AVISC_CloseableFeatureForm.cs</DependentUpon>
     </Compile>
@@ -67,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UI_ICON_Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AVISC_Global\AVISC_Global.csproj">
+      <Project>{f195f66b-e1fc-47eb-a583-0a07f3bc3f94}</Project>
+      <Name>AVISC_Global</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

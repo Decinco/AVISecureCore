@@ -37,9 +37,8 @@ namespace AVISC_Pantallas
             this.btn_Login = new System.Windows.Forms.Button();
             this.panel_pass = new System.Windows.Forms.Panel();
             this.pbx_ojo = new System.Windows.Forms.PictureBox();
-            this.txt_pass = new System.Windows.Forms.TextBox();
             this.panel_user = new System.Windows.Forms.Panel();
-            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_pass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@ namespace AVISC_Pantallas
             this.pbx_back = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_user = new System.Windows.Forms.TextBox();
             this.pnl_fondo.SuspendLayout();
             this.pnl_Container.SuspendLayout();
             this.pnl_Login.SuspendLayout();
@@ -68,7 +68,7 @@ namespace AVISC_Pantallas
             this.pnl_fondo.Location = new System.Drawing.Point(0, 0);
             this.pnl_fondo.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_fondo.Name = "pnl_fondo";
-            this.pnl_fondo.Size = new System.Drawing.Size(1920, 1055);
+            this.pnl_fondo.Size = new System.Drawing.Size(1920, 1080);
             this.pnl_fondo.TabIndex = 0;
             // 
             // pnl_Container
@@ -126,7 +126,6 @@ namespace AVISC_Pantallas
             this.lbl_error.TabIndex = 0;
             this.lbl_error.Text = "label1";
             this.lbl_error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_error.Visible = false;
             // 
             // btn_Login
             // 
@@ -146,8 +145,8 @@ namespace AVISC_Pantallas
             // 
             this.panel_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.panel_pass.Controls.Add(this.panel2);
-            this.panel_pass.Controls.Add(this.pbx_ojo);
             this.panel_pass.Controls.Add(this.txt_pass);
+            this.panel_pass.Controls.Add(this.pbx_ojo);
             this.panel_pass.Location = new System.Drawing.Point(37, 283);
             this.panel_pass.Name = "panel_pass";
             this.panel_pass.Size = new System.Drawing.Size(655, 48);
@@ -163,41 +162,29 @@ namespace AVISC_Pantallas
             this.pbx_ojo.TabStop = false;
             this.pbx_ojo.Click += new System.EventHandler(this.pbx_ojo_Click_1);
             // 
+            // panel_user
+            // 
+            this.panel_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.panel_user.Controls.Add(this.txt_user);
+            this.panel_user.Controls.Add(this.panel1);
+            this.panel_user.Location = new System.Drawing.Point(37, 175);
+            this.panel_user.Name = "panel_user";
+            this.panel_user.Size = new System.Drawing.Size(655, 48);
+            this.panel_user.TabIndex = 3;
+            // 
             // txt_pass
             // 
             this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.White;
-            this.txt_pass.Location = new System.Drawing.Point(16, 12);
+            this.txt_pass.Location = new System.Drawing.Point(20, 11);
             this.txt_pass.Multiline = true;
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.PasswordChar = '·';
-            this.txt_pass.Size = new System.Drawing.Size(573, 25);
-            this.txt_pass.TabIndex = 1;
+            this.txt_pass.PasswordChar = '*';
+            this.txt_pass.Size = new System.Drawing.Size(569, 27);
+            this.txt_pass.TabIndex = 0;
             this.txt_pass.UseSystemPasswordChar = true;
-            // 
-            // panel_user
-            // 
-            this.panel_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.panel_user.Controls.Add(this.panel1);
-            this.panel_user.Controls.Add(this.txt_user);
-            this.panel_user.Location = new System.Drawing.Point(37, 175);
-            this.panel_user.Name = "panel_user";
-            this.panel_user.Size = new System.Drawing.Size(655, 48);
-            this.panel_user.TabIndex = 3;
-            // 
-            // txt_user
-            // 
-            this.txt_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.txt_user.ForeColor = System.Drawing.Color.White;
-            this.txt_user.Location = new System.Drawing.Point(16, 10);
-            this.txt_user.Multiline = true;
-            this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(622, 27);
-            this.txt_user.TabIndex = 0;
             // 
             // label2
             // 
@@ -228,7 +215,7 @@ namespace AVISC_Pantallas
             this.label4.Location = new System.Drawing.Point(0, 51);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(717, 46);
+            this.label4.Size = new System.Drawing.Size(720, 46);
             this.label4.TabIndex = 0;
             this.label4.Text = "Iniciar Sesión";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,7 +260,7 @@ namespace AVISC_Pantallas
             this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
             this.pbx_back.Location = new System.Drawing.Point(0, 0);
             this.pbx_back.Name = "pbx_back";
-            this.pbx_back.Size = new System.Drawing.Size(1920, 1055);
+            this.pbx_back.Size = new System.Drawing.Size(1920, 1080);
             this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_back.TabIndex = 4;
             this.pbx_back.TabStop = false;
@@ -297,18 +284,31 @@ namespace AVISC_Pantallas
             this.panel2.Size = new System.Drawing.Size(655, 1);
             this.panel2.TabIndex = 2;
             // 
+            // txt_user
+            // 
+            this.txt_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.txt_user.ForeColor = System.Drawing.Color.White;
+            this.txt_user.Location = new System.Drawing.Point(20, 11);
+            this.txt_user.Multiline = true;
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(614, 27);
+            this.txt_user.TabIndex = 3;
+            // 
             // AVISC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnl_fondo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AVISC_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AVISC_Login";
             this.Load += new System.EventHandler(this.AVISC_Login_Load);
             this.pnl_fondo.ResumeLayout(false);
@@ -341,13 +341,13 @@ namespace AVISC_Pantallas
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Panel panel_pass;
         private System.Windows.Forms.PictureBox pbx_ojo;
-        private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Panel panel_user;
-        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txt_user;
     }
 }

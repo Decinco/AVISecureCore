@@ -29,7 +29,6 @@ namespace AVISC_Pantallas
             imageClose = Bitmap.FromFile(@"Resources\ojo-cerrado.png");
 
             pbx_ojo.Image = imageOpen;
-            txt_pass.UseSystemPasswordChar = false;
 
             // Redondear los bordes de los paneles
             RoundUtils.RedondearEsquinas(pnl_Login, 40); // Redondear el panel de login
@@ -44,13 +43,13 @@ namespace AVISC_Pantallas
             {
                 if (txt_pass.Text == "12345aA")
                 {
-                    ChangePasswordForm = new AVISC_LoginChangePassword { username = txt_user.Text, passwword = txt_pass.Text };
+                    ChangePasswordForm = new AVISC_LoginChangePassword { username = txt_pass.Text, passwword = txt_pass.Text };
                     ChangePasswordForm.Show();
                     Hide();
                 }
                 else
                 {
-                    validar_login = LoginData.PerformLogin(txt_user.Text, txt_pass.Text, null);
+                    validar_login = LoginData.PerformLogin(txt_pass.Text, txt_pass.Text, null);
 
                     if (validar_login)
                     {
@@ -65,15 +64,18 @@ namespace AVISC_Pantallas
                     else
                     {
                         pnl_warning.Visible = true;
-                        lbl_error.Visible = true;
                         lbl_error.Text = "Nombre de usuario o contraseña incorrectos. Vuelve a intentarlo.";
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 pnl_warning.Visible = true;
-                lbl_error.Text = "Nombre de usuario o contraseña incorrectos.";
+                lbl_error.Text = "Ha ocurrido un error.";
+                MessageBox.Show(ex.ToString(), "Parece que estás en el bando equivocado...");
+
+                Application.Exit();
+
             }
         }
 

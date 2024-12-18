@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using AVISC_Global;
 
 namespace AVISC_BaseForms
 {
@@ -11,6 +12,11 @@ namespace AVISC_BaseForms
         public AVISC_CloseableFeatureForm()
         {
             InitializeComponent();
+        }
+
+        private void AVISC_CloseableFeatureForm_Load(object sender, EventArgs e)
+        {
+            RoundUtils.RedondearEsquinas(pnl_BackButton, bottomLeft: 20);
         }
 
         private void BackButton_Click(object sender, EventArgs e)

@@ -27,15 +27,6 @@ namespace AVISC_Controles
             set { lbl_opcion.Text = value; }
         }
 
-
-        Color myRgbColor = new Color();
-
-        [DllImport("gdi32.dll")]
-        private static extern IntPtr CreateRoundRectRgn(
-            int nLeftRect, int nTopRect,
-            int nRightRect, int nBottomRect,
-            int nWidthEllipse, int nHeightEllipse);
-
         public SWLauchForm()
         {
             InitializeComponent();

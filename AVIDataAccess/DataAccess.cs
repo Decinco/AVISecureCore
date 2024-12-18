@@ -4,9 +4,6 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
 
-/// <summary>
-/// Espacio de nombres utilizado para las clases de acceso a datos de Audiovisual Industries.
-/// </summary>
 namespace AVIDataAccess
 {
     /// <summary>

@@ -41,9 +41,9 @@ namespace AVISC_BaseForms
             this.pnl_BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.pnl_BackButton.Controls.Add(this.pictureBox1);
             this.pnl_BackButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnl_BackButton.Location = new System.Drawing.Point(1760, 0);
+            this.pnl_BackButton.Location = new System.Drawing.Point(1759, 0);
             this.pnl_BackButton.Name = "pnl_BackButton";
-            this.pnl_BackButton.Size = new System.Drawing.Size(80, 60);
+            this.pnl_BackButton.Size = new System.Drawing.Size(81, 60);
             this.pnl_BackButton.TabIndex = 24;
             this.pnl_BackButton.Click += new System.EventHandler(this.BackButton_Click);
             this.pnl_BackButton.MouseEnter += new System.EventHandler(this.BackButton_Enter);
@@ -72,6 +72,7 @@ namespace AVISC_BaseForms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AVISC_CloseableFeatureForm";
             this.Text = "AVISC_Principal";
+            this.Load += new System.EventHandler(this.AVISC_CloseableFeatureForm_Load);
             this.pnl_BackButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
