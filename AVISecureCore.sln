@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_BaseForms", "AVISC_Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Global", "AVISC_Global\AVISC_Global.csproj", "{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Maintenance", "AVISC_Maintenance\AVISC_Maintenance.csproj", "{72827DFF-D9FB-440D-939F-5402B3A24244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72827DFF-D9FB-440D-939F-5402B3A24244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
