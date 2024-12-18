@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="SWUserOptions.Designer.cs">
       <DependentUpon>SWUserOptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="SWTextbox.cs">
       <SubType>Component</SubType>
     </Compile>

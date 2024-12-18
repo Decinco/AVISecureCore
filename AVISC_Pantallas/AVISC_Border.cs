@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVISC_BaseForms;
 using AVISC_Global;
+using AVISC_Controles;
 
 
 namespace AVISC_Pantallas

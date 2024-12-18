@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISecureCore", "AVISecureC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Pantallas", "AVISC_Pantallas\AVISC_Pantallas.csproj", "{E63FAC63-C1E6-44C1-BB30-65ED68D83745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Controles", "AVISC_Controles\AVISC_Controles.csproj", "{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVIDataAccess", "AVIDataAccess\AVIDataAccess.csproj", "{F536E5E3-DCB2-4795-BA07-0070C324619F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_BaseForms", "AVISC_BaseForms\AVISC_BaseForms.csproj", "{5C169A50-F0C1-409C-8ABB-1994C5BA4096}"
@@ -16,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Global", "AVISC_Global\AVISC_Global.csproj", "{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Maintenance", "AVISC_Maintenance\AVISC_Maintenance.csproj", "{72827DFF-D9FB-440D-939F-5402B3A24244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Controles", "AVISC_Controles\AVISC_Controles.csproj", "{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		{E63FAC63-C1E6-44C1-BB30-65ED68D83745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E63FAC63-C1E6-44C1-BB30-65ED68D83745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E63FAC63-C1E6-44C1-BB30-65ED68D83745}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F536E5E3-DCB2-4795-BA07-0070C324619F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{72827DFF-D9FB-440D-939F-5402B3A24244}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72827DFF-D9FB-440D-939F-5402B3A24244}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72827DFF-D9FB-440D-939F-5402B3A24244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVIDataAccess;
+using AVISC_Controles;
  
 
 namespace AVISC_Maintenance
@@ -17,15 +18,14 @@ namespace AVISC_Maintenance
 
     public partial class BaseForm : Form
     {
-        public class MaintenanceDataAccess : DataAccess { };
-        private MaintenanceDataAccess dataAccess;
+        private DataAccess dataAccess;
         private DataSet dts;
         public  string taula { get; set; }
         private Dictionary<string, string> fields = new Dictionary<string, string>();
 
         public BaseForm()
         {
-            dataAccess = new MaintenanceDataAccess();
+            dataAccess = new DataAccess();
             InitializeComponent();
             PortarDates();
             dataBind();
@@ -34,7 +34,7 @@ namespace AVISC_Maintenance
         private void PortarDates()
         {
 
-            dts = dataAccess.PortarTaula(" Species ");
+            dts = dataAccess.PortarDataset(" Species ");
             dataGridView1.DataSource = dts.Tables["Species"];
             Regex compCampoId = new Regex("(?i)id");
             if(dts !=null && dts.Tables.Count >0)
@@ -69,7 +69,7 @@ namespace AVISC_Maintenance
             {
                 if(control is AVISC_Controles.SWTextbox)
                 {
-                    AVISC_Controles.SWTextbox textBox = (AVISC_Controles.SWTextbox)control;
+                    SWTextbox textBox = (AVISC_Controles.SWTextbox)control;
                     textBox.DataBindings.Clear();
 
                     textBox.DataBindings.Add("Text", dts.Tables[0], textBox.Tag.ToString());
@@ -81,7 +81,7 @@ namespace AVISC_Maintenance
         
         private void ValidateTextBox(object sender, EventArgs e)
         {
-            ((AVISC_Controles.SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            ((SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
         }
 
         private void actualizarDB_Click(object sender, EventArgs e)
@@ -99,9 +99,9 @@ namespace AVISC_Maintenance
 
             foreach (Control item in this.Controls)
             {
-                if (item is AVISC_Controles.SWTextbox)
+                if (item is SWTextbox)
                 {
-                    AVISC_Controles.SWTextbox sWTextbox = (AVISC_Controles.SWTextbox)item;
+                    SWTextbox sWTextbox = (AVISC_Controles.SWTextbox)item;
                 }
             }
             int result = dataAccess.Actualitzar(dts, querySelect, fields);
@@ -116,9 +116,9 @@ namespace AVISC_Maintenance
             EsNou = true;
             foreach (Control control in Controls)
             {
-                if (control is AVISC_Controles.SWTextbox)
+                if (control is SWTextbox)
                 {
-                    AVISC_Controles.SWTextbox textBox = (AVISC_Controles.SWTextbox)control;
+                    SWTextbox textBox = (AVISC_Controles.SWTextbox)control;
                     textBox.DataBindings.Clear();
                     textBox.Clear();
                     textBox.Validated -= new EventHandler(ValidateTextBox);
