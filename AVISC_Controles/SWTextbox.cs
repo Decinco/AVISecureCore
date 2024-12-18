@@ -84,16 +84,9 @@ namespace AVISC_Controles
                 else if(DadaPermesa == ContentType.Text){
                     isValid = true;
                 }
-               
 
-                if (isValid)
-                {
-                    linkedControl.Text = "CODI VALID";
-                }
-                else
-                {
-                    linkedControl.Text = "ERROR CODI";
-                }
+
+                
             }
 
         }

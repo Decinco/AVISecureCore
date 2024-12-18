@@ -32,9 +32,9 @@ namespace AVISC_Maintenance
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nuevoDB = new System.Windows.Forms.Button();
             this.actualizarDB = new System.Windows.Forms.Button();
-            this.swTextboxNom = new AVISC_Controles.SWTextbox();
-            this.swTextboxCognom = new AVISC_Controles.SWTextbox();
             this.swTextboxSpecie = new AVISC_Controles.SWTextbox();
+            this.swTextboxCognom = new AVISC_Controles.SWTextbox();
+            this.swTextboxNom = new AVISC_Controles.SWTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@ namespace AVISC_Maintenance
             this.nuevoDB.TabIndex = 4;
             this.nuevoDB.Text = "Nuevo";
             this.nuevoDB.UseVisualStyleBackColor = true;
+            this.nuevoDB.Click += new System.EventHandler(this.nuevoDB_Click_1);
             // 
             // actualizarDB
             // 
@@ -64,18 +65,19 @@ namespace AVISC_Maintenance
             this.actualizarDB.TabIndex = 5;
             this.actualizarDB.Text = "Actualizar";
             this.actualizarDB.UseVisualStyleBackColor = true;
+            this.actualizarDB.Click += new System.EventHandler(this.actualizarDB_Click);
             // 
-            // swTextboxNom
+            // swTextboxSpecie
             // 
-            this.swTextboxNom.AllowEmpty = false;
-            this.swTextboxNom.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.swTextboxNom.IsForeignKey = false;
-            this.swTextboxNom.LinkedControlName = null;
-            this.swTextboxNom.Location = new System.Drawing.Point(61, 84);
-            this.swTextboxNom.Name = "swTextboxNom";
-            this.swTextboxNom.Size = new System.Drawing.Size(208, 22);
-            this.swTextboxNom.TabIndex = 9;
-            this.swTextboxNom.Tag = "CodeSpecie";
+            this.swTextboxSpecie.AllowEmpty = false;
+            this.swTextboxSpecie.DadaPermesa = AVISC_Controles.ContentType.Text;
+            this.swTextboxSpecie.IsForeignKey = false;
+            this.swTextboxSpecie.LinkedControlName = null;
+            this.swTextboxSpecie.Location = new System.Drawing.Point(786, 83);
+            this.swTextboxSpecie.Name = "swTextboxSpecie";
+            this.swTextboxSpecie.Size = new System.Drawing.Size(265, 22);
+            this.swTextboxSpecie.TabIndex = 11;
+            this.swTextboxSpecie.Tag = "DescSpecie";
             // 
             // swTextboxCognom
             // 
@@ -89,17 +91,17 @@ namespace AVISC_Maintenance
             this.swTextboxCognom.TabIndex = 10;
             this.swTextboxCognom.Tag = "CodeSpecie";
             // 
-            // swTextboxSpecie
+            // swTextboxNom
             // 
-            this.swTextboxSpecie.AllowEmpty = false;
-            this.swTextboxSpecie.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.swTextboxSpecie.IsForeignKey = false;
-            this.swTextboxSpecie.LinkedControlName = null;
-            this.swTextboxSpecie.Location = new System.Drawing.Point(786, 83);
-            this.swTextboxSpecie.Name = "swTextboxSpecie";
-            this.swTextboxSpecie.Size = new System.Drawing.Size(265, 22);
-            this.swTextboxSpecie.TabIndex = 11;
-            this.swTextboxSpecie.Tag = "DescSpecie";
+            this.swTextboxNom.AllowEmpty = false;
+            this.swTextboxNom.DadaPermesa = AVISC_Controles.ContentType.Text;
+            this.swTextboxNom.IsForeignKey = false;
+            this.swTextboxNom.LinkedControlName = null;
+            this.swTextboxNom.Location = new System.Drawing.Point(61, 84);
+            this.swTextboxNom.Name = "swTextboxNom";
+            this.swTextboxNom.Size = new System.Drawing.Size(208, 22);
+            this.swTextboxNom.TabIndex = 9;
+            this.swTextboxNom.Tag = "CodeSpecie";
             // 
             // BaseForm
             // 

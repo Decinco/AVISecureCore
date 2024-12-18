@@ -53,43 +53,7 @@ namespace AVISC_Maintenance
 
         }
 
-        private void actualizarDB_Click(object sender, EventArgs e)
-        {
-            if (EsNou)
-            {
-                DataRow newRow = dts.Tables["Species"].NewRow();
-                newRow["CodeSpecie"] = swTextboxNom.Text;
-                newRow["DescSpecie"] = swTextboxSpecie.Text;
-
-                dts.Tables["Species"].Rows.Add(newRow);
-                EsNou = false;
-            }
-
-            string querySelect = "SELECT * FROM Species";
-            
-            foreach  (Control item in this.Controls)
-            {
-                if(item is TextBox)
-                {
-                    TextBox ctr = (TextBox)item;
-                    fields.Add(item.Tag.ToString(), item.Text);
-                }
-            }
-            int result = dataAccess.Actualitzar(dts, querySelect , fields );
-
-            MessageBox.Show($"Registros modificados: {result}");
-
-            PortarDates();
-        }
-
-        private void nuevoDB_Click(object sender, EventArgs e)
-        {
-            EsNou = true;
-            swTextboxCognom.DataBindings.Clear();
-            swTextboxSpecie.DataBindings.Clear();
-            swTextboxNom.DataBindings.Clear();
-            dataBind();
-        }
+       
         //private void actualizarDatos()
         //{
         //    swTextboxCognom.DataBindings.Clear();
@@ -118,6 +82,50 @@ namespace AVISC_Maintenance
         private void ValidateTextBox(object sender, EventArgs e)
         {
             ((AVISC_Controles.SWTextbox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
+        }
+
+        private void actualizarDB_Click(object sender, EventArgs e)
+        {
+            string querySelect = "SELECT * FROM Species";
+
+            if (EsNou)
+            {
+                DataRow newRow = dts.Tables[0].NewRow();
+                newRow["CodeSpecie"] = swTextboxNom.Text;
+                newRow["DescSpecie"] = swTextboxSpecie.Text;
+                dts.Tables[0].Rows.Add(newRow);
+                EsNou = false;
+            }
+
+            foreach (Control item in this.Controls)
+            {
+                if (item is AVISC_Controles.SWTextbox)
+                {
+                    AVISC_Controles.SWTextbox sWTextbox = (AVISC_Controles.SWTextbox)item;
+                }
+            }
+            int result = dataAccess.Actualitzar(dts, querySelect, fields);
+
+            MessageBox.Show($"Registros modificados: {result}");
+
+            PortarDates();
+        }
+
+        private void nuevoDB_Click_1(object sender, EventArgs e)
+        {
+            EsNou = true;
+            foreach (Control control in Controls)
+            {
+                if (control is AVISC_Controles.SWTextbox)
+                {
+                    AVISC_Controles.SWTextbox textBox = (AVISC_Controles.SWTextbox)control;
+                    textBox.DataBindings.Clear();
+                    textBox.Clear();
+                    textBox.Validated -= new EventHandler(ValidateTextBox);
+                }
+            }
+
+
         }
     }
     
