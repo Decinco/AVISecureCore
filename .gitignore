@@ -8,6 +8,7 @@
 *.dll
 *.pdb
 *.exe.config
+Compile/*.xml
 
 # User-specific files
 *.rsuser
