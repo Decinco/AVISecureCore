@@ -136,19 +136,22 @@
   <data name="ferrari" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ferrari.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Log In" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Log In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AVISC_Simple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\avisc_simple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AVI_Simple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\avi_simple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Feature-Slash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Feature-Slash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Feature-Slash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Feature-Slash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Log In" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log In.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AVI_Simple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\avi_simple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AVISC_Simple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\avisc_simple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -30,7 +30,6 @@ namespace AVISC_Pantallas
         private void InitializeComponent()
         {
             this.pnl_back = new System.Windows.Forms.Panel();
-            this.pbx_back = new System.Windows.Forms.PictureBox();
             this.pnl_login = new System.Windows.Forms.Panel();
             this.pnl_warning = new System.Windows.Forms.Panel();
             this.lbl_error = new System.Windows.Forms.Label();
@@ -44,14 +43,15 @@ namespace AVISC_Pantallas
             this.lbl_confirmNewPass = new System.Windows.Forms.Label();
             this.lbl_newPass = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
+            this.pbx_back = new System.Windows.Forms.PictureBox();
             this.pnl_back.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).BeginInit();
             this.pnl_login.SuspendLayout();
             this.pnl_warning.SuspendLayout();
             this.pnl_confirmNewPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_confirmNewPass)).BeginInit();
             this.pnl_newPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_newPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_back
@@ -62,20 +62,8 @@ namespace AVISC_Pantallas
             this.pnl_back.Location = new System.Drawing.Point(0, 0);
             this.pnl_back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_back.Name = "pnl_back";
-            this.pnl_back.Size = new System.Drawing.Size(1920, 1080);
+            this.pnl_back.Size = new System.Drawing.Size(1920, 1055);
             this.pnl_back.TabIndex = 0;
-            // 
-            // pbx_back
-            // 
-            this.pbx_back.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
-            this.pbx_back.Location = new System.Drawing.Point(0, 0);
-            this.pbx_back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbx_back.Name = "pbx_back";
-            this.pbx_back.Size = new System.Drawing.Size(1920, 1080);
-            this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_back.TabIndex = 0;
-            this.pbx_back.TabStop = false;
             // 
             // pnl_login
             // 
@@ -234,11 +222,23 @@ namespace AVISC_Pantallas
             this.lbl_titulo.Text = "Nueva Contraseña";
             this.lbl_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pbx_back
+            // 
+            this.pbx_back.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
+            this.pbx_back.Location = new System.Drawing.Point(0, 0);
+            this.pbx_back.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbx_back.Name = "pbx_back";
+            this.pbx_back.Size = new System.Drawing.Size(1920, 1055);
+            this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_back.TabIndex = 0;
+            this.pbx_back.TabStop = false;
+            // 
             // AVISC_LoginChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1055);
             this.Controls.Add(this.pnl_back);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,7 +247,6 @@ namespace AVISC_Pantallas
             this.Text = "AVISC_LoginChangePassword";
             this.Load += new System.EventHandler(this.AVISC_LoginChangePassword_Load);
             this.pnl_back.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).EndInit();
             this.pnl_login.ResumeLayout(false);
             this.pnl_login.PerformLayout();
             this.pnl_warning.ResumeLayout(false);
@@ -258,6 +257,7 @@ namespace AVISC_Pantallas
             this.pnl_newPass.ResumeLayout(false);
             this.pnl_newPass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_newPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).EndInit();
             this.ResumeLayout(false);
 
         }

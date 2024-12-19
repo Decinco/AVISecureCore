@@ -10,10 +10,6 @@ namespace AVISC_Pantallas
     {
         private Image imageOpen, imageClose;
 
-        private bool validar_login = false;
-
-        AVISC_LoginChangePassword ChangePasswordForm;
-
         AVISC_Border Border; 
 
         public AVISC_Login()
@@ -30,28 +26,31 @@ namespace AVISC_Pantallas
             imageClose = Bitmap.FromFile(@"Resources\ojo-cerrado.png");
 
             pbx_ojo.Image = imageOpen;
-            txt_pass.UseSystemPasswordChar = false;
         }
-
-        private void btm_login_Click(object sender, EventArgs e)
+        private void btm_login_Click_1(object sender, EventArgs e)
         {
-            // hacer primero verificar si la pass es 12345aA si es hacer el changepass, sino simplemente acceder a la base de datos y ya
+
+            LoginStatus status;
+            // hacer primero verificar si el password es 12345aA y hacer el changepass, sino, simplemente acceder a la base de
+            // datos y ya
             try
             {
-                if (txt_pass.Text == "12345aA")
+                if (txt_pass.Text == null || txt_user.Text == null)
                 {
-                    ChangePasswordForm = new AVISC_LoginChangePassword { username = txt_user.Text, passwword = txt_pass.Text };
-                    ChangePasswordForm.Show();
-
-                    Hide();
+                    pnl_warning.Visible = true;
+                    lbl_error.Text = "Rellena el formulario, por favor.";
                 }
                 else
                 {
-                    validar_login = LoginData.PerformLogin(txt_user.Text, txt_pass.Text, null);
 
-                    if (validar_login == true)
+                    status = LoginData.PerformLogin(txt_user.Text, txt_pass.Text);
+
+                    if (status == LoginStatus.PasswordChange)
                     {
-
+                        ShowNewPassword();
+                    }
+                    else if (status == LoginStatus.Success)
+                    {
                         Border = new AVISC_Border();
 
                         pnl_warning.Visible = false;
@@ -65,37 +64,129 @@ namespace AVISC_Pantallas
                     else
                     {
                         pnl_warning.Visible = true;
-                        lbl_error.Visible = true;
-                        lbl_error.Text = "Nombre de usuario o contraseña incorrectos. Vuelve a intentarlo.";
+                        lbl_error.Text = lbl_error.Text = "Nombre de usuario o contraseña incorrectos. Vuelve a intentarlo.";
+                        MessageBox.Show("entra");
                     }
                 }
             }
             catch (Exception)
             {
-
                 pnl_warning.Visible = true;
                 lbl_error.Text = "Nombre de usuario o contraseña incorrectos.";
-            }
-        }
-        private void pbx_ojo_Click(object sender, EventArgs e)
-        {
-            if (validar_login)
-            {
-                txt_pass.UseSystemPasswordChar = false;
-                pbx_ojo.Image = imageOpen;
-                validar_login = false;
-            }
-            else
-            {
-                txt_pass.UseSystemPasswordChar = true;
-                pbx_ojo.Image = imageClose;
-                validar_login = true;
             }
         }
 
         private void LoggedOut(object sender, FormClosingEventArgs e)
         {
             Show();
+        }
+
+        private void pbx_newPass_Click(object sender, EventArgs e)
+        {
+            if (txt_newPass.UseSystemPasswordChar)
+            {
+                txt_newPass.UseSystemPasswordChar = false;
+                pbx_newPass.Image = imageOpen;
+            }
+            else
+            {
+                txt_newPass.UseSystemPasswordChar = true;
+                pbx_newPass.Image = imageClose;
+            }
+        }
+
+        private void pbx_ojo_Click(object sender, EventArgs e)
+        {
+            if (txt_pass.UseSystemPasswordChar)
+            {
+                txt_pass.UseSystemPasswordChar = false;
+                pbx_ojo.Image = imageOpen;
+            }
+            else
+            {
+                txt_pass.UseSystemPasswordChar = true;
+                pbx_ojo.Image = imageClose;
+            }
+        }
+
+        private void pbx_confirmNewPass_Click(object sender, EventArgs e)
+        {
+            if (txt_confirmNewPass.UseSystemPasswordChar)
+            {
+                txt_confirmNewPass.UseSystemPasswordChar = false;
+                pbx_confirmNewPass.Image = imageOpen;
+            }
+            else
+            {
+                txt_confirmNewPass.UseSystemPasswordChar = true;
+                pbx_confirmNewPass.Image = imageClose;
+            }
+        }
+
+        private void ShowNewPassword()
+        {
+            pbx_newPass.Image = imageOpen;
+            pbx_confirmNewPass.Image = imageOpen;
+
+            pnl_confirmNewPass.Show();
+            pnl_warning.Visible = true;
+            lbl_error.Visible = true;
+            txt_newPass.UseSystemPasswordChar = false;
+            txt_newPass.UseSystemPasswordChar = false;
+            lbl_error.ForeColor = Color.Black;
+            pnl_warning.BackColor = Color.FromArgb(255, 241, 102);
+            lbl_error.Text = "Se ha pedido un cambio para la contraseña. Por favor, crea una nueva.";
+
+            // Activar Tabulación
+            txt_newPass.TabStop = true;
+            txt_confirmNewPass.TabStop = true;
+            btm_generationNewPass.TabStop = true;
+
+            txt_user.TabStop = false;
+            txt_pass.TabStop = false;
+            btm_login.TabStop = false;
+
+
+
+            pnl_Login.Hide();
+            lbl_titulo.Hide();
+            lbl_pass.Hide();
+            lbl_user.Hide();
+        }
+
+        private void btm_generationNewPass_Click(object sender, EventArgs e)
+        {
+            ChangeNewPassword();
+        }
+
+        private void SupressEnterAndNextTextbox(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void ChangeNewPassword()
+        {
+            bool validar_login;
+            validar_login = LoginData.ChangeNewPassword(txt_newPass.Text, txt_confirmNewPass.Text, txt_user.Text);
+
+            if (validar_login)
+            {
+                Border = new AVISC_Border();
+
+                pnl_warning.Visible = false;
+                pnl_confirmNewPass.Hide();
+                Hide();
+                Border.Show();
+            }
+            else
+            {
+                lbl_error.Text = "Las contraseñas no coinciden.";
+                lbl_error.ForeColor = Color.White;
+                pnl_warning.BackColor = Color.FromArgb(255, 46, 46);
+            }
         }
     }
 }

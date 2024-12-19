@@ -202,9 +202,10 @@ namespace AVIDataAccess
             if (!section.SectionInformation.IsProtected)
             {
                 section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+                conf.Save();
             }
 
-            conf.Save();
+            //conf.Save();
         }
     }
 }

@@ -95,7 +95,7 @@ namespace AVISC_Pantallas
             }
             else
             {
-                validar_login = LoginData.PerformLogin(username, Passwword, txt_confirmNewPass.Text);
+                //validar_login = LoginData.PerformLogin(username, Passwword, txt_confirmNewPass.Text);
 
                 if (validar_login)
                 {
