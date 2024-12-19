@@ -36,7 +36,6 @@ namespace AVISC_Pantallas
             this.pnl_Login = new System.Windows.Forms.Panel();
             this.btm_login = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pbx_ojo = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,31 +43,32 @@ namespace AVISC_Pantallas
             this.pnl_newPassword = new System.Windows.Forms.Panel();
             this.btm_generationNewPass = new System.Windows.Forms.Button();
             this.pnl_confirmNewPass = new System.Windows.Forms.Panel();
-            this.pbx_confirmNewPass = new System.Windows.Forms.PictureBox();
             this.pnl_newPass = new System.Windows.Forms.Panel();
-            this.pbx_newPass = new System.Windows.Forms.PictureBox();
             this.lbl_confirmNewPass = new System.Windows.Forms.Label();
             this.lbl_newPass = new System.Windows.Forms.Label();
             this.lbl_titolNewPass = new System.Windows.Forms.Label();
             this.lbl_pass = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
-            this.pbx_back = new System.Windows.Forms.PictureBox();
             this.txt_confirmNewPass = new System.Windows.Forms.TextBox();
             this.txt_newPass = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
+            this.pbx_ojo = new System.Windows.Forms.PictureBox();
+            this.pbx_confirmNewPass = new System.Windows.Forms.PictureBox();
+            this.pbx_newPass = new System.Windows.Forms.PictureBox();
+            this.pbx_back = new System.Windows.Forms.PictureBox();
             this.pnl_fondo.SuspendLayout();
             this.pnl_Container.SuspendLayout();
             this.pnl_warning.SuspendLayout();
             this.pnl_Login.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).BeginInit();
             this.panel4.SuspendLayout();
             this.pnl_newPassword.SuspendLayout();
             this.pnl_confirmNewPass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_confirmNewPass)).BeginInit();
             this.pnl_newPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_confirmNewPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_newPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).BeginInit();
             this.SuspendLayout();
@@ -166,16 +166,6 @@ namespace AVISC_Pantallas
             this.panel3.Size = new System.Drawing.Size(655, 48);
             this.panel3.TabIndex = 4;
             // 
-            // pbx_ojo
-            // 
-            this.pbx_ojo.Location = new System.Drawing.Point(605, 5);
-            this.pbx_ojo.Name = "pbx_ojo";
-            this.pbx_ojo.Size = new System.Drawing.Size(47, 38);
-            this.pbx_ojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_ojo.TabIndex = 2;
-            this.pbx_ojo.TabStop = false;
-            this.pbx_ojo.Click += new System.EventHandler(this.pbx_ojo_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -261,16 +251,6 @@ namespace AVISC_Pantallas
             this.pnl_confirmNewPass.Size = new System.Drawing.Size(655, 48);
             this.pnl_confirmNewPass.TabIndex = 4;
             // 
-            // pbx_confirmNewPass
-            // 
-            this.pbx_confirmNewPass.Location = new System.Drawing.Point(605, 5);
-            this.pbx_confirmNewPass.Name = "pbx_confirmNewPass";
-            this.pbx_confirmNewPass.Size = new System.Drawing.Size(47, 38);
-            this.pbx_confirmNewPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_confirmNewPass.TabIndex = 2;
-            this.pbx_confirmNewPass.TabStop = false;
-            this.pbx_confirmNewPass.Click += new System.EventHandler(this.pbx_confirmNewPass_Click);
-            // 
             // pnl_newPass
             // 
             this.pnl_newPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -280,16 +260,6 @@ namespace AVISC_Pantallas
             this.pnl_newPass.Name = "pnl_newPass";
             this.pnl_newPass.Size = new System.Drawing.Size(655, 48);
             this.pnl_newPass.TabIndex = 3;
-            // 
-            // pbx_newPass
-            // 
-            this.pbx_newPass.Location = new System.Drawing.Point(605, 5);
-            this.pbx_newPass.Name = "pbx_newPass";
-            this.pbx_newPass.Size = new System.Drawing.Size(47, 38);
-            this.pbx_newPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_newPass.TabIndex = 3;
-            this.pbx_newPass.TabStop = false;
-            this.pbx_newPass.Click += new System.EventHandler(this.pbx_newPass_Click);
             // 
             // lbl_confirmNewPass
             // 
@@ -361,16 +331,6 @@ namespace AVISC_Pantallas
             this.lbl_titulo.Text = "Iniciar Sessión";
             this.lbl_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pbx_back
-            // 
-            this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
-            this.pbx_back.Location = new System.Drawing.Point(0, 0);
-            this.pbx_back.Name = "pbx_back";
-            this.pbx_back.Size = new System.Drawing.Size(1920, 1055);
-            this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_back.TabIndex = 4;
-            this.pbx_back.TabStop = false;
-            // 
             // txt_confirmNewPass
             // 
             this.txt_confirmNewPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -384,7 +344,6 @@ namespace AVISC_Pantallas
             this.txt_confirmNewPass.Size = new System.Drawing.Size(596, 33);
             this.txt_confirmNewPass.TabIndex = 1;
             this.txt_confirmNewPass.TabStop = false;
-            this.txt_confirmNewPass.UseSystemPasswordChar = true;
             this.txt_confirmNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SupressEnterAndNextTextbox);
             // 
             // txt_newPass
@@ -400,7 +359,6 @@ namespace AVISC_Pantallas
             this.txt_newPass.Size = new System.Drawing.Size(596, 34);
             this.txt_newPass.TabIndex = 0;
             this.txt_newPass.TabStop = false;
-            this.txt_newPass.UseSystemPasswordChar = true;
             this.txt_newPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SupressEnterAndNextTextbox);
             // 
             // txt_pass
@@ -431,6 +389,45 @@ namespace AVISC_Pantallas
             this.txt_user.UseSystemPasswordChar = true;
             this.txt_user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SupressEnterAndNextTextbox);
             // 
+            // pbx_ojo
+            // 
+            this.pbx_ojo.Location = new System.Drawing.Point(605, 5);
+            this.pbx_ojo.Name = "pbx_ojo";
+            this.pbx_ojo.Size = new System.Drawing.Size(47, 38);
+            this.pbx_ojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_ojo.TabIndex = 2;
+            this.pbx_ojo.TabStop = false;
+            this.pbx_ojo.Click += new System.EventHandler(this.pbx_ojo_Click);
+            // 
+            // pbx_confirmNewPass
+            // 
+            this.pbx_confirmNewPass.Location = new System.Drawing.Point(605, 5);
+            this.pbx_confirmNewPass.Name = "pbx_confirmNewPass";
+            this.pbx_confirmNewPass.Size = new System.Drawing.Size(47, 38);
+            this.pbx_confirmNewPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_confirmNewPass.TabIndex = 2;
+            this.pbx_confirmNewPass.TabStop = false;
+            this.pbx_confirmNewPass.Click += new System.EventHandler(this.pbx_confirmNewPass_Click);
+            // 
+            // pbx_newPass
+            // 
+            this.pbx_newPass.Location = new System.Drawing.Point(605, 5);
+            this.pbx_newPass.Name = "pbx_newPass";
+            this.pbx_newPass.Size = new System.Drawing.Size(47, 38);
+            this.pbx_newPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_newPass.TabIndex = 3;
+            this.pbx_newPass.TabStop = false;
+            this.pbx_newPass.Click += new System.EventHandler(this.pbx_newPass_Click);
+            // 
+            // pbx_back
+            // 
+            this.pbx_back.Location = new System.Drawing.Point(0, 0);
+            this.pbx_back.Name = "pbx_back";
+            this.pbx_back.Size = new System.Drawing.Size(1920, 1055);
+            this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_back.TabIndex = 4;
+            this.pbx_back.TabStop = false;
+            // 
             // AVISC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
@@ -450,16 +447,16 @@ namespace AVISC_Pantallas
             this.pnl_Login.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.pnl_newPassword.ResumeLayout(false);
             this.pnl_newPassword.PerformLayout();
             this.pnl_confirmNewPass.ResumeLayout(false);
             this.pnl_confirmNewPass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_confirmNewPass)).EndInit();
             this.pnl_newPass.ResumeLayout(false);
             this.pnl_newPass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ojo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_confirmNewPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_newPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_back)).EndInit();
             this.ResumeLayout(false);
@@ -498,5 +495,6 @@ namespace AVISC_Pantallas
         private System.Windows.Forms.TextBox txt_newPass;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

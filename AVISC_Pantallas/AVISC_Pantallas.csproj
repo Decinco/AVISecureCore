@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\01 align center.png" />
+    <None Include="Resources\cerrar-sesion.png" />
     <Content Include="Resources\ddddd-4083739413.jpg" />
     <Content Include="Resources\dibujo 1.png" />
     <Content Include="Resources\Ellipse 1.png" />
