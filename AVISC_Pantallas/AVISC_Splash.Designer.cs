@@ -42,15 +42,16 @@ namespace AVISC_Pantallas
             this.backVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("backVideo.OcxState")));
             this.backVideo.Size = new System.Drawing.Size(1920, 1080);
             this.backVideo.TabIndex = 0;
+            this.backVideo.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.backVideo_PlayStateChange);
             // 
-            // splash
+            // AVISC_Splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.backVideo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "splash";
+            this.Name = "AVISC_Splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "splash";
             this.Load += new System.EventHandler(this.splash_Load);

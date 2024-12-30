@@ -54,7 +54,7 @@ namespace AVISC_Pantallas
                 }
             }
 
-            RoundUtils.RedondearEsquinas(img_User, 200);
+            //RoundUtils.RedondearEsquinas(img_User, 200);
         }
     }
 }

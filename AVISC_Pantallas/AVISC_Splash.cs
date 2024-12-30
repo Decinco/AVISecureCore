@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace AVISC_Pantallas
 {
@@ -34,22 +27,21 @@ namespace AVISC_Pantallas
             backVideo.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resources", "video-splash.mp4");
             backVideo.settings.autoStart = true;
             backVideo.uiMode = "none"; // Ocultar controles
-            backVideo.PlayStateChange += BackVideo_PlayStateChange; // Suscribirse al evento
+            backVideo.enableContextMenu = false; // Deshabilitar menú contextual
+            backVideo.PlayStateChange += backVideo_PlayStateChange; // Suscribirse al evento
         }
-
-        private void BackVideo_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        
+        private void backVideo_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
-            // Verificar si el estado del reproductor es "Playing"
             if (e.newState == (int)WMPLib.WMPPlayState.wmppsPlaying)
             {
                 backVideo.fullScreen = true; // Hacer pantalla completa
             }
-            else if (e.newState == (int)WMPLib.WMPPlayState.wmppsStopped)
+            else if (e.newState == (int)WMPLib.WMPPlayState.wmppsPaused || e.newState == (int)WMPLib.WMPPlayState.wmppsStopped)
             {
+                // Mostrar el formulario de login al pausar o terminar el video
                 AVISC_Login login = new AVISC_Login();
-
                 login.Show();
-
                 Hide();
             }
         }
