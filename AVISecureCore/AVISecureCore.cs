@@ -22,8 +22,9 @@ namespace AVISecureCore
         private void button1_Click(object sender, EventArgs e)
         {
             AVISC_Splash splash = new AVISC_Splash();
+            AVISC_Login LOGIN = new AVISC_Login();
 
-            splash.Show();
+            LOGIN.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

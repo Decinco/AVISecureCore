@@ -8,8 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using AVIDataAccess;
+using System.Windows.Forms;
 
 namespace AVISC_Global {  
+
+    public enum LoginStatus
+    {
+        Success,
+        Failure,
+        PasswordChange
+    }
+
     /// <summary>
     /// Clase global que incluye los datos del usuario necesarios para correr el programa
     /// </summary>
@@ -31,11 +40,11 @@ namespace AVISC_Global {
         /// <param name="username">Nombre del usuario al que se hará login.</param>
         /// <param name="password">Contraseña introducida.</param>
         /// <returns>"true" si es exitoso, "false" si no.</returns>
-        public static bool PerformLogin(string username, string password, string newPassword)
+        public static LoginStatus PerformLogin(string username, string password)
         {
             DataRow[] rowsFound;
-            string hashedPasswd, salt, storedPasswd, new_salt, query;
-            bool valid = false;
+            string hashedPasswd, salt, storedPasswd;
+            LoginStatus status = LoginStatus.Failure;
 
             DataSet dts = Data.PortarDataset("Users");
             rowsFound = dts.Tables[0].Select($"Login = '{username}'");
@@ -47,27 +56,59 @@ namespace AVISC_Global {
 
                 if (password == "12345aA")
                 {
-                    new_salt = CreateSalt();
-                    hashedPasswd = SaltPassword(newPassword, new_salt);
-                    query = $"UPDATE Users SET Password = '{hashedPasswd}', Salt = '{new_salt}' WHERE Login = '{username}'";
-
-                    Data.Executar(query);
-                    valid = true;
+                    status = LoginStatus.PasswordChange;
                 }
                 else
                 {
                     hashedPasswd = SaltPassword(password, salt);
-                    valid = hashedPasswd == storedPasswd;
+                    if (hashedPasswd == storedPasswd)
+                    {
+                        status = LoginStatus.Success;
+                    }
+                    else
+                    {
+                        status = LoginStatus.Failure;
+                    }
                 }
             }
 
-            if (valid)
+            if (status == LoginStatus.Success)
             {
                 SetUserInformation(rowsFound[0]);
             }
-            return valid;
+
+            return status;
         }
 
+        public static bool ChangeNewPassword(string newPass, string comfirmPass, string user)
+        {
+            DataRow[] rowsFound;
+            bool changePass;
+            string newSalt, query, pass;
+
+            DataSet dts = Data.PortarDataset("Users");
+            rowsFound = dts.Tables[0].Select($"Login = '{user}'");
+
+            if (newPass == comfirmPass)
+            {
+                newSalt = CreateSalt();
+                pass = SaltPassword(comfirmPass, newSalt);
+                query = $"UPDATE Users SET Password = '{pass}', Salt = '{newSalt}' WHERE Login = '{user}'";
+
+                Data.Executar(query);
+                changePass = true;
+            }
+            else
+            {
+                changePass = false;
+            }
+            if (changePass)
+            {
+                SetUserInformation(rowsFound[0]);
+            }
+
+            return changePass;
+        }
         private static string SaltPassword(string password, string salt)
         {
             string strHash;
@@ -101,6 +142,7 @@ namespace AVISC_Global {
             DataSet userCategoryDTS = Data.PortarDataset("UserCategories");
             DataSet userOptionDTS = Data.PortarDataset("UserOptions");
             int permissionLevel;
+            byte[] profilePictureString;
 
             ImageConverter converter = new ImageConverter();
 
@@ -109,11 +151,20 @@ namespace AVISC_Global {
             permissionLevel = userCategory.Field<int>("AccessLevel");
             
 
+            profilePictureString = userRow.Field<byte[]>("Photo");
+
             UserName = userRow.Field<string>("UserName");
-            ProfilePicture = (Bitmap)converter.ConvertFrom(userRow.Field<byte[]>("Photo"));
             CategoryName = userCategory.Field<string>("DescUserCategory");
             AvailableOptions = new List<DataRow>(userOptionDTS.Tables[0].Select($"accesLvlReq <= {permissionLevel}"));
-        }
 
+            if (profilePictureString != null)
+            {
+                ProfilePicture = (Bitmap)converter.ConvertFrom(profilePictureString);
+            }
+            else
+            {
+                ProfilePicture = Bitmap.FromFile(@"Resources\avatar-de-hombre.png");
+            }
+        }
     }
 }
