@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AVISC_CloseableFeatureForm.cs" />
+    <Compile Include="AVISC_CloseableFeatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AVISC_CloseableFeatureForm.Designer.cs">
       <DependentUpon>AVISC_CloseableFeatureForm.cs</DependentUpon>
     </Compile>

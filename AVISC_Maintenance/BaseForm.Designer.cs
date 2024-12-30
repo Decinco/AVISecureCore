@@ -108,7 +108,7 @@ namespace AVISC_Maintenance
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1822, 953);
+            this.ClientSize = new System.Drawing.Size(1840, 1000);
             this.Controls.Add(this.swTextboxSpecie);
             this.Controls.Add(this.swTextboxCognom);
             this.Controls.Add(this.swTextboxNom);
@@ -116,6 +116,7 @@ namespace AVISC_Maintenance
             this.Controls.Add(this.nuevoDB);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
             this.Text = "BaseForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

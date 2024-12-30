@@ -45,8 +45,8 @@ namespace AVISC_Pantallas
                 {
                     pnl_MenuItems.Controls.Add(new SWLauchForm()
                     {
-                        Project = "AVISC_BaseForms",
-                        Target = "AVISC_CloseableFeatureForm",
+                        Project = "AVISC_Maintenance",
+                        Target = "BaseForm",
                         FeatureName = option.Field<string>("Descripcio"),
                         Description = "Aún no están implementadas las descripciones en la base de datos",
                         Margin = new Padding(25)

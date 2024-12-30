@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVIDataAccess;
 using AVISC_Controles;
+using AVISC_BaseForms;
  
 
 namespace AVISC_Maintenance
 {
-   
 
-    public partial class BaseForm : Form
+    public partial class BaseForm : AVISC_CloseableFeatureForm
     {
         private DataAccess dataAccess;
         private DataSet dts;
