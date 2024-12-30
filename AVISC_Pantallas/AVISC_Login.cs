@@ -27,12 +27,15 @@ namespace AVISC_Pantallas
             pbx_ojo.Image = imageOpen;
 
             // Redondear los bordes de los paneles
-            RoundUtils.RedondearEsquinas(pnl_Login, 40); // Redondear el panel de login
-            RoundUtils.RedondearEsquinas(btn_Login, 20); // Redondear el botón de login
+            RoundUtils.RedondearEsquinas(pnl_Container, 40); // Redondear el panel de login
+            RoundUtils.RedondearEsquinas(btm_login, 20); // Redondear el botón de login
+            RoundUtils.RedondearEsquinas(btm_generationNewPass, 20); // Redondear el botón de login
             RoundUtils.RedondearEsquinas(panel_user, topLeft: 10, topRight: 10); 
             RoundUtils.RedondearEsquinas(panel_pass, topLeft: 10, topRight: 10);
+            RoundUtils.RedondearEsquinas(pnl_newPass, topLeft: 10, topRight: 10);
+            RoundUtils.RedondearEsquinas(pnl_confirmNewPass, topLeft: 10, topRight: 10);
         }
-        private void btm_login_Click_1(object sender, EventArgs e)
+        private void btm_login_Click(object sender, EventArgs e)
         {
 
             LoginStatus status;
@@ -160,9 +163,6 @@ namespace AVISC_Pantallas
 
 
             pnl_Login.Hide();
-            lbl_titulo.Hide();
-            lbl_pass.Hide();
-            lbl_user.Hide();
         }
 
         private void btm_generationNewPass_Click(object sender, EventArgs e)
