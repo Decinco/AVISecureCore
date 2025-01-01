@@ -35,7 +35,16 @@ namespace AVISC_Maintenance
             this.swTextboxSpecie = new AVISC_Controles.SWTextbox();
             this.swTextboxCognom = new AVISC_Controles.SWTextbox();
             this.swTextboxNom = new AVISC_Controles.SWTextbox();
+            this.saveImg = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveImg)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,22 +58,32 @@ namespace AVISC_Maintenance
             // 
             // nuevoDB
             // 
-            this.nuevoDB.Location = new System.Drawing.Point(1252, 73);
+            this.nuevoDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.nuevoDB.FlatAppearance.BorderSize = 0;
+            this.nuevoDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nuevoDB.Font = new System.Drawing.Font("Inter ExtraBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevoDB.ForeColor = System.Drawing.Color.White;
+            this.nuevoDB.Location = new System.Drawing.Point(1299, 79);
             this.nuevoDB.Name = "nuevoDB";
-            this.nuevoDB.Size = new System.Drawing.Size(226, 44);
+            this.nuevoDB.Size = new System.Drawing.Size(180, 60);
             this.nuevoDB.TabIndex = 4;
             this.nuevoDB.Text = "Nuevo";
-            this.nuevoDB.UseVisualStyleBackColor = true;
+            this.nuevoDB.UseVisualStyleBackColor = false;
             this.nuevoDB.Click += new System.EventHandler(this.nuevoDB_Click_1);
             // 
             // actualizarDB
             // 
-            this.actualizarDB.Location = new System.Drawing.Point(1562, 74);
+            this.actualizarDB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.actualizarDB.FlatAppearance.BorderSize = 0;
+            this.actualizarDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.actualizarDB.Font = new System.Drawing.Font("Inter ExtraBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actualizarDB.ForeColor = System.Drawing.Color.White;
+            this.actualizarDB.Location = new System.Drawing.Point(1622, 79);
             this.actualizarDB.Name = "actualizarDB";
-            this.actualizarDB.Size = new System.Drawing.Size(226, 43);
+            this.actualizarDB.Size = new System.Drawing.Size(180, 60);
             this.actualizarDB.TabIndex = 5;
-            this.actualizarDB.Text = "Actualizar";
-            this.actualizarDB.UseVisualStyleBackColor = true;
+            this.actualizarDB.Text = "Guardar\r\nCambios";
+            this.actualizarDB.UseVisualStyleBackColor = false;
             this.actualizarDB.Click += new System.EventHandler(this.actualizarDB_Click);
             // 
             // swTextboxSpecie
@@ -85,7 +104,7 @@ namespace AVISC_Maintenance
             this.swTextboxCognom.DadaPermesa = AVISC_Controles.ContentType.Text;
             this.swTextboxCognom.IsForeignKey = false;
             this.swTextboxCognom.LinkedControlName = null;
-            this.swTextboxCognom.Location = new System.Drawing.Point(310, 84);
+            this.swTextboxCognom.Location = new System.Drawing.Point(340, 84);
             this.swTextboxCognom.Name = "swTextboxCognom";
             this.swTextboxCognom.Size = new System.Drawing.Size(422, 22);
             this.swTextboxCognom.TabIndex = 10;
@@ -94,14 +113,55 @@ namespace AVISC_Maintenance
             // swTextboxNom
             // 
             this.swTextboxNom.AllowEmpty = false;
+            this.swTextboxNom.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.swTextboxNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextboxNom.DadaPermesa = AVISC_Controles.ContentType.Text;
             this.swTextboxNom.IsForeignKey = false;
             this.swTextboxNom.LinkedControlName = null;
             this.swTextboxNom.Location = new System.Drawing.Point(61, 84);
+            this.swTextboxNom.Multiline = true;
             this.swTextboxNom.Name = "swTextboxNom";
-            this.swTextboxNom.Size = new System.Drawing.Size(208, 22);
+            this.swTextboxNom.Size = new System.Drawing.Size(245, 60);
             this.swTextboxNom.TabIndex = 9;
             this.swTextboxNom.Tag = "CodeSpecie";
+            // 
+            // saveImg
+            // 
+            this.saveImg.Image = global::AVISC_Maintenance.Properties.Resources.save_img;
+            this.saveImg.Location = new System.Drawing.Point(9, 10);
+            this.saveImg.Name = "saveImg";
+            this.saveImg.Size = new System.Drawing.Size(40, 40);
+            this.saveImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.saveImg.TabIndex = 25;
+            this.saveImg.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.panel1.Controls.Add(this.saveImg);
+            this.panel1.Location = new System.Drawing.Point(1564, 79);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(60, 60);
+            this.panel1.TabIndex = 26;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(1240, 79);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 60);
+            this.panel2.TabIndex = 27;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AVISC_Maintenance.Properties.Resources.save_img;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
             // 
             // BaseForm
             // 
@@ -115,11 +175,24 @@ namespace AVISC_Maintenance
             this.Controls.Add(this.actualizarDB);
             this.Controls.Add(this.nuevoDB);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
             this.Text = "BaseForm";
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.nuevoDB, 0);
+            this.Controls.SetChildIndex(this.actualizarDB, 0);
+            this.Controls.SetChildIndex(this.swTextboxNom, 0);
+            this.Controls.SetChildIndex(this.swTextboxCognom, 0);
+            this.Controls.SetChildIndex(this.swTextboxSpecie, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.saveImg)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +205,10 @@ namespace AVISC_Maintenance
         private AVISC_Controles.SWTextbox swTextboxNom;
         private AVISC_Controles.SWTextbox swTextboxCognom;
         private AVISC_Controles.SWTextbox swTextboxSpecie;
+        private System.Windows.Forms.PictureBox saveImg;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

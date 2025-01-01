@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using AVIDataAccess;
 using AVISC_Controles;
 using AVISC_BaseForms;
+using AVISC_Global;
  
 
 namespace AVISC_Maintenance
@@ -29,6 +30,9 @@ namespace AVISC_Maintenance
             InitializeComponent();
             PortarDates();
             dataBind();
+
+            RoundUtils.RedondearEsquinas(nuevoDB, 30);
+            RoundUtils.RedondearEsquinas(actualizarDB, 30);
         }
         bool EsNou = false;
         private void PortarDates()
