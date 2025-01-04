@@ -47,8 +47,8 @@ namespace AVISC_Pantallas
                     {
                         Project = "AVISC_BaseForms",
                         Target = "AVISC_CloseableFeatureForm",
-                        FeatureName = option.Field<string>("Descripcio"),
-                        Description = "Aún no están implementadas las descripciones en la base de datos",
+                        Description = option.Field<string>("Descripcio"),
+                        FeatureName = option.Field<string>("Nom"),
                         Margin = new Padding(25)
                     });
                 }

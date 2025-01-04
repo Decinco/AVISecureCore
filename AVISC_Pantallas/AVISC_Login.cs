@@ -34,6 +34,8 @@ namespace AVISC_Pantallas
             RoundUtils.RedondearEsquinas(panel_pass, topLeft: 10, topRight: 10);
             RoundUtils.RedondearEsquinas(pnl_newPass, topLeft: 10, topRight: 10);
             RoundUtils.RedondearEsquinas(pnl_confirmNewPass, topLeft: 10, topRight: 10);
+
+            RoundUtils.RedondearEsquinas(pnl_salir, bottomLeft: 20);
         }
         private void btm_login_Click(object sender, EventArgs e)
         {
@@ -176,6 +178,21 @@ namespace AVISC_Pantallas
             {
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void pbx_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pnl_salir_MouseEnter_1(object sender, EventArgs e)
+        {
+            pnl_salir.BackColor = Color.Gray;
+        }
+
+        private void pnl_salir_MouseLeave_1(object sender, EventArgs e)
+        {
+            pnl_salir.BackColor = Color.Black;
         }
 
         private void ChangeNewPassword()
