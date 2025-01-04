@@ -31,20 +31,26 @@ namespace AVISC_Maintenance
             PortarDates();
             dataBind();
 
-            RoundUtils.RedondearEsquinas(nuevoDB, 30);
-            RoundUtils.RedondearEsquinas(actualizarDB, 30);
+            RoundUtils.RedondearEsquinas(nuevoDB, topRight: 30, bottomRight: 30);
+            RoundUtils.RedondearEsquinas(actualizarDB, topRight: 30, bottomRight: 30);
+            RoundUtils.RedondearEsquinas(nuevoPanel, topLeft: 30, bottomLeft: 30);
+            RoundUtils.RedondearEsquinas(actualizarPanel, topLeft: 30, bottomLeft: 30);
+            RoundUtils.RedondearEsquinas(dataBaseView, 50);
         }
         bool EsNou = false;
         private void PortarDates()
         {
-
-            dts = dataAccess.PortarDataset(" Species ");
-            dataGridView1.DataSource = dts.Tables["Species"];
+            // Obtener datos de la base de datos
+            dts = dataAccess.PortarDataset("Species");
             Regex compCampoId = new Regex("(?i)id");
-            if(dts !=null && dts.Tables.Count >0)
+
+            if (dts != null && dts.Tables.Count > 0)
             {
-                dataGridView1.DataSource = dts.Tables[0];
-                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                // Configurar el DataSource
+                dataBaseView.DataSource = dts.Tables[0];
+
+                // Ocultar columnas específicas
+                foreach (DataGridViewColumn column in dataBaseView.Columns)
                 {
                     if (compCampoId.IsMatch(column.Name))
                     {
@@ -52,12 +58,12 @@ namespace AVISC_Maintenance
                     }
                 }
             }
-            //actualizarDatos();
 
-
+            // Aplicar estilo al DataGridView
+            EstilizarDataGridView();
         }
 
-       
+
         //private void actualizarDatos()
         //{
         //    swTextboxCognom.DataBindings.Clear();
@@ -131,8 +137,55 @@ namespace AVISC_Maintenance
 
 
         }
-    }
-    
-    
 
+        private void EstilizarDataGridView()
+        {
+            dataBaseView.BorderStyle = BorderStyle.None;
+
+            // Estilo de las cabeceras de columna
+            dataBaseView.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(32, 32, 32),
+                ForeColor = Color.FromArgb(255, 241, 102),
+                Font = new Font("Arial", 14F, FontStyle.Bold),
+                Alignment = DataGridViewContentAlignment.MiddleCenter
+            };
+
+            // Estilo de las celdas
+            dataBaseView.DefaultCellStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(42, 42, 42),
+                ForeColor = Color.White,
+                Font = new Font("Arial", 12F),
+                SelectionBackColor = Color.Gray,
+                SelectionForeColor = Color.White
+            };
+
+            // Alternar colores en las filas
+            dataBaseView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(32, 32, 32);
+
+            // Estilo de filas
+            dataBaseView.RowTemplate.Height = 70;
+
+            // Asignar el mismo ancho a todas las columnas
+            //foreach (DataGridViewColumn columna in dataBaseView.Columns)
+            //{
+            //    columna.Width = 260;
+            //}
+
+            // Eliminar las líneas blancas entre las celdas
+            dataBaseView.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            //dataBaseView.GridColor = Color.Transparent;
+
+            // Deshabilitar los estilos visuales predeterminados
+            dataBaseView.EnableHeadersVisualStyles = false;
+        }
+
+        private void swTextboxSpecie_Validating(object sender, CancelEventArgs e)
+        {
+            swTextboxNom.BackColor = Color.FromArgb(42, 42, 42);
+            swTextboxCognom.BackColor = Color.FromArgb(42, 42, 42);
+            swTextboxSpecie.BackColor = Color.FromArgb(42, 42, 42);
+        }
+    }
 }
