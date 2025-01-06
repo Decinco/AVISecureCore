@@ -28,6 +28,7 @@ namespace AVISC_Pantallas
         public AVISC_Principal()
         {
             InitializeComponent();
+            RoundUtils.RedondearEsquinas(img_User, 200);
         }
 
         // Se utiliza un richtextbox para poder permitir que el nombre de usuario salga en negrita

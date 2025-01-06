@@ -12,7 +12,8 @@ using AVIDataAccess;
 using AVISC_Controles;
 using AVISC_BaseForms;
 using System.Drawing.Text;
-
+using AVISC_Global;
+ 
 
 namespace AVISC_Maintenance
 {
@@ -31,6 +32,12 @@ namespace AVISC_Maintenance
         public BaseForm()
         {
             DataAccess = new DataAccess();
+
+            RoundUtils.RedondearEsquinas(nuevoDB, topRight: 30, bottomRight: 30);
+            RoundUtils.RedondearEsquinas(actualizarDB, topRight: 30, bottomRight: 30);
+            RoundUtils.RedondearEsquinas(nuevoPanel, topLeft: 30, bottomLeft: 30);
+            RoundUtils.RedondearEsquinas(actualizarPanel, topLeft: 30, bottomLeft: 30);
+            RoundUtils.RedondearEsquinas(dataBaseView, 50);
 
             InitializeComponent();
             Setup();
@@ -87,6 +94,8 @@ namespace AVISC_Maintenance
                     }
                 }
             }
+            // Aplicar estilo al DataGridView
+            EstilizarDataGridView();
         }
 
         private string GetValueColumn(string displayTable)
@@ -229,5 +238,55 @@ namespace AVISC_Maintenance
             }
         }
         public virtual void DataGridConfiguration() { }
+
+        private void EstilizarDataGridView()
+        {
+            dataBaseView.BorderStyle = BorderStyle.None;
+
+            // Estilo de las cabeceras de columna
+            dataBaseView.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(32, 32, 32),
+                ForeColor = Color.FromArgb(255, 241, 102),
+                Font = new Font("Arial", 14F, FontStyle.Bold),
+                Alignment = DataGridViewContentAlignment.MiddleCenter
+            };
+
+            // Estilo de las celdas
+            dataBaseView.DefaultCellStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(42, 42, 42),
+                ForeColor = Color.White,
+                Font = new Font("Arial", 12F),
+                SelectionBackColor = Color.Gray,
+                SelectionForeColor = Color.White
+            };
+
+            // Alternar colores en las filas
+            dataBaseView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(32, 32, 32);
+
+            // Estilo de filas
+            dataBaseView.RowTemplate.Height = 70;
+
+            // Asignar el mismo ancho a todas las columnas
+            //foreach (DataGridViewColumn columna in dataBaseView.Columns)
+            //{
+            //    columna.Width = 260;
+            //}
+
+            // Eliminar las líneas blancas entre las celdas
+            dataBaseView.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            //dataBaseView.GridColor = Color.Transparent;
+
+            // Deshabilitar los estilos visuales predeterminados
+            dataBaseView.EnableHeadersVisualStyles = false;
+        }
+
+        private void swTextboxSpecie_Validating(object sender, CancelEventArgs e)
+        {
+            swTextboxNom.BackColor = Color.FromArgb(42, 42, 42);
+            swTextboxCognom.BackColor = Color.FromArgb(42, 42, 42);
+            swTextboxSpecie.BackColor = Color.FromArgb(42, 42, 42);
+        }
     }
 }
