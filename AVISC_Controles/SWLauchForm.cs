@@ -15,6 +15,7 @@ namespace AVISC_Controles
 
         public string Target { get; set; }
 
+
         public string Description
         {
             get { return lbl_descipcion.Text; }
@@ -25,6 +26,12 @@ namespace AVISC_Controles
         {
             get { return lbl_opcion.Text; }
             set { lbl_opcion.Text = value; }
+        }
+
+        public Image Image
+        {
+            get { return pbx_imagen.Image; }
+            set { pbx_imagen.Image = value; }
         }
 
         public SWLauchForm()

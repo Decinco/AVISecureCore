@@ -172,11 +172,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\01 align center.png" />
+    <None Include="Resources\log out login.png" />
+    <None Include="Resources\log_out.png" />
+    <None Include="Resources\salir.png" />
     <None Include="Resources\cerrar-sesion.png" />
     <Content Include="Resources\ddddd-4083739413.jpg" />
     <Content Include="Resources\dibujo 1.png" />
     <Content Include="Resources\Ellipse 1.png" />
     <None Include="Resources\Feature-Slash.png" />
+    <None Include="Resources\energia.png" />
+    <None Include="Resources\energia1.png" />
     <Content Include="Resources\Group 3.png" />
     <Content Include="Resources\Inter.bmp" />
     <Content Include="Resources\Inter\Inter-Italic-VariableFont_opsz,wght.ttf" />

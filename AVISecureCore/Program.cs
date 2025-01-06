@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AVISC_Pantallas;
 
 namespace AVISecureCore
 {
@@ -16,7 +17,7 @@ namespace AVISecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AVISecureCore());
+            Application.Run(new AVISC_Login());
         }
     }
 }
