@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AVIDataAccess">
-      <HintPath>..\Compile\AVIDataAccess.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -52,6 +49,7 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForeignKeyTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +58,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AVIDataAccess\AVIDataAccess.csproj">
+      <Project>{f536e5e3-dcb2-4795-ba07-0070c324619f}</Project>
+      <Name>AVIDataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AVISC_BaseForms\AVISC_BaseForms.csproj">
       <Project>{5c169a50-f0c1-409c-8abb-1994c5ba4096}</Project>
       <Name>AVISC_BaseForms</Name>

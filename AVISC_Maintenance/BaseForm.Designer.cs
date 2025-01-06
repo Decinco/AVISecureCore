@@ -32,9 +32,13 @@ namespace AVISC_Maintenance
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nuevoDB = new System.Windows.Forms.Button();
             this.actualizarDB = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.swTextbox1 = new AVISC_Controles.SWTextbox();
             this.swTextboxSpecie = new AVISC_Controles.SWTextbox();
-            this.swTextboxCognom = new AVISC_Controles.SWTextbox();
             this.swTextboxNom = new AVISC_Controles.SWTextbox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,29 +71,47 @@ namespace AVISC_Maintenance
             this.actualizarDB.UseVisualStyleBackColor = true;
             this.actualizarDB.Click += new System.EventHandler(this.actualizarDB_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(555, 83);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.Tag = "UserCategories.DescUserCategory";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(555, 122);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 27;
+            this.comboBox2.Tag = "UserRanks.DescUserRank";
+            // 
+            // swTextbox1
+            // 
+            this.swTextbox1.AllowEmpty = false;
+            this.swTextbox1.DadaPermesa = AVISC_Controles.ContentType.Text;
+            this.swTextbox1.IsForeignKey = false;
+            this.swTextbox1.LinkedControlName = null;
+            this.swTextbox1.Location = new System.Drawing.Point(61, 123);
+            this.swTextbox1.Name = "swTextbox1";
+            this.swTextbox1.Size = new System.Drawing.Size(208, 20);
+            this.swTextbox1.TabIndex = 26;
+            this.swTextbox1.Tag = "Login";
+            // 
             // swTextboxSpecie
             // 
             this.swTextboxSpecie.AllowEmpty = false;
             this.swTextboxSpecie.DadaPermesa = AVISC_Controles.ContentType.Text;
             this.swTextboxSpecie.IsForeignKey = false;
             this.swTextboxSpecie.LinkedControlName = null;
-            this.swTextboxSpecie.Location = new System.Drawing.Point(786, 83);
+            this.swTextboxSpecie.Location = new System.Drawing.Point(284, 84);
             this.swTextboxSpecie.Name = "swTextboxSpecie";
-            this.swTextboxSpecie.Size = new System.Drawing.Size(265, 22);
+            this.swTextboxSpecie.Size = new System.Drawing.Size(265, 20);
             this.swTextboxSpecie.TabIndex = 11;
-            this.swTextboxSpecie.Tag = "DescSpecie";
-            // 
-            // swTextboxCognom
-            // 
-            this.swTextboxCognom.AllowEmpty = false;
-            this.swTextboxCognom.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.swTextboxCognom.IsForeignKey = false;
-            this.swTextboxCognom.LinkedControlName = null;
-            this.swTextboxCognom.Location = new System.Drawing.Point(310, 84);
-            this.swTextboxCognom.Name = "swTextboxCognom";
-            this.swTextboxCognom.Size = new System.Drawing.Size(422, 22);
-            this.swTextboxCognom.TabIndex = 10;
-            this.swTextboxCognom.Tag = "CodeSpecie";
+            this.swTextboxSpecie.Tag = "Password";
             // 
             // swTextboxNom
             // 
@@ -99,26 +121,57 @@ namespace AVISC_Maintenance
             this.swTextboxNom.LinkedControlName = null;
             this.swTextboxNom.Location = new System.Drawing.Point(61, 84);
             this.swTextboxNom.Name = "swTextboxNom";
-            this.swTextboxNom.Size = new System.Drawing.Size(208, 22);
+            this.swTextboxNom.Size = new System.Drawing.Size(208, 20);
             this.swTextboxNom.TabIndex = 9;
-            this.swTextboxNom.Tag = "CodeSpecie";
+            this.swTextboxNom.Tag = "UserName";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(682, 83);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 28;
+            this.comboBox3.Tag = "Species.DescSpecie";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(682, 123);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.TabIndex = 29;
+            this.comboBox4.Tag = "Planets.DescPlanet";
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.swTextbox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.swTextboxSpecie);
-            this.Controls.Add(this.swTextboxCognom);
             this.Controls.Add(this.swTextboxNom);
             this.Controls.Add(this.actualizarDB);
             this.Controls.Add(this.nuevoDB);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
             this.Text = "BaseForm";
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.nuevoDB, 0);
+            this.Controls.SetChildIndex(this.actualizarDB, 0);
+            this.Controls.SetChildIndex(this.swTextboxNom, 0);
+            this.Controls.SetChildIndex(this.swTextboxSpecie, 0);
+            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.swTextbox1, 0);
+            this.Controls.SetChildIndex(this.comboBox2, 0);
+            this.Controls.SetChildIndex(this.comboBox3, 0);
+            this.Controls.SetChildIndex(this.comboBox4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,7 +183,11 @@ namespace AVISC_Maintenance
         private System.Windows.Forms.Button nuevoDB;
         private System.Windows.Forms.Button actualizarDB;
         private AVISC_Controles.SWTextbox swTextboxNom;
-        private AVISC_Controles.SWTextbox swTextboxCognom;
         private AVISC_Controles.SWTextbox swTextboxSpecie;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private AVISC_Controles.SWTextbox swTextbox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
