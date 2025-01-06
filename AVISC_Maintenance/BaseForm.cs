@@ -134,15 +134,15 @@ namespace AVISC_Maintenance
                     comboBox.DisplayMember = foreign.DisplayColumnName;
                     comboBox.ValueMember = foreign.ValueColumnName;
 
-                    //dataGridViewColumnIndex = dataGridView1.Columns[foreign.ValueColumnName].Index;
-                    //dataGridView1.Columns[foreign.ValueColumnName].Visible = false;
+                    //dataGridViewColumnIndex = dataBaseView.Columns[foreign.ValueColumnName].Index;
+                    //dataBaseView.Columns[foreign.ValueColumnName].Visible = false;
 
                     //DataGridViewComboBoxColumn column = new DataGridViewComboBoxColumn();
                     //column.DataSource = DTS.Tables[foreign.DisplayTableName];
                     //column.DisplayMember = foreign.DisplayColumnName;
                     //column.ValueMember = foreign.ValueColumnName;
 
-                    //dataGridView1.Columns.Insert(dataGridViewColumnIndex, column);
+                    //dataBaseView.Columns.Insert(dataGridViewColumnIndex, column);
                 }
             }
         }
