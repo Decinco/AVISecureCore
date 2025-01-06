@@ -48,7 +48,7 @@ namespace AVIDataAccess
         }
 
         /// <summary>
-        /// Obtiene un dataset con todos los registros de una tabla específica.
+        /// Obtiene todos los registros de una tabla específica.
         /// </summary>
         /// <param name="tableName">Nombre de la tabla a consultar.</param>
         /// <returns>Un DataSet con los datos de la tabla.</returns>
@@ -61,30 +61,69 @@ namespace AVIDataAccess
 
             using (Connection)
             {
-                adapter.Fill(dts, tableName);
+                adapter.Fill(dts);
             }
 
             return dts;
         }
 
         /// <summary>
-        /// Obtiene todos los registros de una tabla específica.
+        /// Obtiene todos los registros de una tabla y todas las tablas que tenga vinculadas a través de una clave foránea.
         /// </summary>
-        /// <param name="tableName">Nombre de la tabla a consultar.</param>
-        /// <returns>Un DataSet con los datos de la tabla.</returns>
-        public DataTable PortarTaula(string tableName)
+        /// <param name="mainTableName">La tabla a consultar.</param>
+        /// <param name="infoFK">DataSet con las claves foráneas </param>
+        /// <returns>Un DataSet con los datos de una tabla y todas las tablas vinculadas.</returns>
+        public DataSet PortarDatasetIForanies(string mainTableName, DataSet infoFK)
         {
             Connectar();
             DataSet dts = new DataSet();
-            string query = $"SELECT * FROM {tableName}";
+            List<string> fkTables = new List<string>();
+            string query = $"SELECT * FROM {mainTableName};";
+
+            foreach (DataRow foreignKey in infoFK.Tables[0].Rows)
+            {
+                fkTables.Add(foreignKey.Field<string>("PKTABLE_NAME"));
+            }
+
+            foreach (string table in fkTables)
+            {
+                query += $"SELECT * FROM {table};";
+            }
+
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
 
             using (Connection)
             {
-                adapter.Fill(dts, tableName);
+                adapter.Fill(dts);
             }
 
-            return dts.Tables[0];
+            dts.Tables[0].TableName = mainTableName;
+            for (int i = 1; i <= fkTables.Count; i++)
+            {
+                dts.Tables[i].TableName = fkTables[i-1];
+            }
+
+            return dts;
+        }
+
+        /// <summary>
+        /// Obtiene la información sobre claves foráneas de la tabla indicada.
+        /// </summary>
+        /// <param name="tableName">Nombre de la tabla principal.</param>
+        /// <returns>Un DataSet con los datos de la tabla</returns>
+        public DataSet PortarInfoFK(string tableName)
+        {
+            Connectar();
+            DataSet dts = new DataSet();
+            string query = $"sp_fkeys @fktable_name = '{tableName}'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
+
+            using (Connection)
+            {
+                adapter.Fill(dts);
+            }
+
+            return dts;
         }
 
         /// <summary>
@@ -201,8 +240,6 @@ namespace AVIDataAccess
                 section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
                 conf.Save();
             }
-
-            //conf.Save();
         }
     }
 }

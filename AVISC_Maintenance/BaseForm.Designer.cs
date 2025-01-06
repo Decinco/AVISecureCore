@@ -32,9 +32,6 @@ namespace AVISC_Maintenance
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nuevoDB = new System.Windows.Forms.Button();
             this.actualizarDB = new System.Windows.Forms.Button();
-            this.swTextboxSpecie = new AVISC_Controles.SWTextbox();
-            this.swTextboxCognom = new AVISC_Controles.SWTextbox();
-            this.swTextboxNom = new AVISC_Controles.SWTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,61 +64,23 @@ namespace AVISC_Maintenance
             this.actualizarDB.UseVisualStyleBackColor = true;
             this.actualizarDB.Click += new System.EventHandler(this.actualizarDB_Click);
             // 
-            // swTextboxSpecie
-            // 
-            this.swTextboxSpecie.AllowEmpty = false;
-            this.swTextboxSpecie.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.swTextboxSpecie.IsForeignKey = false;
-            this.swTextboxSpecie.LinkedControlName = null;
-            this.swTextboxSpecie.Location = new System.Drawing.Point(786, 83);
-            this.swTextboxSpecie.Name = "swTextboxSpecie";
-            this.swTextboxSpecie.Size = new System.Drawing.Size(265, 22);
-            this.swTextboxSpecie.TabIndex = 11;
-            this.swTextboxSpecie.Tag = "DescSpecie";
-            // 
-            // swTextboxCognom
-            // 
-            this.swTextboxCognom.AllowEmpty = false;
-            this.swTextboxCognom.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.swTextboxCognom.IsForeignKey = false;
-            this.swTextboxCognom.LinkedControlName = null;
-            this.swTextboxCognom.Location = new System.Drawing.Point(310, 84);
-            this.swTextboxCognom.Name = "swTextboxCognom";
-            this.swTextboxCognom.Size = new System.Drawing.Size(422, 22);
-            this.swTextboxCognom.TabIndex = 10;
-            this.swTextboxCognom.Tag = "CodeSpecie";
-            // 
-            // swTextboxNom
-            // 
-            this.swTextboxNom.AllowEmpty = false;
-            this.swTextboxNom.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.swTextboxNom.IsForeignKey = false;
-            this.swTextboxNom.LinkedControlName = null;
-            this.swTextboxNom.Location = new System.Drawing.Point(61, 84);
-            this.swTextboxNom.Name = "swTextboxNom";
-            this.swTextboxNom.Size = new System.Drawing.Size(208, 22);
-            this.swTextboxNom.TabIndex = 9;
-            this.swTextboxNom.Tag = "CodeSpecie";
-            // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1840, 1000);
-            this.Controls.Add(this.swTextboxSpecie);
-            this.Controls.Add(this.swTextboxCognom);
-            this.Controls.Add(this.swTextboxNom);
             this.Controls.Add(this.actualizarDB);
             this.Controls.Add(this.nuevoDB);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
             this.Text = "BaseForm";
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.nuevoDB, 0);
+            this.Controls.SetChildIndex(this.actualizarDB, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -129,8 +88,5 @@ namespace AVISC_Maintenance
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button nuevoDB;
         private System.Windows.Forms.Button actualizarDB;
-        private AVISC_Controles.SWTextbox swTextboxNom;
-        private AVISC_Controles.SWTextbox swTextboxCognom;
-        private AVISC_Controles.SWTextbox swTextboxSpecie;
     }
 }
