@@ -39,11 +39,7 @@ namespace AVISC_Controles
             InitializeComponent();
 
             // Configurar el estilo para redibujar el control.
-            this.SetStyle(ControlStyles.UserPaint, true);
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.ResizeRedraw, true); // Redibuja al cambiar de tamaño.
-            this.BackColor = Color.Transparent; // Permitir transparencia para bordes visibles.
+            BackColor = Color.Transparent; // Permitir transparencia para bordes visibles.
             RoundUtils.RedondearEsquinas(pnl_configuracion, 50); // Inicializa la región al crear el control.
         }
 
