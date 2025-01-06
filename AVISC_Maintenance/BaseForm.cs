@@ -30,7 +30,6 @@ namespace AVISC_Maintenance
 
         public BaseForm()
         {
-            Taula = "Users";
             DataAccess = new DataAccess();
 
             InitializeComponent();
