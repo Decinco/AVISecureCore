@@ -195,6 +195,11 @@ namespace AVISC_Pantallas
             pnl_salir.BackColor = Color.Black;
         }
 
+        private void pbx_salir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void ChangeNewPassword()
         {
             bool validar_login;

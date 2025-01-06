@@ -84,9 +84,9 @@ namespace AVISC_Maintenance
             if(!DesignMode)
             {
                 DTS = DataAccess.PortarDatasetIForanies(Taula, ForeignKeyInformation);
-                dataGridView1.DataSource = DTS.Tables[Taula];
+                dataBaseView.DataSource = DTS.Tables[Taula];
 
-                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                foreach (DataGridViewColumn column in dataBaseView.Columns)
                 {
                     if (!Fields.ContainsKey(column.Name))
                     {
