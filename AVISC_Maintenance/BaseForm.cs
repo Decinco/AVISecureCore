@@ -21,13 +21,41 @@ namespace AVISC_Maintenance
     {
         public string Taula { get; set; }
 
-        private Dictionary<string, string> Fields = new Dictionary<string, string>();
-
         private DataAccess DataAccess;
 
-        private DataSet DTS;
+        /// <summary>
+        /// Campos que se mostrarán en el DataGridView. Se asignan automáticamente pero se pueden añadir más.
+        /// </summary>
+        protected Dictionary<string, string> Fields = new Dictionary<string, string>();
 
-        private DataSet ForeignKeyInformation;
+        /// <summary>
+        /// Campos que no se mostrarán en el DataGridView.
+        /// </summary>
+        protected List<string> IgnoredFields = new List<string>();
+
+        /// <summary>
+        /// DataSet que contiene los datos de la tabla.
+        /// </summary>
+        protected DataSet DTS;
+
+        /// <summary>
+        /// DataSet que contiene la información de las claves foráneas.
+        /// </summary>
+        protected DataSet ForeignKeyInformation;
+
+        // Eventos que habilitan la personalización de la actualización de la base de datos y la creación de un nuevo registro
+        /// <summary>
+        /// Evento que se dispara antes de guardar los cambios en la base de datos.
+        /// </summary>
+        protected event EventHandler BeforeSave;
+        /// <summary>
+        /// Evento que se dispara después de guardar los cambios en la base de datos.
+        /// </summary>
+        protected event EventHandler Saved;
+        /// <summary>
+        /// Evento que se dispara al crear un nuevo registro.
+        /// </summary>
+        protected event EventHandler New;
 
         public BaseForm()
         {
@@ -41,10 +69,13 @@ namespace AVISC_Maintenance
             if (DesignMode) return;
 
             Setup();
+
             PortarDades();
+
             ComboBoxInitialization();
             DataBind();
-            DataGridConfiguration();
+
+            CustomPostLoadBehavior();
 
             RoundUtils.RedondearEsquinas(pnl_NewButton, 30);
             RoundUtils.RedondearEsquinas(pnl_SaveButton, 30);
@@ -86,6 +117,8 @@ namespace AVISC_Maintenance
                     Fields.Add(cmb.Tag.ToString(), "");
                 }
             }
+
+            CustomFields();
         }
 
         private void PortarDades()
@@ -95,7 +128,7 @@ namespace AVISC_Maintenance
 
             foreach (DataGridViewColumn column in dataBaseView.Columns)
             {
-                if (!Fields.ContainsKey(column.Name))
+                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name))
                 {
                     column.Visible = false;
                 }
@@ -175,6 +208,9 @@ namespace AVISC_Maintenance
                     comboBox.SelectedIndexChanged += ValidateComboBox;
                 }
             }
+
+            CustomDataBinding();
+
             DataAccess.New = false;
         }
         
@@ -214,12 +250,16 @@ namespace AVISC_Maintenance
                 }
             }
 
+            BeforeSave?.Invoke(this, EventArgs.Empty);
+
             int result = DataAccess.Actualitzar(DTS, querySelect, Fields);
 
             MessageBox.Show($"Registros modificados: {result}");
 
             PortarDades();
             DataBind();
+
+            Saved?.Invoke(this, EventArgs.Empty);
         }
 
         private void NewEntry(object sender, EventArgs e)
@@ -242,8 +282,29 @@ namespace AVISC_Maintenance
                     comboBox.Validated -= ValidateComboBox;
                 }
             }
+
+            New?.Invoke(this, EventArgs.Empty);
         }
-        public virtual void DataGridConfiguration() { }
+
+        /// <summary>
+        /// Personaliza las cabeceras de las columnas del DataGridView.
+        /// </summary>
+        public virtual void CustomHeaders() { }
+
+        /// <summary>
+        /// Permite añadir los campos que no se hayan añadido automáticamente, y esconder los que no se quieran mostrar.
+        /// </summary>
+        public virtual void CustomFields() { }
+
+        /// <summary>
+        /// Permite añadir manualmente nuevos dataBindings.
+        /// </summary>
+        public virtual void CustomDataBinding() { }
+
+        /// <summary>
+        /// Permite añadir comportamientos personalizados después de cargar la ventana.
+        /// </summary>
+        public virtual void CustomPostLoadBehavior() { }
 
         private void EstilizarDataGridView()
         {
@@ -286,6 +347,8 @@ namespace AVISC_Maintenance
 
             // Deshabilitar los estilos visuales predeterminados
             dataBaseView.EnableHeadersVisualStyles = false;
+
+            CustomHeaders();
         }
 
         private void pnl_NewButton_MouseEnter(object sender, EventArgs e)

@@ -50,9 +50,14 @@ namespace AVISC_Maintenance
             // 
             // dataBaseView
             // 
+            this.dataBaseView.AllowUserToAddRows = false;
+            this.dataBaseView.AllowUserToDeleteRows = false;
+            this.dataBaseView.AllowUserToResizeColumns = false;
+            this.dataBaseView.AllowUserToResizeRows = false;
             this.dataBaseView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataBaseView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.dataBaseView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataBaseView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataBaseView.Location = new System.Drawing.Point(33, 254);
             this.dataBaseView.Name = "dataBaseView";
             this.dataBaseView.RowHeadersWidth = 51;
@@ -195,15 +200,15 @@ namespace AVISC_Maintenance
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataBaseView;
         private System.Windows.Forms.PictureBox saveImg;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel pnl_saveButtonIcon;
-        private System.Windows.Forms.Panel pnl_SaveButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel pnl_NewButton;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl_newIconButton;
+        protected System.Windows.Forms.DataGridView dataBaseView;
+        private System.Windows.Forms.Panel pnl_SaveButton;
+        private System.Windows.Forms.Panel pnl_NewButton;
     }
 }

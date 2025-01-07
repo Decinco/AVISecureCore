@@ -67,6 +67,9 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantOpcionsLite.resx">
+      <DependentUpon>MantOpcionsLite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\octagon-xmark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
