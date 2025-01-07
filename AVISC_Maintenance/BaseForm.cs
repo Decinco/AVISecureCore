@@ -26,7 +26,7 @@ namespace AVISC_Maintenance
         /// <summary>
         /// Campos que se mostrarán en el DataGridView. Se asignan automáticamente pero se pueden añadir más.
         /// </summary>
-        protected Dictionary<string, string> Fields = new Dictionary<string, string>();
+        protected Dictionary<string, object> Fields = new Dictionary<string, object>();
 
         /// <summary>
         /// Campos que no se mostrarán en el DataGridView.
@@ -143,7 +143,7 @@ namespace AVISC_Maintenance
             DataRow foreignKeyRow;
 
             foreignKeyRow = ForeignKeyInformation.Tables[0].Select($"PKTABLE_NAME = '{displayTable}'")[0];
-            valueColumnName = foreignKeyRow.Field<string>("FKCOLUMN_NAME");
+            valueColumnName = foreignKeyRow.Field<string>("PKCOLUMN_NAME");
 
             return valueColumnName;
         }
@@ -363,12 +363,12 @@ namespace AVISC_Maintenance
 
         private void pnl_SaveButton_MouseEnter(object sender, EventArgs e)
         {
-            pnl_NewButton.BackColor = Color.FromArgb(42, 42, 42);
+            pnl_SaveButton.BackColor = Color.FromArgb(42, 42, 42);
         }
 
         private void pnl_SaveButton_MouseLeave(object sender, EventArgs e)
         {
-            pnl_NewButton.BackColor = Color.FromArgb(33, 33, 33);
+            pnl_SaveButton.BackColor = Color.FromArgb(33, 33, 33);
         }
     }
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVISC_Maintenance.Properties;
 using static System.Resources.ResXFileRef;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AVISC_Maintenance
 {
@@ -24,47 +26,51 @@ namespace AVISC_Maintenance
         public override void CustomFields()
         {
             // Campo imatge, que no se mostrará en la tabla
-            Fields.Add("Imatge", "");
             IgnoredFields.Add("Imatge");
         }
 
         public override void CustomDataBinding()
         {
-            RefreshImage();
+            pbx_Icon.DataBindings.Clear();
 
-            txt_ImgByteArray.DataBindings.Add("Text", dataBaseView.DataSource, "Imatge");
+            Binding imageBinding = new Binding("Image", DTS.Tables[0], "Imatge");
+            imageBinding.Format += ImageBinding_Format;
+            imageBinding.Parse += ImageBinding_Parse;
+
+            pbx_Icon.DataBindings.Add(imageBinding);
+        }
+
+        private void ImageBinding_Parse(object sender, ConvertEventArgs e)
+        {
+            if (e.DesiredType == typeof(byte[]))
+            {
+                if (e.Value is Image image)
+                {
+                    ImageConverter converter = new ImageConverter();
+                    e.Value = (byte[])converter.ConvertTo(image, typeof(byte[]));
+                }
+            }
+        }
+
+        private void ImageBinding_Format(object sender, ConvertEventArgs e)
+        {
+            if (e.DesiredType == typeof(Image))
+            {
+                if (e.Value is byte[] imageData)
+                {
+                    e.Value = Image.FromStream(new MemoryStream(imageData));
+                }
+                else
+                {
+                    e.Value = Resources.octagon_xmark;
+                }
+            }
         }
 
         public override void CustomHeaders()
         {
             // Columnas de la tabla
             dataBaseView.Columns["Nom"].HeaderText = "Opción";
-        }
-
-        public override void CustomPostLoadBehavior()
-        {
-            // Eventos
-            BeforeSave += ActualitzarDadesImatge;
-        }
-
-        private void ActualitzarDadesImatge(object sender, EventArgs e)
-        {
-            Fields.Add("Imatge", "");
-        }
-
-        private void RefreshImage()
-        {
-            ImageConverter converter = new ImageConverter();
-
-            try
-            {
-                byte[] imageByte = Encoding.ASCII.GetBytes(dataBaseView.SelectedRows[0].Cells["Imatge"].Value.ToString());
-                pbx_Icon.Image = (Bitmap)converter.ConvertFrom(imageByte);
-            }
-            catch (Exception)
-            {
-                pbx_Icon.Image = Resources.octagon_xmark;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,12 +85,13 @@ namespace AVISC_Maintenance
                 ImageConverter converter = new ImageConverter();
                 byte[] imageByte = (byte[])converter.ConvertTo(uploadedImage, typeof(byte[]));
 
-                string imageString = Encoding.ASCII.GetString(imageByte);
-                dataBaseView.SelectedRows[0].Cells["Imatge"].Value = imageString;
-                Fields["Imatge"] = imageString;
+                Fields["Imatge"] = imageByte;
             }
 
-            RefreshImage();
+            if (pbx_Icon.DataBindings.Count > 0)
+            {
+                pbx_Icon.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            }
         }
     }
 }

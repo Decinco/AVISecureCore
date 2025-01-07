@@ -33,7 +33,6 @@
             this.pbx_Icon = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txt_ImgByteArray = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,19 +85,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txt_ImgByteArray
-            // 
-            this.txt_ImgByteArray.Location = new System.Drawing.Point(419, 100);
-            this.txt_ImgByteArray.Name = "txt_ImgByteArray";
-            this.txt_ImgByteArray.Size = new System.Drawing.Size(100, 20);
-            this.txt_ImgByteArray.TabIndex = 35;
-            // 
             // MantOpcionsLite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
-            this.Controls.Add(this.txt_ImgByteArray);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pbx_Icon);
@@ -111,7 +102,6 @@
             this.Controls.SetChildIndex(this.pbx_Icon, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.txt_ImgByteArray, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_Icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,6 +115,5 @@
         private System.Windows.Forms.PictureBox pbx_Icon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_ImgByteArray;
     }
 }

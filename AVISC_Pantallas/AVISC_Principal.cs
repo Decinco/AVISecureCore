@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,12 +45,15 @@ namespace AVISC_Pantallas
             {
                 foreach (var option in AvailableOptions)
                 {
+                    
+
                     pnl_MenuItems.Controls.Add(new SWLauchForm()
                     {
                         Project = option.Field<string>("Ensamblat"),
                         Target = option.Field<string>("Classe"),
                         Description = option.Field<string>("Descripcio"),
                         FeatureName = option.Field<string>("Nom"),
+                        Image = Image.FromStream(new MemoryStream(option.Field<byte[]>("Imatge"))), 
                         Margin = new Padding(25)
                     });
                 }

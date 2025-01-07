@@ -177,7 +177,7 @@ namespace AVIDataAccess
         /// <param name="query">Consulta SQL utilizada para obtener la tabla.</param>
         /// <param name="fields">Diccionario con los campos y valores a actualizar.</param>
         /// <returns>Número de registros modificados.</returns>
-        public int Actualitzar(DataSet dts, string query, Dictionary<string, string> fields)
+        public int Actualitzar(DataSet dts, string query, Dictionary<string, object> fields)
         {
             Connectar();
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
@@ -191,7 +191,7 @@ namespace AVIDataAccess
                     DataRow row = dts.Tables[0].NewRow();
                     dts.Tables[0].Rows.Add(row);
 
-                    foreach (KeyValuePair<string, string> field in fields)
+                    foreach (KeyValuePair<string, object> field in fields)
                     {
                         row[field.Key] = field.Value;
                     }
