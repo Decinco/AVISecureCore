@@ -33,18 +33,19 @@ namespace AVISC_Maintenance
         {
             DataAccess = new DataAccess();
 
-            RoundUtils.RedondearEsquinas(nuevoDB, topRight: 30, bottomRight: 30);
-            RoundUtils.RedondearEsquinas(actualizarDB, topRight: 30, bottomRight: 30);
-            RoundUtils.RedondearEsquinas(nuevoPanel, topLeft: 30, bottomLeft: 30);
-            RoundUtils.RedondearEsquinas(actualizarPanel, topLeft: 30, bottomLeft: 30);
-            RoundUtils.RedondearEsquinas(dataBaseView, 50);
-
             InitializeComponent();
             Setup();
             PortarDades();
             ComboBoxInitialization();
             DataBind();
             DataGridConfiguration();
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            RoundUtils.RedondearEsquinas(pnl_NewButton, 30);
+            RoundUtils.RedondearEsquinas(pnl_SaveButton, 30);
+            RoundUtils.RedondearEsquinas(dataBaseView, 50);
         }
 
         private void Setup()
@@ -190,7 +191,7 @@ namespace AVISC_Maintenance
             }
         }
 
-        private void actualizarDB_Click(object sender, EventArgs e)
+        private void UpdateDatabase(object sender, EventArgs e)
         {
             string querySelect = $"SELECT * FROM {Taula}";
 
@@ -216,7 +217,7 @@ namespace AVISC_Maintenance
             DataBind();
         }
 
-        private void nuevoDB_Click_1(object sender, EventArgs e)
+        private void NewEntry(object sender, EventArgs e)
         {
             DataAccess.New = true;
             foreach (Control control in Controls)
@@ -282,11 +283,24 @@ namespace AVISC_Maintenance
             dataBaseView.EnableHeadersVisualStyles = false;
         }
 
-        private void swTextboxSpecie_Validating(object sender, CancelEventArgs e)
+        private void pnl_NewButton_MouseEnter(object sender, EventArgs e)
         {
-            swTextboxNom.BackColor = Color.FromArgb(42, 42, 42);
-            swTextboxCognom.BackColor = Color.FromArgb(42, 42, 42);
-            swTextboxSpecie.BackColor = Color.FromArgb(42, 42, 42);
+            pnl_NewButton.BackColor = Color.FromArgb(42, 42, 42);
+        }
+
+        private void pnl_NewButton_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_NewButton.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        private void pnl_SaveButton_MouseEnter(object sender, EventArgs e)
+        {
+            pnl_NewButton.BackColor = Color.FromArgb(42, 42, 42);
+        }
+
+        private void pnl_SaveButton_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_NewButton.BackColor = Color.FromArgb(33, 33, 33);
         }
     }
 }
