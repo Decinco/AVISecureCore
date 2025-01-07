@@ -108,6 +108,7 @@ namespace AVISC_Maintenance
                     {
                         ValueColumnName = GetValueColumn(tagParts[0]),
                         ValueTableName = GetValueTable(tagParts[0]),
+                        OriginColumnName = GetOriginColumn(tagParts[0]),
                         DisplayColumnName = tagParts[1],
                         DisplayTableName = tagParts[0]
                     };
@@ -128,7 +129,7 @@ namespace AVISC_Maintenance
 
             foreach (DataGridViewColumn column in dataBaseView.Columns)
             {
-                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name))
+                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name) || column.Name.ToLower().Contains("id"))
                 {
                     column.Visible = false;
                 }
@@ -144,6 +145,17 @@ namespace AVISC_Maintenance
 
             foreignKeyRow = ForeignKeyInformation.Tables[0].Select($"PKTABLE_NAME = '{displayTable}'")[0];
             valueColumnName = foreignKeyRow.Field<string>("PKCOLUMN_NAME");
+
+            return valueColumnName;
+        }
+
+        private string GetOriginColumn(string displayTable)
+        {
+            string valueColumnName;
+            DataRow foreignKeyRow;
+
+            foreignKeyRow = ForeignKeyInformation.Tables[0].Select($"PKTABLE_NAME = '{displayTable}'")[0];
+            valueColumnName = foreignKeyRow.Field<string>("FKCOLUMN_NAME");
 
             return valueColumnName;
         }
