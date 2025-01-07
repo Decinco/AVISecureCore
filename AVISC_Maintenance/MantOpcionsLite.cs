@@ -26,6 +26,7 @@ namespace AVISC_Maintenance
         public override void CustomFields()
         {
             // Campo imatge, que no se mostrará en la tabla
+            Fields.Add("Imatge", new byte[1]);
             IgnoredFields.Add("Imatge");
         }
 
