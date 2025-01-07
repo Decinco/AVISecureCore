@@ -45,17 +45,23 @@ namespace AVISC_Controles
 
         private void Abrir_Formulario_Click(object sender, EventArgs e)
         {
-            Assembly ensamblat = Assembly.LoadFrom($"{Project}.dll");
+            try { 
+                Assembly ensamblat = Assembly.LoadFrom($"{Project}.dll");
 
-            Object dll;
-            Type tipus;
-            tipus = ensamblat.GetType($"{Project}.{Target}");
-            dll = Activator.CreateInstance(tipus);
-            AVISC_CloseableFeatureForm frm = (AVISC_CloseableFeatureForm)dll;
+                Object dll;
+                Type tipus;
+                tipus = ensamblat.GetType($"{Project}.{Target}");
+                dll = Activator.CreateInstance(tipus);
+                AVISC_CloseableFeatureForm frm = (AVISC_CloseableFeatureForm)dll;
 
-            frm.FeatureName = FeatureName;
+                frm.FeatureName = FeatureName;
 
-            OpenForm(frm);
+                OpenForm(frm);
+            }
+            catch
+            {
+                MessageBox.Show("El formulario no está compilado o no existe.");
+            }
 
         }
 

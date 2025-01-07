@@ -34,8 +34,12 @@ namespace AVIDataAccess
         public DataAccess()
         {
             ConnectionStringSettings conf = ConfigurationManager.ConnectionStrings["SecureCore"];
+
+            if (conf is null) return;
+
             New = false;
             ConnString = conf.ConnectionString;
+
             EncryptConfigFile();
         }
 

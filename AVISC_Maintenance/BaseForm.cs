@@ -34,15 +34,18 @@ namespace AVISC_Maintenance
             DataAccess = new DataAccess();
 
             InitializeComponent();
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            if (DesignMode) return;
+
             Setup();
             PortarDades();
             ComboBoxInitialization();
             DataBind();
             DataGridConfiguration();
-        }
 
-        private void BaseForm_Load(object sender, EventArgs e)
-        {
             RoundUtils.RedondearEsquinas(pnl_NewButton, 30);
             RoundUtils.RedondearEsquinas(pnl_SaveButton, 30);
             RoundUtils.RedondearEsquinas(dataBaseView, 50);
@@ -50,6 +53,11 @@ namespace AVISC_Maintenance
 
         private void Setup()
         {
+            if (DesignMode)
+            {
+                Taula = "Dummy";
+            }
+
             ForeignKeyInformation = DataAccess.PortarInfoFK(Taula);
 
             foreach (Control control in Controls)
@@ -82,17 +90,14 @@ namespace AVISC_Maintenance
 
         private void PortarDades()
         {
-            if(!DesignMode)
-            {
-                DTS = DataAccess.PortarDatasetIForanies(Taula, ForeignKeyInformation);
-                dataBaseView.DataSource = DTS.Tables[Taula];
+            DTS = DataAccess.PortarDatasetIForanies(Taula, ForeignKeyInformation);
+            dataBaseView.DataSource = DTS.Tables[Taula];
 
-                foreach (DataGridViewColumn column in dataBaseView.Columns)
+            foreach (DataGridViewColumn column in dataBaseView.Columns)
+            {
+                if (!Fields.ContainsKey(column.Name))
                 {
-                    if (!Fields.ContainsKey(column.Name))
-                    {
-                        column.Visible = false;
-                    }
+                    column.Visible = false;
                 }
             }
             // Aplicar estilo al DataGridView
