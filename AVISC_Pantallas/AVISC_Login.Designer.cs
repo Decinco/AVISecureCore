@@ -87,7 +87,7 @@ namespace AVISC_Pantallas
             this.pnl_fondo.Location = new System.Drawing.Point(0, 0);
             this.pnl_fondo.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_fondo.Name = "pnl_fondo";
-            this.pnl_fondo.Size = new System.Drawing.Size(1920, 1055);
+            this.pnl_fondo.Size = new System.Drawing.Size(1940, 1080);
             this.pnl_fondo.TabIndex = 0;
             // 
             // pnl_salir
@@ -98,6 +98,7 @@ namespace AVISC_Pantallas
             this.pnl_salir.Name = "pnl_salir";
             this.pnl_salir.Size = new System.Drawing.Size(80, 60);
             this.pnl_salir.TabIndex = 6;
+            this.pnl_salir.Click += new System.EventHandler(this.pnl_salir_Click);
             this.pnl_salir.MouseEnter += new System.EventHandler(this.pnl_salir_MouseEnter_1);
             this.pnl_salir.MouseLeave += new System.EventHandler(this.pnl_salir_MouseLeave_1);
             // 
@@ -412,9 +413,9 @@ namespace AVISC_Pantallas
             // pbx_back
             // 
             this.pbx_back.Image = global::AVISC_Pantallas.Properties.Resources.Log_In;
-            this.pbx_back.Location = new System.Drawing.Point(0, 0);
+            this.pbx_back.Location = new System.Drawing.Point(0, -3);
             this.pbx_back.Name = "pbx_back";
-            this.pbx_back.Size = new System.Drawing.Size(1920, 1080);
+            this.pbx_back.Size = new System.Drawing.Size(1920, 1083);
             this.pbx_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_back.TabIndex = 4;
             this.pbx_back.TabStop = false;
@@ -456,7 +457,7 @@ namespace AVISC_Pantallas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1055);
+            this.ClientSize = new System.Drawing.Size(1940, 1080);
             this.Controls.Add(this.pnl_fondo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;

@@ -103,15 +103,15 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 29;
+            this.comboBox1.ItemHeight = 36;
             this.comboBox1.Location = new System.Drawing.Point(798, 68);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(221, 37);
+            this.comboBox1.Size = new System.Drawing.Size(221, 44);
             this.comboBox1.TabIndex = 40;
             this.comboBox1.Tag = "UserRanks.DescUserRank";
             // 
@@ -142,15 +142,15 @@
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox2.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.IntegralHeight = false;
-            this.comboBox2.ItemHeight = 29;
+            this.comboBox2.ItemHeight = 36;
             this.comboBox2.Location = new System.Drawing.Point(794, 185);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(225, 37);
+            this.comboBox2.Size = new System.Drawing.Size(225, 44);
             this.comboBox2.TabIndex = 42;
             this.comboBox2.Tag = "UserCategories.DescUserCategory";
             // 
@@ -169,15 +169,15 @@
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox3.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox3.ForeColor = System.Drawing.Color.White;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.IntegralHeight = false;
-            this.comboBox3.ItemHeight = 29;
+            this.comboBox3.ItemHeight = 36;
             this.comboBox3.Location = new System.Drawing.Point(1039, 68);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(207, 37);
+            this.comboBox3.Size = new System.Drawing.Size(207, 44);
             this.comboBox3.TabIndex = 44;
             this.comboBox3.Tag = "Planets.DescPlanet";
             // 
@@ -196,15 +196,15 @@
             // comboBox4
             // 
             this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox4.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox4.ForeColor = System.Drawing.Color.White;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.IntegralHeight = false;
-            this.comboBox4.ItemHeight = 29;
+            this.comboBox4.ItemHeight = 36;
             this.comboBox4.Location = new System.Drawing.Point(1039, 185);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(207, 37);
+            this.comboBox4.Size = new System.Drawing.Size(207, 44);
             this.comboBox4.TabIndex = 46;
             this.comboBox4.Tag = "Species.DescSpecie";
             // 
@@ -263,7 +263,7 @@
             this.swTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox4.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox4.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox4.ForeColor = System.Drawing.Color.White;
             this.swTextbox4.IsForeignKey = false;
             this.swTextbox4.LinkedControlName = null;
@@ -281,7 +281,7 @@
             this.swTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox3.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox3.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox3.ForeColor = System.Drawing.Color.White;
             this.swTextbox3.IsForeignKey = false;
             this.swTextbox3.LinkedControlName = null;
@@ -299,7 +299,7 @@
             this.swTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox2.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox2.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox2.ForeColor = System.Drawing.Color.White;
             this.swTextbox2.IsForeignKey = false;
             this.swTextbox2.LinkedControlName = null;
@@ -317,7 +317,7 @@
             this.swTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox1.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox1.ForeColor = System.Drawing.Color.White;
             this.swTextbox1.IsForeignKey = false;
             this.swTextbox1.LinkedControlName = null;

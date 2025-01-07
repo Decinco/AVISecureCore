@@ -66,7 +66,7 @@ namespace SpaceShipTypes
             this.lbl_descFiliations.AutoSize = true;
             this.lbl_descFiliations.Font = new System.Drawing.Font("Inter", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_descFiliations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.lbl_descFiliations.Location = new System.Drawing.Point(909, 107);
+            this.lbl_descFiliations.Location = new System.Drawing.Point(899, 107);
             this.lbl_descFiliations.Name = "lbl_descFiliations";
             this.lbl_descFiliations.Size = new System.Drawing.Size(98, 31);
             this.lbl_descFiliations.TabIndex = 33;
@@ -75,12 +75,12 @@ namespace SpaceShipTypes
             // cmb_descFiliation
             // 
             this.cmb_descFiliation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.cmb_descFiliation.Font = new System.Drawing.Font("Inter", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.cmb_descFiliation.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.cmb_descFiliation.ForeColor = System.Drawing.Color.White;
             this.cmb_descFiliation.FormattingEnabled = true;
-            this.cmb_descFiliation.Location = new System.Drawing.Point(915, 161);
+            this.cmb_descFiliation.Location = new System.Drawing.Point(905, 161);
             this.cmb_descFiliation.Name = "cmb_descFiliation";
-            this.cmb_descFiliation.Size = new System.Drawing.Size(234, 38);
+            this.cmb_descFiliation.Size = new System.Drawing.Size(263, 44);
             this.cmb_descFiliation.TabIndex = 34;
             this.cmb_descFiliation.Tag = "Filiations.DescFiliations";
             // 
@@ -89,7 +89,7 @@ namespace SpaceShipTypes
             this.lbl_categoria.AutoSize = true;
             this.lbl_categoria.Font = new System.Drawing.Font("Inter", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_categoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.lbl_categoria.Location = new System.Drawing.Point(1198, 107);
+            this.lbl_categoria.Location = new System.Drawing.Point(1188, 107);
             this.lbl_categoria.Name = "lbl_categoria";
             this.lbl_categoria.Size = new System.Drawing.Size(119, 31);
             this.lbl_categoria.TabIndex = 35;
@@ -98,12 +98,12 @@ namespace SpaceShipTypes
             // cmb_category
             // 
             this.cmb_category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.cmb_category.Font = new System.Drawing.Font("Inter", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.cmb_category.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.cmb_category.ForeColor = System.Drawing.Color.White;
             this.cmb_category.FormattingEnabled = true;
-            this.cmb_category.Location = new System.Drawing.Point(1204, 161);
+            this.cmb_category.Location = new System.Drawing.Point(1194, 161);
             this.cmb_category.Name = "cmb_category";
-            this.cmb_category.Size = new System.Drawing.Size(234, 38);
+            this.cmb_category.Size = new System.Drawing.Size(263, 44);
             this.cmb_category.TabIndex = 36;
             this.cmb_category.Tag = "SpaceShipCategories.DescSpaceShipCategory";
             // 
@@ -113,7 +113,7 @@ namespace SpaceShipTypes
             this.swTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox1.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox1.Font = new System.Drawing.Font("Inter", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox1.ForeColor = System.Drawing.Color.White;
             this.swTextbox1.IsForeignKey = false;
             this.swTextbox1.LinkedControlName = null;
@@ -130,7 +130,7 @@ namespace SpaceShipTypes
             this.swTxt_desc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTxt_desc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTxt_desc.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTxt_desc.Font = new System.Drawing.Font("Inter", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTxt_desc.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTxt_desc.ForeColor = System.Drawing.Color.White;
             this.swTxt_desc.IsForeignKey = false;
             this.swTxt_desc.LinkedControlName = null;

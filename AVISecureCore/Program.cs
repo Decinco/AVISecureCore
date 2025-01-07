@@ -17,7 +17,7 @@ namespace AVISecureCore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AVISC_Login());
+            Application.Run(new AVISC_Splash());
         }
     }
 }

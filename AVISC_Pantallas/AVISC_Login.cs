@@ -180,11 +180,6 @@ namespace AVISC_Pantallas
             }
         }
 
-        private void pbx_salir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void pnl_salir_MouseEnter_1(object sender, EventArgs e)
         {
             pnl_salir.BackColor = Color.Gray;
@@ -196,6 +191,11 @@ namespace AVISC_Pantallas
         }
 
         private void pbx_salir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pnl_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

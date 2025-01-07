@@ -43,6 +43,7 @@ namespace MenuOptions
             // 
             this.Ensamblat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.Ensamblat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Ensamblat.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.Ensamblat.ForeColor = System.Drawing.Color.White;
             this.Ensamblat.Location = new System.Drawing.Point(33, 84);
             this.Ensamblat.Multiline = true;
@@ -55,6 +56,7 @@ namespace MenuOptions
             // 
             this.Classe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.Classe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Classe.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.Classe.ForeColor = System.Drawing.Color.White;
             this.Classe.Location = new System.Drawing.Point(357, 84);
             this.Classe.Multiline = true;
@@ -67,6 +69,7 @@ namespace MenuOptions
             // 
             this.Nom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.Nom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Nom.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.Nom.ForeColor = System.Drawing.Color.White;
             this.Nom.Location = new System.Drawing.Point(682, 84);
             this.Nom.Multiline = true;
@@ -79,6 +82,7 @@ namespace MenuOptions
             // 
             this.Descripcio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.Descripcio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Descripcio.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.Descripcio.ForeColor = System.Drawing.Color.White;
             this.Descripcio.Location = new System.Drawing.Point(1006, 84);
             this.Descripcio.Multiline = true;
