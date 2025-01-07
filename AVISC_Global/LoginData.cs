@@ -140,7 +140,7 @@ namespace AVISC_Global {
         private static void SetUserInformation(DataRow userRow)
         {
             DataSet userCategoryDTS = Data.PortarDataset("UserCategories");
-            DataSet userOptionDTS = Data.PortarDataset("UserOptions");
+            DataSet menuOptionDTS = Data.PortarDataset("MenuOptions");
             int permissionLevel;
             byte[] profilePictureString;
 
@@ -155,7 +155,7 @@ namespace AVISC_Global {
 
             UserName = userRow.Field<string>("UserName");
             CategoryName = userCategory.Field<string>("DescUserCategory");
-            AvailableOptions = new List<DataRow>(userOptionDTS.Tables[0].Select($"accesLvlReq <= {permissionLevel}"));
+            AvailableOptions = new List<DataRow>(menuOptionDTS.Tables[0].Select($"accesLvlReq <= {permissionLevel}"));
 
             if (profilePictureString != null)
             {
