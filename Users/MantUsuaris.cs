@@ -44,16 +44,11 @@ namespace Users
         {
             pbx_UserIcon.DataBindings.Clear();
 
-            Binding imageBinding = new Binding("Image", DTS.Tables[Taula], "Photo");
+            Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo");
             imageBinding.Format += ImageBinding_Format;
             imageBinding.Parse += ImageBinding_Parse;
 
             pbx_UserIcon.DataBindings.Add(imageBinding);
-
-            if (DTS.Tables[Taula].Rows[0].Field<byte[]>("Photo") == DTS.Tables[Taula].Rows[1].Field<byte[]>("Photo"))
-            {
-                MessageBox.Show("Algo no va bien");
-            }
 
             UpdateImage();
         }
