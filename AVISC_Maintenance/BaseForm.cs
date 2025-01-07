@@ -129,7 +129,7 @@ namespace AVISC_Maintenance
 
             foreach (DataGridViewColumn column in dataBaseView.Columns)
             {
-                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name))
+                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name) || column.Name.ToLower().Contains("id"))
                 {
                     column.Visible = false;
                 }
