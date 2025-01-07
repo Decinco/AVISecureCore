@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35229.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISecureCore", "AVISecureCore\AVISecureCore.csproj", "{AD7081B4-D50F-4520-A41A-E260A735BDAF}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Maintenance", "AVISC_Maintenance\AVISC_Maintenance.csproj", "{72827DFF-D9FB-440D-939F-5402B3A24244}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_Controles", "AVISC_Controles\AVISC_Controles.csproj", "{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantRangs", "MantRangs\MantRangs.csproj", "{65F141C9-0946-40F1-B4AA-E37EC07FA64A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.csproj", "{9EB62ED3-0445-447D-BEC7-E29622D0D718}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F141C9-0946-40F1-B4AA-E37EC07FA64A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F141C9-0946-40F1-B4AA-E37EC07FA64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F141C9-0946-40F1-B4AA-E37EC07FA64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F141C9-0946-40F1-B4AA-E37EC07FA64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

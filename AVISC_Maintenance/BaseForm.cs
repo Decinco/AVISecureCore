@@ -108,6 +108,7 @@ namespace AVISC_Maintenance
                     {
                         ValueColumnName = GetValueColumn(tagParts[0]),
                         ValueTableName = GetValueTable(tagParts[0]),
+                        OriginColumnName = GetOriginColumn(tagParts[0]),
                         DisplayColumnName = tagParts[1],
                         DisplayTableName = tagParts[0]
                     };
@@ -138,6 +139,17 @@ namespace AVISC_Maintenance
         }
 
         private string GetValueColumn(string displayTable)
+        {
+            string valueColumnName;
+            DataRow foreignKeyRow;
+
+            foreignKeyRow = ForeignKeyInformation.Tables[0].Select($"PKTABLE_NAME = '{displayTable}'")[0];
+            valueColumnName = foreignKeyRow.Field<string>("PKCOLUMN_NAME");
+
+            return valueColumnName;
+        }
+
+        private string GetOriginColumn(string displayTable)
         {
             string valueColumnName;
             DataRow foreignKeyRow;

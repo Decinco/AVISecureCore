@@ -166,6 +166,10 @@
       <Project>{f195f66b-e1fc-47eb-a583-0a07f3bc3f94}</Project>
       <Name>AVISC_Global</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MantRangs\MantRangs.csproj">
+      <Project>{65f141c9-0946-40f1-b4aa-e37ec07fa64a}</Project>
+      <Name>MantRangs</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono password abierto.png" />

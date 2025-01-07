@@ -12,10 +12,11 @@ namespace AVISC_Maintenance
         public string ValueTableName { get; set; }
         public string DisplayColumnName { get; set; }
         public string DisplayTableName { get; set; }
+        public string OriginColumnName { get; set; }
 
         public override string ToString()
         {
-            return ValueColumnName;
+            return OriginColumnName;
         }
     }
 }
