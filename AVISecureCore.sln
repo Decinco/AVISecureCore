@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantRangs", "MantRangs\Mant
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planets", "Planets\Planets.csproj", "{9EB62ED3-0445-447D-BEC7-E29622D0D718}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipCategories", "SpaceShipCategories\SpaceShipCategories.csproj", "{1919B8A4-BB14-48C1-8E69-925323DB4674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipTypes", "SpaceShipTypes\SpaceShipTypes.csproj", "{247DEB5B-E561-401A-B787-2AB1BCE3D55F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EB62ED3-0445-447D-BEC7-E29622D0D718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1919B8A4-BB14-48C1-8E69-925323DB4674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1919B8A4-BB14-48C1-8E69-925323DB4674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1919B8A4-BB14-48C1-8E69-925323DB4674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1919B8A4-BB14-48C1-8E69-925323DB4674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247DEB5B-E561-401A-B787-2AB1BCE3D55F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247DEB5B-E561-401A-B787-2AB1BCE3D55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247DEB5B-E561-401A-B787-2AB1BCE3D55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247DEB5B-E561-401A-B787-2AB1BCE3D55F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,7 +36,7 @@ namespace AVISC_Controles
 
         private void SWTextbox_Leave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            this.BackColor = Color.FromArgb(42, 42, 42);
             ValidateContent();
         }
 
