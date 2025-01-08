@@ -45,9 +45,9 @@
             this.pnl_configuracion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_configuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnl_configuracion.Location = new System.Drawing.Point(0, 0);
-            this.pnl_configuracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_configuracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_configuracion.Name = "pnl_configuracion";
-            this.pnl_configuracion.Size = new System.Drawing.Size(226, 203);
+            this.pnl_configuracion.Size = new System.Drawing.Size(301, 250);
             this.pnl_configuracion.TabIndex = 0;
             this.pnl_configuracion.Click += new System.EventHandler(this.Abrir_Formulario_Click);
             this.pnl_configuracion.MouseEnter += new System.EventHandler(this.SWLauchForm_MouseEnter);
@@ -55,12 +55,11 @@
             // 
             // lbl_descipcion
             // 
-            this.lbl_descipcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_descipcion.Font = new System.Drawing.Font("Inter", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_descipcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(120)))));
-            this.lbl_descipcion.Location = new System.Drawing.Point(17, 138);
-            this.lbl_descipcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_descipcion.Location = new System.Drawing.Point(23, 170);
             this.lbl_descipcion.Name = "lbl_descipcion";
-            this.lbl_descipcion.Size = new System.Drawing.Size(194, 58);
+            this.lbl_descipcion.Size = new System.Drawing.Size(259, 71);
             this.lbl_descipcion.TabIndex = 2;
             this.lbl_descipcion.Text = "heyyy buenas a todos guapisimos y guapisimas aqui vegeta777 en un nuevo video";
             this.lbl_descipcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,12 +69,11 @@
             // 
             // lbl_opcion
             // 
-            this.lbl_opcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_opcion.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_opcion.ForeColor = System.Drawing.Color.White;
-            this.lbl_opcion.Location = new System.Drawing.Point(0, 75);
-            this.lbl_opcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_opcion.Location = new System.Drawing.Point(0, 92);
             this.lbl_opcion.Name = "lbl_opcion";
-            this.lbl_opcion.Size = new System.Drawing.Size(226, 60);
+            this.lbl_opcion.Size = new System.Drawing.Size(301, 74);
             this.lbl_opcion.TabIndex = 1;
             this.lbl_opcion.Text = "label1";
             this.lbl_opcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,10 +83,10 @@
             // 
             // pbx_imagen
             // 
-            this.pbx_imagen.Location = new System.Drawing.Point(85, 12);
-            this.pbx_imagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbx_imagen.Location = new System.Drawing.Point(113, 15);
+            this.pbx_imagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbx_imagen.Name = "pbx_imagen";
-            this.pbx_imagen.Size = new System.Drawing.Size(56, 61);
+            this.pbx_imagen.Size = new System.Drawing.Size(75, 75);
             this.pbx_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_imagen.TabIndex = 0;
             this.pbx_imagen.TabStop = false;
@@ -98,14 +96,14 @@
             // 
             // SWLauchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Controls.Add(this.pnl_configuracion);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SWLauchForm";
-            this.Size = new System.Drawing.Size(226, 203);
+            this.Size = new System.Drawing.Size(301, 250);
             this.MouseEnter += new System.EventHandler(this.SWLauchForm_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.SWLauchForm_MouseLeave);
             this.pnl_configuracion.ResumeLayout(false);

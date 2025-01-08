@@ -53,22 +53,15 @@ namespace AVISC_Global {
             {
                 salt = rowsFound[0].Field<string>("Salt");
                 storedPasswd = rowsFound[0].Field<string>("Password");
+                hashedPasswd = SaltPassword(password, salt);
 
-                if (password == "12345aA")
+                if (password == storedPasswd && storedPasswd == "12345aA")
                 {
                     status = LoginStatus.PasswordChange;
                 }
-                else
+                else if (hashedPasswd == storedPasswd)
                 {
-                    hashedPasswd = SaltPassword(password, salt);
-                    if (hashedPasswd == storedPasswd)
-                    {
-                        status = LoginStatus.Success;
-                    }
-                    else
-                    {
-                        status = LoginStatus.Failure;
-                    }
+                    status = LoginStatus.Success;
                 }
             }
 

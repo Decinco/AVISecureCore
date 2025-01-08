@@ -31,13 +31,19 @@ namespace Users
             dataBaseView.Columns["UserName"].HeaderText = "Nombre";
             dataBaseView.Columns["Login"].HeaderText = "Nombre de Usuario";
             dataBaseView.Columns["Password"].HeaderText = "Contraseña";
+
+            // La foto de perfil se muestra de forma diferente
+            dataBaseView.Columns["Photo"].HeaderText = "";
+            dataBaseView.Columns["Photo"].Width = 60;
+            dataBaseView.Columns["Photo"].DisplayIndex = 0;
+            ((DataGridViewImageColumn)dataBaseView.Columns["Photo"]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+
         }
 
         public override void CustomFields()
         {
             // Campo imatge, que no se mostrará en la tabla
             Fields.Add("Photo", new byte[1]);
-            IgnoredFields.Add("Photo");
             IgnoredFields.Add("Password");
         }
 
@@ -45,13 +51,11 @@ namespace Users
         {
             pbx_UserIcon.DataBindings.Clear();
 
-            Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo");
+            Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo", true, DataSourceUpdateMode.Never);
             imageBinding.Format += ImageBinding_Format;
             imageBinding.Parse += ImageBinding_Parse;
 
             pbx_UserIcon.DataBindings.Add(imageBinding);
-
-            UpdateImage();
         }
 
         public override void CustomPostLoadBehavior()
@@ -64,6 +68,8 @@ namespace Users
             pbx_UserIcon.DataBindings.Clear();
 
             pbx_UserIcon.Image = Resources.user;
+
+            txt_passwordDataBoundButNotShown.Text = "12345aA";
 
             UpdateImage();
         }
@@ -105,6 +111,8 @@ namespace Users
             if (pbx_UserIcon.DataBindings.Count > 0)
             {
                 pbx_UserIcon.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+                pbx_UserIcon.DataBindings[0].WriteValue();
+                pbx_UserIcon.DataBindings[0].BindingManagerBase.EndCurrentEdit();
             }
         }
 
@@ -113,6 +121,8 @@ namespace Users
         {
             Image uploadedImage;
             OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Imágenes PNG (*.png)|*.png";
+            fileDialog.Title = "Por favor, elige una imagen";
 
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -156,6 +166,10 @@ namespace Users
             if (txt_passwordDataBoundButNotShown.Text != "12345aA")
             {
                 txt_passwordDataBoundButNotShown.Text = "12345aA";
+                if (pbx_UserIcon.DataBindings.Count > 0)
+                {
+                    txt_passwordDataBoundButNotShown.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+                }
             }
         }
 

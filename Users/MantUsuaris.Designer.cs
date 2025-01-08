@@ -382,13 +382,14 @@
             this.txt_passwordDataBoundButNotShown.ForeColor = System.Drawing.Color.White;
             this.txt_passwordDataBoundButNotShown.IsForeignKey = false;
             this.txt_passwordDataBoundButNotShown.LinkedControlName = null;
-            this.txt_passwordDataBoundButNotShown.Location = new System.Drawing.Point(423, 220);
+            this.txt_passwordDataBoundButNotShown.Location = new System.Drawing.Point(593, 175);
             this.txt_passwordDataBoundButNotShown.Margin = new System.Windows.Forms.Padding(4);
             this.txt_passwordDataBoundButNotShown.Multiline = true;
             this.txt_passwordDataBoundButNotShown.Name = "txt_passwordDataBoundButNotShown";
-            this.txt_passwordDataBoundButNotShown.Size = new System.Drawing.Size(333, 44);
+            this.txt_passwordDataBoundButNotShown.Size = new System.Drawing.Size(99, 27);
             this.txt_passwordDataBoundButNotShown.TabIndex = 55;
             this.txt_passwordDataBoundButNotShown.Tag = "Password";
+            this.txt_passwordDataBoundButNotShown.UseSystemPasswordChar = true;
             this.txt_passwordDataBoundButNotShown.TextChanged += new System.EventHandler(this.txt_passwordDataBoundButNotShown_TextChanged);
             // 
             // MantUsuaris
@@ -396,7 +397,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
-            this.Controls.Add(this.txt_passwordDataBoundButNotShown);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pnl_IDCard);
             this.Controls.Add(this.pnl_ResetPassword);
@@ -413,6 +413,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.swTextbox3);
+            this.Controls.Add(this.txt_passwordDataBoundButNotShown);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.swTextbox2);
             this.Controls.Add(this.label3);
@@ -424,6 +425,7 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.swTextbox2, 0);
             this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.txt_passwordDataBoundButNotShown, 0);
             this.Controls.SetChildIndex(this.swTextbox3, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.comboBox1, 0);
@@ -440,7 +442,6 @@
             this.Controls.SetChildIndex(this.pnl_ResetPassword, 0);
             this.Controls.SetChildIndex(this.pnl_IDCard, 0);
             this.Controls.SetChildIndex(this.label14, 0);
-            this.Controls.SetChildIndex(this.txt_passwordDataBoundButNotShown, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_UserIcon)).EndInit();
             this.pnl_ChangeImage.ResumeLayout(false);
             this.pnl_ResetPassword.ResumeLayout(false);
