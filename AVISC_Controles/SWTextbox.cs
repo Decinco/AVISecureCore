@@ -42,7 +42,7 @@ namespace AVISC_Controles
 
         private void SWTextbox_Enter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Lime;
+            this.BackColor = Color.FromArgb(60, 60, 60);
         }
 
         private void SWTextbox_TextChanged(object sender, EventArgs e)
