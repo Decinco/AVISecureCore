@@ -45,8 +45,8 @@ namespace Users
             pbx_UserIcon.DataBindings.Clear();
 
             Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo");
-            imageBinding.Format += ImageBinding_Format;
-            imageBinding.Parse += ImageBinding_Parse;
+            imageBinding.Format += new ConvertEventHandler(ImageBinding_Format);
+            imageBinding.Parse += new ConvertEventHandler(ImageBinding_Parse);
 
             pbx_UserIcon.DataBindings.Add(imageBinding);
 
