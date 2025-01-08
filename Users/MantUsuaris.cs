@@ -38,6 +38,7 @@ namespace Users
             // Campo imatge, que no se mostrará en la tabla
             Fields.Add("Photo", new byte[1]);
             IgnoredFields.Add("Photo");
+            IgnoredFields.Add("Password");
         }
 
         public override void CustomDataBinding()
@@ -45,8 +46,8 @@ namespace Users
             pbx_UserIcon.DataBindings.Clear();
 
             Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo");
-            imageBinding.Format += new ConvertEventHandler(ImageBinding_Format);
-            imageBinding.Parse += new ConvertEventHandler(ImageBinding_Parse);
+            imageBinding.Format += ImageBinding_Format;
+            imageBinding.Parse += ImageBinding_Parse;
 
             pbx_UserIcon.DataBindings.Add(imageBinding);
 
@@ -94,6 +95,20 @@ namespace Users
             }
         }
 
+        private void UpdateImage()
+        {
+            ImageConverter converter = new ImageConverter();
+            byte[] imageByte = (byte[])converter.ConvertTo(pbx_UserIcon.Image, typeof(byte[]));
+
+            Fields["Photo"] = imageByte;
+
+            if (pbx_UserIcon.DataBindings.Count > 0)
+            {
+                pbx_UserIcon.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            }
+        }
+
+        // Botón de cambio de imagen
         private void button1_Click(object sender, EventArgs e)
         {
             Image uploadedImage;
@@ -108,19 +123,6 @@ namespace Users
             }
         }
 
-        private void UpdateImage()
-        {
-            ImageConverter converter = new ImageConverter();
-            byte[] imageByte = (byte[])converter.ConvertTo(pbx_UserIcon.Image, typeof(byte[]));
-
-            Fields["Photo"] = imageByte;
-
-            if (pbx_UserIcon.DataBindings.Count > 0)
-            {
-                pbx_UserIcon.DataBindings[0].BindingManagerBase.EndCurrentEdit();
-            }
-        }
-
         private void label12_MouseEnter(object sender, EventArgs e)
         {
             pnl_ChangeImage.BackColor = Color.FromArgb(42, 42, 42);
@@ -129,6 +131,64 @@ namespace Users
         private void label12_MouseLeave(object sender, EventArgs e)
         {
             pnl_ChangeImage.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        // Muestra de tarjeta identificativa
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_MouseEnter(object sender, EventArgs e)
+        {
+            pnl_IDCard.BackColor = Color.FromArgb(42, 42, 42); 
+        }
+
+        private void label13_MouseLeave(object sender, EventArgs e)
+        {
+            pnl_IDCard.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+
+        // Restablecimiento de contraseña
+        private void label6_Click(object sender, EventArgs e)
+        {
+            if (txt_passwordDataBoundButNotShown.Text != "12345aA")
+            {
+                txt_passwordDataBoundButNotShown.Text = "12345aA";
+            }
+        }
+
+        private void label6_MouseEnter(object sender, EventArgs e)
+        {
+            if (txt_passwordDataBoundButNotShown.Text != "12345aA")
+            {
+                pnl_ResetPassword.BackColor = Color.FromArgb(42, 42, 42);
+            }
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+            if (txt_passwordDataBoundButNotShown.Text != "12345aA")
+            {
+                pnl_ResetPassword.BackColor = Color.FromArgb(33, 33, 33);
+            }
+        }
+
+        private void txt_passwordDataBoundButNotShown_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_passwordDataBoundButNotShown.Text == "12345aA")
+            {
+                pnl_ResetPassword.BackColor = Color.FromArgb(20, 20, 20);
+                lbl_ResetPassword.ForeColor = Color.Gray;
+                lbl_ResetPassword.Cursor = Cursors.Default;
+            }
+            else
+            {
+                pnl_ResetPassword.BackColor = Color.FromArgb(33, 33, 33);
+                lbl_ResetPassword.ForeColor = Color.White;
+                lbl_ResetPassword.Cursor = Cursors.Hand;
+            }
         }
     }
 }

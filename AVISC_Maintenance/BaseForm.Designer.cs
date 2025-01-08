@@ -66,6 +66,7 @@ namespace AVISC_Maintenance
             // 
             // saveImg
             // 
+            this.saveImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveImg.Image = global::AVISC_Maintenance.Properties.Resources.save_img;
             this.saveImg.Location = new System.Drawing.Point(10, 10);
             this.saveImg.Name = "saveImg";
@@ -81,6 +82,7 @@ namespace AVISC_Maintenance
             // 
             this.pnl_saveButtonIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.pnl_saveButtonIcon.Controls.Add(this.saveImg);
+            this.pnl_saveButtonIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_saveButtonIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_saveButtonIcon.Location = new System.Drawing.Point(0, 0);
             this.pnl_saveButtonIcon.Name = "pnl_saveButtonIcon";
@@ -95,6 +97,7 @@ namespace AVISC_Maintenance
             this.pnl_SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.pnl_SaveButton.Controls.Add(this.label1);
             this.pnl_SaveButton.Controls.Add(this.pnl_saveButtonIcon);
+            this.pnl_SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_SaveButton.Location = new System.Drawing.Point(1498, 90);
             this.pnl_SaveButton.Name = "pnl_SaveButton";
             this.pnl_SaveButton.Size = new System.Drawing.Size(300, 60);
@@ -105,6 +108,7 @@ namespace AVISC_Maintenance
             // 
             // label1
             // 
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -120,6 +124,7 @@ namespace AVISC_Maintenance
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::AVISC_Maintenance.Properties.Resources.new_img;
             this.pictureBox2.Location = new System.Drawing.Point(10, 10);
             this.pictureBox2.Name = "pictureBox2";
@@ -136,6 +141,7 @@ namespace AVISC_Maintenance
             this.pnl_NewButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.pnl_NewButton.Controls.Add(this.label2);
             this.pnl_NewButton.Controls.Add(this.pnl_newIconButton);
+            this.pnl_NewButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_NewButton.Location = new System.Drawing.Point(1498, 172);
             this.pnl_NewButton.Name = "pnl_NewButton";
             this.pnl_NewButton.Size = new System.Drawing.Size(300, 60);
@@ -146,6 +152,7 @@ namespace AVISC_Maintenance
             // 
             // label2
             // 
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -163,6 +170,7 @@ namespace AVISC_Maintenance
             // 
             this.pnl_newIconButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.pnl_newIconButton.Controls.Add(this.pictureBox2);
+            this.pnl_newIconButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_newIconButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_newIconButton.Location = new System.Drawing.Point(0, 0);
             this.pnl_newIconButton.Name = "pnl_newIconButton";

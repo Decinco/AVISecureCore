@@ -47,9 +47,11 @@
             this.swTextbox2 = new AVISC_Controles.SWTextbox();
             this.swTextbox1 = new AVISC_Controles.SWTextbox();
             this.pnl_ResetPassword = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_ResetPassword = new System.Windows.Forms.Label();
             this.pnl_IDCard = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_passwordDataBoundButNotShown = new AVISC_Controles.SWTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_UserIcon)).BeginInit();
             this.pnl_ChangeImage.SuspendLayout();
             this.pnl_ResetPassword.SuspendLayout();
@@ -73,7 +75,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(37, 139);
+            this.label4.Location = new System.Drawing.Point(37, 121);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 41);
@@ -100,7 +102,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
             this.comboBox1.ItemHeight = 36;
-            this.comboBox1.Location = new System.Drawing.Point(792, 66);
+            this.comboBox1.Location = new System.Drawing.Point(787, 66);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(221, 44);
@@ -112,7 +114,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label7.Location = new System.Drawing.Point(785, 19);
+            this.label7.Location = new System.Drawing.Point(780, 19);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 41);
@@ -124,7 +126,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label8.Location = new System.Drawing.Point(785, 138);
+            this.label8.Location = new System.Drawing.Point(780, 121);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(157, 41);
@@ -139,7 +141,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.IntegralHeight = false;
             this.comboBox2.ItemHeight = 36;
-            this.comboBox2.Location = new System.Drawing.Point(788, 185);
+            this.comboBox2.Location = new System.Drawing.Point(783, 168);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(225, 44);
@@ -151,7 +153,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label9.Location = new System.Drawing.Point(1032, 19);
+            this.label9.Location = new System.Drawing.Point(1027, 19);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 41);
@@ -166,7 +168,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.IntegralHeight = false;
             this.comboBox3.ItemHeight = 36;
-            this.comboBox3.Location = new System.Drawing.Point(1039, 66);
+            this.comboBox3.Location = new System.Drawing.Point(1034, 66);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(207, 44);
@@ -178,7 +180,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label10.Location = new System.Drawing.Point(1032, 138);
+            this.label10.Location = new System.Drawing.Point(1027, 121);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(129, 41);
@@ -193,7 +195,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.IntegralHeight = false;
             this.comboBox4.ItemHeight = 36;
-            this.comboBox4.Location = new System.Drawing.Point(1039, 185);
+            this.comboBox4.Location = new System.Drawing.Point(1034, 168);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(207, 44);
@@ -235,6 +237,7 @@
             // 
             // label12
             // 
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
@@ -277,7 +280,7 @@
             this.swTextbox2.ForeColor = System.Drawing.Color.White;
             this.swTextbox2.IsForeignKey = false;
             this.swTextbox2.LinkedControlName = null;
-            this.swTextbox2.Location = new System.Drawing.Point(44, 185);
+            this.swTextbox2.Location = new System.Drawing.Point(44, 167);
             this.swTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.swTextbox2.Multiline = true;
             this.swTextbox2.Name = "swTextbox2";
@@ -306,31 +309,35 @@
             // pnl_ResetPassword
             // 
             this.pnl_ResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pnl_ResetPassword.Controls.Add(this.label6);
-            this.pnl_ResetPassword.Location = new System.Drawing.Point(423, 185);
+            this.pnl_ResetPassword.Controls.Add(this.lbl_ResetPassword);
+            this.pnl_ResetPassword.Location = new System.Drawing.Point(423, 168);
             this.pnl_ResetPassword.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_ResetPassword.Name = "pnl_ResetPassword";
             this.pnl_ResetPassword.Size = new System.Drawing.Size(333, 44);
             this.pnl_ResetPassword.TabIndex = 52;
             // 
-            // label6
+            // lbl_ResetPassword
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(333, 44);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "Reiniciar Contraseña";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_ResetPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_ResetPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ResetPassword.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_ResetPassword.ForeColor = System.Drawing.Color.White;
+            this.lbl_ResetPassword.Location = new System.Drawing.Point(0, 0);
+            this.lbl_ResetPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_ResetPassword.Name = "lbl_ResetPassword";
+            this.lbl_ResetPassword.Size = new System.Drawing.Size(333, 44);
+            this.lbl_ResetPassword.TabIndex = 51;
+            this.lbl_ResetPassword.Text = "Reiniciar Contraseña";
+            this.lbl_ResetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_ResetPassword.Click += new System.EventHandler(this.label6_Click);
+            this.lbl_ResetPassword.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
+            this.lbl_ResetPassword.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
             // 
             // pnl_IDCard
             // 
             this.pnl_IDCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.pnl_IDCard.Controls.Add(this.label13);
-            this.pnl_IDCard.Location = new System.Drawing.Point(1498, 30);
+            this.pnl_IDCard.Location = new System.Drawing.Point(1498, 23);
             this.pnl_IDCard.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_IDCard.Name = "pnl_IDCard";
             this.pnl_IDCard.Size = new System.Drawing.Size(239, 44);
@@ -338,6 +345,7 @@
             // 
             // label13
             // 
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
@@ -348,12 +356,48 @@
             this.label13.TabIndex = 51;
             this.label13.Text = "Mostrar Tarjeta ID";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
+            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.label14.Location = new System.Drawing.Point(416, 121);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(183, 41);
+            this.label14.TabIndex = 54;
+            this.label14.Text = "Contraseña";
+            // 
+            // txt_passwordDataBoundButNotShown
+            // 
+            this.txt_passwordDataBoundButNotShown.AllowEmpty = false;
+            this.txt_passwordDataBoundButNotShown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.txt_passwordDataBoundButNotShown.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_passwordDataBoundButNotShown.DadaPermesa = AVISC_Controles.ContentType.Nombre;
+            this.txt_passwordDataBoundButNotShown.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.txt_passwordDataBoundButNotShown.ForeColor = System.Drawing.Color.White;
+            this.txt_passwordDataBoundButNotShown.IsForeignKey = false;
+            this.txt_passwordDataBoundButNotShown.LinkedControlName = null;
+            this.txt_passwordDataBoundButNotShown.Location = new System.Drawing.Point(423, 220);
+            this.txt_passwordDataBoundButNotShown.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_passwordDataBoundButNotShown.Multiline = true;
+            this.txt_passwordDataBoundButNotShown.Name = "txt_passwordDataBoundButNotShown";
+            this.txt_passwordDataBoundButNotShown.Size = new System.Drawing.Size(333, 44);
+            this.txt_passwordDataBoundButNotShown.TabIndex = 55;
+            this.txt_passwordDataBoundButNotShown.Tag = "Password";
+            this.txt_passwordDataBoundButNotShown.TextChanged += new System.EventHandler(this.txt_passwordDataBoundButNotShown_TextChanged);
             // 
             // MantUsuaris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.txt_passwordDataBoundButNotShown);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.pnl_IDCard);
             this.Controls.Add(this.pnl_ResetPassword);
             this.Controls.Add(this.pnl_ChangeImage);
@@ -395,6 +439,8 @@
             this.Controls.SetChildIndex(this.pnl_ChangeImage, 0);
             this.Controls.SetChildIndex(this.pnl_ResetPassword, 0);
             this.Controls.SetChildIndex(this.pnl_IDCard, 0);
+            this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.txt_passwordDataBoundButNotShown, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_UserIcon)).EndInit();
             this.pnl_ChangeImage.ResumeLayout(false);
             this.pnl_ResetPassword.ResumeLayout(false);
@@ -425,8 +471,10 @@
         private System.Windows.Forms.Panel pnl_ChangeImage;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel pnl_ResetPassword;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_ResetPassword;
         private System.Windows.Forms.Panel pnl_IDCard;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private AVISC_Controles.SWTextbox txt_passwordDataBoundButNotShown;
     }
 }
