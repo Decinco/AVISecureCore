@@ -129,7 +129,7 @@ namespace AVISC_Maintenance
 
             foreach (DataGridViewColumn column in dataBaseView.Columns)
             {
-                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name) || column.Name.ToLower().Contains("id"))
+                if (!Fields.ContainsKey(column.Name) || IgnoredFields.Contains(column.Name))
                 {
                     column.Visible = false;
                 }
@@ -185,8 +185,8 @@ namespace AVISC_Maintenance
                     comboBox.DisplayMember = foreign.DisplayColumnName;
                     comboBox.ValueMember = foreign.ValueColumnName;
 
-                    dataGridViewColumnIndex = dataBaseView.Columns[foreign.ValueColumnName].Index;
-                    dataBaseView.Columns[foreign.ValueColumnName].Visible = false;
+                    dataGridViewColumnIndex = dataBaseView.Columns[foreign.OriginColumnName].Index;
+                    dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
 
                     //DataGridViewComboBoxColumn column = new DataGridViewComboBoxColumn();
                     //column.DataSource = DTS.Tables[foreign.DisplayTableName];

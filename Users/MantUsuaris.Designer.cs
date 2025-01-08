@@ -55,48 +55,48 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(35, 7);
+            this.label3.Location = new System.Drawing.Point(35, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 38);
+            this.label3.Size = new System.Drawing.Size(135, 48);
             this.label3.TabIndex = 33;
             this.label3.Text = "Código";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(35, 128);
+            this.label4.Location = new System.Drawing.Point(35, 125);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 38);
+            this.label4.Size = new System.Drawing.Size(148, 48);
             this.label4.TabIndex = 35;
             this.label4.Text = "Nombre";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label5.Location = new System.Drawing.Point(422, 7);
+            this.label5.Location = new System.Drawing.Point(422, 1);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(317, 38);
+            this.label5.Size = new System.Drawing.Size(329, 48);
             this.label5.TabIndex = 37;
             this.label5.Text = "Nombre de Usuario";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label6.Location = new System.Drawing.Point(422, 128);
+            this.label6.Location = new System.Drawing.Point(422, 125);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 38);
+            this.label6.Size = new System.Drawing.Size(207, 48);
             this.label6.TabIndex = 39;
             this.label6.Text = "Contraseña";
             // 
@@ -108,7 +108,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
             this.comboBox1.ItemHeight = 36;
-            this.comboBox1.Location = new System.Drawing.Point(798, 68);
+            this.comboBox1.Location = new System.Drawing.Point(798, 66);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(221, 44);
@@ -118,24 +118,24 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label7.Location = new System.Drawing.Point(787, 8);
+            this.label7.Location = new System.Drawing.Point(787, 3);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 38);
+            this.label7.Size = new System.Drawing.Size(123, 48);
             this.label7.TabIndex = 41;
             this.label7.Text = "Rango";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label8.Location = new System.Drawing.Point(784, 127);
+            this.label8.Location = new System.Drawing.Point(784, 125);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 38);
+            this.label8.Size = new System.Drawing.Size(177, 48);
             this.label8.TabIndex = 43;
             this.label8.Text = "Categoría";
             // 
@@ -157,12 +157,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label9.Location = new System.Drawing.Point(1032, 8);
+            this.label9.Location = new System.Drawing.Point(1032, 4);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 38);
+            this.label9.Size = new System.Drawing.Size(141, 48);
             this.label9.TabIndex = 45;
             this.label9.Text = "Planeta";
             // 
@@ -174,7 +174,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.IntegralHeight = false;
             this.comboBox3.ItemHeight = 36;
-            this.comboBox3.Location = new System.Drawing.Point(1039, 68);
+            this.comboBox3.Location = new System.Drawing.Point(1039, 66);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(207, 44);
@@ -184,12 +184,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label10.Location = new System.Drawing.Point(1029, 128);
+            this.label10.Location = new System.Drawing.Point(1029, 126);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 38);
+            this.label10.Size = new System.Drawing.Size(147, 48);
             this.label10.TabIndex = 47;
             this.label10.Text = "Especie";
             // 
@@ -211,19 +211,19 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label11.Location = new System.Drawing.Point(1268, 7);
+            this.label11.Location = new System.Drawing.Point(1268, 3);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(224, 38);
+            this.label11.Size = new System.Drawing.Size(233, 48);
             this.label11.TabIndex = 48;
             this.label11.Text = "Foto de Perfil";
             // 
             // pbx_UserIcon
             // 
             this.pbx_UserIcon.ErrorImage = global::Users.Properties.Resources.user;
-            this.pbx_UserIcon.Location = new System.Drawing.Point(1314, 52);
+            this.pbx_UserIcon.Location = new System.Drawing.Point(1314, 53);
             this.pbx_UserIcon.Margin = new System.Windows.Forms.Padding(4);
             this.pbx_UserIcon.Name = "pbx_UserIcon";
             this.pbx_UserIcon.Size = new System.Drawing.Size(120, 120);
@@ -244,7 +244,7 @@
             // label12
             // 
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -267,7 +267,7 @@
             this.swTextbox4.ForeColor = System.Drawing.Color.White;
             this.swTextbox4.IsForeignKey = false;
             this.swTextbox4.LinkedControlName = null;
-            this.swTextbox4.Location = new System.Drawing.Point(431, 172);
+            this.swTextbox4.Location = new System.Drawing.Point(431, 173);
             this.swTextbox4.Margin = new System.Windows.Forms.Padding(4);
             this.swTextbox4.Multiline = true;
             this.swTextbox4.Name = "swTextbox4";
@@ -303,7 +303,7 @@
             this.swTextbox2.ForeColor = System.Drawing.Color.White;
             this.swTextbox2.IsForeignKey = false;
             this.swTextbox2.LinkedControlName = null;
-            this.swTextbox2.Location = new System.Drawing.Point(44, 172);
+            this.swTextbox2.Location = new System.Drawing.Point(44, 173);
             this.swTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.swTextbox2.Multiline = true;
             this.swTextbox2.Name = "swTextbox2";

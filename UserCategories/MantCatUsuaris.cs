@@ -26,5 +26,10 @@ namespace UserCategories
             dataBaseView.Columns["DescUserCategory"].HeaderText = "Nombre";
             dataBaseView.Columns["AccessLevel"].HeaderText = "Nivel de Acceso";
         }
+
+        private void swTextbox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
