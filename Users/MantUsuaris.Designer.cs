@@ -55,55 +55,55 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(35, 1);
+            this.label3.Location = new System.Drawing.Point(37, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 48);
+            this.label3.Size = new System.Drawing.Size(119, 41);
             this.label3.TabIndex = 33;
             this.label3.Text = "Código";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(35, 125);
+            this.label4.Location = new System.Drawing.Point(37, 128);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 48);
+            this.label4.Size = new System.Drawing.Size(131, 41);
             this.label4.TabIndex = 35;
             this.label4.Text = "Nombre";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label5.Location = new System.Drawing.Point(422, 1);
+            this.label5.Location = new System.Drawing.Point(422, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(329, 48);
+            this.label5.Size = new System.Drawing.Size(290, 41);
             this.label5.TabIndex = 37;
             this.label5.Text = "Nombre de Usuario";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label6.Location = new System.Drawing.Point(422, 125);
+            this.label6.Location = new System.Drawing.Point(422, 128);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 48);
+            this.label6.Size = new System.Drawing.Size(183, 41);
             this.label6.TabIndex = 39;
             this.label6.Text = "Contraseña";
             // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.IntegralHeight = false;
@@ -118,31 +118,31 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label7.Location = new System.Drawing.Point(787, 3);
+            this.label7.Location = new System.Drawing.Point(791, 19);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 48);
+            this.label7.Size = new System.Drawing.Size(108, 41);
             this.label7.TabIndex = 41;
             this.label7.Text = "Rango";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label8.Location = new System.Drawing.Point(784, 125);
+            this.label8.Location = new System.Drawing.Point(791, 138);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 48);
+            this.label8.Size = new System.Drawing.Size(157, 41);
             this.label8.TabIndex = 43;
             this.label8.Text = "Categoría";
             // 
             // comboBox2
             // 
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox2.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox2.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.IntegralHeight = false;
@@ -157,19 +157,19 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label9.Location = new System.Drawing.Point(1032, 4);
+            this.label9.Location = new System.Drawing.Point(1032, 19);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 48);
+            this.label9.Size = new System.Drawing.Size(125, 41);
             this.label9.TabIndex = 45;
             this.label9.Text = "Planeta";
             // 
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox3.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox3.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox3.ForeColor = System.Drawing.Color.White;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.IntegralHeight = false;
@@ -184,19 +184,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label10.Location = new System.Drawing.Point(1029, 126);
+            this.label10.Location = new System.Drawing.Point(1032, 138);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 48);
+            this.label10.Size = new System.Drawing.Size(129, 41);
             this.label10.TabIndex = 47;
             this.label10.Text = "Especie";
             // 
             // comboBox4
             // 
             this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.comboBox4.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.comboBox4.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.comboBox4.ForeColor = System.Drawing.Color.White;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.IntegralHeight = false;
@@ -211,12 +211,12 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label11.Location = new System.Drawing.Point(1268, 3);
+            this.label11.Location = new System.Drawing.Point(1274, 6);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(233, 48);
+            this.label11.Size = new System.Drawing.Size(206, 41);
             this.label11.TabIndex = 48;
             this.label11.Text = "Foto de Perfil";
             // 
@@ -263,7 +263,7 @@
             this.swTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox4.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox4.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox4.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox4.ForeColor = System.Drawing.Color.White;
             this.swTextbox4.IsForeignKey = false;
             this.swTextbox4.LinkedControlName = null;
@@ -281,7 +281,7 @@
             this.swTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox3.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox3.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox3.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox3.ForeColor = System.Drawing.Color.White;
             this.swTextbox3.IsForeignKey = false;
             this.swTextbox3.LinkedControlName = null;
@@ -299,7 +299,7 @@
             this.swTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox2.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox2.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox2.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox2.ForeColor = System.Drawing.Color.White;
             this.swTextbox2.IsForeignKey = false;
             this.swTextbox2.LinkedControlName = null;
@@ -317,7 +317,7 @@
             this.swTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox1.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox1.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox1.ForeColor = System.Drawing.Color.White;
             this.swTextbox1.IsForeignKey = false;
             this.swTextbox1.LinkedControlName = null;

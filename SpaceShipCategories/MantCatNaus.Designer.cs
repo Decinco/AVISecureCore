@@ -40,7 +40,7 @@ namespace SpaceShipCategories
             this.lbl_descSpaceShips.AutoSize = true;
             this.lbl_descSpaceShips.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_descSpaceShips.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.lbl_descSpaceShips.Location = new System.Drawing.Point(671, 58);
+            this.lbl_descSpaceShips.Location = new System.Drawing.Point(630, 88);
             this.lbl_descSpaceShips.Name = "lbl_descSpaceShips";
             this.lbl_descSpaceShips.Size = new System.Drawing.Size(389, 48);
             this.lbl_descSpaceShips.TabIndex = 33;
@@ -51,7 +51,7 @@ namespace SpaceShipCategories
             this.lbl_codeSpaceShip.AutoSize = true;
             this.lbl_codeSpaceShip.Font = new System.Drawing.Font("Inter", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_codeSpaceShip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.lbl_codeSpaceShip.Location = new System.Drawing.Point(25, 58);
+            this.lbl_codeSpaceShip.Location = new System.Drawing.Point(25, 88);
             this.lbl_codeSpaceShip.Name = "lbl_codeSpaceShip";
             this.lbl_codeSpaceShip.Size = new System.Drawing.Size(311, 48);
             this.lbl_codeSpaceShip.TabIndex = 31;
@@ -63,14 +63,14 @@ namespace SpaceShipCategories
             this.swTxt_code.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTxt_code.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTxt_code.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTxt_code.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTxt_code.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTxt_code.ForeColor = System.Drawing.Color.White;
             this.swTxt_code.IsForeignKey = false;
             this.swTxt_code.LinkedControlName = null;
             this.swTxt_code.Location = new System.Drawing.Point(33, 143);
             this.swTxt_code.Multiline = true;
             this.swTxt_code.Name = "swTxt_code";
-            this.swTxt_code.Size = new System.Drawing.Size(570, 60);
+            this.swTxt_code.Size = new System.Drawing.Size(530, 60);
             this.swTxt_code.TabIndex = 34;
             this.swTxt_code.Tag = "CodeSpaceShipCategory";
             // 
@@ -80,14 +80,14 @@ namespace SpaceShipCategories
             this.swTxt_desc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTxt_desc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTxt_desc.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTxt_desc.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTxt_desc.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTxt_desc.ForeColor = System.Drawing.Color.White;
             this.swTxt_desc.IsForeignKey = false;
             this.swTxt_desc.LinkedControlName = null;
-            this.swTxt_desc.Location = new System.Drawing.Point(679, 143);
+            this.swTxt_desc.Location = new System.Drawing.Point(638, 143);
             this.swTxt_desc.Multiline = true;
             this.swTxt_desc.Name = "swTxt_desc";
-            this.swTxt_desc.Size = new System.Drawing.Size(570, 60);
+            this.swTxt_desc.Size = new System.Drawing.Size(530, 60);
             this.swTxt_desc.TabIndex = 35;
             this.swTxt_desc.Tag = "DescSpaceShipCategory";
             // 

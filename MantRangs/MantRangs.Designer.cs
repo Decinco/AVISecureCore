@@ -41,11 +41,11 @@ namespace UserRanks
             this.codeUserRank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.codeUserRank.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.codeUserRank.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.codeUserRank.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.codeUserRank.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.codeUserRank.ForeColor = System.Drawing.Color.White;
             this.codeUserRank.IsForeignKey = false;
             this.codeUserRank.LinkedControlName = null;
-            this.codeUserRank.Location = new System.Drawing.Point(33, 90);
+            this.codeUserRank.Location = new System.Drawing.Point(33, 140);
             this.codeUserRank.Multiline = true;
             this.codeUserRank.Name = "codeUserRank";
             this.codeUserRank.Size = new System.Drawing.Size(245, 60);
@@ -58,11 +58,11 @@ namespace UserRanks
             this.descUserRank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.descUserRank.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descUserRank.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.descUserRank.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.descUserRank.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.descUserRank.ForeColor = System.Drawing.Color.White;
             this.descUserRank.IsForeignKey = false;
             this.descUserRank.LinkedControlName = null;
-            this.descUserRank.Location = new System.Drawing.Point(357, 90);
+            this.descUserRank.Location = new System.Drawing.Point(398, 140);
             this.descUserRank.Multiline = true;
             this.descUserRank.Name = "descUserRank";
             this.descUserRank.Size = new System.Drawing.Size(245, 60);
@@ -72,22 +72,22 @@ namespace UserRanks
             // codeRank
             // 
             this.codeRank.AutoSize = true;
-            this.codeRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.codeRank.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.codeRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.codeRank.Location = new System.Drawing.Point(28, 44);
+            this.codeRank.Location = new System.Drawing.Point(26, 94);
             this.codeRank.Name = "codeRank";
-            this.codeRank.Size = new System.Drawing.Size(139, 29);
+            this.codeRank.Size = new System.Drawing.Size(170, 41);
             this.codeRank.TabIndex = 32;
             this.codeRank.Text = "Code Rank";
             // 
             // descRank
             // 
             this.descRank.AutoSize = true;
-            this.descRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.descRank.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.descRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.descRank.Location = new System.Drawing.Point(352, 44);
+            this.descRank.Location = new System.Drawing.Point(391, 94);
             this.descRank.Name = "descRank";
-            this.descRank.Size = new System.Drawing.Size(72, 29);
+            this.descRank.Size = new System.Drawing.Size(89, 41);
             this.descRank.TabIndex = 33;
             this.descRank.Text = "Rank";
             // 

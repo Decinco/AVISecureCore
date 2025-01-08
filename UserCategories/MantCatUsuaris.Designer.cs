@@ -42,7 +42,7 @@
             this.swTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox1.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox1.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox1.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox1.ForeColor = System.Drawing.Color.White;
             this.swTextbox1.IsForeignKey = false;
             this.swTextbox1.LinkedControlName = null;
@@ -84,7 +84,7 @@
             this.swTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox2.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox2.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox2.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox2.ForeColor = System.Drawing.Color.White;
             this.swTextbox2.IsForeignKey = false;
             this.swTextbox2.LinkedControlName = null;
@@ -114,7 +114,7 @@
             this.swTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.swTextbox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swTextbox3.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.swTextbox3.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.swTextbox3.Font = new System.Drawing.Font("Inter Medium", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.swTextbox3.ForeColor = System.Drawing.Color.White;
             this.swTextbox3.IsForeignKey = false;
             this.swTextbox3.LinkedControlName = null;

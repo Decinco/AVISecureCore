@@ -53,7 +53,7 @@ namespace Planets
             this.CodePlanet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.CodePlanet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CodePlanet.DadaPermesa = AVISC_Controles.ContentType.Codi;
-            this.CodePlanet.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.CodePlanet.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.CodePlanet.ForeColor = System.Drawing.Color.White;
             this.CodePlanet.IsForeignKey = false;
             this.CodePlanet.LinkedControlName = null;
@@ -70,7 +70,7 @@ namespace Planets
             this.DescPlant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.DescPlant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DescPlant.DadaPermesa = AVISC_Controles.ContentType.Nombre;
-            this.DescPlant.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.DescPlant.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.DescPlant.ForeColor = System.Drawing.Color.White;
             this.DescPlant.IsForeignKey = false;
             this.DescPlant.LinkedControlName = null;
@@ -87,11 +87,11 @@ namespace Planets
             this.longTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.longTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.longTbx.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.longTbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.longTbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.longTbx.ForeColor = System.Drawing.Color.White;
             this.longTbx.IsForeignKey = false;
             this.longTbx.LinkedControlName = null;
-            this.longTbx.Location = new System.Drawing.Point(596, 119);
+            this.longTbx.Location = new System.Drawing.Point(583, 119);
             this.longTbx.Multiline = true;
             this.longTbx.Name = "longTbx";
             this.longTbx.Size = new System.Drawing.Size(100, 60);
@@ -104,11 +104,11 @@ namespace Planets
             this.latTbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.latTbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.latTbx.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.latTbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.latTbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.latTbx.ForeColor = System.Drawing.Color.White;
             this.latTbx.IsForeignKey = false;
             this.latTbx.LinkedControlName = null;
-            this.latTbx.Location = new System.Drawing.Point(716, 119);
+            this.latTbx.Location = new System.Drawing.Point(706, 117);
             this.latTbx.Multiline = true;
             this.latTbx.Name = "latTbx";
             this.latTbx.Size = new System.Drawing.Size(100, 60);
@@ -121,11 +121,11 @@ namespace Planets
             this.parsecs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.parsecs.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.parsecs.DadaPermesa = AVISC_Controles.ContentType.Text;
-            this.parsecs.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.parsecs.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.parsecs.ForeColor = System.Drawing.Color.White;
             this.parsecs.IsForeignKey = false;
             this.parsecs.LinkedControlName = null;
-            this.parsecs.Location = new System.Drawing.Point(834, 119);
+            this.parsecs.Location = new System.Drawing.Point(834, 117);
             this.parsecs.Multiline = true;
             this.parsecs.Name = "parsecs";
             this.parsecs.Size = new System.Drawing.Size(111, 60);
@@ -135,65 +135,65 @@ namespace Planets
             // codePlanetlbl
             // 
             this.codePlanetlbl.AutoSize = true;
-            this.codePlanetlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.codePlanetlbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.codePlanetlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.codePlanetlbl.Location = new System.Drawing.Point(32, 77);
+            this.codePlanetlbl.Location = new System.Drawing.Point(28, 73);
             this.codePlanetlbl.Name = "codePlanetlbl";
-            this.codePlanetlbl.Size = new System.Drawing.Size(165, 29);
+            this.codePlanetlbl.Size = new System.Drawing.Size(205, 41);
             this.codePlanetlbl.TabIndex = 35;
             this.codePlanetlbl.Text = "Code Planets";
             // 
             // planetLbl
             // 
             this.planetLbl.AutoSize = true;
-            this.planetLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.planetLbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.planetLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.planetLbl.Location = new System.Drawing.Point(300, 77);
+            this.planetLbl.Location = new System.Drawing.Point(298, 73);
             this.planetLbl.Name = "planetLbl";
-            this.planetLbl.Size = new System.Drawing.Size(99, 29);
+            this.planetLbl.Size = new System.Drawing.Size(125, 41);
             this.planetLbl.TabIndex = 36;
             this.planetLbl.Text = "Planeta";
             // 
             // longlbl
             // 
             this.longlbl.AutoSize = true;
-            this.longlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.longlbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.longlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.longlbl.Location = new System.Drawing.Point(591, 73);
+            this.longlbl.Location = new System.Drawing.Point(576, 73);
             this.longlbl.Name = "longlbl";
-            this.longlbl.Size = new System.Drawing.Size(77, 29);
+            this.longlbl.Size = new System.Drawing.Size(99, 41);
             this.longlbl.TabIndex = 37;
             this.longlbl.Text = "Largo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(711, 73);
+            this.label3.Location = new System.Drawing.Point(699, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 29);
+            this.label3.Size = new System.Drawing.Size(117, 41);
             this.label3.TabIndex = 38;
             this.label3.Text = "Latitud";
             // 
             // parsecsLbl
             // 
             this.parsecsLbl.AutoSize = true;
-            this.parsecsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.parsecsLbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.parsecsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
             this.parsecsLbl.Location = new System.Drawing.Point(829, 73);
             this.parsecsLbl.Name = "parsecsLbl";
-            this.parsecsLbl.Size = new System.Drawing.Size(92, 29);
+            this.parsecsLbl.Size = new System.Drawing.Size(116, 41);
             this.parsecsLbl.TabIndex = 39;
             this.parsecsLbl.Text = "Parsec";
             // 
             // filiationCbx
             // 
             this.filiationCbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.filiationCbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.filiationCbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.filiationCbx.ForeColor = System.Drawing.Color.White;
             this.filiationCbx.FormattingEnabled = true;
-            this.filiationCbx.Location = new System.Drawing.Point(996, 125);
+            this.filiationCbx.Location = new System.Drawing.Point(980, 125);
             this.filiationCbx.Name = "filiationCbx";
             this.filiationCbx.Size = new System.Drawing.Size(202, 44);
             this.filiationCbx.TabIndex = 41;
@@ -202,10 +202,10 @@ namespace Planets
             // sectorCbx
             // 
             this.sectorCbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.sectorCbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.sectorCbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.sectorCbx.ForeColor = System.Drawing.Color.White;
             this.sectorCbx.FormattingEnabled = true;
-            this.sectorCbx.Location = new System.Drawing.Point(1239, 66);
+            this.sectorCbx.Location = new System.Drawing.Point(1239, 70);
             this.sectorCbx.Name = "sectorCbx";
             this.sectorCbx.Size = new System.Drawing.Size(202, 44);
             this.sectorCbx.TabIndex = 42;
@@ -214,40 +214,40 @@ namespace Planets
             // filiationlbl
             // 
             this.filiationlbl.AutoSize = true;
-            this.filiationlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.filiationlbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.filiationlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.filiationlbl.Location = new System.Drawing.Point(991, 77);
+            this.filiationlbl.Location = new System.Drawing.Point(973, 79);
             this.filiationlbl.Name = "filiationlbl";
-            this.filiationlbl.Size = new System.Drawing.Size(116, 29);
+            this.filiationlbl.Size = new System.Drawing.Size(154, 41);
             this.filiationlbl.TabIndex = 43;
             this.filiationlbl.Text = "Afiliacion";
             // 
             // sectorlbl
             // 
             this.sectorlbl.AutoSize = true;
-            this.sectorlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.sectorlbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.sectorlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.sectorlbl.Location = new System.Drawing.Point(1234, 20);
+            this.sectorlbl.Location = new System.Drawing.Point(1232, 24);
             this.sectorlbl.Name = "sectorlbl";
-            this.sectorlbl.Size = new System.Drawing.Size(86, 29);
+            this.sectorlbl.Size = new System.Drawing.Size(112, 41);
             this.sectorlbl.TabIndex = 44;
             this.sectorlbl.Text = "Sector";
             // 
             // nativeslbl
             // 
             this.nativeslbl.AutoSize = true;
-            this.nativeslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.nativeslbl.Font = new System.Drawing.Font("Inter", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.nativeslbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
-            this.nativeslbl.Location = new System.Drawing.Point(1234, 132);
+            this.nativeslbl.Location = new System.Drawing.Point(1232, 132);
             this.nativeslbl.Name = "nativeslbl";
-            this.nativeslbl.Size = new System.Drawing.Size(98, 29);
+            this.nativeslbl.Size = new System.Drawing.Size(126, 41);
             this.nativeslbl.TabIndex = 46;
             this.nativeslbl.Text = "Nativos";
             // 
             // nativesCbx
             // 
             this.nativesCbx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.nativesCbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.nativesCbx.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.nativesCbx.ForeColor = System.Drawing.Color.White;
             this.nativesCbx.FormattingEnabled = true;
             this.nativesCbx.Location = new System.Drawing.Point(1239, 178);
