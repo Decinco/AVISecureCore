@@ -48,7 +48,7 @@ namespace MenuOptions
             this.Ensamblat.Location = new System.Drawing.Point(33, 84);
             this.Ensamblat.Multiline = true;
             this.Ensamblat.Name = "Ensamblat";
-            this.Ensamblat.Size = new System.Drawing.Size(245, 60);
+            this.Ensamblat.Size = new System.Drawing.Size(300, 70);
             this.Ensamblat.TabIndex = 31;
             this.Ensamblat.Tag = "Ensamblat";
             // 
@@ -61,7 +61,7 @@ namespace MenuOptions
             this.Classe.Location = new System.Drawing.Point(357, 84);
             this.Classe.Multiline = true;
             this.Classe.Name = "Classe";
-            this.Classe.Size = new System.Drawing.Size(245, 60);
+            this.Classe.Size = new System.Drawing.Size(245, 70);
             this.Classe.TabIndex = 32;
             this.Classe.Tag = "Classe";
             // 
@@ -74,7 +74,7 @@ namespace MenuOptions
             this.Nom.Location = new System.Drawing.Point(682, 84);
             this.Nom.Multiline = true;
             this.Nom.Name = "Nom";
-            this.Nom.Size = new System.Drawing.Size(245, 60);
+            this.Nom.Size = new System.Drawing.Size(300, 70);
             this.Nom.TabIndex = 33;
             this.Nom.Tag = "Nom";
             // 
@@ -87,7 +87,7 @@ namespace MenuOptions
             this.Descripcio.Location = new System.Drawing.Point(1006, 84);
             this.Descripcio.Multiline = true;
             this.Descripcio.Name = "Descripcio";
-            this.Descripcio.Size = new System.Drawing.Size(245, 60);
+            this.Descripcio.Size = new System.Drawing.Size(475, 70);
             this.Descripcio.TabIndex = 34;
             this.Descripcio.Tag = "Descripcio";
             // 
