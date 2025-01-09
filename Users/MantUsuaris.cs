@@ -13,6 +13,7 @@ using System.IO;
 using System.Resources;
 using Users.Properties;
 using System.Xml.Serialization;
+using AVISC_Global;
 
 namespace Users
 {
@@ -34,9 +35,9 @@ namespace Users
 
             // La foto de perfil se muestra de forma diferente
             dataBaseView.Columns["Photo"].HeaderText = "";
-            dataBaseView.Columns["Photo"].Width = 60;
+            ((DataGridViewImageColumn)dataBaseView.Columns["Photo"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dataBaseView.Columns["Photo"].Width = 70;
             dataBaseView.Columns["Photo"].DisplayIndex = 0;
-            ((DataGridViewImageColumn)dataBaseView.Columns["Photo"]).ImageLayout = DataGridViewImageCellLayout.Stretch;
 
         }
 
@@ -121,13 +122,13 @@ namespace Users
         {
             Image uploadedImage;
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Imágenes PNG (*.png)|*.png";
+            fileDialog.Filter = "Imágenes (*.png, *.jpg)|*.png;*.jpg|Animaciones GIF (*.gif)|*.gif";
             fileDialog.Title = "Por favor, elige una imagen";
 
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 uploadedImage = Image.FromFile(fileDialog.FileName);
-                pbx_UserIcon.Image = uploadedImage;
+                pbx_UserIcon.Image = ImageUtils.StretchImageToSquare(uploadedImage, 200);
 
                 UpdateImage();
             }

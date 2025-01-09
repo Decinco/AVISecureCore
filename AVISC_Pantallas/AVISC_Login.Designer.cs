@@ -29,6 +29,7 @@ namespace AVISC_Pantallas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AVISC_Login));
             this.pnl_fondo = new System.Windows.Forms.Panel();
             this.pnl_salir = new System.Windows.Forms.Panel();
             this.pbx_salir = new System.Windows.Forms.PictureBox();
@@ -87,14 +88,14 @@ namespace AVISC_Pantallas
             this.pnl_fondo.Location = new System.Drawing.Point(0, 0);
             this.pnl_fondo.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_fondo.Name = "pnl_fondo";
-            this.pnl_fondo.Size = new System.Drawing.Size(1940, 1080);
+            this.pnl_fondo.Size = new System.Drawing.Size(1920, 1080);
             this.pnl_fondo.TabIndex = 0;
             // 
             // pnl_salir
             // 
             this.pnl_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.pnl_salir.Controls.Add(this.pbx_salir);
-            this.pnl_salir.Location = new System.Drawing.Point(1841, -3);
+            this.pnl_salir.Location = new System.Drawing.Point(1838, 0);
             this.pnl_salir.Name = "pnl_salir";
             this.pnl_salir.Size = new System.Drawing.Size(80, 60);
             this.pnl_salir.TabIndex = 6;
@@ -457,15 +458,17 @@ namespace AVISC_Pantallas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1940, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.pnl_fondo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AVISC_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AVISC_Login";
+            this.Text = "AVI Secure Core";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AVISC_Login_Load);
             this.pnl_fondo.ResumeLayout(false);
             this.pnl_salir.ResumeLayout(false);

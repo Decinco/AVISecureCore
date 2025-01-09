@@ -68,11 +68,13 @@ namespace AVISC_Pantallas
 
                 lbl_FeatureName.Text = activeFunction.FeatureName;
                 pnl_SmallBarText.Visible = true;
+                Text = $"AVI Secure Core - {activeFunction.FeatureName}";
                 
             }
             else
             {
                 pnl_SmallBarText.Visible = false;
+                Text = $"AVI Secure Core - Menú Principal";
             }
         }
     }

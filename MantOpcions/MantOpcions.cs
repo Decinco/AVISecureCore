@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using AVISC_Maintenance;
 using System.Resources;
 using MantOpcions.Properties;
+using AVISC_Global;
 
 namespace MenuOptions
 {
@@ -33,9 +34,9 @@ namespace MenuOptions
 
             // El icono se muestra de forma diferente
             dataBaseView.Columns["Imatge"].HeaderText = "";
-            dataBaseView.Columns["Imatge"].Width = 60;
+            dataBaseView.Columns["Imatge"].Width = 70;
             dataBaseView.Columns["Imatge"].DisplayIndex = 0;
-            ((DataGridViewImageColumn)dataBaseView.Columns["Imatge"]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+            ((DataGridViewImageColumn)dataBaseView.Columns["Imatge"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
         public override void CustomFields()
@@ -122,7 +123,7 @@ namespace MenuOptions
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 uploadedImage = Image.FromFile(fileDialog.FileName);
-                pbx_OptionIcon.Image = uploadedImage;
+                pbx_OptionIcon.Image = ImageUtils.StretchImageToSquare(uploadedImage, 200);
 
                 UpdateImage();
             }

@@ -327,7 +327,7 @@ namespace AVISC_Maintenance
             {
                 BackColor = Color.FromArgb(32, 32, 32),
                 ForeColor = Color.FromArgb(255, 241, 102),
-                Font = new Font("Arial", 14F, FontStyle.Bold),
+                Font = new Font("Inter", 32, FontStyle.Bold, GraphicsUnit.Pixel),
                 Alignment = DataGridViewContentAlignment.MiddleCenter
             };
 
@@ -336,7 +336,7 @@ namespace AVISC_Maintenance
             {
                 BackColor = Color.FromArgb(42, 42, 42),
                 ForeColor = Color.White,
-                Font = new Font("Arial", 12F),
+                Font = new Font("Inter", 24, FontStyle.Regular, GraphicsUnit.Pixel),
                 SelectionBackColor = Color.Gray,
                 SelectionForeColor = Color.White
             };

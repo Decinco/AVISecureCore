@@ -58,7 +58,6 @@
     <Compile Include="MantPlanets.Designer.cs">
       <DependentUpon>MantPlanets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MantPlanets.resx">
       <DependentUpon>MantPlanets.cs</DependentUpon>

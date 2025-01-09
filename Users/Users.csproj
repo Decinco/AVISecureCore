@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -65,6 +65,10 @@
     <ProjectReference Include="..\AVISC_Controles\AVISC_Controles.csproj">
       <Project>{8bfe8f4b-2ebf-4d49-aff9-e440fd256796}</Project>
       <Name>AVISC_Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVISC_Global\AVISC_Global.csproj">
+      <Project>{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}</Project>
+      <Name>AVISC_Global</Name>
     </ProjectReference>
     <ProjectReference Include="..\AVISC_Maintenance\AVISC_Maintenance.csproj">
       <Project>{72827dff-d9fb-440d-939f-5402b3a24244}</Project>

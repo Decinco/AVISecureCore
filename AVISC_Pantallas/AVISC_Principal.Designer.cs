@@ -29,6 +29,7 @@ namespace AVISC_Pantallas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AVISC_Principal));
             this.lbl_Intro = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -100,6 +101,7 @@ namespace AVISC_Pantallas
             this.Controls.Add(this.img_User);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AVISC_Principal";
             this.Text = "AVISC_Principal";
             this.Load += new System.EventHandler(this.AVISC_Principal_Load);

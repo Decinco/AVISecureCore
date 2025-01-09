@@ -51,6 +51,7 @@ namespace AVISC_Pantallas
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.backVideo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AVISC_Splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "splash";

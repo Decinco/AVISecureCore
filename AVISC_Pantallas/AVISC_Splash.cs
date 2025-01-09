@@ -37,12 +37,16 @@ namespace AVISC_Pantallas
             {
                 backVideo.fullScreen = true; // Hacer pantalla completa
             }
-            else if (e.newState == (int)WMPLib.WMPPlayState.wmppsPaused || e.newState == (int)WMPLib.WMPPlayState.wmppsStopped)
+            else if (e.newState == (int)WMPLib.WMPPlayState.wmppsStopped)
             {
                 // Mostrar el formulario de login al pausar o terminar el video
+                Hide();
                 AVISC_Login login = new AVISC_Login();
                 login.Show();
-                Hide();
+            }
+            else if (e.newState == (int)WMPLib.WMPPlayState.wmppsPaused)
+            {
+                backVideo.Ctlcontrols.stop();
             }
         }
     }

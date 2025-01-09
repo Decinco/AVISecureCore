@@ -30,6 +30,7 @@ namespace AVISC_Pantallas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AVISC_Border));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_SmallBarText = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -200,12 +201,12 @@ namespace AVISC_Pantallas
             // swUserOptions1
             // 
             this.swUserOptions1.AutoSize = true;
+            this.swUserOptions1.Category = "Administrator";
             this.swUserOptions1.ForeColor = System.Drawing.Color.White;
             this.swUserOptions1.Location = new System.Drawing.Point(1486, 0);
             this.swUserOptions1.Margin = new System.Windows.Forms.Padding(0);
             this.swUserOptions1.Name = "swUserOptions1";
             this.swUserOptions1.Options = null;
-            this.swUserOptions1.Category = "Administrator";
             this.swUserOptions1.Size = new System.Drawing.Size(433, 80);
             this.swUserOptions1.TabIndex = 2;
             this.swUserOptions1.Username = "John Random";
@@ -224,9 +225,9 @@ namespace AVISC_Pantallas
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AVISC_Border";
-            this.ShowInTaskbar = false;
-            this.Text = "PantallaPrincipal";
+            this.Text = "AVI Secure Core - Menú Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.pnl_SmallBarText.ResumeLayout(false);

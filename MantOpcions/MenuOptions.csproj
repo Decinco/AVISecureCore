@@ -61,6 +61,10 @@
       <Project>{5c169a50-f0c1-409c-8abb-1994c5ba4096}</Project>
       <Name>AVISC_BaseForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AVISC_Global\AVISC_Global.csproj">
+      <Project>{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}</Project>
+      <Name>AVISC_Global</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AVISC_Maintenance\AVISC_Maintenance.csproj">
       <Project>{72827dff-d9fb-440d-939f-5402b3a24244}</Project>
       <Name>AVISC_Maintenance</Name>
