@@ -15,7 +15,7 @@ using AVISC_Global;
 
 namespace MenuOptions
 {
-    public partial class MantOpcions : BaseForm
+    public partial class MantOpcions : AVISC_MaintenanceBaseForm
     {
         public MantOpcions()
         {

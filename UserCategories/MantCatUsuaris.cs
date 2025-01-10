@@ -11,7 +11,7 @@ using AVISC_Maintenance;
 
 namespace UserCategories
 {
-    public partial class MantCatUsuaris : BaseForm
+    public partial class MantCatUsuaris : AVISC_MaintenanceBaseForm
     {
         public MantCatUsuaris()
         {
