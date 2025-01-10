@@ -75,6 +75,9 @@ namespace AVISC_Maintenance
             ComboBoxInitialization();
             DataBind();
 
+            // Aplicar estilo al DataGridView
+            EstilizarDataGridView();
+
             CustomPostLoadBehavior();
 
             RoundUtils.RedondearEsquinas(pnl_NewButton, 30);
@@ -134,8 +137,6 @@ namespace AVISC_Maintenance
                     column.Visible = false;
                 }
             }
-            // Aplicar estilo al DataGridView
-            EstilizarDataGridView();
         }
 
         private string GetValueColumn(string displayTable)
@@ -299,9 +300,9 @@ namespace AVISC_Maintenance
         }
 
         /// <summary>
-        /// Personaliza las cabeceras de las columnas del DataGridView.
+        /// Permite personalizar las cabeceras del datagridview y las propiedades de las columnas.
         /// </summary>
-        public virtual void CustomHeaders() { }
+        public virtual void CustomDataGrid() { }
 
         /// <summary>
         /// Permite añadir los campos que no se hayan añadido automáticamente, y esconder los que no se quieran mostrar.
@@ -360,7 +361,7 @@ namespace AVISC_Maintenance
             // Deshabilitar los estilos visuales predeterminados
             dataBaseView.EnableHeadersVisualStyles = false;
 
-            CustomHeaders();
+            CustomDataGrid();
         }
 
         private void pnl_NewButton_MouseEnter(object sender, EventArgs e)

@@ -40,9 +40,11 @@ namespace AVISC_Pantallas
             else if (e.newState == (int)WMPLib.WMPPlayState.wmppsStopped)
             {
                 // Mostrar el formulario de login al pausar o terminar el video
-                Hide();
-                AVISC_Login login = new AVISC_Login();
-                login.Show();
+                if (Visible == true) {
+                    Hide();
+                    AVISC_Login login = new AVISC_Login();
+                    login.Show();
+                }
             }
             else if (e.newState == (int)WMPLib.WMPPlayState.wmppsPaused)
             {

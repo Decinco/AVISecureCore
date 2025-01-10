@@ -20,7 +20,7 @@ namespace UserCategories
             InitializeComponent();
         }
 
-        public override void CustomHeaders()
+        public override void CustomDataGrid()
         {
             dataBaseView.Columns["CodeUserCategory"].HeaderText = "Código";
             dataBaseView.Columns["DescUserCategory"].HeaderText = "Nombre";

@@ -24,7 +24,7 @@ namespace MenuOptions
 
         }
 
-        public override void CustomHeaders()
+        public override void CustomDataGrid()
         {
             dataBaseView.Columns["Ensamblat"].HeaderText = "Ensamblado";
             dataBaseView.Columns["Classe"].HeaderText = "Clase del Formulario";

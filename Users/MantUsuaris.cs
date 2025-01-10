@@ -26,7 +26,7 @@ namespace Users
             InitializeComponent();
         }
 
-        public override void CustomHeaders()
+        public override void CustomDataGrid()
         {
             dataBaseView.Columns["CodeUser"].HeaderText = "Código";
             dataBaseView.Columns["UserName"].HeaderText = "Nombre";
@@ -36,9 +36,8 @@ namespace Users
             // La foto de perfil se muestra de forma diferente
             dataBaseView.Columns["Photo"].HeaderText = "";
             ((DataGridViewImageColumn)dataBaseView.Columns["Photo"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-            dataBaseView.Columns["Photo"].Width = 70;
             dataBaseView.Columns["Photo"].DisplayIndex = 0;
-
+            dataBaseView.Columns["Photo"].Width = 72;
         }
 
         public override void CustomFields()
