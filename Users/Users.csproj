@@ -70,6 +70,10 @@
       <Project>{F195F66B-E1FC-47EB-A583-0A07F3BC3F94}</Project>
       <Name>AVISC_Global</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AVISC_CrystalReport\AVISC_CrystalReport.csproj">
+      <Project>{6294bc93-6ffd-4755-8f0b-0b00f14fe599}</Project>
+      <Name>AVISC_CrystalReport</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AVISC_Maintenance\AVISC_Maintenance.csproj">
       <Project>{72827dff-d9fb-440d-939f-5402b3a24244}</Project>
       <Name>AVISC_Maintenance</Name>

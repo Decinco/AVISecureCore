@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34902.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISecureCore", "AVISecureCore\AVISecureCore.csproj", "{AD7081B4-D50F-4520-A41A-E260A735BDAF}"
 EndProject
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserCategories", "UserCategories\UserCategories.csproj", "{96FFADC2-FD84-4C15-ABC6-63CCCFBC6841}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{79FCACCA-9743-4707-A972-371F8A00B994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_CrystalReport", "AVISC_CrystalReport\AVISC_CrystalReport.csproj", "{6294BC93-6FFD-4755-8F0B-0B00F14FE599}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{79FCACCA-9743-4707-A972-371F8A00B994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79FCACCA-9743-4707-A972-371F8A00B994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79FCACCA-9743-4707-A972-371F8A00B994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6294BC93-6FFD-4755-8F0B-0B00F14FE599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6294BC93-6FFD-4755-8F0B-0B00F14FE599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6294BC93-6FFD-4755-8F0B-0B00F14FE599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6294BC93-6FFD-4755-8F0B-0B00F14FE599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -101,10 +101,6 @@ namespace AVISC_Controles
             string pattern = @"^[AEIOU][A-Z]{3}0[13579]$";
             return Regex.IsMatch(text, pattern);
         }
-
-
-
-
     }
 }
 

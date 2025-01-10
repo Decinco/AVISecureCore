@@ -14,6 +14,7 @@ using System.Resources;
 using Users.Properties;
 using System.Xml.Serialization;
 using AVISC_Global;
+using AVISC_CrystalReport;
 
 namespace Users
 {
@@ -45,6 +46,7 @@ namespace Users
             // Campo imatge, que no se mostrará en la tabla
             Fields.Add("Photo", new byte[1]);
             IgnoredFields.Add("Password");
+            IgnoredFields.Add("idUser");
         }
 
         public override void CustomDataBinding()
@@ -146,7 +148,8 @@ namespace Users
         // Muestra de tarjeta identificativa
         private void label13_Click(object sender, EventArgs e)
         {
-
+            CardIdUser cardIdUser = new CardIdUser(int.Parse(swtxtIdUser.Text));
+            cardIdUser.Show();
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)

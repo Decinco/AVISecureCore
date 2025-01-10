@@ -52,6 +52,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_passwordDataBoundButNotShown = new AVISC_Controles.SWTextbox();
+            this.swtxtIdUser = new AVISC_Controles.SWTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_UserIcon)).BeginInit();
             this.pnl_ChangeImage.SuspendLayout();
             this.pnl_ResetPassword.SuspendLayout();
@@ -392,6 +393,18 @@
             this.txt_passwordDataBoundButNotShown.UseSystemPasswordChar = true;
             this.txt_passwordDataBoundButNotShown.TextChanged += new System.EventHandler(this.txt_passwordDataBoundButNotShown_TextChanged);
             // 
+            // swtxtIdUser
+            // 
+            this.swtxtIdUser.AllowEmpty = false;
+            this.swtxtIdUser.DadaPermesa = AVISC_Controles.ContentType.Nombre;
+            this.swtxtIdUser.IsForeignKey = false;
+            this.swtxtIdUser.LinkedControlName = null;
+            this.swtxtIdUser.Location = new System.Drawing.Point(1325, 100);
+            this.swtxtIdUser.Name = "swtxtIdUser";
+            this.swtxtIdUser.Size = new System.Drawing.Size(100, 22);
+            this.swtxtIdUser.TabIndex = 56;
+            this.swtxtIdUser.Tag = "idUser";
+            // 
             // MantUsuaris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -418,9 +431,11 @@
             this.Controls.Add(this.swTextbox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.swTextbox1);
+            this.Controls.Add(this.swtxtIdUser);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MantUsuaris";
             this.Text = "MantUsuaris";
+            this.Controls.SetChildIndex(this.swtxtIdUser, 0);
             this.Controls.SetChildIndex(this.swTextbox1, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.swTextbox2, 0);
@@ -477,5 +492,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private AVISC_Controles.SWTextbox txt_passwordDataBoundButNotShown;
+        private AVISC_Controles.SWTextbox swtxtIdUser;
     }
 }
