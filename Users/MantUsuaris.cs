@@ -13,6 +13,7 @@ using System.IO;
 using System.Resources;
 using Users.Properties;
 using System.Xml.Serialization;
+using AVISC_CrystalReport;
 
 namespace Users
 {
@@ -39,13 +40,14 @@ namespace Users
             Fields.Add("Photo", new byte[1]);
             IgnoredFields.Add("Photo");
             IgnoredFields.Add("Password");
+            IgnoredFields.Add("idUser");
         }
 
         public override void CustomDataBinding()
         {
             pbx_UserIcon.DataBindings.Clear();
 
-            Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo");
+            Binding imageBinding = new Binding("Image", dataBaseView.DataSource, "Photo", true, DataSourceUpdateMode.Never);
             imageBinding.Format += ImageBinding_Format;
             imageBinding.Parse += ImageBinding_Parse;
 
@@ -136,7 +138,8 @@ namespace Users
         // Muestra de tarjeta identificativa
         private void label13_Click(object sender, EventArgs e)
         {
-
+            CardIdUser cardIdUser = new CardIdUser(int.Parse(swtxtIdUser.Text));
+            cardIdUser.Show();
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)
