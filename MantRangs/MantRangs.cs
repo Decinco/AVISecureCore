@@ -11,7 +11,7 @@ using AVISC_Maintenance;
 
 namespace UserRanks
 {
-    public partial class MantRangs : BaseForm
+    public partial class MantRangs : AVISC_MaintenanceBaseForm
     {
         public MantRangs()
         {

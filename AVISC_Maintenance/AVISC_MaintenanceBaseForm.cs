@@ -17,7 +17,7 @@ using AVISC_Global;
 
 namespace AVISC_Maintenance
 {
-    public partial class BaseForm : AVISC_CloseableFeatureForm
+    public partial class AVISC_MaintenanceBaseForm : AVISC_CloseableFeatureForm
     {
         public string Taula { get; set; }
 
@@ -57,7 +57,7 @@ namespace AVISC_Maintenance
         /// </summary>
         protected event EventHandler New;
 
-        public BaseForm()
+        public AVISC_MaintenanceBaseForm()
         {
             DataAccess = new DataAccess();
 

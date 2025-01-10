@@ -17,7 +17,7 @@ using AVISC_Global;
 
 namespace Users
 {
-    public partial class MantUsuaris : BaseForm
+    public partial class MantUsuaris : AVISC_MaintenanceBaseForm
     {
         public MantUsuaris()
         {

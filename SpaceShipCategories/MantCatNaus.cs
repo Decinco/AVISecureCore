@@ -11,7 +11,7 @@ using AVISC_Maintenance;
 
 namespace SpaceShipCategories
 {
-    public partial class MantCatNaus : BaseForm
+    public partial class MantCatNaus : AVISC_MaintenanceBaseForm
     {
         public MantCatNaus()
         {

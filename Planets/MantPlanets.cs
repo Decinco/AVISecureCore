@@ -11,7 +11,7 @@ using AVISC_Maintenance;
 
 namespace Planets
 {
-    public partial class MantPlanetes : BaseForm
+    public partial class MantPlanetes : AVISC_MaintenanceBaseForm
     {
         public MantPlanetes()
         {

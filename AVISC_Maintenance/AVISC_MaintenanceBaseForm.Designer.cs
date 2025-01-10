@@ -1,7 +1,7 @@
 ﻿
 namespace AVISC_Maintenance
 {
-    partial class BaseForm
+    partial class AVISC_MaintenanceBaseForm
     {
         /// <summary>
         /// Required designer variable.
