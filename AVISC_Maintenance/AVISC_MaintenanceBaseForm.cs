@@ -17,9 +17,15 @@ using AVISC_Global;
 
 namespace AVISC_Maintenance
 {
+    /// <summary>
+    /// Formulario base para mantenimientos de base de datos.
+    /// </summary>
     public partial class AVISC_MaintenanceBaseForm : AVISC_CloseableFeatureForm
     {
-        public string Taula { get; set; }
+        /// <summary>
+        /// Requerido. El nombre de la tabla principal desde la cual obtener los datos.
+        /// </summary>
+        protected string Taula { get; set; }
 
         private DataAccess DataAccess;
 

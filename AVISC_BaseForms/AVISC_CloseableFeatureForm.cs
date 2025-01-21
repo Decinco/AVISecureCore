@@ -5,8 +5,14 @@ using AVISC_Global;
 
 namespace AVISC_BaseForms
 {
+    /// <summary>
+    /// Un formulario cerrable que se introduce dentro del panel de la pantalla AVISC_Border.
+    /// </summary>
     public partial class AVISC_CloseableFeatureForm : Form
     {
+        /// <summary>
+        /// Nombre de la función a mostrar.
+        /// </summary>
         public string FeatureName { get; set; }
 
         public AVISC_CloseableFeatureForm()
