@@ -18,5 +18,14 @@ namespace Planets
             Taula = "Planets";
             InitializeComponent();
         }
+
+        protected override void CustomDataGrid()
+        {
+            dataBaseView.Columns["CodePlanet"].HeaderText = "Code Planets";
+            dataBaseView.Columns["DescPlanet"].HeaderText = "Planeta";
+            dataBaseView.Columns["long"].HeaderText = "Longitud";
+            dataBaseView.Columns["lat"].HeaderText = "Latitud";
+            dataBaseView.Columns["parsecs"].HeaderText = "Parsecs";
+        }
     }
 }

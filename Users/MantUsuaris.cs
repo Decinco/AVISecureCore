@@ -27,7 +27,7 @@ namespace Users
             InitializeComponent();
         }
 
-        public override void CustomDataGrid()
+        protected override void CustomDataGrid()
         {
             dataBaseView.Columns["CodeUser"].HeaderText = "Código";
             dataBaseView.Columns["UserName"].HeaderText = "Nombre";
@@ -41,15 +41,16 @@ namespace Users
             dataBaseView.Columns["Photo"].Width = 72;
         }
 
-        public override void CustomFields()
+        protected override void CustomFields()
         {
             // Campo imatge, que no se mostrará en la tabla
             Fields.Add("Photo", new byte[1]);
+            Fields.Remove("idUser");
             IgnoredFields.Add("Password");
             IgnoredFields.Add("idUser");
         }
 
-        public override void CustomDataBinding()
+        protected override void CustomDataBinding()
         {
             pbx_UserIcon.DataBindings.Clear();
 
@@ -60,9 +61,18 @@ namespace Users
             pbx_UserIcon.DataBindings.Add(imageBinding);
         }
 
-        public override void CustomPostLoadBehavior()
+        protected override void CustomPostLoadBehavior()
         {
             New += MantUsuaris_New;
+            Saved += MantUsuaris_Saved;
+        }
+
+        private void MantUsuaris_Saved(object sender, EventArgs e)
+        {
+            // Al guardar, reiniciamos el botón
+            pnl_IDCard.BackColor = Color.FromArgb(33, 33, 33);
+            lbl_IDCard.ForeColor = Color.White;
+            lbl_IDCard.Cursor = Cursors.Hand;
         }
 
         private void MantUsuaris_New(object sender, EventArgs e)
@@ -74,6 +84,11 @@ namespace Users
             txt_passwordDataBoundButNotShown.Text = "12345aA";
 
             UpdateImage();
+
+            // Al crear un nuevo usuario, el botón no se debe poder pulsar.
+            pnl_IDCard.BackColor = Color.FromArgb(20, 20, 20);
+            lbl_IDCard.ForeColor = Color.Gray;
+            lbl_IDCard.Cursor = Cursors.Default;
         }
 
         private void ImageBinding_Parse(object sender, ConvertEventArgs e)
@@ -148,18 +163,27 @@ namespace Users
         // Muestra de tarjeta identificativa
         private void label13_Click(object sender, EventArgs e)
         {
-            CardIdUser cardIdUser = new CardIdUser(int.Parse(swtxtIdUser.Text));
-            cardIdUser.Show();
+            if (!IsNew)
+            {
+                CardIdUser cardIdUser = new CardIdUser(int.Parse(swtxtIdUser.Text));
+                cardIdUser.Show();
+            }
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)
         {
-            pnl_IDCard.BackColor = Color.FromArgb(42, 42, 42); 
+            if (!IsNew)
+            {
+                pnl_IDCard.BackColor = Color.FromArgb(42, 42, 42);
+            }
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)
         {
-            pnl_IDCard.BackColor = Color.FromArgb(33, 33, 33);
+            if (!IsNew)
+            {
+                pnl_IDCard.BackColor = Color.FromArgb(33, 33, 33);
+            }
         }
 
 

@@ -49,7 +49,7 @@
             this.pnl_ResetPassword = new System.Windows.Forms.Panel();
             this.lbl_ResetPassword = new System.Windows.Forms.Label();
             this.pnl_IDCard = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_IDCard = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_passwordDataBoundButNotShown = new AVISC_Controles.SWTextbox();
             this.swtxtIdUser = new AVISC_Controles.SWTextbox();
@@ -337,29 +337,29 @@
             // pnl_IDCard
             // 
             this.pnl_IDCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pnl_IDCard.Controls.Add(this.label13);
+            this.pnl_IDCard.Controls.Add(this.lbl_IDCard);
             this.pnl_IDCard.Location = new System.Drawing.Point(1498, 23);
             this.pnl_IDCard.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_IDCard.Name = "pnl_IDCard";
             this.pnl_IDCard.Size = new System.Drawing.Size(239, 44);
             this.pnl_IDCard.TabIndex = 53;
             // 
-            // label13
+            // lbl_IDCard
             // 
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(239, 44);
-            this.label13.TabIndex = 51;
-            this.label13.Text = "Mostrar Tarjeta ID";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
-            this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
+            this.lbl_IDCard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_IDCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_IDCard.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_IDCard.ForeColor = System.Drawing.Color.White;
+            this.lbl_IDCard.Location = new System.Drawing.Point(0, 0);
+            this.lbl_IDCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_IDCard.Name = "lbl_IDCard";
+            this.lbl_IDCard.Size = new System.Drawing.Size(239, 44);
+            this.lbl_IDCard.TabIndex = 51;
+            this.lbl_IDCard.Text = "Mostrar Tarjeta ID";
+            this.lbl_IDCard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IDCard.Click += new System.EventHandler(this.label13_Click);
+            this.lbl_IDCard.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
+            this.lbl_IDCard.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 
             // label14
             // 
@@ -489,7 +489,7 @@
         private System.Windows.Forms.Panel pnl_ResetPassword;
         private System.Windows.Forms.Label lbl_ResetPassword;
         private System.Windows.Forms.Panel pnl_IDCard;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl_IDCard;
         private System.Windows.Forms.Label label14;
         private AVISC_Controles.SWTextbox txt_passwordDataBoundButNotShown;
         private AVISC_Controles.SWTextbox swtxtIdUser;

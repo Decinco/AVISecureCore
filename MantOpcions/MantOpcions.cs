@@ -24,7 +24,7 @@ namespace MenuOptions
 
         }
 
-        public override void CustomDataGrid()
+        protected override void CustomDataGrid()
         {
             dataBaseView.Columns["Ensamblat"].HeaderText = "Ensamblado";
             dataBaseView.Columns["Classe"].HeaderText = "Clase del Formulario";
@@ -39,13 +39,13 @@ namespace MenuOptions
             ((DataGridViewImageColumn)dataBaseView.Columns["Imatge"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
-        public override void CustomFields()
+        protected override void CustomFields()
         {
             // Campo imatge, que no se mostrará en la tabla
             Fields.Add("Imatge", new byte[1]);
         }
 
-        public override void CustomDataBinding()
+        protected override void CustomDataBinding()
         {
             pbx_OptionIcon.DataBindings.Clear();
 
@@ -56,7 +56,7 @@ namespace MenuOptions
             pbx_OptionIcon.DataBindings.Add(imageBinding);
         }
 
-        public override void CustomPostLoadBehavior()
+        protected override void CustomPostLoadBehavior()
         {
             New += MantUsuaris_New;
         }

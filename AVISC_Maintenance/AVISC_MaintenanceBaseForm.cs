@@ -43,6 +43,14 @@ namespace AVISC_Maintenance
         /// </summary>
         protected DataSet ForeignKeyInformation;
 
+        /// <summary>
+        /// Expone la propiedad DataAccess.New para que los formularios que hereden esta clase puedan leerlo.
+        /// </summary>
+        protected bool IsNew
+        {
+            get { return DataAccess.New; }
+        }
+
         // Eventos que habilitan la personalización de la actualización de la base de datos y la creación de un nuevo registro
         /// <summary>
         /// Evento que se dispara antes de guardar los cambios en la base de datos.
@@ -63,6 +71,26 @@ namespace AVISC_Maintenance
 
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Permite personalizar las cabeceras del dataGridView y las propiedades de las columnas.
+        /// </summary>
+        protected virtual void CustomDataGrid() { }
+
+        /// <summary>
+        /// Permite añadir los campos que no se hayan añadido automáticamente, y esconder los que no se quieran mostrar.
+        /// </summary>
+        protected virtual void CustomFields() { }
+
+        /// <summary>
+        /// Permite añadir manualmente nuevos dataBindings.
+        /// </summary>
+        protected virtual void CustomDataBinding() { }
+
+        /// <summary>
+        /// Permite añadir comportamientos personalizados después de cargar la ventana.
+        /// </summary>
+        protected virtual void CustomPostLoadBehavior() { }
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
@@ -254,12 +282,18 @@ namespace AVISC_Maintenance
                 if (item is TextBox)
                 {
                     TextBox sWTextbox = (TextBox)item;
-                    Fields[sWTextbox.Tag.ToString()] = sWTextbox.Text;
+                    if (Fields.ContainsKey(sWTextbox.Tag.ToString()))
+                    {
+                        Fields[sWTextbox.Tag.ToString()] = sWTextbox.Text;
+                    }
                 }
                 else if (item is ComboBox)
                 {
                     ComboBox ComboBox = (ComboBox)item;
-                    Fields[ComboBox.Tag.ToString()] = ComboBox.SelectedValue.ToString();
+                    if (Fields.ContainsKey(ComboBox.Tag.ToString()))
+                    {
+                        Fields[ComboBox.Tag.ToString()] = ComboBox.SelectedValue.ToString();
+                    }
                 }
             }
 
@@ -298,26 +332,6 @@ namespace AVISC_Maintenance
 
             New?.Invoke(this, EventArgs.Empty);
         }
-
-        /// <summary>
-        /// Permite personalizar las cabeceras del datagridview y las propiedades de las columnas.
-        /// </summary>
-        public virtual void CustomDataGrid() { }
-
-        /// <summary>
-        /// Permite añadir los campos que no se hayan añadido automáticamente, y esconder los que no se quieran mostrar.
-        /// </summary>
-        public virtual void CustomFields() { }
-
-        /// <summary>
-        /// Permite añadir manualmente nuevos dataBindings.
-        /// </summary>
-        public virtual void CustomDataBinding() { }
-
-        /// <summary>
-        /// Permite añadir comportamientos personalizados después de cargar la ventana.
-        /// </summary>
-        public virtual void CustomPostLoadBehavior() { }
 
         private void EstilizarDataGridView()
         {

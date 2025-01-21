@@ -19,7 +19,7 @@ namespace SpaceShipCategories
             InitializeComponent();
         }
 
-        public override void CustomDataGrid()
+        protected override void CustomDataGrid()
         {
             dataBaseView.Columns["CodeSpaceShipCategory"].HeaderText = "Código";
             dataBaseView.Columns["DescSpaceShipCategory"].HeaderText = "Descripción";

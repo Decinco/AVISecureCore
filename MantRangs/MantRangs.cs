@@ -19,5 +19,11 @@ namespace UserRanks
 
             Taula = "UserRanks";
         }
+
+        protected override void CustomDataGrid()
+        {
+            dataBaseView.Columns["CodeUserRank"].HeaderText = "Code Rank";
+            dataBaseView.Columns["DescUserRank"].HeaderText = "Rank";
+        }
     }
 }
