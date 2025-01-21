@@ -44,7 +44,7 @@ namespace AVISC_Maintenance
         protected DataSet ForeignKeyInformation;
 
         /// <summary>
-        /// Expone la propiedad DataAccess.New para que los formularios que hereden esta clase puedan leerlo.
+        /// Expone la propiedad <see cref="DataAccess.New"/> para que los formularios que hereden esta clase puedan leerlo.
         /// </summary>
         protected bool IsNew
         {
