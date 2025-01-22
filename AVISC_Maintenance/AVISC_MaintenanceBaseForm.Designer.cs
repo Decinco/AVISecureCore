@@ -180,7 +180,7 @@ namespace AVISC_Maintenance
             this.pnl_newIconButton.MouseEnter += new System.EventHandler(this.pnl_NewButton_MouseEnter);
             this.pnl_newIconButton.MouseLeave += new System.EventHandler(this.pnl_NewButton_MouseLeave);
             // 
-            // BaseForm
+            // AVISC_MaintenanceBaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +190,7 @@ namespace AVISC_Maintenance
             this.Controls.Add(this.pnl_SaveButton);
             this.Controls.Add(this.dataBaseView);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "BaseForm";
+            this.Name = "AVISC_MaintenanceBaseForm";
             this.Text = "BaseForm";
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.Controls.SetChildIndex(this.dataBaseView, 0);
@@ -213,10 +213,14 @@ namespace AVISC_Maintenance
         private System.Windows.Forms.Panel pnl_saveButtonIcon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl_newIconButton;
+
+        /// <summary>
+        /// DataGrid utilizado para mostrar los datos de la tabla.
+        /// </summary>
         protected System.Windows.Forms.DataGridView dataBaseView;
         private System.Windows.Forms.Panel pnl_SaveButton;
         private System.Windows.Forms.Panel pnl_NewButton;
+        private System.Windows.Forms.Label label2;
     }
 }

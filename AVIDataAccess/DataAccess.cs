@@ -7,7 +7,7 @@ using System.Configuration;
 namespace AVIDataAccess
 {
     /// <summary>
-    /// Clase base abstracta para el acceso a datos.
+    /// Clase utilizada para el acceso a datos.
     /// Proporciona métodos comunes para interactuar con bases de datos.
     /// </summary>
     public class DataAccess
@@ -46,7 +46,7 @@ namespace AVIDataAccess
         /// <summary>
         /// Establece la conexión con la base de datos utilizando la cadena de conexión.
         /// </summary>
-        protected void Connectar()
+        private void Connectar()
         {
             Connection = new SqlConnection(ConnString);
         }
@@ -246,4 +246,10 @@ namespace AVIDataAccess
             }
         }
     }
+
+    /// <summary>
+    /// Este espacio de nombres contiene clases de acceso a datos. 
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated] // Evita que aparezca esta clase en la documentación
+    class NamespaceDoc { }
 }

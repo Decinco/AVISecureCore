@@ -71,6 +71,9 @@ namespace AVISC_Maintenance
         /// </summary>
         protected event EventHandler New;
 
+        /// <summary>
+        /// Constructor que inicializa el acceso a datos.
+        /// </summary>
         public AVISC_MaintenanceBaseForm()
         {
             DataAccess = new DataAccess();
@@ -403,5 +406,12 @@ namespace AVISC_Maintenance
         {
             pnl_SaveButton.BackColor = Color.FromArgb(33, 33, 33);
         }
+
     }
+
+    /// <summary>
+    /// Este espacio de nombres incluye clases que facilitan la creación de una pantalla de mantenimiento de la base de datos. 
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated] // Evita que aparezca esta clase en la documentación
+    class NamespaceDoc { }
 }

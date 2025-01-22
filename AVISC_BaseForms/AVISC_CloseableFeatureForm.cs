@@ -15,6 +15,9 @@ namespace AVISC_BaseForms
         /// </summary>
         public string FeatureName { get; set; }
 
+        /// <summary>
+        /// Constructor por defecto.
+        /// </summary>
         public AVISC_CloseableFeatureForm()
         {
             InitializeComponent();
@@ -40,4 +43,10 @@ namespace AVISC_BaseForms
             pnl_BackButton.BackColor = ColorTranslator.FromHtml("#2A2A2A");
         }
     }
+
+    /// <summary>
+    /// Este espacio de nombres incluye formularios que se utilizan como base para crear otros formularios en el programa.
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated] // Evita que aparezca esta clase en la documentación
+    class NamespaceDoc { }
 }
