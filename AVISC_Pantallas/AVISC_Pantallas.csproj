@@ -186,6 +186,8 @@
     <None Include="Resources\Feature-Slash.png" />
     <None Include="Resources\energia.png" />
     <None Include="Resources\energia1.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\eye-crossed.png" />
     <Content Include="Resources\Group 3.png" />
     <Content Include="Resources\Inter.bmp" />
     <Content Include="Resources\Inter\Inter-Italic-VariableFont_opsz,wght.ttf" />

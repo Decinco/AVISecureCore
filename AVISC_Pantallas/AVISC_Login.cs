@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using AVISC_Global;
+using AVISC_Pantallas.Properties;
 
 namespace AVISC_Pantallas
 {
@@ -21,8 +22,8 @@ namespace AVISC_Pantallas
             pbx_back.SendToBack();
             pbx_back.Dock = DockStyle.Fill;
 
-            imageOpen = Bitmap.FromFile(@"Resources\ojo-abierto.png");
-            imageClose = Bitmap.FromFile(@"Resources\ojo-cerrado.png");
+            imageOpen = Resources.eye;
+            imageClose = Resources.eye_crossed;
 
             pbx_ojo.Image = imageOpen;
 

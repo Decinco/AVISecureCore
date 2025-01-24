@@ -88,7 +88,7 @@ namespace AVISC_Pantallas
             this.pnl_fondo.Location = new System.Drawing.Point(0, 0);
             this.pnl_fondo.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_fondo.Name = "pnl_fondo";
-            this.pnl_fondo.Size = new System.Drawing.Size(1920, 1080);
+            this.pnl_fondo.Size = new System.Drawing.Size(1920, 1055);
             this.pnl_fondo.TabIndex = 0;
             // 
             // pnl_salir
@@ -232,9 +232,9 @@ namespace AVISC_Pantallas
             // 
             // pbx_ojo
             // 
-            this.pbx_ojo.Location = new System.Drawing.Point(605, 5);
+            this.pbx_ojo.Location = new System.Drawing.Point(612, 4);
             this.pbx_ojo.Name = "pbx_ojo";
-            this.pbx_ojo.Size = new System.Drawing.Size(47, 38);
+            this.pbx_ojo.Size = new System.Drawing.Size(40, 40);
             this.pbx_ojo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_ojo.TabIndex = 2;
             this.pbx_ojo.TabStop = false;
@@ -255,12 +255,11 @@ namespace AVISC_Pantallas
             this.txt_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_user.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.Color.White;
-            this.txt_user.Location = new System.Drawing.Point(20, 11);
+            this.txt_user.Location = new System.Drawing.Point(16, 7);
             this.txt_user.Multiline = true;
             this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(614, 27);
+            this.txt_user.Size = new System.Drawing.Size(623, 34);
             this.txt_user.TabIndex = 3;
-            this.txt_user.UseSystemPasswordChar = true;
             this.txt_user.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SupressEnterAndNextTextbox);
             // 
             // lbl_titol
@@ -318,9 +317,9 @@ namespace AVISC_Pantallas
             // 
             // pbx_confirmNewPass
             // 
-            this.pbx_confirmNewPass.Location = new System.Drawing.Point(605, 5);
+            this.pbx_confirmNewPass.Location = new System.Drawing.Point(612, 4);
             this.pbx_confirmNewPass.Name = "pbx_confirmNewPass";
-            this.pbx_confirmNewPass.Size = new System.Drawing.Size(47, 38);
+            this.pbx_confirmNewPass.Size = new System.Drawing.Size(40, 40);
             this.pbx_confirmNewPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_confirmNewPass.TabIndex = 2;
             this.pbx_confirmNewPass.TabStop = false;
@@ -353,9 +352,9 @@ namespace AVISC_Pantallas
             // 
             // pbx_newPass
             // 
-            this.pbx_newPass.Location = new System.Drawing.Point(605, 5);
+            this.pbx_newPass.Location = new System.Drawing.Point(612, 4);
             this.pbx_newPass.Name = "pbx_newPass";
-            this.pbx_newPass.Size = new System.Drawing.Size(47, 38);
+            this.pbx_newPass.Size = new System.Drawing.Size(40, 40);
             this.pbx_newPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_newPass.TabIndex = 3;
             this.pbx_newPass.TabStop = false;
@@ -458,7 +457,7 @@ namespace AVISC_Pantallas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(5F, 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1055);
             this.Controls.Add(this.pnl_fondo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
