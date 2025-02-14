@@ -73,6 +73,7 @@ namespace AVISC_Pantallas
                     else
                     {
                         pnl_warning.Visible = true;
+                        pnl_warning.BackColor = Color.FromArgb(255, 46, 46);
                         lbl_error.Text = "Nombre de usuario o contraseña incorrectos. Vuelve a intentarlo.";
                     }
                 }
@@ -168,6 +169,27 @@ namespace AVISC_Pantallas
             pnl_Login.Hide();
         }
 
+        private void HideNewPassword()
+        {
+            pbx_newPass.Image = imageOpen;
+            pbx_confirmNewPass.Image = imageOpen;
+
+            pnl_warning.Visible = false;
+
+            // Activar Tabulación
+            txt_newPass.TabStop = false;
+            txt_confirmNewPass.TabStop = false;
+            btm_generationNewPass.TabStop = false;
+
+            txt_user.TabStop = true;
+            txt_pass.TabStop = true;
+            btm_login.TabStop = true;
+
+
+
+            pnl_Login.Show();
+        }
+
         private void btm_generationNewPass_Click(object sender, EventArgs e)
         {
             ChangeNewPassword();
@@ -211,8 +233,13 @@ namespace AVISC_Pantallas
                 Border = new AVISC_Border();
 
                 pnl_warning.Visible = false;
-                pnl_confirmNewPass.Hide();
+
+                HideNewPassword();
+
                 Hide();
+
+                Border.FormClosing += LoggedOut; // Suscribirse al evento FormClosing
+
                 Border.Show();
             }
             else
