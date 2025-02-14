@@ -201,7 +201,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(207, 44);
             this.comboBox4.TabIndex = 46;
-            this.comboBox4.Tag = "Species.DescSpecie";
+            this.comboBox4.Tag = "EntityT.DescSpecie";
             // 
             // label11
             // 
