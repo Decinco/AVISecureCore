@@ -16,14 +16,14 @@ namespace AVISC_CrystalReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CardId : ReportClass {
+    public class ListsEDI : ReportClass {
         
-        public CardId() {
+        public ListsEDI() {
         }
         
         public override string ResourceName {
             get {
-                return "CardId.rpt";
+                return "ListsEDI.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AVISC_CrystalReport {
         
         public override string FullResourceName {
             get {
-                return "AVISC_CrystalReport.CardId.rpt";
+                return "AVISC_CrystalReport.ListsEDI.rpt";
             }
             set {
                 // Do nothing
@@ -87,20 +87,12 @@ namespace AVISC_CrystalReport {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_UserId {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCardId : Component, ICachedReport {
+    public class CachedListsEDI : Component, ICachedReport {
         
-        public CachedCardId() {
+        public CachedListsEDI() {
         }
         
         [Browsable(false)]
@@ -137,7 +129,7 @@ namespace AVISC_CrystalReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CardId rpt = new CardId();
+            ListsEDI rpt = new ListsEDI();
             rpt.Site = this.Site;
             return rpt;
         }
