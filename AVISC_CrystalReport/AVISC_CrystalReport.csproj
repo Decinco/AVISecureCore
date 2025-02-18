@@ -56,6 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AVISC_Lists.cs" />
+    <Compile Include="AVISC_Lists.Designer.cs">
+      <DependentUpon>AVISC_Lists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AVISC_Lists1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AVISC_Lists.rpt</DependentUpon>
+    </Compile>
     <Compile Include="CardId.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +79,13 @@
       <DependentUpon>CardIdUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AVISC_Lists.resx">
+      <DependentUpon>AVISC_Lists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AVISC_Lists.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AVISC_Lists1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CardId.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CardId.cs</LastGenOutput>
