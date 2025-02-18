@@ -87,7 +87,7 @@ namespace AVIDataAccess
 
                 return entityList;
             }
-            catch
+            catch (Exception e)
             {
                 return null;
             }

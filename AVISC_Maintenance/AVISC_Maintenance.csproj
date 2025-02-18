@@ -54,8 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AVISC_EFManteinanceBaseForm.cs">
+    <Compile Include="AVISC_EFMaintenanceBaseForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVISC_EFMaintenanceBaseForm.Designer.cs">
+      <DependentUpon>AVISC_EFMaintenanceBaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AVISC_MaintenanceBaseForm.cs">
       <SubType>Form</SubType>
@@ -72,6 +75,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AVISC_EFMaintenanceBaseForm.resx">
+      <DependentUpon>AVISC_EFMaintenanceBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AVISC_MaintenanceBaseForm.resx">
       <DependentUpon>AVISC_MaintenanceBaseForm.cs</DependentUpon>
     </EmbeddedResource>
