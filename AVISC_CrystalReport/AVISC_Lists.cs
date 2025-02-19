@@ -42,7 +42,7 @@ namespace AVISC_CrystalReport
 
                 // Crear el documento del informe
                 ReportDocument informe = new ReportDocument();
-                informe.Load("ListEDI1.rpt");
+                informe.Load("ListEDI.rpt");
 
                 // Configurar las credenciales de conexión
                 ConnectionInfo crConnectionInfo = new ConnectionInfo
@@ -88,9 +88,9 @@ namespace AVISC_CrystalReport
             }
         }
 
-        private void swTextButton1_ButtonClick(object sender, EventArgs e)
+        private void swTextButton1_ButtonClick_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(swTextbox1.Text))
+            if (string.IsNullOrWhiteSpace(txt_comand.Text))
             {
                 MessageBox.Show("Rellene el campo");
             }
@@ -99,7 +99,7 @@ namespace AVISC_CrystalReport
                 try
                 {
                     crystalReportViewer1.Enabled = true;
-                    idPersona = int.Parse(swTextbox1.Text);
+                    idPersona = int.Parse(txt_comand.Text);
                     MessageBox.Show($"Generando informe para ID: {idPersona}");
                     MostrarInforme(idPersona);
                 }

@@ -16,14 +16,14 @@ namespace AVISC_CrystalReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ListsEDI : ReportClass {
+    public class ListEDI : ReportClass {
         
-        public ListsEDI() {
+        public ListEDI() {
         }
         
         public override string ResourceName {
             get {
-                return "ListsEDI.rpt";
+                return "ListEDI.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AVISC_CrystalReport {
         
         public override string FullResourceName {
             get {
-                return "AVISC_CrystalReport.ListsEDI.rpt";
+                return "AVISC_CrystalReport.ListEDI.rpt";
             }
             set {
                 // Do nothing
@@ -87,12 +87,20 @@ namespace AVISC_CrystalReport {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_idComanda {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedListsEDI : Component, ICachedReport {
+    public class CachedListEDI : Component, ICachedReport {
         
-        public CachedListsEDI() {
+        public CachedListEDI() {
         }
         
         [Browsable(false)]
@@ -129,7 +137,7 @@ namespace AVISC_CrystalReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ListsEDI rpt = new ListsEDI();
+            ListEDI rpt = new ListEDI();
             rpt.Site = this.Site;
             return rpt;
         }
