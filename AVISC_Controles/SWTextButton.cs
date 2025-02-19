@@ -23,7 +23,7 @@ namespace AVISC_Controles
             get { return ButtonEnabledInternal; } 
             set { UpdateState(value); }
         }
-        private bool ButtonEnabledInternal;
+        private bool ButtonEnabledInternal = true;
 
         [Browsable(true)]
         [Category("Action")] // Necesarios para que se pueda ver en el Diseñador
@@ -32,8 +32,6 @@ namespace AVISC_Controles
         public SWTextButton()
         {
             InitializeComponent();
-
-            ButtonEnabled = true;
         }
 
         public void Enable()
@@ -86,6 +84,11 @@ namespace AVISC_Controles
             {
                 pnl_Button.BackColor = Color.FromArgb(33, 33, 33);
             }
+        }
+
+        private void SWTextButton_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

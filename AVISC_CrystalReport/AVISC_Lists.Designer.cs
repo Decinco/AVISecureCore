@@ -69,7 +69,7 @@ namespace AVISC_CrystalReport
             // 
             // swTextButton1
             // 
-            this.swTextButton1.ButtonEnabled = false;
+            this.swTextButton1.ButtonEnabled = true;
             this.swTextButton1.ButtonText = "Encontrar Comanda";
             this.swTextButton1.Location = new System.Drawing.Point(696, 38);
             this.swTextButton1.Name = "swTextButton1";

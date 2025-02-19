@@ -44,6 +44,9 @@ namespace AVISC_Controles
             this.pnl_Button.Name = "pnl_Button";
             this.pnl_Button.Size = new System.Drawing.Size(150, 150);
             this.pnl_Button.TabIndex = 53;
+            this.pnl_Button.Click += new System.EventHandler(this.ClickEvent);
+            this.pnl_Button.MouseEnter += new System.EventHandler(this.MouseEnterEvent);
+            this.pnl_Button.MouseLeave += new System.EventHandler(this.MouseLeaveEvent);
             // 
             // lbl_Button
             // 
@@ -68,6 +71,10 @@ namespace AVISC_Controles
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_Button);
             this.Name = "SWTextButton";
+            this.Load += new System.EventHandler(this.SWTextButton_Load);
+            this.Click += new System.EventHandler(this.ClickEvent);
+            this.MouseEnter += new System.EventHandler(this.MouseEnterEvent);
+            this.MouseLeave += new System.EventHandler(this.MouseLeaveEvent);
             this.pnl_Button.ResumeLayout(false);
             this.ResumeLayout(false);
 
