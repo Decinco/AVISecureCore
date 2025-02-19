@@ -35,7 +35,7 @@ namespace AVISC_CrystalReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 637);
+            this.ClientSize = new System.Drawing.Size(1840, 1000);
             this.Name = "AVISC_Lists";
             this.Text = "AVISC_Lists";
             this.ResumeLayout(false);
