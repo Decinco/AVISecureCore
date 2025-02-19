@@ -25,11 +25,15 @@ namespace AVISC_Controles
         }
         private bool ButtonEnabledInternal;
 
-        private event EventHandler ButtonClick;
+        [Browsable(true)]
+        [Category("Action")] // Necesarios para que se pueda ver en el Diseñador
+        public event EventHandler ButtonClick;
 
         public SWTextButton()
         {
             InitializeComponent();
+
+            ButtonEnabled = true;
         }
 
         public void Enable()
@@ -46,7 +50,7 @@ namespace AVISC_Controles
         {
             ButtonEnabledInternal = newValue;
 
-            if (ButtonEnabledInternal)
+            if (!ButtonEnabledInternal)
             {
                 pnl_Button.BackColor = Color.FromArgb(20, 20, 20);
                 lbl_Button.ForeColor = Color.Gray;

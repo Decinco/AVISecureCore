@@ -61,6 +61,12 @@
     <Compile Include="SWOption.Designer.cs">
       <DependentUpon>SWOption.cs</DependentUpon>
     </Compile>
+    <Compile Include="SWTextButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWTextButton.Designer.cs">
+      <DependentUpon>SWTextButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="SWUserOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SWOption.resx">
       <DependentUpon>SWOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SWTextButton.resx">
+      <DependentUpon>SWTextButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SWUserOptions.resx">
       <DependentUpon>SWUserOptions.cs</DependentUpon>

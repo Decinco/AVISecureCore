@@ -56,7 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AVISC_Lists.cs" />
+    <Compile Include="AVISC_Lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AVISC_Lists.Designer.cs">
       <DependentUpon>AVISC_Lists.cs</DependentUpon>
     </Compile>
