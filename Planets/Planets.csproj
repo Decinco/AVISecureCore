@@ -93,6 +93,10 @@
       <Project>{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}</Project>
       <Name>AVISC_Controles</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AVISC_FTP\AVISC_FTP.csproj">
+      <Project>{bab61c30-1d15-45b9-a930-318e6cc5f285}</Project>
+      <Name>AVISC_FTP</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AVISC_Maintenance\AVISC_Maintenance.csproj">
       <Project>{72827dff-d9fb-440d-939f-5402b3a24244}</Project>
       <Name>AVISC_Maintenance</Name>

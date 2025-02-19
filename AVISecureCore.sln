@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_CrystalReport", "AVIS
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "AVIDocumentation", "AVIDocumentation\AVIDocumentation.shfbproj", "{B70B742E-A4A0-4512-BFAD-F379F3331F63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_FTP", "AVISC_FTP\AVISC_FTP.csproj", "{BAB61C30-1D15-45B9-A930-318E6CC5F285}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B70B742E-A4A0-4512-BFAD-F379F3331F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
