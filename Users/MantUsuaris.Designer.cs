@@ -41,22 +41,16 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pbx_UserIcon = new System.Windows.Forms.PictureBox();
-            this.pnl_ChangeImage = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.swTextbox3 = new AVISC_Controles.SWTextbox();
             this.swTextbox2 = new AVISC_Controles.SWTextbox();
             this.swTextbox1 = new AVISC_Controles.SWTextbox();
-            this.pnl_ResetPassword = new System.Windows.Forms.Panel();
-            this.lbl_ResetPassword = new System.Windows.Forms.Label();
-            this.pnl_IDCard = new System.Windows.Forms.Panel();
-            this.lbl_IDCard = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_passwordDataBoundButNotShown = new AVISC_Controles.SWTextbox();
             this.swtxtIdUser = new AVISC_Controles.SWTextbox();
+            this.stb_ResetPassword = new AVISC_Controles.SWTextButton();
+            this.stb_ChangeProfile = new AVISC_Controles.SWTextButton();
+            this.stb_IDCard = new AVISC_Controles.SWTextButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_UserIcon)).BeginInit();
-            this.pnl_ChangeImage.SuspendLayout();
-            this.pnl_ResetPassword.SuspendLayout();
-            this.pnl_IDCard.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -226,33 +220,6 @@
             this.pbx_UserIcon.TabIndex = 49;
             this.pbx_UserIcon.TabStop = false;
             // 
-            // pnl_ChangeImage
-            // 
-            this.pnl_ChangeImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pnl_ChangeImage.Controls.Add(this.label12);
-            this.pnl_ChangeImage.Location = new System.Drawing.Point(1262, 185);
-            this.pnl_ChangeImage.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_ChangeImage.Name = "pnl_ChangeImage";
-            this.pnl_ChangeImage.Size = new System.Drawing.Size(218, 44);
-            this.pnl_ChangeImage.TabIndex = 50;
-            // 
-            // label12
-            // 
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(218, 44);
-            this.label12.TabIndex = 51;
-            this.label12.Text = "Cambiar";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.button1_Click);
-            this.label12.MouseEnter += new System.EventHandler(this.label12_MouseEnter);
-            this.label12.MouseLeave += new System.EventHandler(this.label12_MouseLeave);
-            // 
             // swTextbox3
             // 
             this.swTextbox3.AllowEmpty = false;
@@ -307,60 +274,6 @@
             this.swTextbox1.TabIndex = 32;
             this.swTextbox1.Tag = "CodeUser";
             // 
-            // pnl_ResetPassword
-            // 
-            this.pnl_ResetPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pnl_ResetPassword.Controls.Add(this.lbl_ResetPassword);
-            this.pnl_ResetPassword.Location = new System.Drawing.Point(423, 168);
-            this.pnl_ResetPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_ResetPassword.Name = "pnl_ResetPassword";
-            this.pnl_ResetPassword.Size = new System.Drawing.Size(333, 44);
-            this.pnl_ResetPassword.TabIndex = 52;
-            // 
-            // lbl_ResetPassword
-            // 
-            this.lbl_ResetPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_ResetPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_ResetPassword.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_ResetPassword.ForeColor = System.Drawing.Color.White;
-            this.lbl_ResetPassword.Location = new System.Drawing.Point(0, 0);
-            this.lbl_ResetPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_ResetPassword.Name = "lbl_ResetPassword";
-            this.lbl_ResetPassword.Size = new System.Drawing.Size(333, 44);
-            this.lbl_ResetPassword.TabIndex = 51;
-            this.lbl_ResetPassword.Text = "Reiniciar Contraseña";
-            this.lbl_ResetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_ResetPassword.Click += new System.EventHandler(this.label6_Click);
-            this.lbl_ResetPassword.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
-            this.lbl_ResetPassword.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
-            // 
-            // pnl_IDCard
-            // 
-            this.pnl_IDCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pnl_IDCard.Controls.Add(this.lbl_IDCard);
-            this.pnl_IDCard.Location = new System.Drawing.Point(1498, 23);
-            this.pnl_IDCard.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_IDCard.Name = "pnl_IDCard";
-            this.pnl_IDCard.Size = new System.Drawing.Size(239, 44);
-            this.pnl_IDCard.TabIndex = 53;
-            // 
-            // lbl_IDCard
-            // 
-            this.lbl_IDCard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_IDCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_IDCard.Font = new System.Drawing.Font("Inter", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_IDCard.ForeColor = System.Drawing.Color.White;
-            this.lbl_IDCard.Location = new System.Drawing.Point(0, 0);
-            this.lbl_IDCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_IDCard.Name = "lbl_IDCard";
-            this.lbl_IDCard.Size = new System.Drawing.Size(239, 44);
-            this.lbl_IDCard.TabIndex = 51;
-            this.lbl_IDCard.Text = "Mostrar Tarjeta ID";
-            this.lbl_IDCard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_IDCard.Click += new System.EventHandler(this.label13_Click);
-            this.lbl_IDCard.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
-            this.lbl_IDCard.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -405,15 +318,45 @@
             this.swtxtIdUser.TabIndex = 56;
             this.swtxtIdUser.Tag = "idUser";
             // 
+            // stb_ResetPassword
+            // 
+            this.stb_ResetPassword.ButtonEnabled = true;
+            this.stb_ResetPassword.ButtonText = "Reiniciar Contraseña";
+            this.stb_ResetPassword.Location = new System.Drawing.Point(423, 165);
+            this.stb_ResetPassword.Name = "stb_ResetPassword";
+            this.stb_ResetPassword.Size = new System.Drawing.Size(333, 47);
+            this.stb_ResetPassword.TabIndex = 57;
+            this.stb_ResetPassword.ButtonClick += new System.EventHandler(this.stb_ResetPassword_ButtonClick);
+            // 
+            // stb_ChangeProfile
+            // 
+            this.stb_ChangeProfile.ButtonEnabled = true;
+            this.stb_ChangeProfile.ButtonText = "Cambiar";
+            this.stb_ChangeProfile.Location = new System.Drawing.Point(1263, 186);
+            this.stb_ChangeProfile.Name = "stb_ChangeProfile";
+            this.stb_ChangeProfile.Size = new System.Drawing.Size(218, 43);
+            this.stb_ChangeProfile.TabIndex = 58;
+            this.stb_ChangeProfile.ButtonClick += new System.EventHandler(this.stb_ChangeProfile_Click);
+            // 
+            // stb_IDCard
+            // 
+            this.stb_IDCard.ButtonEnabled = true;
+            this.stb_IDCard.ButtonText = "Ver Tarjeta";
+            this.stb_IDCard.Location = new System.Drawing.Point(1498, 27);
+            this.stb_IDCard.Name = "stb_IDCard";
+            this.stb_IDCard.Size = new System.Drawing.Size(239, 43);
+            this.stb_IDCard.TabIndex = 59;
+            this.stb_IDCard.ButtonClick += new System.EventHandler(this.stb_IDCard_Click);
+            // 
             // MantUsuaris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.stb_IDCard);
+            this.Controls.Add(this.stb_ChangeProfile);
+            this.Controls.Add(this.stb_ResetPassword);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.pnl_IDCard);
-            this.Controls.Add(this.pnl_ResetPassword);
-            this.Controls.Add(this.pnl_ChangeImage);
             this.Controls.Add(this.pbx_UserIcon);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -453,14 +396,11 @@
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label11, 0);
             this.Controls.SetChildIndex(this.pbx_UserIcon, 0);
-            this.Controls.SetChildIndex(this.pnl_ChangeImage, 0);
-            this.Controls.SetChildIndex(this.pnl_ResetPassword, 0);
-            this.Controls.SetChildIndex(this.pnl_IDCard, 0);
             this.Controls.SetChildIndex(this.label14, 0);
+            this.Controls.SetChildIndex(this.stb_ResetPassword, 0);
+            this.Controls.SetChildIndex(this.stb_ChangeProfile, 0);
+            this.Controls.SetChildIndex(this.stb_IDCard, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_UserIcon)).EndInit();
-            this.pnl_ChangeImage.ResumeLayout(false);
-            this.pnl_ResetPassword.ResumeLayout(false);
-            this.pnl_IDCard.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,14 +424,11 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pbx_UserIcon;
-        private System.Windows.Forms.Panel pnl_ChangeImage;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel pnl_ResetPassword;
-        private System.Windows.Forms.Label lbl_ResetPassword;
-        private System.Windows.Forms.Panel pnl_IDCard;
-        private System.Windows.Forms.Label lbl_IDCard;
         private System.Windows.Forms.Label label14;
         private AVISC_Controles.SWTextbox txt_passwordDataBoundButNotShown;
         private AVISC_Controles.SWTextbox swtxtIdUser;
+        private AVISC_Controles.SWTextButton stb_ResetPassword;
+        private AVISC_Controles.SWTextButton stb_ChangeProfile;
+        private AVISC_Controles.SWTextButton stb_IDCard;
     }
 }

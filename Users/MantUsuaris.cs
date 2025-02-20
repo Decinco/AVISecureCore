@@ -69,10 +69,7 @@ namespace Users
 
         private void MantUsuaris_Saved(object sender, EventArgs e)
         {
-            // Al guardar, reiniciamos el botón
-            pnl_IDCard.BackColor = Color.FromArgb(33, 33, 33);
-            lbl_IDCard.ForeColor = Color.White;
-            lbl_IDCard.Cursor = Cursors.Hand;
+            stb_IDCard.Enable();
         }
 
         private void MantUsuaris_New(object sender, EventArgs e)
@@ -86,9 +83,7 @@ namespace Users
             UpdateImage();
 
             // Al crear un nuevo usuario, el botón no se debe poder pulsar.
-            pnl_IDCard.BackColor = Color.FromArgb(20, 20, 20);
-            lbl_IDCard.ForeColor = Color.Gray;
-            lbl_IDCard.Cursor = Cursors.Default;
+            stb_IDCard.Disable();
         }
 
         private void ImageBinding_Parse(object sender, ConvertEventArgs e)
@@ -134,7 +129,7 @@ namespace Users
         }
 
         // Botón de cambio de imagen
-        private void button1_Click(object sender, EventArgs e)
+        private void stb_ChangeProfile_Click(object sender, EventArgs e)
         {
             Image uploadedImage;
             OpenFileDialog fileDialog = new OpenFileDialog();
@@ -150,92 +145,34 @@ namespace Users
             }
         }
 
-        private void label12_MouseEnter(object sender, EventArgs e)
-        {
-            pnl_ChangeImage.BackColor = Color.FromArgb(42, 42, 42);
-        }
-
-        private void label12_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_ChangeImage.BackColor = Color.FromArgb(33, 33, 33);
-        }
-
         // Muestra de tarjeta identificativa
-        private void label13_Click(object sender, EventArgs e)
+        private void stb_IDCard_Click(object sender, EventArgs e)
         {
-            if (!IsNew)
-            {
-                CardIdUser cardIdUser = new CardIdUser(int.Parse(swtxtIdUser.Text));
-                cardIdUser.Show();
-            }
-        }
-
-        private void label13_MouseEnter(object sender, EventArgs e)
-        {
-            if (!IsNew)
-            {
-                pnl_IDCard.BackColor = Color.FromArgb(42, 42, 42);
-            }
-        }
-
-        private void label13_MouseLeave(object sender, EventArgs e)
-        {
-            if (!IsNew)
-            {
-                pnl_IDCard.BackColor = Color.FromArgb(33, 33, 33);
-            }
+            CardIdUser cardIdUser = new CardIdUser(int.Parse(swtxtIdUser.Text));
+            cardIdUser.Show();
         }
 
 
         // Restablecimiento de contraseña
-        private void label6_Click(object sender, EventArgs e)
-        {
-            if (txt_passwordDataBoundButNotShown.Text != "12345aA")
-            {
-                txt_passwordDataBoundButNotShown.Text = "12345aA";
-                if (pbx_UserIcon.DataBindings.Count > 0)
-                {
-                    txt_passwordDataBoundButNotShown.DataBindings[0].BindingManagerBase.EndCurrentEdit();
-                }
-            }
-        }
-
-        private void label6_MouseEnter(object sender, EventArgs e)
-        {
-            if (txt_passwordDataBoundButNotShown.Text != "12345aA")
-            {
-                pnl_ResetPassword.BackColor = Color.FromArgb(42, 42, 42);
-            }
-        }
-
-        private void label6_MouseLeave(object sender, EventArgs e)
-        {
-            if (txt_passwordDataBoundButNotShown.Text != "12345aA")
-            {
-                pnl_ResetPassword.BackColor = Color.FromArgb(33, 33, 33);
-            }
-        }
-
         private void txt_passwordDataBoundButNotShown_TextChanged(object sender, EventArgs e)
         {
             if (txt_passwordDataBoundButNotShown.Text == "12345aA")
             {
-                pnl_ResetPassword.BackColor = Color.FromArgb(20, 20, 20);
-                lbl_ResetPassword.ForeColor = Color.Gray;
-                lbl_ResetPassword.Cursor = Cursors.Default;
+                stb_ResetPassword.Disable();
             }
             else
             {
-                pnl_ResetPassword.BackColor = Color.FromArgb(33, 33, 33);
-                lbl_ResetPassword.ForeColor = Color.White;
-                lbl_ResetPassword.Cursor = Cursors.Hand;
+                stb_ResetPassword.Enable();
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void stb_ResetPassword_ButtonClick(object sender, EventArgs e)
         {
-            AVISC_FTP.FTPExplorer fTPExplorer = new AVISC_FTP.FTPExplorer();
-            fTPExplorer.Show();
+            txt_passwordDataBoundButNotShown.Text = "12345aA";
+            if (pbx_UserIcon.DataBindings.Count > 0)
+            {
+                txt_passwordDataBoundButNotShown.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            }
         }
     }
 }

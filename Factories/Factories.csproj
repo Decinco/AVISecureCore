@@ -83,6 +83,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AVIDataAccess\AVIDataAccess.csproj">
+      <Project>{f536e5e3-dcb2-4795-ba07-0070c324619f}</Project>
+      <Name>AVIDataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AVISC_BaseForms\AVISC_BaseForms.csproj">
       <Project>{5C169A50-F0C1-409C-8ABB-1994C5BA4096}</Project>
       <Name>AVISC_BaseForms</Name>

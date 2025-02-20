@@ -41,6 +41,7 @@ namespace AVISC_Pantallas
 
         private void AVISC_Principal_Load(object sender, EventArgs e)
         {
+
             if (AvailableOptions != null)
             {
                 foreach (var option in AvailableOptions)
