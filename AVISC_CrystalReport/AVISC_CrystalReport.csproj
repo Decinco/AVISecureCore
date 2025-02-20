@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AVISC_Lists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVISC_Lists.Designer.cs">
+      <DependentUpon>AVISC_Lists.cs</DependentUpon>
+    </Compile>
     <Compile Include="CardId.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,7 +75,17 @@
     <Compile Include="CardIdUser.Designer.cs">
       <DependentUpon>CardIdUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListEDI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListEDI.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AVISC_Lists.resx">
+      <DependentUpon>AVISC_Lists.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CardId.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CardId.cs</LastGenOutput>
@@ -77,6 +93,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CardIdUser.resx">
       <DependentUpon>CardIdUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListEDI.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListEDI.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AVISC_BaseForms\AVISC_BaseForms.csproj">
+      <Project>{5c169a50-f0c1-409c-8abb-1994c5ba4096}</Project>
+      <Name>AVISC_BaseForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVISC_Controles\AVISC_Controles.csproj">
+      <Project>{8bfe8f4b-2ebf-4d49-aff9-e440fd256796}</Project>
+      <Name>AVISC_Controles</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
