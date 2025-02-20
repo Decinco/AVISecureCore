@@ -45,6 +45,7 @@ namespace Planets
             this.sectorlbl = new System.Windows.Forms.Label();
             this.nativeslbl = new System.Windows.Forms.Label();
             this.nativesCbx = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CodePlanet
@@ -256,11 +257,22 @@ namespace Planets
             this.nativesCbx.TabIndex = 45;
             this.nativesCbx.Tag = "Species.DescSpecie";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(35, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MantPlanetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.nativeslbl);
             this.Controls.Add(this.nativesCbx);
             this.Controls.Add(this.sectorlbl);
@@ -295,6 +307,7 @@ namespace Planets
             this.Controls.SetChildIndex(this.sectorlbl, 0);
             this.Controls.SetChildIndex(this.nativesCbx, 0);
             this.Controls.SetChildIndex(this.nativeslbl, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,6 +331,7 @@ namespace Planets
         private System.Windows.Forms.Label sectorlbl;
         private System.Windows.Forms.Label nativeslbl;
         private System.Windows.Forms.ComboBox nativesCbx;
+        private System.Windows.Forms.Button button1;
     }
 }
 
