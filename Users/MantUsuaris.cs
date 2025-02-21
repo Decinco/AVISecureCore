@@ -231,12 +231,6 @@ namespace Users
                 lbl_ResetPassword.Cursor = Cursors.Hand;
             }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            AVISC_FTP.FTPExplorer fTPExplorer = new AVISC_FTP.FTPExplorer();
-            fTPExplorer.Show();
-        }
     }
 }
 
