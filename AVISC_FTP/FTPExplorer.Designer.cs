@@ -20,7 +20,7 @@ namespace AVISC_FTP
             }
             base.Dispose(disposing);
         }
-
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -29,20 +29,13 @@ namespace AVISC_FTP
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstArchivos = new System.Windows.Forms.ListBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.btnDownload = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnGetFile = new System.Windows.Forms.Button();
+            this.lblDescAS = new System.Windows.Forms.Label();
+            this.lblArchivoSeleccionado = new System.Windows.Forms.Label();
+            this.btnSubirArchivo = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lstArchivos
-            // 
-            this.lstArchivos.FormattingEnabled = true;
-            this.lstArchivos.ItemHeight = 16;
-            this.lstArchivos.Location = new System.Drawing.Point(391, 133);
-            this.lstArchivos.Name = "lstArchivos";
-            this.lstArchivos.Size = new System.Drawing.Size(316, 212);
-            this.lstArchivos.TabIndex = 25;
             // 
             // lblEstado
             // 
@@ -63,40 +56,76 @@ namespace AVISC_FTP
             this.btnDownload.UseVisualStyleBackColor = true;
             this.btnDownload.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox1
+            // btnGetFile
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(234, 133);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 212);
-            this.listBox1.TabIndex = 28;
+            this.btnGetFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGetFile.Location = new System.Drawing.Point(234, 199);
+            this.btnGetFile.Name = "btnGetFile";
+            this.btnGetFile.Size = new System.Drawing.Size(114, 23);
+            this.btnGetFile.TabIndex = 31;
+            this.btnGetFile.Text = "Select File";
+            this.btnGetFile.UseVisualStyleBackColor = true;
+            this.btnGetFile.Click += new System.EventHandler(this.btnGetFile_Click);
+            // 
+            // lblDescAS
+            // 
+            this.lblDescAS.AutoSize = true;
+            this.lblDescAS.Location = new System.Drawing.Point(234, 255);
+            this.lblDescAS.Name = "lblDescAS";
+            this.lblDescAS.Size = new System.Drawing.Size(148, 17);
+            this.lblDescAS.TabIndex = 32;
+            this.lblDescAS.Text = "Archivo Seleccionado:";
+            // 
+            // lblArchivoSeleccionado
+            // 
+            this.lblArchivoSeleccionado.AutoSize = true;
+            this.lblArchivoSeleccionado.Location = new System.Drawing.Point(389, 255);
+            this.lblArchivoSeleccionado.Name = "lblArchivoSeleccionado";
+            this.lblArchivoSeleccionado.Size = new System.Drawing.Size(46, 17);
+            this.lblArchivoSeleccionado.TabIndex = 33;
+            this.lblArchivoSeleccionado.Text = "label2";
+            // 
+            // btnSubirArchivo
+            // 
+            this.btnSubirArchivo.ForeColor = System.Drawing.Color.Black;
+            this.btnSubirArchivo.Location = new System.Drawing.Point(648, 40);
+            this.btnSubirArchivo.Name = "btnSubirArchivo";
+            this.btnSubirArchivo.Size = new System.Drawing.Size(133, 41);
+            this.btnSubirArchivo.TabIndex = 34;
+            this.btnSubirArchivo.Text = "Subir Archivo";
+            this.btnSubirArchivo.UseVisualStyleBackColor = true;
+            this.btnSubirArchivo.Click += new System.EventHandler(this.btnSubirArchivo_Click);
             // 
             // FTPExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnSubirArchivo);
+            this.Controls.Add(this.lblArchivoSeleccionado);
+            this.Controls.Add(this.lblDescAS);
+            this.Controls.Add(this.btnGetFile);
             this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lstArchivos);
             this.Name = "FTPExplorer";
             this.Text = "FTPExplorer";
-            this.Controls.SetChildIndex(this.lstArchivos, 0);
             this.Controls.SetChildIndex(this.lblEstado, 0);
             this.Controls.SetChildIndex(this.btnDownload, 0);
-            this.Controls.SetChildIndex(this.listBox1, 0);
+            this.Controls.SetChildIndex(this.btnGetFile, 0);
+            this.Controls.SetChildIndex(this.lblDescAS, 0);
+            this.Controls.SetChildIndex(this.lblArchivoSeleccionado, 0);
+            this.Controls.SetChildIndex(this.btnSubirArchivo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstArchivos;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Button btnDownload;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnGetFile;
+        private System.Windows.Forms.Label lblDescAS;
+        private System.Windows.Forms.Label lblArchivoSeleccionado;
+        private System.Windows.Forms.Button btnSubirArchivo;
     }
 }

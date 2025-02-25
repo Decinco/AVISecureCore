@@ -27,11 +27,5 @@ namespace Planets
             dataBaseView.Columns["lat"].HeaderText = "Latitud";
             dataBaseView.Columns["parsecs"].HeaderText = "Parsecs";
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AVISC_FTP.FTPExplorer fTPExplorer = new AVISC_FTP.FTPExplorer();
-            fTPExplorer.Show();
-        }
     }
 }
