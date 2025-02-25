@@ -231,6 +231,7 @@ namespace Users
                 lbl_ResetPassword.Cursor = Cursors.Hand;
             }
         }
+
     }
 }
 

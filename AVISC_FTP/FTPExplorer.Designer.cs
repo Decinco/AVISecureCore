@@ -34,6 +34,7 @@ namespace AVISC_FTP
             this.btnGetFile = new System.Windows.Forms.Button();
             this.lblDescAS = new System.Windows.Forms.Label();
             this.lblArchivoSeleccionado = new System.Windows.Forms.Label();
+            this.btnSubirArchivo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEstado
@@ -84,11 +85,23 @@ namespace AVISC_FTP
             this.lblArchivoSeleccionado.TabIndex = 33;
             this.lblArchivoSeleccionado.Text = "label2";
             // 
+            // btnSubirArchivo
+            // 
+            this.btnSubirArchivo.ForeColor = System.Drawing.Color.Black;
+            this.btnSubirArchivo.Location = new System.Drawing.Point(648, 40);
+            this.btnSubirArchivo.Name = "btnSubirArchivo";
+            this.btnSubirArchivo.Size = new System.Drawing.Size(133, 41);
+            this.btnSubirArchivo.TabIndex = 34;
+            this.btnSubirArchivo.Text = "Subir Archivo";
+            this.btnSubirArchivo.UseVisualStyleBackColor = true;
+            this.btnSubirArchivo.Click += new System.EventHandler(this.btnSubirArchivo_Click);
+            // 
             // FTPExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.btnSubirArchivo);
             this.Controls.Add(this.lblArchivoSeleccionado);
             this.Controls.Add(this.lblDescAS);
             this.Controls.Add(this.btnGetFile);
@@ -101,6 +114,7 @@ namespace AVISC_FTP
             this.Controls.SetChildIndex(this.btnGetFile, 0);
             this.Controls.SetChildIndex(this.lblDescAS, 0);
             this.Controls.SetChildIndex(this.lblArchivoSeleccionado, 0);
+            this.Controls.SetChildIndex(this.btnSubirArchivo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +126,6 @@ namespace AVISC_FTP
         private System.Windows.Forms.Button btnGetFile;
         private System.Windows.Forms.Label lblDescAS;
         private System.Windows.Forms.Label lblArchivoSeleccionado;
+        private System.Windows.Forms.Button btnSubirArchivo;
     }
 }
