@@ -30,71 +30,73 @@ namespace AVISC_FTP
         private void InitializeComponent()
         {
             this.lblEstado = new System.Windows.Forms.Label();
-            this.btnDownload = new System.Windows.Forms.Button();
-            this.btnGetFile = new System.Windows.Forms.Button();
             this.lblDescAS = new System.Windows.Forms.Label();
             this.lblArchivoSeleccionado = new System.Windows.Forms.Label();
-            this.btnSubirArchivo = new System.Windows.Forms.Button();
+            this.btnDownload = new AVISC_Controles.SWTextButton();
+            this.swTextButton2 = new AVISC_Controles.SWTextButton();
+            this.btnSubirArchivo = new AVISC_Controles.SWTextButton();
             this.SuspendLayout();
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(231, 100);
+            this.lblEstado.Font = new System.Drawing.Font("Inter", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.lblEstado.Location = new System.Drawing.Point(234, 307);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(0, 17);
+            this.lblEstado.Size = new System.Drawing.Size(0, 32);
             this.lblEstado.TabIndex = 26;
-            // 
-            // btnDownload
-            // 
-            this.btnDownload.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDownload.Location = new System.Drawing.Point(234, 40);
-            this.btnDownload.Name = "btnDownload";
-            this.btnDownload.Size = new System.Drawing.Size(97, 41);
-            this.btnDownload.TabIndex = 27;
-            this.btnDownload.Text = "Descargar";
-            this.btnDownload.UseVisualStyleBackColor = true;
-            this.btnDownload.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnGetFile
-            // 
-            this.btnGetFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGetFile.Location = new System.Drawing.Point(234, 199);
-            this.btnGetFile.Name = "btnGetFile";
-            this.btnGetFile.Size = new System.Drawing.Size(114, 23);
-            this.btnGetFile.TabIndex = 31;
-            this.btnGetFile.Text = "Select File";
-            this.btnGetFile.UseVisualStyleBackColor = true;
-            this.btnGetFile.Click += new System.EventHandler(this.btnGetFile_Click);
             // 
             // lblDescAS
             // 
             this.lblDescAS.AutoSize = true;
+            this.lblDescAS.Font = new System.Drawing.Font("Inter", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblDescAS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
             this.lblDescAS.Location = new System.Drawing.Point(234, 255);
             this.lblDescAS.Name = "lblDescAS";
-            this.lblDescAS.Size = new System.Drawing.Size(148, 17);
+            this.lblDescAS.Size = new System.Drawing.Size(261, 32);
             this.lblDescAS.TabIndex = 32;
             this.lblDescAS.Text = "Archivo Seleccionado:";
             // 
             // lblArchivoSeleccionado
             // 
             this.lblArchivoSeleccionado.AutoSize = true;
-            this.lblArchivoSeleccionado.Location = new System.Drawing.Point(389, 255);
+            this.lblArchivoSeleccionado.Font = new System.Drawing.Font("Inter", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lblArchivoSeleccionado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(102)))));
+            this.lblArchivoSeleccionado.Location = new System.Drawing.Point(501, 255);
             this.lblArchivoSeleccionado.Name = "lblArchivoSeleccionado";
-            this.lblArchivoSeleccionado.Size = new System.Drawing.Size(46, 17);
+            this.lblArchivoSeleccionado.Size = new System.Drawing.Size(0, 32);
             this.lblArchivoSeleccionado.TabIndex = 33;
-            this.lblArchivoSeleccionado.Text = "label2";
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.ButtonEnabled = true;
+            this.btnDownload.ButtonText = "Descargar";
+            this.btnDownload.Location = new System.Drawing.Point(441, 145);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(163, 64);
+            this.btnDownload.TabIndex = 35;
+            this.btnDownload.ButtonClick += new System.EventHandler(this.btnDownload_ButtonClick);
+            // 
+            // swTextButton2
+            // 
+            this.swTextButton2.ButtonEnabled = true;
+            this.swTextButton2.ButtonText = "Seleccionar Archivo";
+            this.swTextButton2.Location = new System.Drawing.Point(240, 145);
+            this.swTextButton2.Name = "swTextButton2";
+            this.swTextButton2.Size = new System.Drawing.Size(163, 64);
+            this.swTextButton2.TabIndex = 36;
+            this.swTextButton2.ButtonClick += new System.EventHandler(this.btnGetFile);
             // 
             // btnSubirArchivo
             // 
-            this.btnSubirArchivo.ForeColor = System.Drawing.Color.Black;
-            this.btnSubirArchivo.Location = new System.Drawing.Point(648, 40);
+            this.btnSubirArchivo.ButtonEnabled = true;
+            this.btnSubirArchivo.ButtonText = "Subir Archivo";
+            this.btnSubirArchivo.Location = new System.Drawing.Point(646, 145);
             this.btnSubirArchivo.Name = "btnSubirArchivo";
-            this.btnSubirArchivo.Size = new System.Drawing.Size(133, 41);
-            this.btnSubirArchivo.TabIndex = 34;
-            this.btnSubirArchivo.Text = "Subir Archivo";
-            this.btnSubirArchivo.UseVisualStyleBackColor = true;
-            this.btnSubirArchivo.Click += new System.EventHandler(this.btnSubirArchivo_Click);
+            this.btnSubirArchivo.Size = new System.Drawing.Size(163, 64);
+            this.btnSubirArchivo.TabIndex = 37;
+            this.btnSubirArchivo.ButtonClick += new System.EventHandler(this.btnSubirArchivo_ButtonClick);
             // 
             // FTPExplorer
             // 
@@ -102,18 +104,18 @@ namespace AVISC_FTP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
             this.Controls.Add(this.btnSubirArchivo);
+            this.Controls.Add(this.swTextButton2);
+            this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.lblArchivoSeleccionado);
             this.Controls.Add(this.lblDescAS);
-            this.Controls.Add(this.btnGetFile);
-            this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.lblEstado);
             this.Name = "FTPExplorer";
             this.Text = "FTPExplorer";
             this.Controls.SetChildIndex(this.lblEstado, 0);
-            this.Controls.SetChildIndex(this.btnDownload, 0);
-            this.Controls.SetChildIndex(this.btnGetFile, 0);
             this.Controls.SetChildIndex(this.lblDescAS, 0);
             this.Controls.SetChildIndex(this.lblArchivoSeleccionado, 0);
+            this.Controls.SetChildIndex(this.btnDownload, 0);
+            this.Controls.SetChildIndex(this.swTextButton2, 0);
             this.Controls.SetChildIndex(this.btnSubirArchivo, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,10 +124,10 @@ namespace AVISC_FTP
 
         #endregion
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Button btnDownload;
-        private System.Windows.Forms.Button btnGetFile;
         private System.Windows.Forms.Label lblDescAS;
         private System.Windows.Forms.Label lblArchivoSeleccionado;
-        private System.Windows.Forms.Button btnSubirArchivo;
+        private AVISC_Controles.SWTextButton btnDownload;
+        private AVISC_Controles.SWTextButton swTextButton2;
+        private AVISC_Controles.SWTextButton btnSubirArchivo;
     }
 }

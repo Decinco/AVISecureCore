@@ -36,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AVISC_Global, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Compile\AVISC_Global.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -87,6 +91,10 @@
     <ProjectReference Include="..\AVISC_BaseForms\AVISC_BaseForms.csproj">
       <Project>{5c169a50-f0c1-409c-8abb-1994c5ba4096}</Project>
       <Name>AVISC_BaseForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVISC_Controles\AVISC_Controles.csproj">
+      <Project>{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}</Project>
+      <Name>AVISC_Controles</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,73 +19,6 @@ namespace AVISC_FTP
             nodeToPathMap = new Dictionary<TreeNode, string>(); // Inicializamos el diccionario
         }
 
-        private void btnGetFile_Click(object sender, EventArgs e)
-        {
-            using (Form explorerForm = new Form())
-            {
-                explorerForm.Text = "Explorador FTP";
-                explorerForm.Size = new System.Drawing.Size(400, 500);
-
-                TreeView treeView = new TreeView { Dock = DockStyle.Fill };
-                explorerForm.Controls.Add(treeView);
-
-                treeView.BeforeExpand += (s, ev) =>
-                {
-                    TreeNode selectedNode = ev.Node;
-
-                    if (selectedNode.Nodes.Count == 1 && selectedNode.Nodes[0].Text == "Cargando...")
-                    {
-                        selectedNode.Nodes.Clear(); // Eliminar nodo temporal
-                        string ruta = nodeToPathMap[selectedNode]; // Obtener la ruta completa del directorio
-                        cargarDirectorios(selectedNode, ruta);
-                    }
-                };
-
-                treeView.AfterSelect += (s, ev) =>
-                {
-                    if (ev.Node != null && !ev.Node.Text.EndsWith("/")) // Es un archivo
-                    {
-                        archivoSeleccionado = nodeToPathMap[ev.Node];
-                        lblArchivoSeleccionado.Text = archivoSeleccionado;
-                    }
-                };
-
-                // Inicializamos el explorador en la raíz del servidor FTP
-                TreeNode rootNode = new TreeNode("/");
-                treeView.Nodes.Add(rootNode);
-                nodeToPathMap[rootNode] = "/";
-                cargarDirectorios(rootNode, "");
-
-                explorerForm.ShowDialog();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(archivoSeleccionado))
-            {
-                using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
-                {
-                    folderDialog.Description = "Selecciona la carpeta de destino";
-
-                    if (folderDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string rutaLocal = Path.Combine(folderDialog.SelectedPath, Path.GetFileName(archivoSeleccionado));
-                        bool exito = ftpConnection.descargarArchivoFTP(archivoSeleccionado, rutaLocal);
-                        lblEstado.Text = exito ? $"Archivo descargado correctamente en: {rutaLocal}" : "Error al descargar el archivo.";
-                    }
-                    else
-                    {
-                        lblEstado.Text = "Selección de carpeta cancelada.";
-                    }
-                }
-            }
-            else
-            {
-                lblEstado.Text = "Selecciona un archivo primero.";
-            }
-        }
-
         private void cargarDirectorios(TreeNode parentNode, string ruta)
         {
             try
@@ -111,7 +44,33 @@ namespace AVISC_FTP
             }
         }
 
-        private void btnSubirArchivo_Click(object sender, EventArgs e)
+        private void btnDownload_ButtonClick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(archivoSeleccionado))
+            {
+                using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+                {
+                    folderDialog.Description = "Selecciona la carpeta de destino";
+
+                    if (folderDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string rutaLocal = Path.Combine(folderDialog.SelectedPath, Path.GetFileName(archivoSeleccionado));
+                        bool exito = ftpConnection.descargarArchivoFTP(archivoSeleccionado, rutaLocal);
+                        lblEstado.Text = exito ? $"Archivo descargado correctamente en: {rutaLocal}" : "Error al descargar el archivo.";
+                    }
+                    else
+                    {
+                        lblEstado.Text = "Selección de carpeta cancelada.";
+                    }
+                }
+            }
+            else
+            {
+                lblEstado.Text = "Selecciona un archivo primero.";
+            }
+        }
+
+        private void btnSubirArchivo_ButtonClick(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -169,6 +128,47 @@ namespace AVISC_FTP
                         explorerForm.ShowDialog();
                     }
                 }
+            }
+        }
+
+        private void btnGetFile(object sender, EventArgs e)
+        {
+            using (Form explorerForm = new Form())
+            {
+                explorerForm.Text = "Explorador FTP";
+                explorerForm.Size = new System.Drawing.Size(400, 500);
+
+                TreeView treeView = new TreeView { Dock = DockStyle.Fill };
+                explorerForm.Controls.Add(treeView);
+
+                treeView.BeforeExpand += (s, ev) =>
+                {
+                    TreeNode selectedNode = ev.Node;
+
+                    if (selectedNode.Nodes.Count == 1 && selectedNode.Nodes[0].Text == "Cargando...")
+                    {
+                        selectedNode.Nodes.Clear(); // Eliminar nodo temporal
+                        string ruta = nodeToPathMap[selectedNode]; // Obtener la ruta completa del directorio
+                        cargarDirectorios(selectedNode, ruta);
+                    }
+                };
+
+                treeView.AfterSelect += (s, ev) =>
+                {
+                    if (ev.Node != null && !ev.Node.Text.EndsWith("/")) // Es un archivo
+                    {
+                        archivoSeleccionado = nodeToPathMap[ev.Node];
+                        lblArchivoSeleccionado.Text = archivoSeleccionado;
+                    }
+                };
+
+                // Inicializamos el explorador en la raíz del servidor FTP
+                TreeNode rootNode = new TreeNode("/");
+                treeView.Nodes.Add(rootNode);
+                nodeToPathMap[rootNode] = "/";
+                cargarDirectorios(rootNode, "");
+
+                explorerForm.ShowDialog();
             }
         }
     }
