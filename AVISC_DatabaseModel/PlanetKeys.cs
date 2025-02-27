@@ -7,15 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Factories
+namespace AVISC_DatabaseModel
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Factories
+    public partial class PlanetKeys
     {
-        public short idFactory { get; set; }
-        public string codeFactory { get; set; }
-        public string DescFactory { get; set; }
+        public int idKey { get; set; }
+        public int idPlanet { get; set; }
+        public string XMLKey { get; set; }
+    
+        public virtual Planets Planets { get; set; }
     }
 }

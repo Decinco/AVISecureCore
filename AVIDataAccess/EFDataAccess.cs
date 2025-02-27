@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Reflection;
+using System.ComponentModel;
 
 namespace AVIDataAccess
 {
@@ -87,11 +89,56 @@ namespace AVIDataAccess
 
                 return entityList;
             }
-            catch (Exception e)
+            catch
             {
                 return null;
             }
         }
+
+        /// <summary>
+        /// Lee todos los registros de una tabla relacionada a la tabla principal.
+        /// </summary>
+        /// <typeparam name="ForeignType">Tipo de la entidad de la tabla a consultar.</typeparam>
+        /// <returns>Una lista con todos los registros. Si ha ocurrido un error durante la ejecución de la función, devuelve null.</returns>
+        public List<ForeignType> RefreshForeignTable<ForeignType>()
+            where ForeignType : class
+        {
+            try
+            {
+                List<ForeignType> entityList;
+
+                entityList = (from items in DatabaseContext.Set<ForeignType>() select items).ToList();
+
+                return entityList;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Lee todos los registros de una tabla relacionada a la tabla principal.
+        /// </summary>
+        /// <typeparam name="ForeignType">Tipo de la entidad de la tabla a consultar.</typeparam>
+        /// <returns>Una lista con todos los registros. Si ha ocurrido un error durante la ejecución de la función, devuelve null.</returns>
+        public BindingList<ForeignType> RefreshForeignTableToBindingList<ForeignType>()
+            where ForeignType : class
+        {
+            try
+            {
+                BindingList<ForeignType> entityList;
+
+                entityList = (from items in DatabaseContext.Set<ForeignType>() select items).ToList().ToBindingList();
+
+                return entityList;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
 
         /// <summary>
         /// Guarda todos los cambios y refresca el origen de datos. Además, devuelve la cantidad de ítems afectados.

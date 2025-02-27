@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factories", "Factories\Fact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_FTP", "AVISC_FTP\AVISC_FTP.csproj", "{BAB61C30-1D15-45B9-A930-318E6CC5F285}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sectors", "Sectors\Sectors.csproj", "{D110E715-3428-4DFC-A7E0-9B0B4A4AB7AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_DatabaseModel", "AVISC_DatabaseModel\AVISC_DatabaseModel.csproj", "{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAB61C30-1D15-45B9-A930-318E6CC5F285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D110E715-3428-4DFC-A7E0-9B0B4A4AB7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D110E715-3428-4DFC-A7E0-9B0B4A4AB7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D110E715-3428-4DFC-A7E0-9B0B4A4AB7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D110E715-3428-4DFC-A7E0-9B0B4A4AB7AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

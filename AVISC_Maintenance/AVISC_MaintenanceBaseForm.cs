@@ -225,13 +225,6 @@ namespace AVISC_Maintenance
 
                     dataGridViewColumnIndex = dataBaseView.Columns[foreign.OriginColumnName].Index;
                     dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
-
-                    //DataGridViewComboBoxColumn column = new DataGridViewComboBoxColumn();
-                    //column.DataSource = DTS.Tables[foreign.DisplayTableName];
-                    //column.DisplayMember = foreign.DisplayColumnName;
-                    //column.ValueMember = foreign.ValueColumnName;
-
-                    //dataBaseView.Columns.Insert(dataGridViewColumnIndex, column);
                 }
             }
         }
