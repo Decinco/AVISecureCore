@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,22 +17,37 @@ namespace AVISC_Maintenance
 {
 
     /// <summary>
-    /// Formulario base para la creación de formularios de mantenimiento utilizando EntityFramework.
+    /// <para>
+    ///     Formulario base para la creación de formularios de mantenimiento utilizando EntityFramework.
+    /// </para>
+    /// <para>
+    ///     Se pueden añadir automáticamente campos a la tabla creando un <see cref="TextBox"/> o <see cref="ComboBox"/> en el formulario y luego introduciendo el nombre del tag con el formato correcto.
+    /// </para>
+    /// <list type="table">
+    ///     <item>
+    ///         <term>TextBox</term>
+    ///         <description>"[nombre_columna]"</description>
+    ///     </item>
+    ///     <item>
+    ///         <term>ComboBox</term>
+    ///         <description>"[nombre_tabla_foránea].[nombre_columna_foránea].[nombre_columna_id]"</description>
+    ///     </item>
+    /// </list>
     /// </summary>
-    /// <typeparam name="EntityT">Tipo de la entidad que va a servir como tabla primaria</typeparam>
-    /// <typeparam name="ContextT">Contexto a utilizar</typeparam>
+    /// <typeparam name="EntityT">Tipo de la entidad que va a servir como tabla primaria.</typeparam>
+    /// <typeparam name="ContextT">Contexto a utilizar. Debe heredar de <see cref="DbContext"/>.</typeparam>
     public partial class AVISC_EFMaintenanceBaseForm<EntityT, ContextT> : AVISC_CloseableFeatureForm
         where EntityT : class, new()
         where ContextT : DbContext, new()
     {
 
         /// <summary>
-        /// Define los campos que se van a mostrar en la tabla
+        /// Define los campos que se van a mostrar en la tabla.
         /// </summary>
         protected List<string> Fields { get; set; }
 
         /// <summary>
-        /// Controla si se está creando un nuevo registro
+        /// Controla si se está creando un nuevo registro.
         /// </summary>
         protected bool New { get; private set; }
 
@@ -49,11 +65,13 @@ namespace AVISC_Maintenance
         /// </summary>
         protected event EventHandler NewAdded;
 
-        private List<EntityT> Data;
+        private BindingSource Source;
+
+        private BindingList<EntityT> Data;
 
         private ContextT Context;
 
-        private EFDataAccess<EntityT> DataAccess; // Un dataAccess cuyas acciones solo pueden afectar a objetos "EntityT"
+        private EFDataAccess<EntityT> DataAccess;
 
         private string TypeName;
 
@@ -67,6 +85,7 @@ namespace AVISC_Maintenance
             Context = new ContextT();
 
             DataAccess = new EFDataAccess<EntityT>(Context);
+            Source = new BindingSource();
             New = false;
             TypeName = typeof(EntityT).Name;
 
@@ -99,15 +118,19 @@ namespace AVISC_Maintenance
             RoundUtils.RedondearEsquinas(pnl_SaveButton, 30);
             RoundUtils.RedondearEsquinas(dataBaseView, 50);
 
-            Setup();
-            DataBind();
+            if (!DesignMode)
+            {
+                Setup();
 
-            // Aplicar estilo al DataGridView
-            EstilizarDataGridView();
+                DataBind();
 
-            CustomPostLoadBehavior();
+                // Aplicar estilo al DataGridView
+                EstilizarDataGridView();
 
-            HideUnavailable();
+                CustomPostLoadBehavior();
+
+                HideUnavailable();
+            }
         }
 
         private void Setup()
@@ -115,33 +138,112 @@ namespace AVISC_Maintenance
             dataBaseView.Hide();
 
             Fields = new List<string>();
-            Data = DataAccess.Refresh();
+
+            AddFields();
+
+            Data = new BindingList<EntityT>(DataAccess.Refresh());
+            Source.DataSource = Data;
 
             if (Data == null)
             {
                 MessageBox.Show("Ha habido un error al importar los datos de la base de datos.");
             }
-            else
-            {
 
-                foreach (Control control in Controls)
+            CustomFields();
+        }
+
+        private void AddFields()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
                 {
-                    if (control is TextBox)
+                    TextBox textBox = (TextBox)control;
+                    Fields.Add(textBox.Tag.ToString());
+                }
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    string[] tagParts = comboBox.Tag.ToString().Split('.');
+                    ForeignKeyTag newTag;
+
+                    newTag = new ForeignKeyTag()
                     {
-                        TextBox textBox = (TextBox)control;
-                        Fields.Add(textBox.Tag.ToString());
+                        ValueColumnName = tagParts[2],
+                        ValueTableName = TypeName,
+                        OriginColumnName = tagParts[2],
+                        DisplayColumnName = tagParts[1],
+                        DisplayTableName = tagParts[0]
+                    };
+
+                    comboBox.Tag = newTag;
+
+                    Fields.Add(comboBox.Tag.ToString());
+                }
+            }
+        }
+
+        private void ComboBoxInitialization()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    ForeignKeyTag foreign = (ForeignKeyTag)comboBox.Tag;
+
+                    try
+                    {
+                        // Esta es la única forma que he encontrado de sacar los datos de un modelo a partir de su nombre.
+                        Type foreignType = typeof(ContextT).GetProperty(foreign.DisplayTableName).PropertyType.GetGenericArguments()[0];
+                        //MethodInfo obtainListMethod = DataAccess.GetType().GetMethod("RefreshForeignTableToBindingList").MakeGenericMethod(foreignType);
+                        //BindingSource source = new BindingSource()
+                        //{
+                        //    DataSource = obtainListMethod.Invoke(DataAccess, null)
+                        //};
+
+
+                        comboBox.DataSource = MakeListFromDBSet(Context.Set(foreignType));
+
+                        comboBox.DisplayMember = foreign.DisplayColumnName;
+                        comboBox.ValueMember = foreign.OriginColumnName;
+
+                        dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
+
+                        //dataBaseView.Columns.Add(new DataGridViewColumn
+                        //{
+
+                        //});
+
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show($"No se pudo determinar a dónde tiene que apuntar el ComboBox para la columna {comboBox.Tag}. \n Detalles: {e.Message}", "Liada monumental", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
+        }
 
-            CustomFields();
+        private List<object> MakeListFromDBSet(DbSet set)
+        {
+            List<object> list = new List<object>();
+
+            foreach (object entry in set)
+            {
+                list.Add(entry);
+            }
+
+            return list;
         }
 
         private void DataBind()
         {
             bool errors = false;
 
-            dataBaseView.DataSource = Data;
+            dataBaseView.DataSource = Source;
+
+            ComboBoxInitialization();
+
             foreach (Control control in Controls)
             {
                 if (control is TextBox)
@@ -150,7 +252,7 @@ namespace AVISC_Maintenance
                     try
                     {
                         textBox.DataBindings.Clear();
-                        textBox.DataBindings.Add("Text", Data, textBox.Tag.ToString());
+                        textBox.DataBindings.Add("Text", Source, textBox.Tag.ToString());
 
                         textBox.TextChanged += SaveToDataGrid;
                     }
@@ -162,6 +264,33 @@ namespace AVISC_Maintenance
 
                             textBox.ReadOnly = true;
                             textBox.Text = "¡Esta propiedad no existe!";
+
+                            errors = true;
+                        }
+                    }
+                }
+
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    ForeignKeyTag foreign = (ForeignKeyTag)comboBox.Tag;
+
+                    try
+                    {
+
+                        comboBox.DataBindings.Clear();
+                        comboBox.DataBindings.Add(new Binding("SelectedValue", Source, comboBox.Tag.ToString(), true, DataSourceUpdateMode.Never));
+
+                        comboBox.SelectedValueChanged += SaveToDataGridComboBox;
+                    }
+                    catch
+                    {
+                        if (!ErrorMessageAlreadyShown)
+                        {
+                            MessageBox.Show($"¡{foreign.ValueColumnName} no es una propiedad de {foreign.ValueTableName} o {foreign.OriginColumnName} no es una propiedad de {TypeName}!", "Liada monumental", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            comboBox.Enabled = false;
+                            comboBox.Text = "¡Esta propiedad no existe!";
 
                             errors = true;
                         }
@@ -201,11 +330,24 @@ namespace AVISC_Maintenance
             }
         }
 
+        private void SaveToDataGridComboBox(object sender, EventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+
+            if (comboBox.DataBindings.Count > 0)
+            {
+                // La hamburguesa del terror
+                comboBox.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+                comboBox.DataBindings[0].WriteValue();
+                comboBox.DataBindings[0].BindingManagerBase.EndCurrentEdit();
+            }
+        }
+
         private void SaveChanges(object sender, EventArgs e)
         {
             int changedItems;
             int newItems = 0;
-            List<EntityT> newData;
+            BindingList<EntityT> newData;
 
             BeforeSave?.Invoke(this, e);
 
@@ -240,7 +382,7 @@ namespace AVISC_Maintenance
                 }
             }
 
-            newData = DataAccess.SaveAndRefresh(out changedItems);
+            newData = new BindingList<EntityT>(DataAccess.SaveAndRefresh(out changedItems));
 
             if (newData == null)
             {

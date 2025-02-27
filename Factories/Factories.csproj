@@ -56,24 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories.cs">
-      <DependentUpon>FactoryMaintenance.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FactoryMaintenance.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FactoryMaintenance.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FactoryMaintenance.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FactoryMaintenance.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FactoryMaintenance.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FactoryMaintenance.edmx</DependentUpon>
-    </Compile>
     <Compile Include="MantFactories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +77,10 @@
       <Project>{8BFE8F4B-2EBF-4D49-AFF9-E440FD256796}</Project>
       <Name>AVISC_Controles</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AVISC_DatabaseModel\AVISC_DatabaseModel.csproj">
+      <Project>{5c45fb5b-754f-44ce-a15d-dc4ed88517cf}</Project>
+      <Name>AVISC_DatabaseModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AVISC_Maintenance\AVISC_Maintenance.csproj">
       <Project>{72827dff-d9fb-440d-939f-5402b3a24244}</Project>
       <Name>AVISC_Maintenance</Name>
@@ -102,13 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="FactoryMaintenance.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FactoryMaintenance.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="FactoryMaintenance.edmx.diagram">
-      <DependentUpon>FactoryMaintenance.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,18 +97,6 @@
     <EmbeddedResource Include="MantFactories.resx">
       <DependentUpon>MantFactories.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FactoryMaintenance.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FactoryMaintenance.edmx</DependentUpon>
-      <LastGenOutput>FactoryMaintenance.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="FactoryMaintenance.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FactoryMaintenance.edmx</DependentUpon>
-      <LastGenOutput>FactoryMaintenance.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

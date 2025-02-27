@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVISC_Maintenance;
+using AVISC_DatabaseModel;
 
 namespace Factories
 {
-    public partial class MantFactories : AVISC_EFMaintenanceBaseForm<Factories, SecureCore>
+    public partial class MantFactories : AVISC_EFMaintenanceBaseForm<AVISC_DatabaseModel.Factories, SecureCoreEF>
     {
         public MantFactories()
         {
