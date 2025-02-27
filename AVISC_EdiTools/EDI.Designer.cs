@@ -48,7 +48,7 @@ namespace AVISC_EdiTools
             // 
             this.swTextButton2.ButtonEnabled = true;
             this.swTextButton2.ButtonText = "Subir a la BDD";
-            this.swTextButton2.Location = new System.Drawing.Point(734, 219);
+            this.swTextButton2.Location = new System.Drawing.Point(85, 319);
             this.swTextButton2.Name = "swTextButton2";
             this.swTextButton2.Size = new System.Drawing.Size(262, 63);
             this.swTextButton2.TabIndex = 26;
@@ -56,10 +56,14 @@ namespace AVISC_EdiTools
             // 
             // txt_Edi
             // 
-            this.txt_Edi.Location = new System.Drawing.Point(399, 209);
+            this.txt_Edi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.txt_Edi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Edi.Font = new System.Drawing.Font("Inter", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Edi.ForeColor = System.Drawing.Color.White;
+            this.txt_Edi.Location = new System.Drawing.Point(391, 209);
             this.txt_Edi.Multiline = true;
             this.txt_Edi.Name = "txt_Edi";
-            this.txt_Edi.Size = new System.Drawing.Size(262, 499);
+            this.txt_Edi.Size = new System.Drawing.Size(944, 678);
             this.txt_Edi.TabIndex = 27;
             // 
             // EDI

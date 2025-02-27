@@ -16,15 +16,11 @@ namespace AVISC_EdiTools
     public partial class EDI : AVISC_CloseableFeatureForm
     {
         SecureCoreG5Entities sc;
-        List<Orders> orders;
-        List<Priority> priority;
-        List<OperationalAreas> operationalAreas;
-        List<Agencies> agencies;
-        List<Factories> factories;
-        List<OrderInfo> orderInfo;
-        List<OrdersDetail> ordersDetail;
-        List<Planets> planets;
-        List<References> references;
+
+        Orders orders;
+        OrderInfo orderInfo ;
+        OrdersDetail ordersDetail;
+
         public EDI()
         {
             InitializeComponent();
@@ -38,15 +34,9 @@ namespace AVISC_EdiTools
                 openFileDialog.ShowDialog();
 
                 sc = new SecureCoreG5Entities();
-                orders = new List<Orders>();
-                priority = new List<Priority>();
-                operationalAreas = new List<OperationalAreas>();
-                agencies = new List<Agencies>();
-                factories = new List<Factories>();
-                orderInfo = new List<OrderInfo>();
-                ordersDetail = new List<OrdersDetail>();
-                planets = new List<Planets>();
-                references = new List<References>();            
+                orders = new Orders();
+                orderInfo = new OrderInfo();
+                ordersDetail = new OrdersDetail();
 
                 string[] docRead = File.ReadAllLines(openFileDialog.FileName);
 
@@ -59,8 +49,7 @@ namespace AVISC_EdiTools
                         foreach (string line in docRead)
                         {
                             List<string> parts = line.Split('|').ToList();
-                            int cantidad;
-                            
+
                             if (parts[0] == "ORDERS_D_96A_UN_EAN008")
                             {
                                 correcte = true;
@@ -70,73 +59,38 @@ namespace AVISC_EdiTools
                                 if (correcte)
                                 {
                                     if (parts[0] == "ORD")
-                                    {
-                                        orders.Add(new Orders { codeOrder = parts[1] });
-
-                                        priority.Add(new Priority { idPriority = orders[0].IdFactory, DescPriority = parts[2] });
-
-                                        sc.Priority.AddRange(priority);
+                                    {                                        
+                                        GuardarDatosORD(parts);
                                     }
-
-                                    ordersDetail.Add(new OrdersDetail { idOrder = orders[0].idOrder });
-                                    orderInfo.Add(new OrderInfo { idOrder = orders[0].idOrder });
-
-                                    if (parts[0] == "DTM")
+                                    else if (parts[0] == "DTM")
                                     {
-                                        orders.Add(new Orders { idOrder = orders[0].idOrder, dateOrder = DateTime.ParseExact(parts[1], "yyyyMMdd", CultureInfo.InvariantCulture) });
+
+                                        GuardarDatosDTM(parts);
                                     }
                                     else if (parts[0] == "NADMS")
                                     {
-                                        agencies.Add(new Agencies { idAgency = orderInfo[0].idAgency, DescAgency = parts[2] });
-                                        operationalAreas.Add(new OperationalAreas { idOperationalArea = orderInfo[0].idOperationalArea, DescOperationalArea = parts[1] });
-
-                                        sc.Agencies.AddRange(agencies);
-                                        sc.OperationalAreas.AddRange(operationalAreas);
+                                        GuardarDatosNADMS(parts);
                                     }
                                     else if (parts[0] == "NADMR")
                                     {
-                                        factories.Add(new Factories { idFactory = orders[0].IdFactory, codeFactory = parts[1] });
-
-                                        sc.Factories.AddRange(factories);
+                                        GuardarDatosNADMR(parts);
                                     }
                                     else if (parts[0] == "LIN")
                                     {
-                                        OrdersDetail newOrderDetail = new OrdersDetail { idOrder = orders[0].idOrder };
-                                        ordersDetail.Add(newOrderDetail);
-
-                                        Planets newPlanet = new Planets { CodePlanet = parts[1] };
-                                        planets.Add(newPlanet);
-
-                                        References newReference = new References { codeReference = parts[2] };
-                                        references.Add(newReference);
-
-                                        sc.Planets.AddRange(planets);
-                                        sc.References.AddRange(references);
+                                        GuardarDatosLIN(parts);
                                     }
                                     else if (parts[0] == "QTYLIN")
                                     {
-                                        if (parts[1] == "61")
-                                        {
-                                            cantidad = (int.Parse(parts[2]) * (-1));
-                                        }
-                                        else
-                                        {
-                                            cantidad = int.Parse(parts[2]);
-                                        }
-
-                                        ordersDetail.Add(new OrdersDetail { idOrder = orders[0].idOrder, Quantity = (short)cantidad });
+                                        GuardarDatosQTYLIN(parts);
                                     }
                                     else if (parts[0] == "DTMLIN")
                                     {
-                                        ordersDetail.Add(new OrdersDetail { idOrder = orders[0].idOrder, DeliveryDate = DateTime.ParseExact(parts[1], "yyyyMMdd", CultureInfo.InvariantCulture) });
+                                        GuardarDatosDTMLIN(parts);
                                     }
                                 }
                             }
                             txt_Edi.Text += line + "\r\n";
                         }
-                        sc.Orders.AddRange(orders);
-                        sc.OrderInfo.AddRange(orderInfo);
-                        sc.OrdersDetail.AddRange(ordersDetail);
                     }
                 }
             }
@@ -150,7 +104,15 @@ namespace AVISC_EdiTools
         {
             try
             {
+                orderInfo.idOrder = orders.idOrder;
+                ordersDetail.idOrder = orders.idOrder;
+
+                sc.Orders.Add(orders);
+                sc.OrdersDetail.Add(ordersDetail);
+                sc.OrderInfo.Add(orderInfo);
+
                 sc.SaveChanges();
+                MessageBox.Show($"Se subio correctamente");
             }
             catch (Exception ex)
             {
@@ -158,5 +120,61 @@ namespace AVISC_EdiTools
             }
         }
 
+        private void GuardarDatosORD(List<string> parts)
+        {
+            orders.codeOrder = parts[1];
+
+            string idPriority = parts[2];
+            orders.IdPriority = sc.Priority.FirstOrDefault(x => x.CodePriority == idPriority).idPriority;
+        }
+
+        private void GuardarDatosDTM(List<string> parts)
+        {
+            orders.dateOrder = DateTime.ParseExact(parts[1], "yyyyMMdd", CultureInfo.InvariantCulture);
+        }
+
+        private void GuardarDatosNADMS(List<string> parts)
+        {
+            string idAgency = parts[2];
+            string idOperationalArea = parts[1];
+
+            orderInfo.idAgency = sc.Agencies.FirstOrDefault(a => a.CodeAgency == idAgency).idAgency;
+
+            orderInfo.idOperationalArea = sc.OperationalAreas.FirstOrDefault(opA => opA.CodeOperationalArea == idOperationalArea).idOperationalArea;
+        }
+        private void GuardarDatosNADMR(List<string> parts)
+        {
+            string idFactory = parts[1];
+
+            orders.IdFactory = sc.Factories.FirstOrDefault(f => f.codeFactory == idFactory).idFactory;
+        }
+        private void GuardarDatosLIN(List<string> parts)
+        {
+            string idPlanet = parts[1];
+            string idReference = parts[2];
+
+            ordersDetail.idPlanet = sc.Planets.FirstOrDefault(p => p.CodePlanet == idPlanet).idPlanet;
+
+            ordersDetail.idReference = sc.References.FirstOrDefault(r => r.codeReference == idReference).idReference;
+        }
+        private void GuardarDatosQTYLIN(List<string> parts)
+        {
+            int cantidad;
+            if (parts[1] == "61")
+            {
+                cantidad = (int.Parse(parts[2]) * (-1));
+            }
+            else
+            {
+                cantidad = int.Parse(parts[2]);
+            }
+
+            ordersDetail.Quantity = (short)cantidad;
+
+        }
+        private void GuardarDatosDTMLIN(List<string> parts)
+        {
+            ordersDetail.DeliveryDate = DateTime.ParseExact(parts[1], "yyyyMMdd", CultureInfo.InvariantCulture);
+        }
     }
 }
