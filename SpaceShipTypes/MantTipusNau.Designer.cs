@@ -37,6 +37,7 @@ namespace SpaceShipTypes
             this.cmb_category = new System.Windows.Forms.ComboBox();
             this.swTextbox1 = new AVISC_Controles.SWTextbox();
             this.swTxt_desc = new AVISC_Controles.SWTextbox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_codeSpaceShipType
@@ -141,11 +142,22 @@ namespace SpaceShipTypes
             this.swTxt_desc.TabIndex = 37;
             this.swTxt_desc.Tag = "DescSpaceShipType";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(578, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MantTipusNau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.swTextbox1);
             this.Controls.Add(this.swTxt_desc);
             this.Controls.Add(this.cmb_category);
@@ -164,6 +176,7 @@ namespace SpaceShipTypes
             this.Controls.SetChildIndex(this.cmb_category, 0);
             this.Controls.SetChildIndex(this.swTxt_desc, 0);
             this.Controls.SetChildIndex(this.swTextbox1, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,6 +192,7 @@ namespace SpaceShipTypes
         private System.Windows.Forms.ComboBox cmb_category;
         private AVISC_Controles.SWTextbox swTxt_desc;
         private AVISC_Controles.SWTextbox swTextbox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

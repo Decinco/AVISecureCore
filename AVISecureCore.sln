@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sectors", "Sectors\Sectors.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_DatabaseModel", "AVISC_DatabaseModel\AVISC_DatabaseModel.csproj", "{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVISC_EdiTools", "AVISC_EdiTools\AVISC_EdiTools.csproj", "{BAE64ED1-134E-46C7-A139-656EABABFB6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C45FB5B-754F-44CE-A15D-DC4ED88517CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE64ED1-134E-46C7-A139-656EABABFB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE64ED1-134E-46C7-A139-656EABABFB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE64ED1-134E-46C7-A139-656EABABFB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE64ED1-134E-46C7-A139-656EABABFB6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
