@@ -10,16 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AVISC_BaseForms;
+using AVISC_DatabaseModel;
 
 namespace AVISC_EdiTools
 {
     public partial class EDI : AVISC_CloseableFeatureForm
     {
-        SecureCoreG5Entities sc;
+        SecureCoreEF sc;
 
-        Orders orders;
-        OrderInfo orderInfo ;
-        OrdersDetail ordersDetail;
+        AVISC_DatabaseModel.Orders orders;
+        AVISC_DatabaseModel.OrderInfo orderInfo ;
+        AVISC_DatabaseModel.OrdersDetail ordersDetail;
 
         public EDI()
         {
@@ -33,10 +34,10 @@ namespace AVISC_EdiTools
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.ShowDialog();
 
-                sc = new SecureCoreG5Entities();
-                orders = new Orders();
-                orderInfo = new OrderInfo();
-                ordersDetail = new OrdersDetail();
+                sc = new SecureCoreEF();
+                orders = new AVISC_DatabaseModel.Orders();
+                orderInfo = new AVISC_DatabaseModel.OrderInfo();
+                ordersDetail = new AVISC_DatabaseModel.OrdersDetail();
 
                 string[] docRead = File.ReadAllLines(openFileDialog.FileName);
 
