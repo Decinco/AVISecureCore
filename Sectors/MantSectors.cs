@@ -19,5 +19,12 @@ namespace Sectors
         {
             InitializeComponent();
         }
+
+        protected override void CustomDataGrid()
+        {
+            dataBaseView.Columns["DescSector"].HeaderText = "Sector";
+            dataBaseView.Columns["CodeSector"].HeaderText = "Código";
+            dataBaseView.Columns["idRegion"].HeaderText = "Región";
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 using AVISC_BaseForms;
 using System.Data.Entity;
+using System.Windows.Forms;
 
 namespace AVISC_Maintenance
 {
@@ -56,7 +57,6 @@ namespace AVISC_Maintenance
             // dataBaseView
             // 
             this.dataBaseView.AllowUserToAddRows = false;
-            this.dataBaseView.AllowUserToDeleteRows = false;
             this.dataBaseView.AllowUserToResizeColumns = false;
             this.dataBaseView.AllowUserToResizeRows = false;
             this.dataBaseView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -221,7 +221,25 @@ namespace AVISC_Maintenance
         private System.Windows.Forms.Panel pnl_newIconButton;
 
         /// <summary>
-        /// DataGrid utilizado para mostrar los datos de la tabla.
+        ///     <para>
+        ///         DataGrid utilizado para mostrar los datos de la tabla.
+        ///     </para>
+        ///     <para>
+        ///         Sus columnas se generan automáticamente a partir de las propiedades de <typeparamref name="EntityT"/> a las que se les haya asignado un <see cref="TextBox"/> o <see cref="ComboBox"/>.
+        ///     </para>
+        ///     <para>
+        ///         Las columnas se nombrarán de formas diferentes según si las columnas fueron generadas con un <see cref="TextBox"/> o con un <see cref="ComboBox"/>:
+        ///     </para>
+        ///     <list type="table">
+        ///         <item>
+        ///             <term>TextBox</term>
+        ///             <description>"El nombre de la columna es [nombre_columna].</description>
+        ///         </item>
+        ///         <item>
+        ///             <term>ComboBox</term>
+        ///             <description>Hay dos columnas una de valor y otra de muestra. La de valor tiene el nombre [nombre_columna_id] y la de muestra el nombre "[nombre_columna_id]Display"</description>
+        ///         </item>
+        ///     </list>
         /// </summary>
         protected System.Windows.Forms.DataGridView dataBaseView;
         private System.Windows.Forms.Panel pnl_SaveButton;
