@@ -17,22 +17,22 @@ namespace AVISC_Maintenance
 {
 
     /// <summary>
-    /// <para>
-    ///     Formulario base para la creación de formularios de mantenimiento utilizando EntityFramework.
-    /// </para>
-    /// <para>
-    ///     Se pueden añadir automáticamente campos a la tabla creando un <see cref="TextBox"/> o <see cref="ComboBox"/> en el formulario y luego introduciendo el nombre del tag con el formato correcto.
-    /// </para>
-    /// <list type="table">
-    ///     <item>
-    ///         <term>TextBox</term>
-    ///         <description>"[nombre_columna]"</description>
-    ///     </item>
-    ///     <item>
-    ///         <term>ComboBox</term>
-    ///         <description>"[nombre_tabla_foránea].[nombre_columna_foránea].[nombre_columna_id]"</description>
-    ///     </item>
-    /// </list>
+    ///     <para>
+    ///         Formulario base para la creación de formularios de mantenimiento utilizando EntityFramework.
+    ///     </para>
+    ///     <para>
+    ///         Se pueden añadir automáticamente campos a la tabla creando un <see cref="TextBox"/> o <see cref="ComboBox"/> en el formulario y luego introduciendo el nombre del tag con el formato correcto.
+    ///     </para>
+    ///     <list type="table">
+    ///         <item>
+    ///             <term>TextBox</term>
+    ///             <description>"[nombre_columna]"</description>
+    ///         </item>
+    ///         <item>
+    ///             <term>ComboBox</term>
+    ///             <description>"[nombre_tabla_foránea].[nombre_columna_foránea].[nombre_columna_id]"</description>
+    ///         </item>
+    ///     </list>
     /// </summary>
     /// <typeparam name="EntityT">Tipo de la entidad que va a servir como tabla primaria.</typeparam>
     /// <typeparam name="ContextT">Contexto a utilizar. Debe heredar de <see cref="DbContext"/>.</typeparam>
@@ -51,6 +51,16 @@ namespace AVISC_Maintenance
         /// </summary>
         protected bool New { get; private set; }
 
+        /// <summary>
+        /// Datos obtenidos de la base de datos.
+        /// </summary>
+        protected BindingList<EntityT> Data { get; private set; }
+
+        /// <summary>
+        /// Instancia del contexto <typeparamref name="ContextT"/> usado en esta clase.
+        /// </summary>
+        protected ContextT Context { get; private set; }
+
         // Eventos para añadir nuevos comportamientos al formulario
         /// <summary>
         /// Evento que se dispara antes de guardar los cambios en la base de datos.
@@ -66,10 +76,6 @@ namespace AVISC_Maintenance
         protected event EventHandler NewAdded;
 
         private BindingSource Source;
-
-        private BindingList<EntityT> Data;
-
-        private ContextT Context;
 
         private EFDataAccess<EntityT> DataAccess;
 
@@ -149,6 +155,8 @@ namespace AVISC_Maintenance
                 MessageBox.Show("Ha habido un error al importar los datos de la base de datos.");
             }
 
+            ComboBoxInitialization();
+
             CustomFields();
         }
 
@@ -196,25 +204,11 @@ namespace AVISC_Maintenance
                     {
                         // Esta es la única forma que he encontrado de sacar los datos de un modelo a partir de su nombre.
                         Type foreignType = typeof(ContextT).GetProperty(foreign.DisplayTableName).PropertyType.GetGenericArguments()[0];
-                        //MethodInfo obtainListMethod = DataAccess.GetType().GetMethod("RefreshForeignTableToBindingList").MakeGenericMethod(foreignType);
-                        //BindingSource source = new BindingSource()
-                        //{
-                        //    DataSource = obtainListMethod.Invoke(DataAccess, null)
-                        //};
-
-
+                        
                         comboBox.DataSource = MakeListFromDBSet(Context.Set(foreignType));
 
                         comboBox.DisplayMember = foreign.DisplayColumnName;
                         comboBox.ValueMember = foreign.OriginColumnName;
-
-                        dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
-
-                        //dataBaseView.Columns.Add(new DataGridViewColumn
-                        //{
-
-                        //});
-
                     }
                     catch (Exception e)
                     {
@@ -240,9 +234,8 @@ namespace AVISC_Maintenance
         {
             bool errors = false;
 
+            Source.DataSource = Data;
             dataBaseView.DataSource = Source;
-
-            ComboBoxInitialization();
 
             foreach (Control control in Controls)
             {
@@ -277,6 +270,8 @@ namespace AVISC_Maintenance
 
                     try
                     {
+                        //ComboBoxColumnLinking(comboBox);
+                        dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
 
                         comboBox.DataBindings.Clear();
                         comboBox.DataBindings.Add(new Binding("SelectedValue", Source, comboBox.Tag.ToString(), true, DataSourceUpdateMode.Never));
@@ -341,6 +336,8 @@ namespace AVISC_Maintenance
                 comboBox.DataBindings[0].WriteValue();
                 comboBox.DataBindings[0].BindingManagerBase.EndCurrentEdit();
             }
+
+            //UpdateExtraColumns(comboBox);
         }
 
         private void SaveChanges(object sender, EventArgs e)
@@ -354,7 +351,7 @@ namespace AVISC_Maintenance
             if (New)
             {
 
-                EntityT species = new EntityT();
+                EntityT entity = new EntityT();
 
                 foreach (Control control in Controls)
                 {
@@ -363,16 +360,28 @@ namespace AVISC_Maintenance
                         TextBox textBox = (TextBox)control;
                         try
                         {
-                            typeof(EntityT).GetProperty(textBox.Tag.ToString()).SetValue(species, textBox.Text); // Reflection para poner las propiedades del objeto
+                            typeof(EntityT).GetProperty(textBox.Tag.ToString()).SetValue(entity, textBox.Text); // Reflection para poner las propiedades del objeto
                         }
                         catch
                         {
                             MessageBox.Show($"¡{textBox.Tag} no es una propiedad de {TypeName}!", "Liada monumental", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    else if (control is ComboBox)
+                    {
+                        ComboBox comboBox = (ComboBox)control;
+                        try
+                        {
+                            typeof(EntityT).GetProperty(comboBox.Tag.ToString()).SetValue(entity, comboBox.SelectedValue); // Reflection para poner las propiedades del objeto
+                        }
+                        catch
+                        {
+                            MessageBox.Show($"¡{comboBox.Tag} no es una propiedad de {TypeName}!", "Liada monumental", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
 
-                if (DataAccess.Create(species))
+                if (DataAccess.Create(entity))
                 {
                     newItems += 1;
                 }
@@ -412,6 +421,13 @@ namespace AVISC_Maintenance
                     textBox.Text = "";
 
                     textBox.TextChanged -= SaveToDataGrid;
+                }
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    comboBox.DataBindings.Clear();
+                    comboBox.SelectedIndex = 0;
+                    comboBox.Validated -= SaveToDataGridComboBox;
                 }
             }
 
@@ -500,6 +516,47 @@ namespace AVISC_Maintenance
         private void pnl_SaveButton_MouseLeave(object sender, EventArgs e)
         {
             pnl_SaveButton.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        // -- WIP --
+
+        // Código para las columnas de muestra de foránea... WIP y en desuso por ahora
+        private void ComboBoxColumnLinking(ComboBox comboBox)
+        {
+            ForeignKeyTag foreign = (ForeignKeyTag)comboBox.Tag;
+
+            // Columna de muestra de foránea
+            dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
+
+            dataBaseView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                CellTemplate = new DataGridViewTextBoxCell(),
+                Name = $"{foreign.OriginColumnName}Display",
+                HeaderText = $"{foreign.OriginColumnName}Display",
+                Tag = dataBaseView.Columns[foreign.OriginColumnName].Index
+            });
+
+            dataBaseView.Columns[$"{foreign.OriginColumnName}Display"].Visible = true;
+        }
+
+        // Código de actualización de columna de muestra de foránea. WIP y en desuso.
+        private void UpdateExtraColumns(ComboBox comboBox)
+        {
+            ForeignKeyTag foreign = (ForeignKeyTag)comboBox.Tag;
+            Type foreignType = typeof(ContextT).GetProperty(foreign.DisplayTableName).PropertyType.GetGenericArguments()[0];
+            DataGridViewColumn displayColumn = dataBaseView.Columns[$"{foreign.OriginColumnName}Display"];
+            DataGridViewColumn valueColumn = dataBaseView.Columns[$"{foreign.OriginColumnName}"];
+
+            foreach (DataGridViewRow row in dataBaseView.Rows)
+            {
+                DataGridViewCell displayCell = row.Cells[displayColumn.Index];
+                DataGridViewCell valueCell = row.Cells[valueColumn.Index];
+
+                // Reflection, mi vieja amiga
+                DbSet displaySet = Context.Set(foreignType);
+                var displayObject = displaySet.Find(valueCell.Value);
+                displayCell.Value = displayObject.GetType().GetProperty(foreign.DisplayColumnName).GetValue(displayObject);
+            }
         }
     }
 }

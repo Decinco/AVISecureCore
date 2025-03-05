@@ -75,9 +75,9 @@ namespace Sectors
             this.label2.Location = new System.Drawing.Point(432, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 41);
+            this.label2.Size = new System.Drawing.Size(112, 41);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Descripción";
+            this.label2.Text = "Sector";
             // 
             // swTextbox3
             // 
