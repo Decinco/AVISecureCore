@@ -31,7 +31,7 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <HelpFileFormat>Website</HelpFileFormat>
-    <SyntaxFilters>C#, Visual Basic</SyntaxFilters>
+    <SyntaxFilters>C#</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>True</KeepLogFile>
@@ -41,11 +41,12 @@
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\compile\AVIDataAccess.xml" />
-<DocumentationSource sourceFile="..\compile\AVIDataAccess.dll" />
-<DocumentationSource sourceFile="..\Compile\AVISC_Maintenance.xml" />
-<DocumentationSource sourceFile="..\Compile\AVISC_Maintenance.dll" />
-<DocumentationSource sourceFile="..\Compile\AVISC_BaseForms.xml" />
-<DocumentationSource sourceFile="..\Compile\AVISC_BaseForms.dll" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\compile\AVIDataAccess.dll" />
+      <DocumentationSource sourceFile="..\Compile\AVISC_Maintenance.xml" />
+      <DocumentationSource sourceFile="..\Compile\AVISC_Maintenance.dll" />
+      <DocumentationSource sourceFile="..\Compile\AVISC_BaseForms.xml" />
+      <DocumentationSource sourceFile="..\Compile\AVISC_BaseForms.dll" />
+    </DocumentationSources>
     <HelpTitle>Documentaci&amp;#243%3bn de AVISecureCore</HelpTitle>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <NamingMethod>Guid</NamingMethod>
