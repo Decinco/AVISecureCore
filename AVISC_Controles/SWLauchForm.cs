@@ -48,7 +48,7 @@ namespace AVISC_Controles
             try { 
                 Assembly ensamblat = Assembly.LoadFrom($"{Project}.dll");
 
-                Object dll;
+                object dll;
                 Type tipus;
                 tipus = ensamblat.GetType($"{Project}.{Target}");
                 dll = Activator.CreateInstance(tipus);

@@ -33,7 +33,7 @@ namespace AVIDataAccess
         }
 
         /// <summary>
-        /// Añade un registro a la base de datos.
+        /// Añade un registro a la tabla <typeparamref name="EntityType"/> y lo sube a la base de datos
         /// </summary>
         /// <param name="entity">Registro a añadir.</param>
         /// <returns>True si se ejecuta correctamente, false si ha ocurrido un error.</returns>
@@ -53,7 +53,7 @@ namespace AVIDataAccess
         }
 
         /// <summary>
-        /// Añade todos los registros en una lista a la base de datos.
+        /// Añade todos los registros en una lista a la tabla <typeparamref name="EntityType"/> y los sube a la base de datos.
         /// </summary>
         /// <param name="entityList">Lista de registros a añadir.</param>
         /// <returns>True si se ejecuta correctamente, false si ha ocurrido un error.</returns>
@@ -118,10 +118,10 @@ namespace AVIDataAccess
         }
 
         /// <summary>
-        /// Lee todos los registros de una tabla relacionada a la tabla principal.
+        /// Lee todos los registros de una tabla relacionada a la tabla principal. Convierte el resultado en un BindingList.
         /// </summary>
         /// <typeparam name="ForeignType">Tipo de la entidad de la tabla a consultar.</typeparam>
-        /// <returns>Una lista con todos los registros. Si ha ocurrido un error durante la ejecución de la función, devuelve null.</returns>
+        /// <returns>Una BindingList con todos los registros. Si ha ocurrido un error durante la ejecución de la función, devuelve null.</returns>
         public BindingList<ForeignType> RefreshForeignTableToBindingList<ForeignType>()
             where ForeignType : class
         {

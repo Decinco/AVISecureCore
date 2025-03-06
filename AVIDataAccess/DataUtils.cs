@@ -16,8 +16,8 @@ namespace AVIDataAccess
         /// <summary>
         /// Aparentemente, por alguna razón, esto no viene incluido en las librerías de .NET.
         /// </summary>
-        /// <typeparam name="T">Tipo de la lista y, por lo tanto, tipo de la <see cref="BindingList{T}"/> creada</typeparam>
-        /// <param name="source">Lista a Convertir</param>
+        /// <typeparam name="T">Tipo de la lista y, por lo tanto, tipo de la <see cref="BindingList{T}"/> creada.</typeparam>
+        /// <param name="source">Lista a convertir.</param>
         /// <returns>Bindinglist de tipo T.</returns>
         public static BindingList<T> ToBindingList<T>(this List<T> source)
         {
