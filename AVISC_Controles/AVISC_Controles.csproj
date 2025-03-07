@@ -92,6 +92,9 @@
     <EmbeddedResource Include="SWOption.resx">
       <DependentUpon>SWOption.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SWTextbox.resx">
+      <DependentUpon>SWTextbox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWTextButton.resx">
       <DependentUpon>SWTextButton.cs</DependentUpon>
     </EmbeddedResource>

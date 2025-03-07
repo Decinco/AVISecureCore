@@ -29,7 +29,17 @@ namespace AVISC_Controles
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SWTextbox
+            // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.Font = new System.Drawing.Font("Inter", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Multiline = true;
+            this.Size = new System.Drawing.Size(245, 60);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
