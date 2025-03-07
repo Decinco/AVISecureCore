@@ -18,9 +18,9 @@ namespace AVISC_EdiTools
     {
         SecureCoreEF sc;
 
-        AVISC_DatabaseModel.Orders orders;
-        AVISC_DatabaseModel.OrderInfo orderInfo ;
-        AVISC_DatabaseModel.OrdersDetail ordersDetail;
+        Orders orders;
+        OrderInfo orderInfo ;
+        OrdersDetail ordersDetail;
 
         public EDI()
         {
@@ -31,73 +31,91 @@ namespace AVISC_EdiTools
         {
             try
             {
+                sc = new SecureCoreEF();
+                orders = new Orders();
+                orderInfo = new OrderInfo();
+                ordersDetail = new OrdersDetail();
+
+                orderInfo.idOrder = orders.idOrder;
+                ordersDetail.idOrder = orders.idOrder;
+
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.ShowDialog();
 
-                sc = new SecureCoreEF();
-                orders = new AVISC_DatabaseModel.Orders();
-                orderInfo = new AVISC_DatabaseModel.OrderInfo();
-                ordersDetail = new AVISC_DatabaseModel.OrdersDetail();
-
                 string[] docRead = File.ReadAllLines(openFileDialog.FileName);
 
-                bool correcte = false;
-
-                if (openFileDialog.FileName.Length > 0)
+                if (openFileDialog.FileName.Contains(".edi"))
                 {
-                    using (StreamReader streamReader = new StreamReader(openFileDialog.FileName))
+                    bool correcte = false;
+
+                    lbl_edi.Visible = true;
+                    lbl_edi.ForeColor = Color.White;
+                    lbl_edi.Text = "Archivo EDI selecionado";
+
+                    if (openFileDialog.FileName.Length > 0)
                     {
-                        foreach (string line in docRead)
+                        using (StreamReader streamReader = new StreamReader(openFileDialog.FileName))
                         {
-                            List<string> parts = line.Split('|').ToList();
+                            foreach (string line in docRead)
+                            {
+                                List<string> parts = line.Split('|').ToList();
 
-                            if (parts[0] == "ORDERS_D_96A_UN_EAN008")
-                            {
-                                correcte = true;
-                            }
-                            else
-                            {
-                                if (correcte)
+                                if (parts[0] == "ORDERS_D_96A_UN_EAN008")
                                 {
-                                    if (parts[0] == "ORD")
-                                    {                                        
-                                        GuardarDatosORD(parts);
-                                    }
-                                    else if (parts[0] == "DTM")
+                                    correcte = true;
+                                }
+                                else
+                                {
+                                    if (correcte)
                                     {
+                                        if (parts[0] == "ORD")
+                                        {
+                                            GuardarDatosORD(parts);
+                                        }
+                                        else if (parts[0] == "DTM")
+                                        {
+                                            GuardarDatosDTM(parts);
+                                        }
+                                        else if (parts[0] == "NADMS")
+                                        {
+                                            GuardarDatosNADMS(parts);
+                                        }
+                                        else if (parts[0] == "NADMR")
+                                        {
+                                            GuardarDatosNADMR(parts);
+                                        }
+                                        else if (parts[0] == "LIN")
+                                        {
+                                            GuardarDatosLIN(parts);
+                                        }
+                                        else if (parts[0] == "QTYLIN")
+                                        {
+                                            GuardarDatosQTYLIN(parts);
+                                        }
+                                        else if (parts[0] == "DTMLIN")
+                                        {
+                                            GuardarDatosDTMLIN(parts);
+                                        }
 
-                                        GuardarDatosDTM(parts);
-                                    }
-                                    else if (parts[0] == "NADMS")
-                                    {
-                                        GuardarDatosNADMS(parts);
-                                    }
-                                    else if (parts[0] == "NADMR")
-                                    {
-                                        GuardarDatosNADMR(parts);
-                                    }
-                                    else if (parts[0] == "LIN")
-                                    {
-                                        GuardarDatosLIN(parts);
-                                    }
-                                    else if (parts[0] == "QTYLIN")
-                                    {
-                                        GuardarDatosQTYLIN(parts);
-                                    }
-                                    else if (parts[0] == "DTMLIN")
-                                    {
-                                        GuardarDatosDTMLIN(parts);
+                                        txt_Edi.Text += line + "\r\n";
                                     }
                                 }
                             }
-                            txt_Edi.Text += line + "\r\n";
                         }
                     }
                 }
+                else
+                {
+                    lbl_edi.Visible = true;
+                    lbl_edi.ForeColor = Color.Red;
+                    lbl_edi.Text = "Selecciona un archivo .edi";
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"Error: {ex}");
+                lbl_edi.Visible = true;
+                lbl_edi.ForeColor = Color.Red;
+                lbl_edi.Text = "No has seleccionado un .edi";
             }
         }
 
@@ -105,19 +123,30 @@ namespace AVISC_EdiTools
         {
             try
             {
-                orderInfo.idOrder = orders.idOrder;
-                ordersDetail.idOrder = orders.idOrder;
 
-                sc.Orders.Add(orders);
-                sc.OrdersDetail.Add(ordersDetail);
-                sc.OrderInfo.Add(orderInfo);
+                if (sc.Orders.Any(c => c.codeOrder == orders.codeOrder))
+                {
+                    lbl_bbd.Visible = true;
+                    lbl_bbd.ForeColor = Color.Red;
+                    lbl_bbd.Text = "Codigo de orden duplicado";
+                }
+                else
+                {
+                    sc.Orders.Add(orders);
+                    //sc.OrdersDetail.Add(ordersDetail); 
+                    sc.OrderInfo.Add(orderInfo);
 
-                sc.SaveChanges();
-                MessageBox.Show($"Se subio correctamente");
+                    sc.SaveChanges();
+                    lbl_bbd.Visible = true;
+                    lbl_bbd.ForeColor = Color.White;
+                    lbl_bbd.Text = "Los datos se han subido correctamente!";
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex}");
+                lbl_bbd.Visible = true;
+                lbl_bbd.ForeColor = Color.Red;
+                lbl_bbd.Text = $"Ha habido un error al subir los datos: {ex.Message}";
             }
         }
 
@@ -154,9 +183,14 @@ namespace AVISC_EdiTools
             string idPlanet = parts[1];
             string idReference = parts[2];
 
-            ordersDetail.idPlanet = sc.Planets.FirstOrDefault(p => p.CodePlanet == idPlanet).idPlanet;
+            orders.OrdersDetail.Add(new OrdersDetail()
+                {
+                    idOrder = orders.idOrder,
+                    idPlanet = sc.Planets.FirstOrDefault(p => p.CodePlanet == idPlanet).idPlanet,
+                    idReference = sc.References.FirstOrDefault(r => r.codeReference == idReference).idReference,
+                }
+            );
 
-            ordersDetail.idReference = sc.References.FirstOrDefault(r => r.codeReference == idReference).idReference;
         }
         private void GuardarDatosQTYLIN(List<string> parts)
         {
@@ -170,12 +204,11 @@ namespace AVISC_EdiTools
                 cantidad = int.Parse(parts[2]);
             }
 
-            ordersDetail.Quantity = (short)cantidad;
-
+            orders.OrdersDetail.LastOrDefault().Quantity = (short)cantidad;
         }
         private void GuardarDatosDTMLIN(List<string> parts)
         {
-            ordersDetail.DeliveryDate = DateTime.ParseExact(parts[1], "yyyyMMdd", CultureInfo.InvariantCulture);
+            orders.OrdersDetail.LastOrDefault().DeliveryDate = DateTime.ParseExact(parts[1], "yyyyMMdd", CultureInfo.InvariantCulture);
         }
     }
 }
