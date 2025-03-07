@@ -56,49 +56,53 @@ namespace AVISC_EdiTools
                     {
                         using (StreamReader streamReader = new StreamReader(openFileDialog.FileName))
                         {
-                            foreach (string line in docRead)
+                            correcte = true;
+
+                            if (docRead[0] != "ORDERS_D_96A_UN_EAN008")
                             {
+                                correcte = false;
+                                txt_Edi.Text = "Este documento de texto es inválido";
+                            }
+
+                            for (int i = 1; i < docRead.Length && correcte; i++)
+                            {
+                                string line = docRead[i];
                                 List<string> parts = line.Split('|').ToList();
 
-                                if (parts[0] == "ORDERS_D_96A_UN_EAN008")
+                                txt_Edi.Text += line + "\r\n";  
+
+                                if (parts[0] == "ORD")
                                 {
-                                    correcte = true;
+                                    GuardarDatosORD(parts);
+                                }
+                                else if (parts[0] == "DTM")
+                                {
+                                    GuardarDatosDTM(parts);
+                                }
+                                else if (parts[0] == "NADMS")
+                                {
+                                    GuardarDatosNADMS(parts);
+                                }
+                                else if (parts[0] == "NADMR")
+                                {
+                                    GuardarDatosNADMR(parts);
+                                }
+                                else if (parts[0] == "LIN")
+                                {
+                                    GuardarDatosLIN(parts);
+                                }
+                                else if (parts[0] == "QTYLIN")
+                                {
+                                    GuardarDatosQTYLIN(parts);
+                                }
+                                else if (parts[0] == "DTMLIN")
+                                {
+                                    GuardarDatosDTMLIN(parts);
                                 }
                                 else
                                 {
-                                    if (correcte)
-                                    {
-                                        if (parts[0] == "ORD")
-                                        {
-                                            GuardarDatosORD(parts);
-                                        }
-                                        else if (parts[0] == "DTM")
-                                        {
-                                            GuardarDatosDTM(parts);
-                                        }
-                                        else if (parts[0] == "NADMS")
-                                        {
-                                            GuardarDatosNADMS(parts);
-                                        }
-                                        else if (parts[0] == "NADMR")
-                                        {
-                                            GuardarDatosNADMR(parts);
-                                        }
-                                        else if (parts[0] == "LIN")
-                                        {
-                                            GuardarDatosLIN(parts);
-                                        }
-                                        else if (parts[0] == "QTYLIN")
-                                        {
-                                            GuardarDatosQTYLIN(parts);
-                                        }
-                                        else if (parts[0] == "DTMLIN")
-                                        {
-                                            GuardarDatosDTMLIN(parts);
-                                        }
-
-                                        txt_Edi.Text += line + "\r\n";
-                                    }
+                                    correcte = false;
+                                    txt_Edi.Text = "Este documento de texto es inválido";
                                 }
                             }
                         }

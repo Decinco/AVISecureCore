@@ -100,7 +100,6 @@ namespace AVISC_CrystalReport
                 {
                     crystalReportViewer1.Enabled = true;
                     idPersona = int.Parse(txt_comand.Text);
-                    MessageBox.Show($"Generando informe para ID: {idPersona}");
                     MostrarInforme(idPersona);
                 }
                 catch (Exception ex)

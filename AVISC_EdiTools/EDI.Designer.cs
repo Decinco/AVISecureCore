@@ -50,7 +50,7 @@ namespace AVISC_EdiTools
             // 
             this.swTextButton2.ButtonEnabled = true;
             this.swTextButton2.ButtonText = "Subir a la BDD";
-            this.swTextButton2.Location = new System.Drawing.Point(85, 367);
+            this.swTextButton2.Location = new System.Drawing.Point(85, 334);
             this.swTextButton2.Name = "swTextButton2";
             this.swTextButton2.Size = new System.Drawing.Size(262, 63);
             this.swTextButton2.TabIndex = 26;
@@ -65,6 +65,7 @@ namespace AVISC_EdiTools
             this.txt_Edi.Location = new System.Drawing.Point(391, 209);
             this.txt_Edi.Multiline = true;
             this.txt_Edi.Name = "txt_Edi";
+            this.txt_Edi.ReadOnly = true;
             this.txt_Edi.Size = new System.Drawing.Size(944, 678);
             this.txt_Edi.TabIndex = 27;
             // 
@@ -73,7 +74,7 @@ namespace AVISC_EdiTools
             this.lbl_edi.AutoSize = true;
             this.lbl_edi.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_edi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lbl_edi.Location = new System.Drawing.Point(81, 306);
+            this.lbl_edi.Location = new System.Drawing.Point(81, 275);
             this.lbl_edi.Name = "lbl_edi";
             this.lbl_edi.Size = new System.Drawing.Size(51, 22);
             this.lbl_edi.TabIndex = 28;
@@ -85,7 +86,7 @@ namespace AVISC_EdiTools
             this.lbl_bbd.AutoSize = true;
             this.lbl_bbd.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_bbd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.lbl_bbd.Location = new System.Drawing.Point(81, 473);
+            this.lbl_bbd.Location = new System.Drawing.Point(81, 400);
             this.lbl_bbd.Name = "lbl_bbd";
             this.lbl_bbd.Size = new System.Drawing.Size(51, 22);
             this.lbl_bbd.TabIndex = 29;

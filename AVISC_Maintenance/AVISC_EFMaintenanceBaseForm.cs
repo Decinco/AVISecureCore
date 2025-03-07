@@ -270,7 +270,7 @@ namespace AVISC_Maintenance
 
                     try
                     {
-                        //ComboBoxColumnLinking(comboBox);
+                        ComboBoxColumnLinking(comboBox);
                         dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
 
                         comboBox.DataBindings.Clear();
@@ -337,7 +337,7 @@ namespace AVISC_Maintenance
                 comboBox.DataBindings[0].BindingManagerBase.EndCurrentEdit();
             }
 
-            //UpdateExtraColumns(comboBox);
+            UpdateExtraColumns(comboBox);
         }
 
         private void SaveChanges(object sender, EventArgs e)
