@@ -32,6 +32,8 @@ namespace AVISC_EdiTools
             this.swTextButton1 = new AVISC_Controles.SWTextButton();
             this.swTextButton2 = new AVISC_Controles.SWTextButton();
             this.txt_Edi = new System.Windows.Forms.TextBox();
+            this.lbl_edi = new System.Windows.Forms.Label();
+            this.lbl_bbd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // swTextButton1
@@ -48,7 +50,7 @@ namespace AVISC_EdiTools
             // 
             this.swTextButton2.ButtonEnabled = true;
             this.swTextButton2.ButtonText = "Subir a la BDD";
-            this.swTextButton2.Location = new System.Drawing.Point(85, 319);
+            this.swTextButton2.Location = new System.Drawing.Point(85, 367);
             this.swTextButton2.Name = "swTextButton2";
             this.swTextButton2.Size = new System.Drawing.Size(262, 63);
             this.swTextButton2.TabIndex = 26;
@@ -66,11 +68,37 @@ namespace AVISC_EdiTools
             this.txt_Edi.Size = new System.Drawing.Size(944, 678);
             this.txt_Edi.TabIndex = 27;
             // 
+            // lbl_edi
+            // 
+            this.lbl_edi.AutoSize = true;
+            this.lbl_edi.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_edi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.lbl_edi.Location = new System.Drawing.Point(81, 306);
+            this.lbl_edi.Name = "lbl_edi";
+            this.lbl_edi.Size = new System.Drawing.Size(51, 22);
+            this.lbl_edi.TabIndex = 28;
+            this.lbl_edi.Text = "label1";
+            this.lbl_edi.Visible = false;
+            // 
+            // lbl_bbd
+            // 
+            this.lbl_bbd.AutoSize = true;
+            this.lbl_bbd.Font = new System.Drawing.Font("Inter", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bbd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.lbl_bbd.Location = new System.Drawing.Point(81, 473);
+            this.lbl_bbd.Name = "lbl_bbd";
+            this.lbl_bbd.Size = new System.Drawing.Size(51, 22);
+            this.lbl_bbd.TabIndex = 29;
+            this.lbl_bbd.Text = "label1";
+            this.lbl_bbd.Visible = false;
+            // 
             // EDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.lbl_bbd);
+            this.Controls.Add(this.lbl_edi);
             this.Controls.Add(this.txt_Edi);
             this.Controls.Add(this.swTextButton2);
             this.Controls.Add(this.swTextButton1);
@@ -79,6 +107,8 @@ namespace AVISC_EdiTools
             this.Controls.SetChildIndex(this.swTextButton1, 0);
             this.Controls.SetChildIndex(this.swTextButton2, 0);
             this.Controls.SetChildIndex(this.txt_Edi, 0);
+            this.Controls.SetChildIndex(this.lbl_edi, 0);
+            this.Controls.SetChildIndex(this.lbl_bbd, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,6 +119,8 @@ namespace AVISC_EdiTools
         private AVISC_Controles.SWTextButton swTextButton1;
         private AVISC_Controles.SWTextButton swTextButton2;
         private System.Windows.Forms.TextBox txt_Edi;
+        private System.Windows.Forms.Label lbl_edi;
+        private System.Windows.Forms.Label lbl_bbd;
     }
 }
 
