@@ -11,9 +11,12 @@ namespace AVISC_FTP
         private FTPConnection ftpConnection;
         private string archivoSeleccionado = ""; // Variable para almacenar el archivo seleccionado
         private Dictionary<TreeNode, string> nodeToPathMap; // Mapa para almacenar la ruta completa de cada nodo
+        FTP_Configuration_From fTPConnection = new FTP_Configuration_From();
 
         public FTPExplorer()
         {
+            this.FormClosed += FTP_Configuration_Form_FormClosed;
+
             InitializeComponent();
             ftpConnection = new FTPConnection();  // Iniciar conexión FTP al crear el formulario
             nodeToPathMap = new Dictionary<TreeNode, string>(); // Inicializamos el diccionario
@@ -171,5 +174,16 @@ namespace AVISC_FTP
                 explorerForm.ShowDialog();
             }
         }
+
+        private void btnConfigFTP_ButtonClick(object sender, EventArgs e)
+        {
+            fTPConnection.Show();
+        }
+
+        private void FTP_Configuration_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fTPConnection.Hide();
+        }
+
     }
 }

@@ -35,6 +35,7 @@ namespace AVISC_FTP
             this.btnDownload = new AVISC_Controles.SWTextButton();
             this.swTextButton2 = new AVISC_Controles.SWTextButton();
             this.btnSubirArchivo = new AVISC_Controles.SWTextButton();
+            this.btnConfigFTP = new AVISC_Controles.SWTextButton();
             this.SuspendLayout();
             // 
             // lblEstado
@@ -98,11 +99,22 @@ namespace AVISC_FTP
             this.btnSubirArchivo.TabIndex = 37;
             this.btnSubirArchivo.ButtonClick += new System.EventHandler(this.btnSubirArchivo_ButtonClick);
             // 
+            // btnConfigFTP
+            // 
+            this.btnConfigFTP.ButtonEnabled = true;
+            this.btnConfigFTP.ButtonText = "Configurar FTP";
+            this.btnConfigFTP.Location = new System.Drawing.Point(870, 145);
+            this.btnConfigFTP.Name = "btnConfigFTP";
+            this.btnConfigFTP.Size = new System.Drawing.Size(199, 64);
+            this.btnConfigFTP.TabIndex = 38;
+            this.btnConfigFTP.ButtonClick += new System.EventHandler(this.btnConfigFTP_ButtonClick);
+            // 
             // FTPExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1840, 1000);
+            this.Controls.Add(this.btnConfigFTP);
             this.Controls.Add(this.btnSubirArchivo);
             this.Controls.Add(this.swTextButton2);
             this.Controls.Add(this.btnDownload);
@@ -117,6 +129,7 @@ namespace AVISC_FTP
             this.Controls.SetChildIndex(this.btnDownload, 0);
             this.Controls.SetChildIndex(this.swTextButton2, 0);
             this.Controls.SetChildIndex(this.btnSubirArchivo, 0);
+            this.Controls.SetChildIndex(this.btnConfigFTP, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +142,6 @@ namespace AVISC_FTP
         private AVISC_Controles.SWTextButton btnDownload;
         private AVISC_Controles.SWTextButton swTextButton2;
         private AVISC_Controles.SWTextButton btnSubirArchivo;
+        private AVISC_Controles.SWTextButton btnConfigFTP;
     }
 }
