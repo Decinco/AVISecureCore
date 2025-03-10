@@ -24,7 +24,7 @@ namespace Sectors
         {
             dataBaseView.Columns["DescSector"].HeaderText = "Sector";
             dataBaseView.Columns["CodeSector"].HeaderText = "Código";
-            dataBaseView.Columns["idRegion"].HeaderText = "Región";
+            dataBaseView.Columns["idRegionDisplay"].HeaderText = "Región";
         }
     }
 }

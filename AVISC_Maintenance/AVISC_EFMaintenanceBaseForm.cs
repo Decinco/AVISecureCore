@@ -212,7 +212,7 @@ namespace AVISC_Maintenance
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show($"No se pudo determinar a dónde tiene que apuntar el ComboBox para la columna {comboBox.Tag}. \n Detalles: {e.Message}", "Liada monumental", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"No se pudo determinar a dónde tiene que apuntar el ComboBox para la columna {comboBox.Tag}. \nDetalles: {e.Message}\nEn:{e.StackTrace}", "Liada monumental", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -270,13 +270,12 @@ namespace AVISC_Maintenance
 
                     try
                     {
-                        ComboBoxColumnLinking(comboBox);
                         dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
 
                         comboBox.DataBindings.Clear();
                         comboBox.DataBindings.Add(new Binding("SelectedValue", Source, comboBox.Tag.ToString(), true, DataSourceUpdateMode.Never));
 
-                        comboBox.SelectedValueChanged += SaveToDataGridComboBox;
+                        comboBox.SelectionChangeCommitted += SaveToDataGridComboBox;
                     }
                     catch
                     {
@@ -427,6 +426,7 @@ namespace AVISC_Maintenance
                     ComboBox comboBox = (ComboBox)control;
                     comboBox.DataBindings.Clear();
                     comboBox.SelectedIndex = 0;
+
                     comboBox.Validated -= SaveToDataGridComboBox;
                 }
             }
@@ -495,6 +495,8 @@ namespace AVISC_Maintenance
             // Deshabilitar los estilos visuales predeterminados
             dataBaseView.EnableHeadersVisualStyles = false;
 
+            ComboBoxColumnLinking();
+
             CustomDataGrid();
         }
 
@@ -521,22 +523,28 @@ namespace AVISC_Maintenance
         // -- WIP --
 
         // Código para las columnas de muestra de foránea... WIP y en desuso por ahora
-        private void ComboBoxColumnLinking(ComboBox comboBox)
+        private void ComboBoxColumnLinking()
         {
-            ForeignKeyTag foreign = (ForeignKeyTag)comboBox.Tag;
-
-            // Columna de muestra de foránea
-            dataBaseView.Columns[foreign.OriginColumnName].Visible = false;
-
-            dataBaseView.Columns.Add(new DataGridViewTextBoxColumn()
+            foreach (Control control in Controls)
             {
-                CellTemplate = new DataGridViewTextBoxCell(),
-                Name = $"{foreign.OriginColumnName}Display",
-                HeaderText = $"{foreign.OriginColumnName}Display",
-                Tag = dataBaseView.Columns[foreign.OriginColumnName].Index
-            });
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
 
-            dataBaseView.Columns[$"{foreign.OriginColumnName}Display"].Visible = true;
+                    ForeignKeyTag foreign = (ForeignKeyTag)comboBox.Tag;
+
+                    // Columna de muestra de foránea
+                    dataBaseView.Columns.Add(new DataGridViewTextBoxColumn()
+                    {
+                        CellTemplate = new DataGridViewTextBoxCell(),
+                        Name = $"{foreign.OriginColumnName}Display",
+                        HeaderText = $"{foreign.OriginColumnName}Display",
+                        Tag = dataBaseView.Columns[foreign.OriginColumnName].Index
+                    });
+
+                    Fields.Add($"{foreign.OriginColumnName}Display");
+                }
+            };
         }
 
         // Código de actualización de columna de muestra de foránea. WIP y en desuso.
@@ -554,8 +562,28 @@ namespace AVISC_Maintenance
 
                 // Reflection, mi vieja amiga
                 DbSet displaySet = Context.Set(foreignType);
-                var displayObject = displaySet.Find(valueCell.Value);
-                displayCell.Value = displayObject.GetType().GetProperty(foreign.DisplayColumnName).GetValue(displayObject);
+                try
+                {
+                    var displayObject = displaySet.Find(int.Parse(valueCell.Value.ToString()));
+                    displayCell.Value = displayObject.GetType().GetProperty(foreign.DisplayColumnName).GetValue(displayObject);
+                }
+                catch
+                {
+                    displayCell.Value = "Sin información";
+                }
+            }
+        }
+
+        private void RefreshLinkedColumns(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+
+                    UpdateExtraColumns(comboBox);
+                }
             }
         }
     }

@@ -68,6 +68,8 @@ namespace AVISC_Maintenance
             this.dataBaseView.RowHeadersWidth = 51;
             this.dataBaseView.Size = new System.Drawing.Size(1765, 703);
             this.dataBaseView.TabIndex = 1;
+            this.dataBaseView.Visible = false;
+            this.dataBaseView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.RefreshLinkedColumns);
             // 
             // saveImg
             // 
