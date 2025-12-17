@@ -1,7 +1,0 @@
-<FTP>
-	<ip>sqlserver.S2AM.sdslab.cat</ip>
-	<credentials>
-		<username>g05</username>
-		<password>12345aA</password>
-	</credentials>
-</FTP>
